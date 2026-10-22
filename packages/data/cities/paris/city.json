@@ -1,0 +1,16 @@
+{
+  "id": "paris",
+  "name": "Paris",
+  "bbox": [2.2241, 48.8156, 2.4699, 48.9022],
+  "timezone": "Europe/Paris",
+  "country": "FR",
+  "holidayRegion": "Île-de-France",
+  "transitAreaIds": [],
+  "locale": "fr-FR",
+  "curatedFactsPath": "packages/data/cities/paris/curated-facts.yml",
+  "evalCorpusPath": "evals/corpus/paris",
+  "capabilities": {
+    "transit": false,
+    "curatedFacts": false
+  }
+}

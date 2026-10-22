@@ -1,0 +1,16 @@
+{
+  "id": "lyon",
+  "name": "Lyon",
+  "bbox": [4.771, 45.707, 4.898, 45.808],
+  "timezone": "Europe/Paris",
+  "country": "FR",
+  "holidayRegion": "Auvergne-Rhône-Alpes",
+  "transitAreaIds": [],
+  "locale": "fr-FR",
+  "curatedFactsPath": "packages/data/cities/lyon/curated-facts.yml",
+  "evalCorpusPath": "evals/corpus/lyon",
+  "capabilities": {
+    "transit": false,
+    "curatedFacts": false
+  }
+}

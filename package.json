@@ -17,7 +17,14 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "pnpm -r test",
-    "test:watch": "pnpm -r --parallel test:watch"
+    "test:watch": "pnpm -r --parallel test:watch",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:generate": "pnpm --filter @recta/api db:generate",
+    "db:migrate": "pnpm --filter @recta/api db:migrate",
+    "db:seed": "pnpm --filter @recta/api db:seed",
+    "db:reset": "pnpm --filter @recta/api db:reset",
+    "db:check": "pnpm --filter @recta/api db:check"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

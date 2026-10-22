@@ -1,0 +1,21 @@
+name: recta
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-recta}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-recta}
+      POSTGRES_DB: ${POSTGRES_DB:-recta}
+    ports:
+      - '5432:5432'
+    volumes:
+      - recta-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER:-recta} -d ${POSTGRES_DB:-recta}']
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  recta-db:

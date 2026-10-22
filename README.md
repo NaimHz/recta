@@ -16,16 +16,22 @@ Une erreur n'est affichée qu'avec sa source, sa date et la donnée brute. Une d
 
 - Node 22
 - pnpm 11
+- Docker et Docker Compose
 
 ## Démarrage
 
 ```bash
 pnpm install
+docker compose up -d
+pnpm db:reset
 pnpm dev
 ```
 
 - Web : http://localhost:4311
 - API : http://localhost:4310/health
+
+`pnpm db:reset` recrée le schéma, applique les migrations et charge les packs villes. La commande
+attend que Postgres soit prêt.
 
 ## Scripts
 
@@ -37,15 +43,19 @@ pnpm dev
 | `pnpm format` | Prettier |
 | `pnpm test` | Tests unitaires |
 | `pnpm build` | Build du web |
+| `pnpm db:up` | Démarre Postgres/PostGIS |
+| `pnpm db:reset` | Recrée la base, applique les migrations et charge les villes |
+| `pnpm db:check` | Vérifie PostGIS et la présence des villes |
 
 ## Structure
 
 ```
 apps/web          React + TanStack Router + Vite
-apps/api          Fastify + Zod
+apps/api          Fastify + Zod + Drizzle
 packages/domain   Schémas et types partagés
 packages/data     Packs villes et données de référence
 services/solver   Solveur de contraintes
 evals             Corpus, annotations, harnais d'évaluation
-infra             Base de données, déploiement, CI
+infra             Déploiement et CI
+compose.yaml      Postgres 16 + PostGIS 3.4
 ```
