@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "measuredAt": "2026-10-22T14:06:21.143Z",
+  "protocol": "1.4",
+  "departure": "2026-10-23T08:00:00+02:00",
+  "criteria": {
+    "minSuccessRate": 0.9,
+    "maxP95LatencyMs": 3000,
+    "note": "Seuils fixés avant la mesure. Le volet commercial est séparé."
+  },
+  "overall": {
+    "transitous": {
+      "requests": 10,
+      "successes": 10,
+      "failures": 0,
+      "successRate": 1,
+      "failureRate": 0,
+      "p50Ms": 144.5,
+      "p95Ms": 431.4,
+      "maxMs": 431.4,
+      "technicalStatus": "ok"
+    },
+    "osrm": {
+      "requests": 10,
+      "successes": 10,
+      "failures": 0,
+      "successRate": 1,
+      "failureRate": 0,
+      "p50Ms": 22.6,
+      "p95Ms": 63.4,
+      "maxMs": 63.4,
+      "technicalStatus": "ok"
+    }
+  },
+  "cities": {
+    "paris": {
+      "transitous": {
+        "requests": 5,
+        "successes": 5,
+        "failures": 0,
+        "successRate": 1,
+        "failureRate": 0,
+        "p50Ms": 184.7,
+        "p95Ms": 431.4,
+        "maxMs": 431.4,
+        "technicalStatus": "ok"
+      },
+      "osrm": {
+        "requests": 5,
+        "successes": 5,
+        "failures": 0,
+        "successRate": 1,
+        "failureRate": 0,
+        "p50Ms": 26.2,
+        "p95Ms": 63.4,
+        "maxMs": 63.4,
+        "technicalStatus": "ok"
+      }
+    },
+    "lyon": {
+      "transitous": {
+        "requests": 5,
+        "successes": 5,
+        "failures": 0,
+        "successRate": 1,
+        "failureRate": 0,
+        "p50Ms": 139.3,
+        "p95Ms": 180.1,
+        "maxMs": 180.1,
+        "technicalStatus": "ok"
+      },
+      "osrm": {
+        "requests": 5,
+        "successes": 5,
+        "failures": 0,
+        "successRate": 1,
+        "failureRate": 0,
+        "p50Ms": 22.4,
+        "p95Ms": 23.3,
+        "maxMs": 23.3,
+        "technicalStatus": "ok"
+      }
+    }
+  },
+  "quality": {
+    "transitous": {
+      "successes": 10,
+      "withTransitLeg": 10,
+      "walkOnly": 0
+    },
+    "osrm": {
+      "successes": 10,
+      "plausibleWalk": 10,
+      "implausibleWalk": 0
+    }
+  },
+  "verdict": {
+    "technical": {
+      "transitous": "ok",
+      "osrm": "ok"
+    },
+    "policy": {
+      "transitous": "prototype_non_commercial_only",
+      "osrm": "public_instance_spike_only"
+    },
+    "fallback": {
+      "transitous": "indéterminé si indisponible",
+      "osrm": "auto-héberger OSRM avec profil piéton, sinon estimation + indéterminé"
+    }
+  }
+}

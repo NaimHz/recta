@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "measuredAt": "2026-10-22T14:06:21.143Z",
+  "protocol": "1.4",
+  "departure": "2026-10-23T08:00:00+02:00",
+  "services": {
+    "transitous": {
+      "endpoint": "https://api.transitous.org/api/v6/plan",
+      "userAgent": "Recta/0.1 (https://github.com/NaimHz/recta)",
+      "policy": "Open source, non commercial, usage léger ; attribution Transitous et OpenStreetMap."
+    },
+    "osrm": {
+      "endpoint": "https://routing.openstreetmap.de/routed-foot",
+      "profile": "foot",
+      "userAgent": "Recta/0.1 (https://github.com/NaimHz/recta)",
+      "policy": "Instance publique FOSSGIS : une requête par seconde maximum, pas d'usage intensif ; attribution et lien « fix the map »."
+    }
+  },
+  "cities": [
+    {
+      "id": "paris",
+      "name": "Paris",
+      "trips": [
+        {
+          "id": "paris-gare-du-nord-louvre",
+          "from": "Gare du Nord",
+          "to": "Louvre",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 431.431567,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 1440,
+            "transfers": 0,
+            "transitLegs": 1,
+            "modes": ["WALK", "SUBWAY"],
+            "itinerariesReturned": 14,
+            "startTime": "2026-10-23T06:00:00Z",
+            "endTime": "2026-10-23T06:24:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 63.372556999999915,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 2457.3,
+            "distanceMeters": 3072.5,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        },
+        {
+          "id": "paris-montparnasse-tour-eiffel",
+          "from": "Montparnasse",
+          "to": "Tour Eiffel",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 199.98008899999968,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 1260,
+            "transfers": 0,
+            "transitLegs": 1,
+            "modes": ["WALK", "SUBWAY"],
+            "itinerariesReturned": 8,
+            "startTime": "2026-10-23T06:00:00Z",
+            "endTime": "2026-10-23T06:21:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 21.86183599999913,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 2572.1,
+            "distanceMeters": 3215.7,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        },
+        {
+          "id": "paris-bastille-sacre-coeur",
+          "from": "Bastille",
+          "to": "Sacré-Cœur",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 184.73133600000074,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 1620,
+            "transfers": 1,
+            "transitLegs": 2,
+            "modes": ["WALK", "SUBWAY"],
+            "itinerariesReturned": 8,
+            "startTime": "2026-10-23T06:00:00Z",
+            "endTime": "2026-10-23T06:27:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 27.27150299999994,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 3723.9,
+            "distanceMeters": 4655.6,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        },
+        {
+          "id": "paris-chatelet-bnf",
+          "from": "Châtelet",
+          "to": "Bibliothèque François Mitterrand",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 144.46026299999994,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 660,
+            "transfers": 0,
+            "transitLegs": 1,
+            "modes": ["WALK", "SUBWAY"],
+            "itinerariesReturned": 8,
+            "startTime": "2026-10-23T06:01:00Z",
+            "endTime": "2026-10-23T06:12:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 26.156232000001182,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 3538,
+            "distanceMeters": 4421.8,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        },
+        {
+          "id": "paris-luxembourg-la-defense",
+          "from": "Luxembourg",
+          "to": "La Défense",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 143.24576399999933,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 1680,
+            "transfers": 1,
+            "transitLegs": 2,
+            "modes": ["WALK", "REGIONAL_RAIL"],
+            "itinerariesReturned": 5,
+            "startTime": "2026-10-23T06:01:00Z",
+            "endTime": "2026-10-23T06:29:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 25.0178820000001,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 8109.8,
+            "distanceMeters": 10179.4,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "lyon",
+      "name": "Lyon",
+      "trips": [
+        {
+          "id": "lyon-part-dieu-bellecour",
+          "from": "Part-Dieu",
+          "to": "Bellecour",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 164.36369000000013,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 1080,
+            "transfers": 1,
+            "transitLegs": 2,
+            "modes": ["WALK", "SUBWAY"],
+            "itinerariesReturned": 9,
+            "startTime": "2026-10-23T06:02:00Z",
+            "endTime": "2026-10-23T06:20:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 22.068875999999364,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 1751.8,
+            "distanceMeters": 2197.1,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        },
+        {
+          "id": "lyon-hotel-de-ville-vaulx-en-velin",
+          "from": "Hôtel de Ville",
+          "to": "Vaulx-en-Velin La Soie",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 103.23112700000092,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 1200,
+            "transfers": 0,
+            "transitLegs": 1,
+            "modes": ["WALK", "SUBWAY"],
+            "itinerariesReturned": 5,
+            "startTime": "2026-10-23T06:01:00Z",
+            "endTime": "2026-10-23T06:21:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 23.2619250000007,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 5759.5,
+            "distanceMeters": 7196.8,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        },
+        {
+          "id": "lyon-perrache-gerland",
+          "from": "Perrache",
+          "to": "Gerland",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 180.0703820000017,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 1320,
+            "transfers": 1,
+            "transitLegs": 2,
+            "modes": ["WALK", "TRAM", "SUBWAY"],
+            "itinerariesReturned": 6,
+            "startTime": "2026-10-23T06:01:00Z",
+            "endTime": "2026-10-23T06:23:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 22.37666000000172,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 3135,
+            "distanceMeters": 3918.8,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        },
+        {
+          "id": "lyon-jean-mace-decines",
+          "from": "Jean Macé",
+          "to": "Décines Grand Large",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 125.40698199999679,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 2100,
+            "transfers": 2,
+            "transitLegs": 3,
+            "modes": ["WALK", "SUBWAY", "TRAM"],
+            "itinerariesReturned": 3,
+            "startTime": "2026-10-23T06:01:00Z",
+            "endTime": "2026-10-23T06:36:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 20.891852000000654,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 7925.6,
+            "distanceMeters": 9883.1,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        },
+        {
+          "id": "lyon-bellecour-saint-priest",
+          "from": "Bellecour",
+          "to": "Saint-Priest",
+          "transitous": {
+            "ok": true,
+            "latencyMs": 139.33901599999808,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 3000,
+            "transfers": 1,
+            "transitLegs": 2,
+            "modes": ["WALK", "SUBWAY", "BUS"],
+            "itinerariesReturned": 5,
+            "startTime": "2026-10-23T06:00:00Z",
+            "endTime": "2026-10-23T06:50:00Z"
+          },
+          "osrm": {
+            "ok": true,
+            "latencyMs": 22.571552000001248,
+            "httpStatus": 200,
+            "error": null,
+            "durationSeconds": 9673,
+            "distanceMeters": 12189.1,
+            "speedKmh": 4.5,
+            "plausibleWalk": true
+          }
+        }
+      ]
+    }
+  ],
+  "attribution": "Transitous/MOTIS et OpenStreetMap contributors ; routage piéton par FOSSGIS/OSRM."
+}
