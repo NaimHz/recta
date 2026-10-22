@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "protocol": "1.4",
+  "departure": "2026-10-23T08:00:00+02:00",
+  "criteria": {
+    "minSuccessRate": 0.9,
+    "maxP95LatencyMs": 3000,
+    "note": "Seuils fixés avant la mesure. Le volet commercial est séparé."
+  },
+  "services": {
+    "transitous": {
+      "endpoint": "https://api.transitous.org/api/v6/plan",
+      "userAgent": "Recta/0.1 (https://github.com/NaimHz/recta)",
+      "policy": "Open source, non commercial, usage léger ; attribution Transitous et OpenStreetMap."
+    },
+    "osrm": {
+      "endpoint": "https://routing.openstreetmap.de/routed-foot",
+      "profile": "foot",
+      "userAgent": "Recta/0.1 (https://github.com/NaimHz/recta)",
+      "policy": "Instance publique FOSSGIS : une requête par seconde maximum, pas d'usage intensif ; attribution et lien « fix the map »."
+    }
+  },
+  "cities": [
+    {
+      "id": "paris",
+      "name": "Paris",
+      "trips": [
+        {
+          "id": "paris-gare-du-nord-louvre",
+          "from": { "name": "Gare du Nord", "lat": 48.8809, "lon": 2.3553 },
+          "to": { "name": "Louvre", "lat": 48.8606, "lon": 2.3364 }
+        },
+        {
+          "id": "paris-montparnasse-tour-eiffel",
+          "from": { "name": "Montparnasse", "lat": 48.8421, "lon": 2.3219 },
+          "to": { "name": "Tour Eiffel", "lat": 48.8584, "lon": 2.2945 }
+        },
+        {
+          "id": "paris-bastille-sacre-coeur",
+          "from": { "name": "Bastille", "lat": 48.8532, "lon": 2.3693 },
+          "to": { "name": "Sacré-Cœur", "lat": 48.8867, "lon": 2.3431 }
+        },
+        {
+          "id": "paris-chatelet-bnf",
+          "from": { "name": "Châtelet", "lat": 48.8585, "lon": 2.347 },
+          "to": { "name": "Bibliothèque François Mitterrand", "lat": 48.8299, "lon": 2.3765 }
+        },
+        {
+          "id": "paris-luxembourg-la-defense",
+          "from": { "name": "Luxembourg", "lat": 48.8462, "lon": 2.3372 },
+          "to": { "name": "La Défense", "lat": 48.892, "lon": 2.238 }
+        }
+      ]
+    },
+    {
+      "id": "lyon",
+      "name": "Lyon",
+      "trips": [
+        {
+          "id": "lyon-part-dieu-bellecour",
+          "from": { "name": "Part-Dieu", "lat": 45.7605, "lon": 4.8586 },
+          "to": { "name": "Bellecour", "lat": 45.7578, "lon": 4.8357 }
+        },
+        {
+          "id": "lyon-hotel-de-ville-vaulx-en-velin",
+          "from": { "name": "Hôtel de Ville", "lat": 45.7673, "lon": 4.8357 },
+          "to": { "name": "Vaulx-en-Velin La Soie", "lat": 45.76, "lon": 4.918 }
+        },
+        {
+          "id": "lyon-perrache-gerland",
+          "from": { "name": "Perrache", "lat": 45.7485, "lon": 4.826 },
+          "to": { "name": "Gerland", "lat": 45.7245, "lon": 4.832 }
+        },
+        {
+          "id": "lyon-jean-mace-decines",
+          "from": { "name": "Jean Macé", "lat": 45.745, "lon": 4.842 },
+          "to": { "name": "Décines Grand Large", "lat": 45.77, "lon": 4.955 }
+        },
+        {
+          "id": "lyon-bellecour-saint-priest",
+          "from": { "name": "Bellecour", "lat": 45.7578, "lon": 4.8357 },
+          "to": { "name": "Saint-Priest", "lat": 45.696, "lon": 4.944 }
+        }
+      ]
+    }
+  ],
+  "attribution": "Transitous/MOTIS et OpenStreetMap contributors ; routage piéton par FOSSGIS/OSRM."
+}
