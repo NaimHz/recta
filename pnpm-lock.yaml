@@ -44,6 +44,9 @@ importers:
       fastify:
         specifier: ^5.12.7
         version: 5.12.7
+      opening_hours:
+        specifier: 3.15.0
+        version: 3.15.0(typescript@5.9.3)
       postgres:
         specifier: ^3.4.9
         version: 3.4.9
@@ -1265,6 +1268,14 @@ packages:
   hookified@2.2.0:
     resolution: {integrity: sha512-p/LgFzRN5FeoD3DLS6bkUapeye6E4SI6yJs6KetENd18S+FBthqYq2amJUWpt5z0EQwwHemidjY5OqJGEKm5uA==}
 
+  i18next@26.5.4:
+    resolution: {integrity: sha512-Wg0O1u2xmnsve9gICDwGekLkMe9SIC7+ZiuLYfWUGb/A3TQdRKygQ4OY9ros4raf5D66ZnW9JMrTDtGP2b8a7Q==}
+    peerDependencies:
+      typescript: ^5 || ^6 || ^7
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
@@ -1421,6 +1432,10 @@ packages:
   on-exit-leak-free@2.1.2:
     resolution: {integrity: sha512-0eJJY6hXLGf1udHwfNftBqH+g73EU4B504nZeKpz1sYRKafAghwxEJunB2O7rDZkL4PGfsMVnTXZ2EjibbqcsA==}
     engines: {node: '>=14.0.0'}
+
+  opening_hours@3.15.0:
+    resolution: {integrity: sha512-gSPN1YSLCcS4H4YL3Pc/0QRgoafuIhasQ44bM0U+62TABoEyIEeP9AuAIGSGHd9AWycq1eBwxbNfgkiCpx8bCQ==}
+    engines: {node: '>=14'}
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -1585,6 +1600,9 @@ packages:
 
   std-env@4.3.0:
     resolution: {integrity: sha512-OtU/EgQ1kIm5KwqQpBC6ZEMXrZRui11w8zgfTWp8cdO9B8OaPsbA8bTHO2P+HNo1VlUTGMVBwPhydu6poeXiag==}
+
+  suncalc@2.1.1:
+    resolution: {integrity: sha512-ufMOPzYRk5aomEs3g+qeJGdCPZWC3TL94E0HQagoSusFnNXCvfuewWBroY3lxRHqA7IA8UGvgg7dcrSSDJsuEg==}
 
   thread-stream@4.2.0:
     resolution: {integrity: sha512-e2zZ96wSChazBsbENf/Pcm/4swHt2cEKQ92rhUjkL9GCKiTDJIaTBenjE/m9DXi0QBmTMDkFDdOomUy20A1tDQ==}
@@ -2641,6 +2659,10 @@ snapshots:
 
   hookified@2.2.0: {}
 
+  i18next@26.5.4(typescript@5.9.3):
+    optionalDependencies:
+      typescript: 5.9.3
+
   ignore@5.3.2: {}
 
   ignore@7.0.13: {}
@@ -2755,6 +2777,13 @@ snapshots:
   obug@3.0.0: {}
 
   on-exit-leak-free@2.1.2: {}
+
+  opening_hours@3.15.0(typescript@5.9.3):
+    dependencies:
+      i18next: 26.5.4(typescript@5.9.3)
+      suncalc: 2.1.1
+    transitivePeerDependencies:
+      - typescript
 
   optionator@0.9.4:
     dependencies:
@@ -2905,6 +2934,8 @@ snapshots:
   split2@4.2.0: {}
 
   std-env@4.3.0: {}
+
+  suncalc@2.1.1: {}
 
   thread-stream@4.2.0:
     dependencies:

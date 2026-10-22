@@ -1,0 +1,761 @@
+{
+  "version": 1,
+  "measuredAt": "2026-10-22T13:00:34.716Z",
+  "parser": {
+    "name": "opening_hours",
+    "version": "3.15.0"
+  },
+  "attribution": "OpenStreetMap contributors",
+  "license": "ODbL-1.0",
+  "cities": {
+    "barcelona": {
+      "sample": "osm-sample-barcelona.json",
+      "protocol": "ADR-002",
+      "parser": {
+        "name": "opening_hours",
+        "version": "3.15.0"
+      },
+      "sources": [
+        {
+          "endpoint": "https://overpass-api.de/api/interpreter",
+          "osmBaseTimestamp": "2026-10-22T12:59:36Z"
+        }
+      ],
+      "sampleSources": [
+        {
+          "endpoint": "https://overpass.openstreetmap.fr/api/interpreter",
+          "osmBaseTimestamp": "2026-07-07T10:04:45Z"
+        },
+        {
+          "endpoint": "https://overpass-api.de/api/interpreter",
+          "osmBaseTimestamp": "2026-10-22T12:47:20Z"
+        },
+        {
+          "endpoint": "https://overpass-api.de/api/interpreter",
+          "osmBaseTimestamp": "2026-10-22T12:48:21Z"
+        },
+        {
+          "endpoint": "https://overpass-api.de/api/interpreter",
+          "osmBaseTimestamp": "2026-10-22T12:49:21Z"
+        }
+      ],
+      "metrics": {
+        "overall": {
+          "total": 30,
+          "withHours": 16,
+          "parsed": 16,
+          "errors": 0,
+          "missing": 0,
+          "g1": 0.5333333333333333,
+          "g2": 0,
+          "withCheckDate": 4,
+          "staleOver365": 1,
+          "medianAgeDays": 235.04206847222224
+        },
+        "iconic": {
+          "total": 15,
+          "withHours": 12,
+          "parsed": 12,
+          "errors": 0,
+          "missing": 0,
+          "g1": 0.8,
+          "g2": 0,
+          "withCheckDate": 2,
+          "staleOver365": 0,
+          "medianAgeDays": 199.04206847222224
+        },
+        "random": {
+          "total": 15,
+          "withHours": 4,
+          "parsed": 4,
+          "errors": 0,
+          "missing": 0,
+          "g1": 0.26666666666666666,
+          "g2": 0,
+          "withCheckDate": 2,
+          "staleOver365": 1,
+          "medianAgeDays": 596.5420684722221
+        },
+        "byStratum": {
+          "museums_attractions": {
+            "total": 19,
+            "withHours": 12,
+            "parsed": 12,
+            "errors": 0,
+            "missing": 0,
+            "g1": 0.631578947368421,
+            "g2": 0,
+            "withCheckDate": 3,
+            "staleOver365": 0,
+            "medianAgeDays": 115.54206847222223
+          },
+          "restaurants_cafes": {
+            "total": 5,
+            "withHours": 2,
+            "parsed": 2,
+            "errors": 0,
+            "missing": 0,
+            "g1": 0.4,
+            "g2": 0,
+            "withCheckDate": 0,
+            "staleOver365": 0,
+            "medianAgeDays": null
+          },
+          "shops_markets": {
+            "total": 6,
+            "withHours": 2,
+            "parsed": 2,
+            "errors": 0,
+            "missing": 0,
+            "g1": 0.3333333333333333,
+            "g2": 0,
+            "withCheckDate": 1,
+            "staleOver365": 1,
+            "medianAgeDays": 1077.5420684722221
+          }
+        }
+      },
+      "decision": "no-go",
+      "places": [
+        {
+          "kind": "iconic",
+          "name": "Sagrada Família",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "way",
+            "id": 132513667
+          },
+          "missing": false,
+          "osmName": "Escoles de la Sagrada Família",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "iconic",
+          "name": "Park Güell",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "way",
+            "id": 66713401
+          },
+          "missing": false,
+          "osmName": "Parc Güell",
+          "openingHours": "Jan 01-Mar 24,Oct 28-Dec 31: 08:30-18:15; Mar 25-Apr 29: 08:00-20:30; Apr 30-Aug 26: 08:00-21:30",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "close",
+            "2026-09-08": "close",
+            "2026-09-09": "close",
+            "2026-09-10": "close",
+            "2026-09-11": "close",
+            "2026-09-12": "close",
+            "2026-09-13": "close"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "Casa Batlló",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "relation",
+            "id": 9427554
+          },
+          "missing": false,
+          "osmName": "Casa Batlló",
+          "openingHours": "Mo-Su 09:00-21:00",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "La Pedrera",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "relation",
+            "id": 8974896
+          },
+          "missing": false,
+          "osmName": "Casa Milà",
+          "openingHours": "Mar 01-Nov 04: 09:00-20:30,21:00-23:00; Nov 05-Feb 28: 09:00-18:30,19:00-21:00",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "Museu Picasso",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "way",
+            "id": 188938001
+          },
+          "missing": false,
+          "osmName": "Museu Picasso",
+          "openingHours": "Jan 1, May 1, Jun 24, Dec 25 off; Tu, We, Su 09:00-20:00; Th-Sa 09:00-21:00",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "close",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "MACBA",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "way",
+            "id": 36930946
+          },
+          "missing": false,
+          "osmName": "Museu d'Art Contemporani de Barcelona",
+          "openingHours": "Mo,We-Fr 11:00-19:30; Sa 10:00-20:00; Su,PH 10:00-15:00",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "close",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "MNAC",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "node",
+            "id": 14075577293
+          },
+          "missing": false,
+          "osmName": "Museu Nacional d'Art de Catalunya",
+          "openingHours": "Tu-Sa 10:00-18:00; Su 10:00-15:00; May-Sep: Tu-Sa 10:00-20:00; PH off",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "close",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "close",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "Fundació Joan Miró",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "relation",
+            "id": 3347844
+          },
+          "missing": false,
+          "osmName": "Fundació Joan Miró",
+          "openingHours": "Tu-Su 10:00-19:00; Apr-Oct Tu-Sa 10:00-20:00; PH off",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "close",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "close",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "Palau de la Música",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "way",
+            "id": 377216661
+          },
+          "missing": false,
+          "osmName": "Palau de la Música Catalana",
+          "openingHours": "Mo-Su 09:00-15:30",
+          "checkDate": "2026-09-09",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "Santa Maria del Mar",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "way",
+            "id": 51260215
+          },
+          "missing": false,
+          "osmName": "Basílica de Santa Maria del Mar",
+          "openingHours": "Mo-Su 10:00-20:30",
+          "checkDate": "2025-11-02",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "Boqueria",
+          "stratum": "shops_markets",
+          "osm": {
+            "type": "relation",
+            "id": 6288735
+          },
+          "missing": false,
+          "osmName": "Mercat de Sant Josep - La Boqueria",
+          "openingHours": "Mo-Sa 08:00-20:30",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "close"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "Hospital de Sant Pau",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "relation",
+            "id": 7422813
+          },
+          "missing": false,
+          "osmName": "Hospital de la Santa Creu i Sant Pau",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "iconic",
+          "name": "Tibidabo",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "way",
+            "id": 106406397
+          },
+          "missing": false,
+          "osmName": "Parc d'Atraccions Tibidabo",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "iconic",
+          "name": "Castell de Montjuïc",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "relation",
+            "id": 19658818
+          },
+          "missing": false,
+          "osmName": "Castell de Montjuïc",
+          "openingHours": "Nov 01-Feb 28 10:00-18:00; Mar 01-Oct 31 10:00-20:00; Dec 25,Jan 01 off; PH off",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "close",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "iconic",
+          "name": "CosmoCaixa",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "way",
+            "id": 248742203
+          },
+          "missing": false,
+          "osmName": "Cosmocaixa",
+          "openingHours": "Tu-Su 10:00-20:00; Dec 24,Dec 31,Jan 05: 10:00-18:00; Dec 25,Jan 01,Jan 06: off",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "close",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "random",
+          "name": "Camp Nou Experience",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "node",
+            "id": 5337055959
+          },
+          "missing": false,
+          "osmName": "Camp Nou Experience",
+          "openingHours": "09:00-19:00; Dec 25,Jan 01 off",
+          "checkDate": "2026-06-29",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "random",
+          "name": "Torre de les Aigües del Besòs",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "relation",
+            "id": 7325444
+          },
+          "missing": false,
+          "osmName": "Torre de les Aigües del Besòs",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "Asil Bressol del Nen Jesús",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "way",
+            "id": 818316619
+          },
+          "missing": false,
+          "osmName": "Asil Bressol del Nen Jesús",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "LOAD",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "node",
+            "id": 13956459472
+          },
+          "missing": false,
+          "osmName": "LOAD",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "Big Fun Museum",
+          "stratum": "museums_attractions",
+          "osm": {
+            "type": "node",
+            "id": 7003408120
+          },
+          "missing": false,
+          "osmName": "Big Fun Museum",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "La Parada",
+          "stratum": "restaurants_cafes",
+          "osm": {
+            "type": "node",
+            "id": 8502866417
+          },
+          "missing": false,
+          "osmName": "La Parada",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "Huang Cheng",
+          "stratum": "restaurants_cafes",
+          "osm": {
+            "type": "node",
+            "id": 1466056119
+          },
+          "missing": false,
+          "osmName": "Huang Cheng",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "Ribeira",
+          "stratum": "restaurants_cafes",
+          "osm": {
+            "type": "node",
+            "id": 8497996119
+          },
+          "missing": false,
+          "osmName": "Ribeira",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "el Racó",
+          "stratum": "restaurants_cafes",
+          "osm": {
+            "type": "node",
+            "id": 6112965112
+          },
+          "missing": false,
+          "osmName": "el Racó",
+          "openingHours": "Mo-Su 13:00-16:00, 20:00-23:00",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "close",
+            "2026-09-08": "close",
+            "2026-09-09": "close",
+            "2026-09-10": "close",
+            "2026-09-11": "close",
+            "2026-09-12": "close",
+            "2026-09-13": "close"
+          }
+        },
+        {
+          "kind": "random",
+          "name": "365",
+          "stratum": "restaurants_cafes",
+          "osm": {
+            "type": "node",
+            "id": 6786006588
+          },
+          "missing": false,
+          "osmName": "365",
+          "openingHours": "Mo-Su 06:00-22:00",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "random",
+          "name": "Condis",
+          "stratum": "shops_markets",
+          "osm": {
+            "type": "node",
+            "id": 7525380585
+          },
+          "missing": false,
+          "osmName": "Condis",
+          "openingHours": "Mo-Su 07:00-24:00",
+          "checkDate": "",
+          "parsed": true,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {
+            "2026-09-07": "open",
+            "2026-09-08": "open",
+            "2026-09-09": "open",
+            "2026-09-10": "open",
+            "2026-09-11": "open",
+            "2026-09-12": "open",
+            "2026-09-13": "open"
+          }
+        },
+        {
+          "kind": "random",
+          "name": "La Casa del Libro",
+          "stratum": "shops_markets",
+          "osm": {
+            "type": "node",
+            "id": 5834511364
+          },
+          "missing": false,
+          "osmName": "La Casa del Libro",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "Aldi",
+          "stratum": "shops_markets",
+          "osm": {
+            "type": "node",
+            "id": 11445935669
+          },
+          "missing": false,
+          "osmName": "Aldi",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "Condis",
+          "stratum": "shops_markets",
+          "osm": {
+            "type": "node",
+            "id": 5109943423
+          },
+          "missing": false,
+          "osmName": "Condis",
+          "openingHours": "",
+          "checkDate": "2023-11-10",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        },
+        {
+          "kind": "random",
+          "name": "Bonpreu",
+          "stratum": "shops_markets",
+          "osm": {
+            "type": "node",
+            "id": 5198201043
+          },
+          "missing": false,
+          "osmName": "Bonpreu",
+          "openingHours": "",
+          "checkDate": "",
+          "parsed": false,
+          "parseError": null,
+          "warnings": [],
+          "evaluation": {}
+        }
+      ]
+    }
+  }
+}
