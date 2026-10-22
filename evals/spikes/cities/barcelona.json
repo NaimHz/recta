@@ -1,0 +1,117 @@
+{
+  "city": {
+    "id": "barcelona",
+    "name": "Barcelona",
+    "timezone": "Europe/Madrid",
+    "country": "ES",
+    "countryCode": "es",
+    "holidayState": "Cataluña",
+    "bbox": [2.052, 41.32, 2.229, 41.469],
+    "adminArea": "Barcelona",
+    "adminLevel": "8",
+    "evaluation": {
+      "dates": [
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "sunday": "2026-09-13",
+      "holiday": "2026-09-11"
+    }
+  },
+  "seed": 20261022,
+  "randomPerStratum": 5,
+  "iconic": [
+    {
+      "name": "Sagrada Família",
+      "aliases": ["sagrada familia", "la sagrada familia"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "Park Güell",
+      "aliases": ["park guell", "parc guell"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "Casa Batlló",
+      "aliases": ["casa batllo"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "La Pedrera",
+      "aliases": ["la pedrera", "casa mila"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "Museu Picasso",
+      "aliases": ["museu picasso", "museo picasso", "picasso museum"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "MACBA",
+      "aliases": [
+        "macba",
+        "museu d art contemporani de barcelona",
+        "museo de arte contemporaneo de barcelona"
+      ],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "MNAC",
+      "aliases": [
+        "mnac",
+        "museu nacional d art de catalunya",
+        "museo nacional de arte de cataluna"
+      ],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "Fundació Joan Miró",
+      "aliases": ["fundacio joan miro", "fundacion joan miro", "joan miro"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "Palau de la Música",
+      "aliases": ["palau de la musica", "palau de la musica catalana"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "Santa Maria del Mar",
+      "aliases": ["santa maria del mar"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "Boqueria",
+      "aliases": ["boqueria", "mercat de la boqueria", "la boqueria", "mercado de la boqueria"],
+      "stratum": "shops_markets"
+    },
+    {
+      "name": "Hospital de Sant Pau",
+      "aliases": [
+        "hospital de sant pau",
+        "hospital de la santa creu i sant pau",
+        "recinte modernista de sant pau"
+      ],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "Tibidabo",
+      "aliases": ["tibidabo", "parc d atraccions tibidabo", "parque de atracciones tibidabo"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "Castell de Montjuïc",
+      "aliases": ["castell de montjuic", "castle of montjuic", "castillo de montjuic"],
+      "stratum": "museums_attractions"
+    },
+    {
+      "name": "CosmoCaixa",
+      "aliases": ["cosmocaixa", "cosmocaixa barcelona"],
+      "stratum": "museums_attractions"
+    }
+  ]
+}

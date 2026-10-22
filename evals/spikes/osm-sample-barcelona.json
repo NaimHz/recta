@@ -1,0 +1,335 @@
+{
+  "version": 1,
+  "protocol": "ADR-002",
+  "createdAt": "2026-10-22T12:50:46.867Z",
+  "city": {
+    "id": "barcelona",
+    "name": "Barcelona",
+    "timezone": "Europe/Madrid",
+    "country": "ES",
+    "countryCode": "es",
+    "holidayState": "Cataluña",
+    "bbox": [2.052, 41.32, 2.229, 41.469],
+    "adminArea": "Barcelona",
+    "adminLevel": "8",
+    "evaluation": {
+      "dates": [
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "sunday": "2026-09-13",
+      "holiday": "2026-09-11"
+    },
+    "selectionArea": "administrative polygon",
+    "boundary": {
+      "provider": "Nominatim",
+      "placeId": 83756302,
+      "displayName": "Barcelona, Barcelonès, Barcelona, Catalunya, España"
+    }
+  },
+  "seed": 20261022,
+  "randomPerStratum": 5,
+  "strata": ["museums_attractions", "restaurants_cafes", "shops_markets"],
+  "candidateCounts": {
+    "museums_attractions": 294,
+    "restaurants_cafes": 5198,
+    "shops_markets": 3803
+  },
+  "places": [
+    {
+      "kind": "iconic",
+      "name": "Sagrada Família",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 132513667
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Park Güell",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 66713401
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Casa Batlló",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "relation",
+        "id": 9427554
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "La Pedrera",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "relation",
+        "id": 8974896
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Museu Picasso",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 188938001
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "MACBA",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 36930946
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "MNAC",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 14075577293
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Fundació Joan Miró",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "relation",
+        "id": 3347844
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Palau de la Música",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 377216661
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Santa Maria del Mar",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 51260215
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Boqueria",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "relation",
+        "id": 6288735
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Hospital de Sant Pau",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "relation",
+        "id": 7422813
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Tibidabo",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 106406397
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "Castell de Montjuïc",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "relation",
+        "id": 19658818
+      }
+    },
+    {
+      "kind": "iconic",
+      "name": "CosmoCaixa",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 248742203
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Camp Nou Experience",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 5337055959
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Torre de les Aigües del Besòs",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "relation",
+        "id": 7325444
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Asil Bressol del Nen Jesús",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 818316619
+      }
+    },
+    {
+      "kind": "random",
+      "name": "LOAD",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 13956459472
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Big Fun Museum",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 7003408120
+      }
+    },
+    {
+      "kind": "random",
+      "name": "La Parada",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 8502866417
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Huang Cheng",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 1466056119
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Ribeira",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 8497996119
+      }
+    },
+    {
+      "kind": "random",
+      "name": "el Racó",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 6112965112
+      }
+    },
+    {
+      "kind": "random",
+      "name": "365",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 6786006588
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Condis",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 7525380585
+      }
+    },
+    {
+      "kind": "random",
+      "name": "La Casa del Libro",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 5834511364
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Aldi",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 11445935669
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Condis",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 5109943423
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Bonpreu",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 5198201043
+      }
+    }
+  ],
+  "sources": [
+    {
+      "endpoint": "https://overpass.openstreetmap.fr/api/interpreter",
+      "osmBaseTimestamp": "2026-07-07T10:04:45Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T12:47:20Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T12:48:21Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T12:49:21Z"
+    }
+  ],
+  "attribution": "OpenStreetMap contributors",
+  "license": "ODbL-1.0"
+}
