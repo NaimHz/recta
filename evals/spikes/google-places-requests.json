@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "protocol": "1.5",
+  "status": "not_executed",
+  "reason": "Aucun compte de facturation ni clé API Google. Décision de ne pas payer pour l'instant.",
+  "plannedAt": "2026-10-22",
+  "execution": {
+    "billingRequired": true,
+    "apiKeyRequired": true,
+    "executed": false
+  },
+  "method": "two_stage",
+  "methodNote": "Text Search IDs Only (gratuit) pour obtenir le place_id, puis Place Details Enterprise pour les horaires et le statut. Le place_id est conservable ; les autres contenus Google ne sont pas stockés.",
+  "sourceSample": "evals/spikes/osm-raw-reference.json",
+  "sampleNote": "Les 10 lieux sont choisis parmi les lieux sans horaires OSM, 5 par ville. Ce n'est pas un échantillon aléatoire : le test vérifie les champs, le SKU, le coût et le stockage, pas la couverture.",
+  "services": {
+    "search": {
+      "endpoint": "https://places.googleapis.com/v1/places:searchText",
+      "method": "POST",
+      "fieldMask": ["places.id"],
+      "sku": "Text Search Essentials (IDs Only)",
+      "languageCode": "fr",
+      "regionCode": "FR",
+      "pageSize": 1
+    },
+    "details": {
+      "endpoint": "https://places.googleapis.com/v1/places/{placeId}",
+      "method": "GET",
+      "fieldMask": [
+        "id",
+        "displayName",
+        "formattedAddress",
+        "location",
+        "regularOpeningHours",
+        "currentOpeningHours",
+        "businessStatus",
+        "utcOffsetMinutes",
+        "timeZone"
+      ],
+      "sku": "Place Details Enterprise",
+      "languageCode": "fr"
+    }
+  },
+  "costModel": {
+    "fx": {
+      "eurUsd": 1.08,
+      "note": "Taux fixe pour le calcul, à revérifier avant activation."
+    },
+    "skus": {
+      "textSearchIdsOnly": {
+        "pricePer1000Usd": 0,
+        "freeMonthly": null,
+        "note": "Gratuit, IDs only."
+      },
+      "placeDetailsEnterprise": {
+        "pricePer1000Usd": 20,
+        "freeMonthly": 1000,
+        "note": "Horaires, statut et identité ; 1 000 appels gratuits par mois et par SKU si la facturation est activée."
+      }
+    },
+    "planned": {
+      "places": 10,
+      "searchCalls": 10,
+      "detailsCalls": 10,
+      "detailsCostUsd": 0.2,
+      "detailsCostEur": 0.185,
+      "withinFreeTierIfBillingEnabled": true
+    },
+    "perItinerary": {
+      "worstCase3Stops": {
+        "detailsCalls": 3,
+        "costUsd": 0.06,
+        "costEur": 0.056
+      },
+      "worstCase5Stops": {
+        "detailsCalls": 5,
+        "costUsd": 0.1,
+        "costEur": 0.093
+      },
+      "worstCase8Stops": {
+        "detailsCalls": 8,
+        "costUsd": 0.16,
+        "costEur": 0.148
+      }
+    },
+    "monthlyBudget": {
+      "googlePlacesEur": 50,
+      "googlePlacesUsd": 54,
+      "freeDetailsCalls": 1000,
+      "paidCallsAtBudget": 2700,
+      "totalCallsAtBudget": 3700,
+      "threeStopItinerariesAtBudget": 1233,
+      "note": "Budget mensuel ADR-005, en incluant les 1 000 appels Enterprise gratuits. Le nombre réel de vérifications sera plus élevé si OSM couvre une partie des horaires."
+    }
+  },
+  "storage": {
+    "placeId": "permanent",
+    "googleCoordinates": "30 jours maximum",
+    "googleNameAddressHoursStatus": "non stockés ; utilisés transitoirement",
+    "derivedResult": "stocké avec la source et la date de vérification",
+    "note": "Les TTL d'ADR-005 s'appliquent aux champs OSM et curatés. Les champs Google suivent la politique plus stricte ; 1.6 consolide la matrice."
+  },
+  "attribution": {
+    "required": "Logo ou texte Google Maps à proximité du contenu issu de Google ; les conditions d'utilisation et la politique de confidentialité doivent intégrer celles de Google.",
+    "logo": "Logo Google Maps, 16 à 19 dp de hauteur, non modifié, libellé accessible « Google Maps ».",
+    "text": "« Google Maps », Roboto 400, 12 à 16 sp, #1F1F1F, #5E5E5E ou blanc, contraste 4,5:1, non traduit.",
+    "source": "https://developers.google.com/maps/documentation/places/web-service/policies"
+  },
+  "requests": [
+    {
+      "id": "paris-chateau-de-vincennes",
+      "cityId": "paris",
+      "cityName": "Paris",
+      "name": "Château de Vincennes",
+      "stratum": "museums_attractions",
+      "osm": { "type": "way", "id": 23032971 },
+      "searchText": "Château de Vincennes, Paris, France"
+    },
+    {
+      "id": "paris-musee-arc-de-triomphe",
+      "cityId": "paris",
+      "cityName": "Paris",
+      "name": "Musée de l'Arc de Triomphe",
+      "stratum": "museums_attractions",
+      "osm": { "type": "node", "id": 12424857994 },
+      "searchText": "Musée de l'Arc de Triomphe, Paris, France"
+    },
+    {
+      "id": "paris-orangerie-du-senat",
+      "cityId": "paris",
+      "cityName": "Paris",
+      "name": "Orangerie du Sénat",
+      "stratum": "museums_attractions",
+      "osm": { "type": "way", "id": 62848404 },
+      "searchText": "Orangerie du Sénat, Paris, France"
+    },
+    {
+      "id": "paris-reseda-cafe",
+      "cityId": "paris",
+      "cityName": "Paris",
+      "name": "Réséda Café",
+      "stratum": "restaurants_cafes",
+      "osm": { "type": "node", "id": 12973619479 },
+      "searchText": "Réséda Café, Paris, France"
+    },
+    {
+      "id": "paris-shy-and-co",
+      "cityId": "paris",
+      "cityName": "Paris",
+      "name": "Shy & Co",
+      "stratum": "shops_markets",
+      "osm": { "type": "node", "id": 1468378326 },
+      "searchText": "Shy & Co, Paris, France"
+    },
+    {
+      "id": "lyon-musee-jean-couty",
+      "cityId": "lyon",
+      "cityName": "Lyon",
+      "name": "Musée Jean Couty",
+      "stratum": "museums_attractions",
+      "osm": { "type": "way", "id": 125014288 },
+      "searchText": "Musée Jean Couty, Lyon, France"
+    },
+    {
+      "id": "lyon-chateau-de-choulans",
+      "cityId": "lyon",
+      "cityName": "Lyon",
+      "name": "Château de Choulans",
+      "stratum": "museums_attractions",
+      "osm": { "type": "way", "id": 40557440 },
+      "searchText": "Château de Choulans, Lyon, France"
+    },
+    {
+      "id": "lyon-magma-coffee-shop",
+      "cityId": "lyon",
+      "cityName": "Lyon",
+      "name": "Magma Coffee shop",
+      "stratum": "restaurants_cafes",
+      "osm": { "type": "node", "id": 11299514272 },
+      "searchText": "Magma Coffee shop, Lyon, France"
+    },
+    {
+      "id": "lyon-r2c-casino",
+      "cityId": "lyon",
+      "cityName": "Lyon",
+      "name": "R2C Casino",
+      "stratum": "restaurants_cafes",
+      "osm": { "type": "node", "id": 2106908997 },
+      "searchText": "R2C Casino, Lyon, France"
+    },
+    {
+      "id": "lyon-pop-shop",
+      "cityId": "lyon",
+      "cityName": "Lyon",
+      "name": "Pop shop",
+      "stratum": "shops_markets",
+      "osm": { "type": "node", "id": 12645770119 },
+      "searchText": "Pop shop, Lyon, France"
+    }
+  ]
+}
