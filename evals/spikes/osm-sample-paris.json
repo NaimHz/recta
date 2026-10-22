@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "protocol": "calibration",
+  "createdAt": "2026-10-22T13:48:00.965Z",
+  "city": {
+    "id": "paris",
+    "name": "Paris",
+    "timezone": "Europe/Paris",
+    "country": "FR",
+    "countryCode": "fr",
+    "holidayState": "Île-de-France",
+    "bbox": [2.2241, 48.8156, 2.4699, 48.9022],
+    "evaluation": {
+      "dates": [
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "sunday": "2026-09-13",
+      "holiday": null
+    },
+    "selectionArea": "bbox",
+    "boundary": null
+  },
+  "seed": 20261022,
+  "randomPerStratum": 10,
+  "strata": ["museums_attractions", "restaurants_cafes", "shops_markets"],
+  "candidateCounts": {
+    "museums_attractions": 1091,
+    "restaurants_cafes": 13669,
+    "shops_markets": 11302
+  },
+  "places": [
+    {
+      "kind": "random",
+      "name": "Galerie Six",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 9725595236
+      }
+    },
+    {
+      "kind": "random",
+      "name": "4M2",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 10130718216
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Galerie Collection privée - Le 33 mai",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 9328182243
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Orangerie du Sénat",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 62848404
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Fonds Enki Bilal",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 14045494335
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Tornabuoni Art",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 11463183207
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Château de Vincennes",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 23032971
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Verger-Roseraie",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 10271575021
+      }
+    },
+    {
+      "kind": "random",
+      "name": "La Galerie des Enfants",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 1107053911
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Musée de l'Arc de Triomphe",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 12424857994
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Réséda Café",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 12973619479
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Smart Bowls",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 7449792490
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Tesoro d’Italia",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 13463724694
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Le Gavroche",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 1933419996
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Le Figuier",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 2531994272
+      }
+    },
+    {
+      "kind": "random",
+      "name": "La Laiterie",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 12830332652
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Le Pont traversé",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 5615261723
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Piero TT",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 5003426283
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Café du Nord",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 4823662541
+      }
+    },
+    {
+      "kind": "random",
+      "name": "La Folle Blanche",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 3541592623
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Franprix",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 3335824053
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Vice Versa",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 11030092187
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Shy & Co",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 1468378326
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Stella exotique",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 2256156637
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Pâtisserie de Choisy",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 1231409119
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Librairie Relais La Procure",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 2934408301
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Archibald",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 9672800537
+      }
+    },
+    {
+      "kind": "random",
+      "name": "La corbeille de Fontenay",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 7338788696
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Paul & Bertine",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 3180887762
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Scarlet Ross",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 1456695091
+      }
+    }
+  ],
+  "sources": [
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T13:44:06Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T13:45:06Z"
+    },
+    {
+      "endpoint": "https://overpass.openstreetmap.fr/api/interpreter",
+      "osmBaseTimestamp": "2026-07-08T10:27:17Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T13:46:05Z"
+    }
+  ],
+  "attribution": "OpenStreetMap contributors",
+  "license": "ODbL-1.0"
+}

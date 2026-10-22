@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "protocol": "calibration",
+  "createdAt": "2026-10-22T13:45:20.608Z",
+  "city": {
+    "id": "lyon",
+    "name": "Lyon",
+    "timezone": "Europe/Paris",
+    "country": "FR",
+    "countryCode": "fr",
+    "holidayState": "Auvergne-Rhône-Alpes",
+    "bbox": [4.771, 45.707, 4.898, 45.808],
+    "evaluation": {
+      "dates": [
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "sunday": "2026-09-13",
+      "holiday": null
+    },
+    "selectionArea": "bbox",
+    "boundary": null
+  },
+  "seed": 20261022,
+  "randomPerStratum": 10,
+  "strata": ["museums_attractions", "restaurants_cafes", "shops_markets"],
+  "candidateCounts": {
+    "museums_attractions": 154,
+    "restaurants_cafes": 2316,
+    "shops_markets": 2298
+  },
+  "places": [
+    {
+      "kind": "random",
+      "name": "Pirogue Monoxyle du Parc de la Tête d'Or",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 11005829237
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Musée Jean Couty",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 125014288
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Cité Internationale de la Gastronomie de Lyon",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 6943618299
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Atelier Antonins",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 11901337122
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Cathédrale Saint-Jean",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 136200148
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Aux 2 ateliers",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 8685851867
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Galerie Vrais Rêves",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 8699441650
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Institut Lumière",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 4485572406
+      }
+    },
+    {
+      "kind": "random",
+      "name": "ComhiC eBike Segway Tour",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "node",
+        "id": 7629079965
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Château de Choulans",
+      "stratum": "museums_attractions",
+      "osm": {
+        "type": "way",
+        "id": 40557440
+      }
+    },
+    {
+      "kind": "random",
+      "name": "R2C Casino",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 2106908997
+      }
+    },
+    {
+      "kind": "random",
+      "name": "La Virée",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 13242945314
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Des Gens Bien",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 13992283929
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Étienne Coffee & Shop",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 761255795
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Bistrot Bonnel",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 6687114808
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Magma Coffee shop",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 11299514272
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Monna Lisa",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 831557126
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Little Italy",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 4547990869
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Teneo",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 2476993853
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Les Loges",
+      "stratum": "restaurants_cafes",
+      "osm": {
+        "type": "node",
+        "id": 14002615062
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Casino",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 1460489223
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Michael Kors",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "way",
+        "id": 1044165769
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Farine & Cannelle",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 2183110507
+      }
+    },
+    {
+      "kind": "random",
+      "name": "La Cagette des Gones",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 10795791549
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Monop'",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 4235506692
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Pop shop",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 12645770119
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Wolford",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 7105230748
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Le petit Souk",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 7004513377
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Casino Shop",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 4366042291
+      }
+    },
+    {
+      "kind": "random",
+      "name": "Boucherie Lafayette",
+      "stratum": "shops_markets",
+      "osm": {
+        "type": "node",
+        "id": 9968166272
+      }
+    }
+  ],
+  "sources": [
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T13:41:02Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T13:42:02Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T13:43:06Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmBaseTimestamp": "2026-10-22T13:44:06Z"
+    }
+  ],
+  "attribution": "OpenStreetMap contributors",
+  "license": "ODbL-1.0"
+}
