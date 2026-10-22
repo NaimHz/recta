@@ -323,13 +323,27 @@ function formatPercent(value: number): string {
 }
 
 async function main(): Promise<void> {
+  const mode = process.argv.includes('--reference') ? 'reference' : 'all'
   const entries = await readdir(spikesDirectory)
   const sampleFiles = entries
     .filter((entry) => /^osm-sample-.*\.json$/.test(entry))
     .sort((left, right) => left.localeCompare(right))
+  const selected: Array<{ file: string; sample: SampleFile }> = []
 
-  if (sampleFiles.length === 0) {
-    throw new Error('Aucun échantillon OSM trouvé.')
+  for (const file of sampleFiles) {
+    const sample = JSON.parse(await readFile(join(spikesDirectory, file), 'utf8')) as SampleFile
+
+    if (mode === 'reference' && sample.protocol !== 'calibration') continue
+
+    selected.push({ file, sample })
+  }
+
+  if (selected.length === 0) {
+    throw new Error(
+      mode === 'reference'
+        ? 'Aucun échantillon de calibration trouvé.'
+        : 'Aucun échantillon OSM trouvé.',
+    )
   }
 
   const measuredAt = new Date()
@@ -337,8 +351,7 @@ async function main(): Promise<void> {
   const summaryCities: Record<string, Omit<CityResult, 'places'>> = {}
   const decisions: Record<string, CityResult['decision']> = {}
 
-  for (const file of sampleFiles) {
-    const sample = JSON.parse(await readFile(join(spikesDirectory, file), 'utf8')) as SampleFile
+  for (const { file, sample } of selected) {
     console.log(`Mesure : ${sample.city.name} (${sample.places.length} lieux).`)
     const details = await fetchDetails(sample.places)
     const result = computeCityResult(
@@ -361,6 +374,9 @@ async function main(): Promise<void> {
     )
   }
 
+  const suffix = mode === 'reference' ? '-reference' : selected.length > 1 ? '-all' : ''
+  const rawName = `osm-raw${suffix}.json`
+  const summaryName = `osm-summary${suffix}.json`
   const raw = {
     version: 1,
     measuredAt: measuredAt.toISOString(),
@@ -385,17 +401,13 @@ async function main(): Promise<void> {
     decision: decisions,
   }
 
+  await writeFile(join(spikesDirectory, rawName), `${JSON.stringify(raw, null, 2)}\n`, 'utf8')
   await writeFile(
-    join(spikesDirectory, 'osm-raw.json'),
-    `${JSON.stringify(raw, null, 2)}\n`,
-    'utf8',
-  )
-  await writeFile(
-    join(spikesDirectory, 'osm-summary.json'),
+    join(spikesDirectory, summaryName),
     `${JSON.stringify(summary, null, 2)}\n`,
     'utf8',
   )
-  console.log('Résultats écrits dans evals/spikes/osm-raw.json et evals/spikes/osm-summary.json.')
+  console.log(`Résultats écrits dans evals/spikes/${rawName} et evals/spikes/${summaryName}.`)
 }
 
 main().catch((error: unknown) => {
