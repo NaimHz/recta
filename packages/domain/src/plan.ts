@@ -39,10 +39,30 @@ export const OpeningHoursSchema = z
 
 export type OpeningHours = z.infer<typeof OpeningHoursSchema>
 
+export const CoordinatesSchema = z.object({
+  lat: z.number().min(-90).max(90),
+  lon: z.number().min(-180).max(180),
+})
+
+export type Coordinates = z.infer<typeof CoordinatesSchema>
+
+export const PlaceSourceSchema = z.object({
+  provider: z.enum(['osm', 'google', 'fixture', 'curated']),
+  sourceDate: IsoDateSchema.nullable(),
+  retrievedAt: z.string().nullable(),
+})
+
+export type PlaceSource = z.infer<typeof PlaceSourceSchema>
+
 export const PlaceSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
+  coordinates: CoordinatesSchema.nullable(),
+  address: z.string().nullable(),
+  category: z.string().nullable(),
+  openingHoursRaw: z.string().nullable(),
   openingHours: OpeningHoursSchema.nullable(),
+  source: PlaceSourceSchema,
 })
 
 export type Place = z.infer<typeof PlaceSchema>

@@ -8,11 +8,20 @@ function makeStop(overrides: Partial<Stop> = {}): Stop {
     place: {
       id: 'place-1',
       name: 'Lieu',
+      coordinates: null,
+      address: null,
+      category: null,
+      openingHoursRaw: '09:00-18:00',
       openingHours: {
         opensAt: '09:00',
         closesAt: '18:00',
         closedOn: [],
         raw: '09:00-18:00',
+      },
+      source: {
+        provider: 'fixture',
+        sourceDate: '2026-10-24',
+        retrievedAt: null,
       },
     },
     start: '09:00',
@@ -44,11 +53,20 @@ describe('verifyOpeningHours', () => {
         place: {
           id: 'place-3',
           name: 'Musée',
+          coordinates: null,
+          address: null,
+          category: null,
+          openingHoursRaw: '09:30-18:00; fermé Mon',
           openingHours: {
             opensAt: '09:30',
             closesAt: '18:00',
             closedOn: ['Mon'],
             raw: '09:30-18:00; fermé Mon',
+          },
+          source: {
+            provider: 'fixture',
+            sourceDate: '2026-10-24',
+            retrievedAt: null,
           },
         },
       }),
@@ -88,11 +106,20 @@ describe('verifyOpeningHours', () => {
         place: {
           id: 'place-1',
           name: 'Musée',
+          coordinates: null,
+          address: null,
+          category: null,
+          openingHoursRaw: '09:30-18:00; fermé Mon',
           openingHours: {
             opensAt: '09:30',
             closesAt: '18:00',
             closedOn: ['Mon'],
             raw: '09:30-18:00; fermé Mon',
+          },
+          source: {
+            provider: 'fixture',
+            sourceDate: '2026-10-24',
+            retrievedAt: null,
           },
         },
       }),
@@ -144,7 +171,16 @@ describe('verifyOpeningHours', () => {
         place: {
           id: 'place-1',
           name: 'Lieu sans horaires',
+          coordinates: null,
+          address: null,
+          category: null,
+          openingHoursRaw: null,
           openingHours: null,
+          source: {
+            provider: 'fixture',
+            sourceDate: '2026-10-24',
+            retrievedAt: null,
+          },
         },
       }),
     ])

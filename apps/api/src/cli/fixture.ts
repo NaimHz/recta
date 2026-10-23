@@ -45,7 +45,7 @@ function parseClosedDays(value: string, lineNumber: number): DayCode[] {
   })
 }
 
-function parseStopLine(line: string, lineNumber: number, index: number): Stop {
+function parseStopLine(line: string, lineNumber: number, index: number, sourceDate: string): Stop {
   const parts = line.split('|').map((part) => part.trim())
 
   if (parts.length !== 4) {
@@ -82,7 +82,16 @@ function parseStopLine(line: string, lineNumber: number, index: number): Stop {
     place: {
       id: `place-${index + 1}`,
       name,
+      coordinates: null,
+      address: null,
+      category: null,
+      openingHoursRaw: hoursRange === '-' ? null : hoursRange,
       openingHours,
+      source: {
+        provider: 'fixture',
+        sourceDate,
+        retrievedAt: null,
+      },
     },
     start,
     end,
@@ -96,7 +105,7 @@ function parseStopLine(line: string, lineNumber: number, index: number): Stop {
 export function parseFixture(text: string): Plan {
   let date: string | null = null
   let timezone: string | null = null
-  const stops: Stop[] = []
+  const rawStops: Array<{ line: string; lineNumber: number; index: number }> = []
 
   text.split(/\r?\n/).forEach((rawLine, index) => {
     const line = rawLine.trim()
@@ -115,17 +124,23 @@ export function parseFixture(text: string): Plan {
       return
     }
 
-    stops.push(parseStopLine(line, lineNumber, stops.length))
+    rawStops.push({ line, lineNumber, index: rawStops.length })
   })
 
   if (!date) throw new FixtureParseError(0, 'ligne « day: YYYY-MM-DD » manquante')
   if (!timezone) throw new FixtureParseError(0, 'ligne « timezone: … » manquante')
+
+  const dayDate = date
+  const stops = rawStops.map(({ line, lineNumber, index }) =>
+    parseStopLine(line, lineNumber, index, dayDate),
+  )
+
   if (stops.length !== 3) {
     throw new FixtureParseError(0, `3 stops attendus, ${stops.length} trouvés`)
   }
 
   return PlanSchema.parse({
     schemaVersion: SCHEMA_VERSION,
-    days: [{ date, timezone, stops }],
+    days: [{ date: dayDate, timezone, stops }],
   })
 }

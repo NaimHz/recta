@@ -1,0 +1,38 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-22T00:00:00Z"
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 101,
+      "lat": 48.8606,
+      "lon": 2.3376,
+      "tags": {
+        "name": "Musée Exemple",
+        "tourism": "museum",
+        "opening_hours": "Mo-Su 09:00-18:00",
+        "check_date": "2026-09-01",
+        "addr:housenumber": "1",
+        "addr:street": "Rue Exemple",
+        "addr:postcode": "00000",
+        "addr:city": "Ville Exemple"
+      }
+    },
+    {
+      "type": "way",
+      "id": 202,
+      "center": {
+        "lat": 48.8566,
+        "lon": 2.3522
+      },
+      "tags": {
+        "name": "Café Exemple",
+        "amenity": "cafe",
+        "opening_hours": "Mo-Fr 08:00-19:00"
+      }
+    }
+  ]
+}

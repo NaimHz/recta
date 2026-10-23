@@ -2,6 +2,7 @@ export { CityConfigSchema } from './city'
 export type { CityConfig } from './city'
 export { verifyOpeningHours, dayCodeForDate } from './opening-hours'
 export {
+  CoordinatesSchema,
   DAY_CODES,
   DaySchema,
   EvidenceSchema,
@@ -11,12 +12,14 @@ export {
   LocalTimeSchema,
   OpeningHoursSchema,
   PlaceSchema,
+  PlaceSourceSchema,
   PlanSchema,
   StopSchema,
   VerificationResultSchema,
   VerificationStatusSchema,
 } from './plan'
 export type {
+  Coordinates,
   Day,
   DayCode,
   Evidence,
@@ -24,6 +27,7 @@ export type {
   IssueSeverity,
   OpeningHours,
   Place,
+  PlaceSource,
   Plan,
   Stop,
   VerificationResult,

@@ -25,7 +25,8 @@
     "db:seed": "pnpm --filter @recta/api db:seed",
     "db:reset": "pnpm --filter @recta/api db:reset",
     "db:check": "pnpm --filter @recta/api db:check",
-    "verify": "pnpm --filter @recta/api verify"
+    "verify": "pnpm --filter @recta/api verify",
+    "osm:fetch": "pnpm --filter @recta/api osm:fetch"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

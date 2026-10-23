@@ -36,10 +36,10 @@ function buildEvidence(day: Day, stop: Stop, weekday: DayCode): Evidence {
   const hours = stop.place.openingHours
 
   return {
-    source: 'fixture',
-    sourceDate: day.date,
-    retrievedAt: null,
-    raw: hours?.raw ?? '',
+    source: stop.place.source.provider,
+    sourceDate: stop.place.source.sourceDate,
+    retrievedAt: stop.place.source.retrievedAt,
+    raw: stop.place.openingHoursRaw ?? hours?.raw ?? '',
     fields: {
       placeName: stop.place.name,
       date: day.date,

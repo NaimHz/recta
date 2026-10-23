@@ -43,10 +43,14 @@ attend que Postgres soit prêt.
 | `pnpm format` | Prettier |
 | `pnpm test` | Tests unitaires |
 | `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort le résultat JSON avec preuve |
+| `pnpm osm:fetch` | Récupère 25 lieux OSM par ville de référence et écrit `evals/sources/osm-places.json` |
 | `pnpm build` | Build du web |
 | `pnpm db:up` | Démarre Postgres/PostGIS |
 | `pnpm db:reset` | Recrée la base, applique les migrations et charge les villes |
 | `pnpm db:check` | Vérifie PostGIS et la présence des villes |
+
+`pnpm osm:fetch --nominatim` ajoute un géocodage de contrôle par ville, à une requête par seconde
+maximum. Les appels Overpass sont espacés d'au moins une seconde.
 
 ## Structure
 

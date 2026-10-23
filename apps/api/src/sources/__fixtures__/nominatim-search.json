@@ -1,0 +1,18 @@
+[
+  {
+    "place_id": 123456,
+    "osm_type": "relation",
+    "osm_id": 7444,
+    "display_name": "Ville Exemple, Région Exemple, France",
+    "lat": "48.8566",
+    "lon": "2.3522",
+    "category": "boundary",
+    "type": "administrative",
+    "address": {
+      "city": "Ville Exemple",
+      "state": "Région Exemple",
+      "country": "France",
+      "country_code": "fr"
+    }
+  }
+]
