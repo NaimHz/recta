@@ -1,0 +1,987 @@
+{
+  "version": 1,
+  "source": "annotation manuelle",
+  "cases": {
+    "wa-paris-louvre": {
+      "days": [
+        {
+          "dateText": "Samedi 24 octobre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée du Louvre",
+              "startText": "09:00",
+              "endText": "11:00",
+              "type": "musée",
+              "sourceText": "09:00-11:00 Musée du Louvre"
+            },
+            {
+              "name": "Comptoir des Marronniers",
+              "startText": "12:30",
+              "endText": null,
+              "type": null,
+              "sourceText": "12:30 déjeuner au Comptoir des Marronniers"
+            },
+            {
+              "name": "Musée d'Orsay",
+              "startText": "15:00",
+              "endText": "17:00",
+              "type": "musée",
+              "sourceText": "15:00-17:00 Musée d'Orsay"
+            }
+          ]
+        }
+      ]
+    },
+    "wa-dimanche": {
+      "days": [
+        {
+          "dateText": "Dimanche",
+          "city": null,
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "café",
+              "startText": "9h",
+              "endText": null,
+              "type": "café",
+              "sourceText": "9h : café à la terrasse"
+            },
+            {
+              "name": "expo Photo",
+              "startText": "11h",
+              "endText": null,
+              "type": null,
+              "sourceText": "11h : expo Photo"
+            },
+            {
+              "name": "parc",
+              "startText": "15h",
+              "endText": null,
+              "type": "parc",
+              "sourceText": "15h : parc"
+            }
+          ]
+        }
+      ]
+    },
+    "wa-abreviations": {
+      "days": [
+        {
+          "dateText": "sam 24/10",
+          "city": null,
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée Picasso",
+              "startText": "10h30",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "10h30 Musée Picasso"
+            },
+            {
+              "name": "Café de Flore",
+              "startText": "13h",
+              "endText": null,
+              "type": "café",
+              "sourceText": "13h Café de Flore"
+            },
+            {
+              "name": "Centre Pompidou",
+              "startText": "15h30",
+              "endText": null,
+              "type": null,
+              "sourceText": "15h30 Centre Pompidou"
+            }
+          ]
+        }
+      ]
+    },
+    "wa-lyon-samedi": {
+      "days": [
+        {
+          "dateText": "Samedi 25 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée des Confluences",
+              "startText": "10h30",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "10h30 : Musée des Confluences"
+            },
+            {
+              "name": "Brasserie Georges",
+              "startText": "13h",
+              "endText": null,
+              "type": "brasserie",
+              "sourceText": "13h : déjeuner à la Brasserie Georges"
+            },
+            {
+              "name": "Basilique Notre-Dame de Fourvière",
+              "startText": "15h30",
+              "endText": "17h",
+              "type": "basilique",
+              "sourceText": "15h30-17h : Basilique Notre-Dame de Fourvière"
+            }
+          ]
+        }
+      ]
+    },
+    "wa-paris-musees": {
+      "days": [
+        {
+          "dateText": "samedi 24/10",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "musée du Louvre",
+              "startText": "9h",
+              "endText": "11h",
+              "type": "musée",
+              "sourceText": "9h-11h : musée du Louvre"
+            },
+            {
+              "name": "musée Rodin",
+              "startText": "14h",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "14h : musée Rodin"
+            },
+            {
+              "name": "musée d'Orsay",
+              "startText": "17h30",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "17h30 : musée d'Orsay"
+            }
+          ]
+        }
+      ]
+    },
+    "wa-english": {
+      "days": [
+        {
+          "dateText": "Saturday",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Louvre Museum",
+              "startText": "10:00 AM",
+              "endText": "12:00 PM",
+              "type": "museum",
+              "sourceText": "10:00 AM - 12:00 PM: Louvre Museum"
+            },
+            {
+              "name": "Café Marly",
+              "startText": "1:30 PM",
+              "endText": null,
+              "type": "café",
+              "sourceText": "1:30 PM: lunch at Café Marly"
+            },
+            {
+              "name": "Jardin des Tuileries",
+              "startText": "4:00 PM",
+              "endText": null,
+              "type": "jardin",
+              "sourceText": "4:00 PM: Jardin des Tuileries"
+            }
+          ]
+        }
+      ]
+    },
+    "wa-sans-horaires": {
+      "days": [
+        {
+          "dateText": "Samedi",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Opéra Garnier",
+              "startText": null,
+              "endText": null,
+              "type": "opéra",
+              "sourceText": "- Opéra Garnier"
+            },
+            {
+              "name": "Galeries Lafayette",
+              "startText": null,
+              "endText": null,
+              "type": null,
+              "sourceText": "- Galeries Lafayette"
+            },
+            {
+              "name": "chez Paul",
+              "startText": null,
+              "endText": null,
+              "type": null,
+              "sourceText": "- dîner chez Paul"
+            }
+          ]
+        }
+      ]
+    },
+    "wa-deux-jours": {
+      "days": [
+        {
+          "dateText": "Vendredi 23/10",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Bouchon des Filles",
+              "startText": "19h",
+              "endText": null,
+              "type": "bouchon",
+              "sourceText": "19h : Bouchon des Filles"
+            }
+          ]
+        },
+        {
+          "dateText": "Samedi 24/10",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "musée du Louvre",
+              "startText": "9h30",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "9h30 : musée du Louvre"
+            },
+            {
+              "name": "Jardin des Tuileries",
+              "startText": "13h",
+              "endText": null,
+              "type": "jardin",
+              "sourceText": "13h : Jardin des Tuileries"
+            }
+          ]
+        }
+      ]
+    },
+    "wa-food": {
+      "days": [
+        {
+          "dateText": "dimanche 26 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "marché Saint-Antoine",
+              "startText": "11h",
+              "endText": null,
+              "type": "marché",
+              "sourceText": "11h : marché Saint-Antoine"
+            },
+            {
+              "name": "Brasserie Georges",
+              "startText": "12h30",
+              "endText": null,
+              "type": "brasserie",
+              "sourceText": "12h30 : déjeuner à la Brasserie Georges"
+            },
+            {
+              "name": "chez Pralus",
+              "startText": "15h",
+              "endText": null,
+              "type": "café",
+              "sourceText": "15h : café chez Pralus"
+            }
+          ]
+        }
+      ]
+    },
+    "wa-lyon-dimanche": {
+      "days": [
+        {
+          "dateText": "Dimanche 26/10",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Basilique de Fourvière",
+              "startText": "10h",
+              "endText": null,
+              "type": "basilique",
+              "sourceText": "10h : Basilique de Fourvière"
+            },
+            {
+              "name": "Halles Paul Bocuse",
+              "startText": "12h",
+              "endText": null,
+              "type": "halles",
+              "sourceText": "12h : déjeuner aux Halles Paul Bocuse"
+            },
+            {
+              "name": "Musée des Confluences",
+              "startText": "16h",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "16h : Musée des Confluences"
+            }
+          ]
+        }
+      ]
+    },
+    "email-lyon": {
+      "days": [
+        {
+          "dateText": "Samedi 25 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Basilique Notre-Dame de Fourvière",
+              "startText": "10h00",
+              "endText": "12h00",
+              "type": "basilique",
+              "sourceText": "10h00 | Basilique Notre-Dame de Fourvière | 10h00-12h00"
+            },
+            {
+              "name": "Brasserie Georges",
+              "startText": "13h00",
+              "endText": "14h30",
+              "type": "brasserie",
+              "sourceText": "13h00 | Brasserie Georges | 13h00-14h30"
+            },
+            {
+              "name": "Musée des Confluences",
+              "startText": "16h00",
+              "endText": "18h00",
+              "type": "musée",
+              "sourceText": "16h00 | Musée des Confluences | 16h00-18h00"
+            }
+          ]
+        }
+      ]
+    },
+    "email-two-days": {
+      "days": [
+        {
+          "dateText": "Vendredi 23 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Bouchon des Filles",
+              "startText": "18h30",
+              "endText": null,
+              "type": "bouchon",
+              "sourceText": "18h30 : dîner au Bouchon des Filles"
+            }
+          ]
+        },
+        {
+          "dateText": "Samedi 24 octobre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée du Louvre",
+              "startText": "10h00",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "10h00 : Musée du Louvre"
+            },
+            {
+              "name": "Jardin des Tuileries",
+              "startText": "14h00",
+              "endText": null,
+              "type": "jardin",
+              "sourceText": "14h00 : Jardin des Tuileries"
+            }
+          ]
+        }
+      ]
+    },
+    "email-weekend": {
+      "days": [
+        {
+          "dateText": "Samedi 24 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Halles Paul Bocuse",
+              "startText": "11h",
+              "endText": null,
+              "type": "halles",
+              "sourceText": "Samedi 24 octobre : Lyon, visite des Halles Paul Bocuse à 11h"
+            }
+          ]
+        },
+        {
+          "dateText": "Dimanche 25 octobre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Luxembourg",
+              "startText": null,
+              "endText": null,
+              "type": null,
+              "sourceText": "Dimanche 25 octobre : Paris, promenade au Luxembourg"
+            }
+          ]
+        }
+      ]
+    },
+    "email-paris": {
+      "days": [
+        {
+          "dateText": "samedi 24 octobre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "musée du Louvre",
+              "startText": "09h00",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "09h00 : musée du Louvre"
+            },
+            {
+              "name": "Comptoir des Marronniers",
+              "startText": "12h30",
+              "endText": null,
+              "type": null,
+              "sourceText": "12h30 : déjeuner au Comptoir des Marronniers"
+            },
+            {
+              "name": "musée d'Orsay",
+              "startText": "15h00",
+              "endText": "17h00",
+              "type": "musée",
+              "sourceText": "15h00-17h00 : musée d'Orsay"
+            }
+          ]
+        }
+      ]
+    },
+    "email-lyon-business": {
+      "days": [
+        {
+          "dateText": "Le vendredi 23 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Opéra de Lyon",
+              "startText": "10h00",
+              "endText": null,
+              "type": "opéra",
+              "sourceText": "10h00 : rendez-vous à l'Opéra de Lyon"
+            },
+            {
+              "name": "Le Bouchon des Filles",
+              "startText": "13h00",
+              "endText": null,
+              "type": "restaurant",
+              "sourceText": "13h00 : déjeuner au restaurant Le Bouchon des Filles"
+            },
+            {
+              "name": "musée des Confluences",
+              "startText": "16h00",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "16h00 : visite du musée des Confluences"
+            }
+          ]
+        }
+      ]
+    },
+    "email-english": {
+      "days": [
+        {
+          "dateText": "Saturday, October 24",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Louvre Museum",
+              "startText": "9:00 AM",
+              "endText": "11:00 AM",
+              "type": "museum",
+              "sourceText": "9:00 AM - 11:00 AM: Louvre Museum"
+            },
+            {
+              "name": "Café Marly",
+              "startText": "12:30 PM",
+              "endText": null,
+              "type": "café",
+              "sourceText": "12:30 PM: lunch at Café Marly"
+            },
+            {
+              "name": "Musée d'Orsay",
+              "startText": "3:00 PM",
+              "endText": "5:00 PM",
+              "type": "musée",
+              "sourceText": "3:00 PM - 5:00 PM: Musée d'Orsay"
+            }
+          ]
+        }
+      ]
+    },
+    "email-sans-horaires": {
+      "days": [
+        {
+          "dateText": "dimanche",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Basilique Notre-Dame de Fourvière",
+              "startText": null,
+              "endText": null,
+              "type": "basilique",
+              "sourceText": "la Basilique Notre-Dame de Fourvière"
+            },
+            {
+              "name": "marché Saint-Antoine",
+              "startText": null,
+              "endText": null,
+              "type": "marché",
+              "sourceText": "le marché Saint-Antoine"
+            },
+            {
+              "name": "café Pralus",
+              "startText": null,
+              "endText": null,
+              "type": "café",
+              "sourceText": "une pause au café Pralus"
+            }
+          ]
+        }
+      ]
+    },
+    "email-multi-jours": {
+      "days": [
+        {
+          "dateText": "Vendredi 23 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Bouchon des Filles",
+              "startText": "18h30",
+              "endText": null,
+              "type": "bouchon",
+              "sourceText": "18h30 : dîner au Bouchon des Filles"
+            },
+            {
+              "name": "Le Sucre",
+              "startText": "21h00",
+              "endText": null,
+              "type": "bar",
+              "sourceText": "21h00 : verre au bar Le Sucre"
+            }
+          ]
+        },
+        {
+          "dateText": "Samedi 24 octobre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "musée du Louvre",
+              "startText": "10h00",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "10h00 : musée du Louvre"
+            },
+            {
+              "name": "Jardin des Tuileries",
+              "startText": "14h00",
+              "endText": null,
+              "type": "jardin",
+              "sourceText": "14h00 : Jardin des Tuileries"
+            }
+          ]
+        }
+      ]
+    },
+    "email-musees": {
+      "days": [
+        {
+          "dateText": "Samedi 24 octobre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "musée Picasso",
+              "startText": "09h30",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "09h30 : musée Picasso"
+            },
+            {
+              "name": "musée Rodin",
+              "startText": "11h30",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "11h30 : musée Rodin"
+            },
+            {
+              "name": "Centre Pompidou",
+              "startText": "14h30",
+              "endText": "16h30",
+              "type": null,
+              "sourceText": "14h30-16h30 : Centre Pompidou"
+            }
+          ]
+        }
+      ]
+    },
+    "email-food": {
+      "days": [
+        {
+          "dateText": "Samedi 25 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "marché Saint-Antoine",
+              "startText": "10h00",
+              "endText": null,
+              "type": "marché",
+              "sourceText": "10h00 : marché Saint-Antoine"
+            },
+            {
+              "name": "Brasserie Georges",
+              "startText": "12h30",
+              "endText": null,
+              "type": "brasserie",
+              "sourceText": "12h30 : déjeuner à la Brasserie Georges"
+            },
+            {
+              "name": "chez Pralus",
+              "startText": "16h00",
+              "endText": null,
+              "type": "café",
+              "sourceText": "16h00 : café chez Pralus"
+            }
+          ]
+        }
+      ]
+    },
+    "article-blog": {
+      "days": [
+        {
+          "dateText": "Jour 1",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Jardin du Luxembourg",
+              "startText": "Matin",
+              "endText": null,
+              "type": "jardin",
+              "sourceText": "Matin : balade au Jardin du Luxembourg"
+            },
+            {
+              "name": "Musée Rodin",
+              "startText": "14h",
+              "endText": "17h30",
+              "type": "musée",
+              "sourceText": "Après-midi : Musée Rodin (14h-17h30)"
+            }
+          ]
+        }
+      ]
+    },
+    "article-prose": {
+      "days": [
+        {
+          "dateText": null,
+          "city": null,
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "marché aux fleurs",
+              "startText": "10 h",
+              "endText": null,
+              "type": "marché",
+              "sourceText": "le marché aux fleurs vers 10 h"
+            },
+            {
+              "name": "chez Marcel",
+              "startText": "midi",
+              "endText": null,
+              "type": null,
+              "sourceText": "déjeuner chez Marcel à midi"
+            },
+            {
+              "name": "Panthéon",
+              "startText": "15 h",
+              "endText": null,
+              "type": null,
+              "sourceText": "le Panthéon à 15 h"
+            }
+          ]
+        }
+      ]
+    },
+    "article-english": {
+      "days": [
+        {
+          "dateText": "Saturday, October 24",
+          "city": null,
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Louvre Museum",
+              "startText": "9:00 AM",
+              "endText": "11:00 AM",
+              "type": "museum",
+              "sourceText": "9:00 AM - 11:00 AM: Louvre Museum"
+            },
+            {
+              "name": "Café Marly",
+              "startText": "12:30 PM",
+              "endText": null,
+              "type": "café",
+              "sourceText": "12:30 PM: Lunch at Café Marly"
+            },
+            {
+              "name": "Musée d'Orsay",
+              "startText": "3:00 PM",
+              "endText": "5:00 PM",
+              "type": "musée",
+              "sourceText": "3:00 PM - 5:00 PM: Musée d'Orsay"
+            }
+          ]
+        }
+      ]
+    },
+    "article-timezone": {
+      "days": [
+        {
+          "dateText": "Le 1er novembre",
+          "city": null,
+          "timezoneText": "heure de Paris",
+          "stops": [
+            {
+              "name": "Opéra Garnier",
+              "startText": null,
+              "endText": null,
+              "type": "opéra",
+              "sourceText": "Opéra Garnier"
+            },
+            {
+              "name": "Galeries Lafayette",
+              "startText": null,
+              "endText": null,
+              "type": null,
+              "sourceText": "Galeries Lafayette"
+            }
+          ]
+        }
+      ]
+    },
+    "article-paris": {
+      "days": [
+        {
+          "dateText": "Le samedi 24 octobre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "musée du Louvre",
+              "startText": "9 h",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "nous commençons la journée au musée du Louvre à 9 h"
+            },
+            {
+              "name": "Comptoir des Marronniers",
+              "startText": "midi",
+              "endText": null,
+              "type": null,
+              "sourceText": "Après un déjeuner au Comptoir des Marronniers vers midi"
+            },
+            {
+              "name": "musée d'Orsay",
+              "startText": "15 h",
+              "endText": "17 h",
+              "type": "musée",
+              "sourceText": "nous rejoignons le musée d'Orsay pour une visite de 15 h à 17 h"
+            }
+          ]
+        }
+      ]
+    },
+    "article-lyon": {
+      "days": [
+        {
+          "dateText": "Le dimanche 25 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Basilique Notre-Dame de Fourvière",
+              "startText": "10 h",
+              "endText": null,
+              "type": "basilique",
+              "sourceText": "direction la Basilique Notre-Dame de Fourvière à 10 h"
+            },
+            {
+              "name": "Halles Paul Bocuse",
+              "startText": "12 h 30",
+              "endText": null,
+              "type": "halles",
+              "sourceText": "Nous déjeunons ensuite aux Halles Paul Bocuse à 12 h 30"
+            },
+            {
+              "name": "musée des Confluences",
+              "startText": "15 h",
+              "endText": "17 h",
+              "type": "musée",
+              "sourceText": "puis visitons le musée des Confluences de 15 h à 17 h"
+            }
+          ]
+        }
+      ]
+    },
+    "article-english-prose": {
+      "days": [
+        {
+          "dateText": "On Sunday, October 25",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Jardin des Tuileries",
+              "startText": "10:00 AM",
+              "endText": null,
+              "type": "jardin",
+              "sourceText": "we start at the Jardin des Tuileries at 10:00 AM"
+            },
+            {
+              "name": "Café Marly",
+              "startText": "12:30 PM",
+              "endText": null,
+              "type": "café",
+              "sourceText": "After lunch at Café Marly at 12:30 PM"
+            },
+            {
+              "name": "Musée d'Orsay",
+              "startText": "3:00 PM",
+              "endText": "5:00 PM",
+              "type": "musée",
+              "sourceText": "we visit the Musée d'Orsay from 3:00 PM to 5:00 PM"
+            }
+          ]
+        }
+      ]
+    },
+    "article-sans-horaires": {
+      "days": [
+        {
+          "dateText": "Le samedi 24 octobre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Opéra Garnier",
+              "startText": null,
+              "endText": null,
+              "type": "opéra",
+              "sourceText": "nous irons à l'Opéra Garnier"
+            },
+            {
+              "name": "Galeries Lafayette",
+              "startText": null,
+              "endText": null,
+              "type": null,
+              "sourceText": "puis aux Galeries Lafayette"
+            },
+            {
+              "name": "chez Paul",
+              "startText": "En fin de journée",
+              "endText": null,
+              "type": null,
+              "sourceText": "En fin de journée, dîner chez Paul."
+            }
+          ]
+        }
+      ]
+    },
+    "article-deux-jours": {
+      "days": [
+        {
+          "dateText": "Le vendredi 23 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Bouchon des Filles",
+              "startText": "19 h",
+              "endText": null,
+              "type": "bouchon",
+              "sourceText": "nous dînons au Bouchon des Filles à 19 h"
+            }
+          ]
+        },
+        {
+          "dateText": "Le samedi 24 octobre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "musée du Louvre",
+              "startText": "10 h",
+              "endText": null,
+              "type": "musée",
+              "sourceText": "nous visitons le musée du Louvre à 10 h"
+            },
+            {
+              "name": "Jardin des Tuileries",
+              "startText": "14 h",
+              "endText": null,
+              "type": "jardin",
+              "sourceText": "puis le Jardin des Tuileries à 14 h"
+            }
+          ]
+        }
+      ]
+    },
+    "article-food": {
+      "days": [
+        {
+          "dateText": "Le dimanche 26 octobre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "marché Saint-Antoine",
+              "startText": "10 h",
+              "endText": null,
+              "type": "marché",
+              "sourceText": "nous commençons au marché Saint-Antoine à 10 h"
+            },
+            {
+              "name": "Brasserie Georges",
+              "startText": "12 h 30",
+              "endText": null,
+              "type": "brasserie",
+              "sourceText": "À 12 h 30, nous déjeunons à la Brasserie Georges"
+            },
+            {
+              "name": "chez Pralus",
+              "startText": "16 h",
+              "endText": null,
+              "type": "café",
+              "sourceText": "nous prenons un café chez Pralus à 16 h"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

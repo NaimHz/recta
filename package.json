@@ -34,7 +34,9 @@
     "eval:opening-hours": "pnpm --filter @recta/api eval:opening-hours",
     "eval:verification": "pnpm --filter @recta/api eval:verification",
     "eval:extraction": "pnpm --filter @recta/api eval:extraction",
-    "eval:extraction:live": "pnpm --filter @recta/api eval:extraction:live"
+    "eval:extraction:live": "pnpm --filter @recta/api eval:extraction:live",
+    "eval:extraction-f1": "pnpm --filter @recta/api eval:extraction-f1",
+    "eval:extraction-f1:live": "pnpm --filter @recta/api eval:extraction-f1:live"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

@@ -52,6 +52,8 @@ attend que Postgres soit prêt.
 | `pnpm eval:verification` | Combine les 30 cas de résolution et les 40 cas d'horaires dans `evals/verification/report.json` |
 | `pnpm eval:extraction` | Valide 10 textes sur les sorties enregistrées et écrit `evals/extraction/report.json` |
 | `pnpm eval:extraction:live` | Rejoue les 10 textes via Anthropic et écrit `evals/extraction/live-report.json` |
+| `pnpm eval:extraction-f1` | Note 30 textes, 3 formats et 7 champs sur les sorties enregistrées, et écrit `evals/extraction-f1/report.json` |
+| `pnpm eval:extraction-f1:live` | Rejoue les 30 textes via Anthropic et écrit `evals/extraction-f1/live-report.json` |
 | `pnpm build` | Build du web |
 | `pnpm db:up` | Démarre Postgres/PostGIS |
 | `pnpm db:reset` | Recrée la base, applique les migrations et charge les villes |
@@ -71,6 +73,16 @@ le mode live nécessite `ANTHROPIC_API_KEY` et `EXTRACTION_MODEL` :
 ```sh
 ANTHROPIC_API_KEY=... EXTRACTION_MODEL=... pnpm eval:extraction:live
 ```
+
+Le corpus F1 contient 30 textes, 10 par format (`whatsapp`, `email`, `article`). Les annotations
+sont manuelles et validées : chaque `sourceText` est une citation exacte et chaque valeur non nulle
+doit y apparaître. Le score aligne les jours et les stops, puis calcule un F1 par champ : `name`,
+`startText`, `endText`, `type`, `dateText`, `city`, `timezoneText`. La tolérance ignore accents,
+casse, ponctuation et articles de date, compare les heures sous forme canonique `HH:MM`, accepte
+les variantes de noms à 50 % de tokens communs et regroupe les types synonymes. Le rapport donne
+le F1 macro, le F1 micro, le détail par format et les erreurs classées. Baseline live : 30/30
+schéma, 30/30 sans invention, F1 macro 0,986 et F1 micro 0,978 ; le champ `type` reste le plus
+fragile.
 
 ## Faits curatés
 

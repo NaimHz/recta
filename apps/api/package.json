@@ -23,7 +23,9 @@
     "eval:opening-hours": "tsx src/evals/opening-hours.ts",
     "eval:verification": "tsx src/evals/verification.ts",
     "eval:extraction": "tsx src/evals/extraction.ts",
-    "eval:extraction:live": "tsx src/evals/extraction.ts --live"
+    "eval:extraction:live": "tsx src/evals/extraction.ts --live",
+    "eval:extraction-f1": "tsx src/evals/extraction-f1.ts",
+    "eval:extraction-f1:live": "tsx src/evals/extraction-f1.ts --live"
   },
   "dependencies": {
     "@recta/domain": "workspace:*",

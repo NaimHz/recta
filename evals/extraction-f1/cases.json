@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "formats": ["whatsapp", "email", "article"],
+  "thresholds": {
+    "schemaValid": 1,
+    "noInvention": 1
+  },
+  "cases": [
+    {
+      "id": "wa-paris-louvre",
+      "format": "whatsapp",
+      "text": "Samedi 24 octobre, Paris\n09:00-11:00 Musée du Louvre\n12:30 déjeuner au Comptoir des Marronniers\n15:00-17:00 Musée d'Orsay"
+    },
+    {
+      "id": "wa-dimanche",
+      "format": "whatsapp",
+      "text": "Dimanche :\n- 9h : café à la terrasse\n- 11h : expo Photo\n- 15h : parc"
+    },
+    {
+      "id": "wa-abreviations",
+      "format": "whatsapp",
+      "text": "sam 24/10 - 10h30 Musée Picasso / 13h Café de Flore / 15h30 Centre Pompidou"
+    },
+    {
+      "id": "wa-lyon-samedi",
+      "format": "whatsapp",
+      "text": "Salut ! Samedi 25 octobre à Lyon :\n10h30 : Musée des Confluences\n13h : déjeuner à la Brasserie Georges\n15h30-17h : Basilique Notre-Dame de Fourvière"
+    },
+    {
+      "id": "wa-paris-musees",
+      "format": "whatsapp",
+      "text": "Paris, samedi 24/10\n9h-11h : musée du Louvre\n14h : musée Rodin\n17h30 : musée d'Orsay"
+    },
+    {
+      "id": "wa-english",
+      "format": "whatsapp",
+      "text": "Hey! Saturday in Paris:\n10:00 AM - 12:00 PM: Louvre Museum\n1:30 PM: lunch at Café Marly\n4:00 PM: Jardin des Tuileries"
+    },
+    {
+      "id": "wa-sans-horaires",
+      "format": "whatsapp",
+      "text": "Samedi à Paris :\n- Opéra Garnier\n- Galeries Lafayette\n- dîner chez Paul"
+    },
+    {
+      "id": "wa-deux-jours",
+      "format": "whatsapp",
+      "text": "Vendredi 23/10 — Lyon\n19h : Bouchon des Filles\nSamedi 24/10 — Paris\n9h30 : musée du Louvre\n13h : Jardin des Tuileries"
+    },
+    {
+      "id": "wa-food",
+      "format": "whatsapp",
+      "text": "Lyon, dimanche 26 octobre\n11h : marché Saint-Antoine\n12h30 : déjeuner à la Brasserie Georges\n15h : café chez Pralus"
+    },
+    {
+      "id": "wa-lyon-dimanche",
+      "format": "whatsapp",
+      "text": "Dimanche 26/10, Lyon\n10h : Basilique de Fourvière\n12h : déjeuner aux Halles Paul Bocuse\n16h : Musée des Confluences"
+    },
+    {
+      "id": "email-lyon",
+      "format": "email",
+      "text": "Objet : week-end à Lyon\nSamedi 25 octobre\n10h00 | Basilique Notre-Dame de Fourvière | 10h00-12h00\n13h00 | Brasserie Georges | 13h00-14h30\n16h00 | Musée des Confluences | 16h00-18h00"
+    },
+    {
+      "id": "email-two-days",
+      "format": "email",
+      "text": "Vendredi 23 octobre — Lyon\n18h30 : dîner au Bouchon des Filles\nSamedi 24 octobre — Paris\n10h00 : Musée du Louvre\n14h00 : Jardin des Tuileries"
+    },
+    {
+      "id": "email-weekend",
+      "format": "email",
+      "text": "Week-end des 24 et 25 octobre\nSamedi 24 octobre : Lyon, visite des Halles Paul Bocuse à 11h\nDimanche 25 octobre : Paris, promenade au Luxembourg"
+    },
+    {
+      "id": "email-paris",
+      "format": "email",
+      "text": "Objet : Samedi à Paris\n\nBonjour,\n\nVoici le programme de samedi 24 octobre à Paris :\n- 09h00 : musée du Louvre\n- 12h30 : déjeuner au Comptoir des Marronniers\n- 15h00-17h00 : musée d'Orsay\n\nÀ bientôt"
+    },
+    {
+      "id": "email-lyon-business",
+      "format": "email",
+      "text": "Objet : Déplacement à Lyon\n\nBonjour,\n\nLe vendredi 23 octobre, à Lyon :\n10h00 : rendez-vous à l'Opéra de Lyon\n13h00 : déjeuner au restaurant Le Bouchon des Filles\n16h00 : visite du musée des Confluences\n\nCordialement"
+    },
+    {
+      "id": "email-english",
+      "format": "email",
+      "text": "Subject: Weekend in Paris\n\nHi,\n\nOn Saturday, October 24, in Paris:\n9:00 AM - 11:00 AM: Louvre Museum\n12:30 PM: lunch at Café Marly\n3:00 PM - 5:00 PM: Musée d'Orsay\n\nBest"
+    },
+    {
+      "id": "email-sans-horaires",
+      "format": "email",
+      "text": "Objet : Programme du dimanche\n\nBonjour,\n\nPour dimanche, à Lyon, je propose :\n- la Basilique Notre-Dame de Fourvière\n- le marché Saint-Antoine\n- une pause au café Pralus\n\nMerci"
+    },
+    {
+      "id": "email-multi-jours",
+      "format": "email",
+      "text": "Objet : Deux jours entre Lyon et Paris\n\nBonjour,\n\nVendredi 23 octobre, à Lyon :\n18h30 : dîner au Bouchon des Filles\n21h00 : verre au bar Le Sucre\n\nSamedi 24 octobre, à Paris :\n10h00 : musée du Louvre\n14h00 : Jardin des Tuileries\n\nBien à vous"
+    },
+    {
+      "id": "email-musees",
+      "format": "email",
+      "text": "Objet : Musées à Paris\n\nBonjour,\n\nSamedi 24 octobre, à Paris :\n- 09h30 : musée Picasso\n- 11h30 : musée Rodin\n- 14h30-16h30 : Centre Pompidou\n\nCordialement"
+    },
+    {
+      "id": "email-food",
+      "format": "email",
+      "text": "Objet : Samedi gourmand à Lyon\n\nBonjour,\n\nSamedi 25 octobre, à Lyon :\n10h00 : marché Saint-Antoine\n12h30 : déjeuner à la Brasserie Georges\n16h00 : café chez Pralus\n\nBon appétit"
+    },
+    {
+      "id": "article-blog",
+      "format": "article",
+      "text": "Jour 1 — Paris\nMatin : balade au Jardin du Luxembourg\nAprès-midi : Musée Rodin (14h-17h30)"
+    },
+    {
+      "id": "article-prose",
+      "format": "article",
+      "text": "On commence par le marché aux fleurs vers 10 h, puis déjeuner chez Marcel à midi, et enfin le Panthéon à 15 h."
+    },
+    {
+      "id": "article-english",
+      "format": "article",
+      "text": "Saturday, October 24\n9:00 AM - 11:00 AM: Louvre Museum\n12:30 PM: Lunch at Café Marly\n3:00 PM - 5:00 PM: Musée d'Orsay"
+    },
+    {
+      "id": "article-timezone",
+      "format": "article",
+      "text": "Le 1er novembre, heure de Paris.\nProgramme : Opéra Garnier, puis Galeries Lafayette."
+    },
+    {
+      "id": "article-paris",
+      "format": "article",
+      "text": "Un samedi à Paris\n\nLe samedi 24 octobre, nous commençons la journée au musée du Louvre à 9 h. Après un déjeuner au Comptoir des Marronniers vers midi, nous rejoignons le musée d'Orsay pour une visite de 15 h à 17 h."
+    },
+    {
+      "id": "article-lyon",
+      "format": "article",
+      "text": "Week-end à Lyon\n\nLe dimanche 25 octobre, direction la Basilique Notre-Dame de Fourvière à 10 h. Nous déjeunons ensuite aux Halles Paul Bocuse à 12 h 30, puis visitons le musée des Confluences de 15 h à 17 h."
+    },
+    {
+      "id": "article-english-prose",
+      "format": "article",
+      "text": "A Sunday in Paris\n\nOn Sunday, October 25, we start at the Jardin des Tuileries at 10:00 AM. After lunch at Café Marly at 12:30 PM, we visit the Musée d'Orsay from 3:00 PM to 5:00 PM."
+    },
+    {
+      "id": "article-sans-horaires",
+      "format": "article",
+      "text": "Une journée à Paris\n\nLe samedi 24 octobre, nous irons à l'Opéra Garnier, puis aux Galeries Lafayette. En fin de journée, dîner chez Paul."
+    },
+    {
+      "id": "article-deux-jours",
+      "format": "article",
+      "text": "Deux jours à Lyon et Paris\n\nLe vendredi 23 octobre, à Lyon, nous dînons au Bouchon des Filles à 19 h. Le samedi 24 octobre, à Paris, nous visitons le musée du Louvre à 10 h, puis le Jardin des Tuileries à 14 h."
+    },
+    {
+      "id": "article-food",
+      "format": "article",
+      "text": "Un dimanche gourmand à Lyon\n\nLe dimanche 26 octobre, nous commençons au marché Saint-Antoine à 10 h. À 12 h 30, nous déjeunons à la Brasserie Georges. Enfin, nous prenons un café chez Pralus à 16 h."
+    }
+  ]
+}

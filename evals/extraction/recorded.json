@@ -286,7 +286,7 @@
     "weekend-two-cities": {
       "days": [
         {
-          "dateText": "Samedi",
+          "dateText": "Samedi 24 octobre",
           "city": "Lyon",
           "timezoneText": null,
           "stops": [
@@ -295,12 +295,12 @@
               "startText": "11h",
               "endText": null,
               "type": null,
-              "sourceText": "Samedi : Lyon, visite des Halles Paul Bocuse à 11h"
+              "sourceText": "Samedi 24 octobre : Lyon, visite des Halles Paul Bocuse à 11h"
             }
           ]
         },
         {
-          "dateText": "Dimanche",
+          "dateText": "Dimanche 25 octobre",
           "city": "Paris",
           "timezoneText": null,
           "stops": [
@@ -309,7 +309,7 @@
               "startText": null,
               "endText": null,
               "type": null,
-              "sourceText": "Dimanche : Paris, promenade au Luxembourg"
+              "sourceText": "Dimanche 25 octobre : Paris, promenade au Luxembourg"
             }
           ]
         }
