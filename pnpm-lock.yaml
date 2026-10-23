@@ -103,6 +103,9 @@ importers:
 
   packages/domain:
     dependencies:
+      opening_hours:
+        specifier: 3.15.0
+        version: 3.15.0(typescript@5.9.3)
       zod:
         specifier: ^4.6.7
         version: 4.6.7

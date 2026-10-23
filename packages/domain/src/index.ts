@@ -2,6 +2,18 @@ export { CityConfigSchema } from './city'
 export type { CityConfig } from './city'
 export { verifyOpeningHours, dayCodeForDate } from './opening-hours'
 export {
+  checkOpeningHoursAt,
+  checkOpeningHoursWindow,
+  localDateTimeInTimezone,
+} from './opening-hours-engine'
+export type {
+  LocalDateTime,
+  OpeningHoursCheck,
+  OpeningHoursContext,
+  OpeningHoursReason,
+  OpeningHoursWindow,
+} from './opening-hours-engine'
+export {
   CoordinatesSchema,
   DAY_CODES,
   DaySchema,
