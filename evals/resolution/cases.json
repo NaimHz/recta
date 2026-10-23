@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "thresholds": {
+    "top1": 0.6,
+    "top3": 0.85
+  },
+  "candidateSource": "evals/sources/osm-places.json",
+  "cases": [
+    {
+      "id": "paris-01",
+      "city": "paris",
+      "query": "musee de l arme",
+      "type": "museum",
+      "expectedPlaceId": "osm:node/130102845"
+    },
+    {
+      "id": "paris-02",
+      "city": "paris",
+      "query": "musee des arts decoratifs",
+      "type": "museum",
+      "expectedPlaceId": "osm:node/247584452"
+    },
+    {
+      "id": "paris-03",
+      "city": "paris",
+      "query": "musee des arts et metiers",
+      "type": "museum",
+      "expectedPlaceId": "osm:node/247618453"
+    },
+    {
+      "id": "paris-04",
+      "city": "paris",
+      "query": "cafe marly",
+      "type": "cafe",
+      "expectedPlaceId": "osm:node/247455918"
+    },
+    {
+      "id": "paris-05",
+      "city": "paris",
+      "query": "chez denise",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/247455923"
+    },
+    {
+      "id": "paris-06",
+      "city": "paris",
+      "query": "la robe et le palais",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/247455924"
+    },
+    {
+      "id": "paris-07",
+      "city": "paris",
+      "query": "petit marche",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/247696089"
+    },
+    {
+      "id": "paris-08",
+      "city": "paris",
+      "query": "cafe des musees",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/247696090"
+    },
+    {
+      "id": "paris-09",
+      "city": "paris",
+      "query": "point zero des routes de france",
+      "type": "attraction",
+      "expectedPlaceId": "osm:node/191031796"
+    },
+    {
+      "id": "paris-10",
+      "city": "paris",
+      "query": "crypte polska",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/247455916"
+    },
+    {
+      "id": "paris-11",
+      "city": "paris",
+      "query": "maceo",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/247467738"
+    },
+    {
+      "id": "paris-12",
+      "city": "paris",
+      "query": "moulin creole",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/158603712"
+    },
+    {
+      "id": "paris-13",
+      "city": "paris",
+      "query": "la terrasse",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/176476541"
+    },
+    {
+      "id": "paris-14",
+      "city": "paris",
+      "query": "saint laurent",
+      "type": "shop",
+      "expectedPlaceId": "osm:node/247589882"
+    },
+    {
+      "id": "paris-15",
+      "city": "paris",
+      "query": "cafe arts et metiers",
+      "type": "cafe",
+      "expectedPlaceId": "osm:node/247696091"
+    },
+    {
+      "id": "lyon-01",
+      "city": "lyon",
+      "query": "la terrasse",
+      "type": "cafe",
+      "expectedPlaceId": "osm:node/35960763"
+    },
+    {
+      "id": "lyon-02",
+      "city": "lyon",
+      "query": "point du jour",
+      "type": "market",
+      "expectedPlaceId": "osm:node/25468556"
+    },
+    {
+      "id": "lyon-03",
+      "city": "lyon",
+      "query": "artisans du monde",
+      "type": "shop",
+      "expectedPlaceId": "osm:node/25339013"
+    },
+    {
+      "id": "lyon-04",
+      "city": "lyon",
+      "query": "esprit bistrot",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/25733700"
+    },
+    {
+      "id": "lyon-05",
+      "city": "lyon",
+      "query": "centre histoire resistance deportation",
+      "type": "museum",
+      "expectedPlaceId": "osm:node/26131828"
+    },
+    {
+      "id": "lyon-06",
+      "city": "lyon",
+      "query": "cite musee tony",
+      "type": "museum",
+      "expectedPlaceId": "osm:node/26132213"
+    },
+    {
+      "id": "lyon-07",
+      "city": "lyon",
+      "query": "comptoir des marronier",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/26641424"
+    },
+    {
+      "id": "lyon-08",
+      "city": "lyon",
+      "query": "leon de lyon",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/47770405"
+    },
+    {
+      "id": "lyon-09",
+      "city": "lyon",
+      "query": "flams lyon",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/75693065"
+    },
+    {
+      "id": "lyon-10",
+      "city": "lyon",
+      "query": "l industrie",
+      "type": "cafe",
+      "expectedPlaceId": "osm:node/61948298"
+    },
+    {
+      "id": "lyon-11",
+      "city": "lyon",
+      "query": "cafe du xxe siecle",
+      "type": "cafe",
+      "expectedPlaceId": "osm:node/97075437"
+    },
+    {
+      "id": "lyon-12",
+      "city": "lyon",
+      "query": "bistro autrement",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/61948490"
+    },
+    {
+      "id": "lyon-13",
+      "city": "lyon",
+      "query": "villemanzy",
+      "type": "restaurant",
+      "expectedPlaceId": "osm:node/81757639"
+    },
+    {
+      "id": "lyon-14",
+      "city": "lyon",
+      "query": "statue louis xiv",
+      "type": "attraction",
+      "expectedPlaceId": "osm:node/236376643"
+    },
+    {
+      "id": "lyon-15",
+      "city": "lyon",
+      "query": "cafe belecour",
+      "type": "cafe",
+      "expectedPlaceId": "osm:node/243854071"
+    }
+  ]
+}

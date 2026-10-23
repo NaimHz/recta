@@ -1,5 +1,12 @@
 export { CityConfigSchema } from './city'
 export type { CityConfig } from './city'
+export { resolvePlaces } from './place-resolution'
+export type {
+  PlaceQuery,
+  PlaceScoreComponents,
+  ResolvePlacesOptions,
+  ScoredPlace,
+} from './place-resolution'
 export { verifyOpeningHours, dayCodeForDate } from './opening-hours'
 export {
   checkOpeningHoursAt,

@@ -44,6 +44,7 @@ attend que Postgres soit prêt.
 | `pnpm test` | Tests unitaires |
 | `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort le résultat JSON avec preuve |
 | `pnpm osm:fetch` | Récupère 25 lieux OSM par ville de référence et écrit `evals/sources/osm-places.json` |
+| `pnpm eval:resolution` | Mesure top-1 et top-3 de la résolution sur 30 cas et écrit `evals/resolution/report.json` |
 | `pnpm build` | Build du web |
 | `pnpm db:up` | Démarre Postgres/PostGIS |
 | `pnpm db:reset` | Recrée la base, applique les migrations et charge les villes |
