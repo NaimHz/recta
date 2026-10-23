@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "measuredAt": "2026-10-23T09:03:41.636Z",
+  "measuredAt": "2026-10-23T10:06:57.116Z",
   "candidateSource": "evals/sources/osm-places.json",
   "thresholds": {
     "top1": 0.6,
@@ -14,6 +14,8 @@
     "top3": 1,
     "abstentions": 0
   },
+  "errorSummary": [],
+  "errors": [],
   "cases": [
     {
       "id": "paris-01",

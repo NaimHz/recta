@@ -1,0 +1,2171 @@
+{
+  "version": 1,
+  "measuredAt": "2026-10-23T10:07:02.039Z",
+  "resolution": {
+    "version": 1,
+    "measuredAt": "2026-10-23T10:07:01.912Z",
+    "candidateSource": "evals/sources/osm-places.json",
+    "thresholds": {
+      "top1": 0.6,
+      "top3": 0.85
+    },
+    "metrics": {
+      "total": 30,
+      "top1Count": 30,
+      "top3Count": 30,
+      "top1": 1,
+      "top3": 1,
+      "abstentions": 0
+    },
+    "errorSummary": [],
+    "errors": [],
+    "cases": [
+      {
+        "id": "paris-01",
+        "city": "paris",
+        "query": "musee de l arme",
+        "type": "museum",
+        "expectedPlaceId": "osm:node/130102845",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/130102845",
+            "name": "Musée de l'Armée",
+            "score": 0.9400000000000001,
+            "nameScore": 0.95,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247618453",
+            "name": "Musée des Arts et Métiers",
+            "score": 0.5564285714285715,
+            "nameScore": 0.5238095238095238,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247584452",
+            "name": "Musée des Arts Décoratifs",
+            "score": 0.505,
+            "nameScore": 0.4666666666666667,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-02",
+        "city": "paris",
+        "query": "musee des arts decoratifs",
+        "type": "museum",
+        "expectedPlaceId": "osm:node/247584452",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247584452",
+            "name": "Musée des Arts Décoratifs",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247618453",
+            "name": "Musée des Arts et Métiers",
+            "score": 0.6986363636363638,
+            "nameScore": 0.6818181818181819,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/130102845",
+            "name": "Musée de l'Armée",
+            "score": 0.49409090909090914,
+            "nameScore": 0.4545454545454546,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-03",
+        "city": "paris",
+        "query": "musee des arts et metiers",
+        "type": "museum",
+        "expectedPlaceId": "osm:node/247618453",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247618453",
+            "name": "Musée des Arts et Métiers",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247584452",
+            "name": "Musée des Arts Décoratifs",
+            "score": 0.6986363636363638,
+            "nameScore": 0.6818181818181819,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247696091",
+            "name": "Les Arts et Métiers",
+            "score": 0.675,
+            "nameScore": 0.7333333333333334,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-04",
+        "city": "paris",
+        "query": "cafe marly",
+        "type": "cafe",
+        "expectedPlaceId": "osm:node/247455918",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247455918",
+            "name": "Le Café Marly",
+            "score": 0.985,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247696090",
+            "name": "Café des Musées",
+            "score": 0.465,
+            "nameScore": 0.5,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247696092",
+            "name": "Camille",
+            "score": 0.415,
+            "nameScore": 0.4444444444444444,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-05",
+        "city": "paris",
+        "query": "chez denise",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/247455923",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247455923",
+            "name": "Chez Denise",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247696090",
+            "name": "Café des Musées",
+            "score": 0.43115384615384617,
+            "nameScore": 0.3846153846153846,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/227450780",
+            "name": "Boldère",
+            "score": 0.3550000000000001,
+            "nameScore": 0.30000000000000004,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-06",
+        "city": "paris",
+        "query": "la robe et le palais",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/247455924",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247455924",
+            "name": "La Robe et le Palais",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247455916",
+            "name": "La Crypte Polska",
+            "score": 0.42250000000000004,
+            "nameScore": 0.375,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/176476541",
+            "name": "La Terrasse",
+            "score": 0.36625,
+            "nameScore": 0.3125,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-07",
+        "city": "paris",
+        "query": "petit marche",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/247696089",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247696089",
+            "name": "Le Petit Marché",
+            "score": 0.985,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/176476541",
+            "name": "La Terrasse",
+            "score": 0.33045454545454545,
+            "nameScore": 0.2727272727272727,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/176476540",
+            "name": "Le Sancerre",
+            "score": 0.33045454545454545,
+            "nameScore": 0.2727272727272727,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-08",
+        "city": "paris",
+        "query": "cafe des musees",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/247696090",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247696090",
+            "name": "Café des Musées",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247455918",
+            "name": "Le Café Marly",
+            "score": 0.465,
+            "nameScore": 0.5,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247455923",
+            "name": "Chez Denise",
+            "score": 0.43115384615384617,
+            "nameScore": 0.3846153846153846,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-09",
+        "city": "paris",
+        "query": "point zero des routes de france",
+        "type": "attraction",
+        "expectedPlaceId": "osm:node/191031796",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/191031796",
+            "name": "Point zéro des Routes de France",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247584452",
+            "name": "Musée des Arts Décoratifs",
+            "score": 0.29192307692307695,
+            "nameScore": 0.3076923076923077,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247696090",
+            "name": "Café des Musées",
+            "score": 0.25730769230769235,
+            "nameScore": 0.2692307692307693,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-10",
+        "city": "paris",
+        "query": "crypte polska",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/247455916",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247455916",
+            "name": "La Crypte Polska",
+            "score": 0.985,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247455924",
+            "name": "La Robe et le Palais",
+            "score": 0.36625,
+            "nameScore": 0.3125,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247455923",
+            "name": "Chez Denise",
+            "score": 0.31000000000000005,
+            "nameScore": 0.25,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-11",
+        "city": "paris",
+        "query": "maceo",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/247467738",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247467738",
+            "name": "Macéo",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/158603712",
+            "name": "Moulin Créole",
+            "score": 0.38500000000000006,
+            "nameScore": 0.33333333333333337,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/176476540",
+            "name": "Le Sancerre",
+            "score": 0.3550000000000001,
+            "nameScore": 0.30000000000000004,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-12",
+        "city": "paris",
+        "query": "moulin creole",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/158603712",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/158603712",
+            "name": "Moulin Créole",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/227450780",
+            "name": "Boldère",
+            "score": 0.38500000000000006,
+            "nameScore": 0.33333333333333337,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/176476540",
+            "name": "Le Sancerre",
+            "score": 0.38500000000000006,
+            "nameScore": 0.33333333333333337,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-13",
+        "city": "paris",
+        "query": "la terrasse",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/176476541",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/176476541",
+            "name": "La Terrasse",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247455916",
+            "name": "La Crypte Polska",
+            "score": 0.4064285714285714,
+            "nameScore": 0.3571428571428571,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247455920",
+            "name": "Mystery Cuisine",
+            "score": 0.4064285714285714,
+            "nameScore": 0.3571428571428571,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-14",
+        "city": "paris",
+        "query": "saint laurent",
+        "type": "shop",
+        "expectedPlaceId": "osm:node/247589882",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247589882",
+            "name": "Saint Laurent",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/203123010",
+            "name": "Avant Seine",
+            "score": 0.24,
+            "nameScore": 0.25,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/227450780",
+            "name": "Boldère",
+            "score": 0.24,
+            "nameScore": 0.25,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "paris-15",
+        "city": "paris",
+        "query": "cafe arts et metiers",
+        "type": "cafe",
+        "expectedPlaceId": "osm:node/247696091",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/247696091",
+            "name": "Les Arts et Métiers",
+            "score": 0.7732352941176471,
+            "nameScore": 0.7647058823529411,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247618453",
+            "name": "Musée des Arts et Métiers",
+            "score": 0.6150000000000001,
+            "nameScore": 0.6666666666666667,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/247696090",
+            "name": "Café des Musées",
+            "score": 0.4385294117647059,
+            "nameScore": 0.47058823529411764,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-01",
+        "city": "lyon",
+        "query": "la terrasse",
+        "type": "cafe",
+        "expectedPlaceId": "osm:node/35960763",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/35960763",
+            "name": "La Terrasse",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/243519182",
+            "name": "L'Auberge",
+            "score": 0.37500000000000006,
+            "nameScore": 0.4,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/95836819",
+            "name": "Le Décalé",
+            "score": 0.37500000000000006,
+            "nameScore": 0.4,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-02",
+        "city": "lyon",
+        "query": "point du jour",
+        "type": "market",
+        "expectedPlaceId": "osm:node/25468556",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/25468556",
+            "name": "Point du Jour",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/25339013",
+            "name": "Artisans du Monde",
+            "score": 0.31500000000000006,
+            "nameScore": 0.33333333333333337,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/243519184",
+            "name": "Monplaisir côté cour",
+            "score": 0.265,
+            "nameScore": 0.2777777777777778,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-03",
+        "city": "lyon",
+        "query": "artisans du monde",
+        "type": "shop",
+        "expectedPlaceId": "osm:node/25339013",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/25339013",
+            "name": "Artisans du Monde",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/61948298",
+            "name": "L'Industrie",
+            "score": 0.31500000000000006,
+            "nameScore": 0.33333333333333337,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/25468556",
+            "name": "Point du Jour",
+            "score": 0.31500000000000006,
+            "nameScore": 0.33333333333333337,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-04",
+        "city": "lyon",
+        "query": "esprit bistrot",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/25733700",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/25733700",
+            "name": "L'Esprit Bistrot",
+            "score": 0.9400000000000001,
+            "nameScore": 0.95,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/75744647",
+            "name": "Restaurant Pierre Orsi",
+            "score": 0.4,
+            "nameScore": 0.35,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/47770405",
+            "name": "Restaurant Léon de Lyon",
+            "score": 0.31000000000000005,
+            "nameScore": 0.25,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-05",
+        "city": "lyon",
+        "query": "centre histoire resistance deportation",
+        "type": "museum",
+        "expectedPlaceId": "osm:node/26131828",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/26131828",
+            "name": "Centre d'Histoire de la Résistance et de la Déportation",
+            "score": 0.7697826086956522,
+            "nameScore": 0.7608695652173914,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/26132213",
+            "name": "Cité musée Tony",
+            "score": 0.3164285714285714,
+            "nameScore": 0.2571428571428571,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/73657010",
+            "name": "Restaurant de la Plaine",
+            "score": 0.2978571428571429,
+            "nameScore": 0.3142857142857143,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-06",
+        "city": "lyon",
+        "query": "cite musee tony",
+        "type": "museum",
+        "expectedPlaceId": "osm:node/26132213",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/26132213",
+            "name": "Cité musée Tony",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/243854071",
+            "name": "Café Bellecour",
+            "score": 0.29192307692307695,
+            "nameScore": 0.3076923076923077,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/75693065",
+            "name": "Flam's Lyon",
+            "score": 0.29192307692307695,
+            "nameScore": 0.3076923076923077,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-07",
+        "city": "lyon",
+        "query": "comptoir des marronier",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/26641424",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/26641424",
+            "name": "Comptoir des Marronniers",
+            "score": 0.9031818181818182,
+            "nameScore": 0.9090909090909091,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/25733700",
+            "name": "L'Esprit Bistrot",
+            "score": 0.31000000000000005,
+            "nameScore": 0.25,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/243519184",
+            "name": "Monplaisir côté cour",
+            "score": 0.31000000000000005,
+            "nameScore": 0.25,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-08",
+        "city": "lyon",
+        "query": "leon de lyon",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/47770405",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/47770405",
+            "name": "Restaurant Léon de Lyon",
+            "score": 0.9400000000000001,
+            "nameScore": 0.95,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/75693065",
+            "name": "Flam's Lyon",
+            "score": 0.535,
+            "nameScore": 0.5,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/243207812",
+            "name": "Le Lyon de l'Atlas",
+            "score": 0.535,
+            "nameScore": 0.5,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-09",
+        "city": "lyon",
+        "query": "flams lyon",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/75693065",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/75693065",
+            "name": "Flam's Lyon",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/243207812",
+            "name": "Le Lyon de l'Atlas",
+            "score": 0.535,
+            "nameScore": 0.5,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/47770405",
+            "name": "Restaurant Léon de Lyon",
+            "score": 0.505,
+            "nameScore": 0.4666666666666667,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-10",
+        "city": "lyon",
+        "query": "l industrie",
+        "type": "cafe",
+        "expectedPlaceId": "osm:node/61948298",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/61948298",
+            "name": "L'Industrie",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/203963977",
+            "name": "Le Mistral",
+            "score": 0.44500000000000006,
+            "nameScore": 0.4,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/243519182",
+            "name": "L'Auberge",
+            "score": 0.37500000000000006,
+            "nameScore": 0.4,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-11",
+        "city": "lyon",
+        "query": "cafe du xxe siecle",
+        "type": "cafe",
+        "expectedPlaceId": "osm:node/97075437",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/97075437",
+            "name": "Café du XXe siècle",
+            "score": 1,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/243854071",
+            "name": "Café Bellecour",
+            "score": 0.44500000000000006,
+            "nameScore": 0.4,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/61948298",
+            "name": "L'Industrie",
+            "score": 0.32500000000000007,
+            "nameScore": 0.2666666666666667,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-12",
+        "city": "lyon",
+        "query": "bistro autrement",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/61948490",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/61948490",
+            "name": "Le Bistro Autrement",
+            "score": 0.985,
+            "nameScore": 1,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/73657010",
+            "name": "Restaurant de la Plaine",
+            "score": 0.3550000000000001,
+            "nameScore": 0.30000000000000004,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/47770405",
+            "name": "Restaurant Léon de Lyon",
+            "score": 0.3550000000000001,
+            "nameScore": 0.30000000000000004,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-13",
+        "city": "lyon",
+        "query": "villemanzy",
+        "type": "restaurant",
+        "expectedPlaceId": "osm:node/81757639",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/81757639",
+            "name": "Maison Villemanzy",
+            "score": 0.9400000000000001,
+            "nameScore": 0.95,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/83454888",
+            "name": "Volfoni",
+            "score": 0.3550000000000001,
+            "nameScore": 0.30000000000000004,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/26641424",
+            "name": "Comptoir des Marronniers",
+            "score": 0.28954545454545455,
+            "nameScore": 0.2272727272727273,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-14",
+        "city": "lyon",
+        "query": "statue louis xiv",
+        "type": "attraction",
+        "expectedPlaceId": "osm:node/236376643",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/236376643",
+            "name": "Statue équestre de Louis XIV",
+            "score": 0.9400000000000001,
+            "nameScore": 0.9500000000000001,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/73657010",
+            "name": "Restaurant de la Plaine",
+            "score": 0.2850000000000001,
+            "nameScore": 0.30000000000000004,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/35960763",
+            "name": "La Terrasse",
+            "score": 0.27214285714285713,
+            "nameScore": 0.2857142857142857,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      },
+      {
+        "id": "lyon-15",
+        "city": "lyon",
+        "query": "cafe belecour",
+        "type": "cafe",
+        "expectedPlaceId": "osm:node/243854071",
+        "top1": true,
+        "top3": true,
+        "ranked": [
+          {
+            "id": "osm:node/243854071",
+            "name": "Café Bellecour",
+            "score": 0.9157692307692308,
+            "nameScore": 0.9230769230769231,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/97075437",
+            "name": "Café du XXe siècle",
+            "score": 0.505,
+            "nameScore": 0.4666666666666667,
+            "typeScore": 1,
+            "distanceScore": 0.5
+          },
+          {
+            "id": "osm:node/243519184",
+            "name": "Monplaisir côté cour",
+            "score": 0.31500000000000006,
+            "nameScore": 0.33333333333333337,
+            "typeScore": 0,
+            "distanceScore": 0.5
+          }
+        ]
+      }
+    ]
+  },
+  "openingHours": {
+    "version": 1,
+    "measuredAt": "2026-10-23T10:07:02.039Z",
+    "thresholds": {
+      "exact": 1
+    },
+    "metrics": {
+      "total": 40,
+      "correct": 40,
+      "correctRate": 1,
+      "byStatus": {
+        "conforme": {
+          "total": 16,
+          "correct": 16
+        },
+        "violation": {
+          "total": 14,
+          "correct": 14
+        },
+        "indéterminé": {
+          "total": 10,
+          "correct": 10
+        }
+      },
+      "byReason": {
+        "closed": {
+          "total": 11,
+          "correct": 11
+        },
+        "closes_during_stop": {
+          "total": 3,
+          "correct": 3
+        },
+        "invalid_context": {
+          "total": 1,
+          "correct": 1
+        },
+        "invalid_local_time": {
+          "total": 2,
+          "correct": 2
+        },
+        "invalid_syntax": {
+          "total": 1,
+          "correct": 1
+        },
+        "invalid_timezone": {
+          "total": 1,
+          "correct": 1
+        },
+        "missing_hours": {
+          "total": 3,
+          "correct": 3
+        },
+        "open": {
+          "total": 16,
+          "correct": 16
+        },
+        "unknown": {
+          "total": 2,
+          "correct": 2
+        }
+      }
+    },
+    "errorSummary": [],
+    "errors": [],
+    "cases": [
+      {
+        "id": "paris-24-7",
+        "city": "paris",
+        "raw": "24/7",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-semaine-midi",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-samedi-ferme",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-24T10:00:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-24",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-avant-ouverture",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T06:59:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "08:59"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-ouverture-exacte",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T07:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "09:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fermeture-exacte",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T16:00:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "18:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-mercredi-ferme",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00; We off",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-jeudi-ouvert",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00; We off",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-22T10:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-22",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-pause-dejeuner",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-12:00,13:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:30:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "12:30"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-reouverture-dejeuner",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-12:00,13:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T11:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "13:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-nuit-ouverte",
+        "city": "paris",
+        "raw": "Fr 20:00-02:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-23T21:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-23",
+            "time": "23:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-nuit-apres-minuit",
+        "city": "paris",
+        "raw": "Fr 20:00-02:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-23T23:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-24",
+            "time": "01:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-nuit-fermeture-exacte",
+        "city": "paris",
+        "raw": "Fr 20:00-02:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-24T00:00:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-24",
+            "time": "02:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-ete-ouvert",
+        "city": "paris",
+        "raw": "Jul-Aug Mo-Su 10:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-07-15T10:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-07-15",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-ete-ferme",
+        "city": "paris",
+        "raw": "Jul-Aug Mo-Su 10:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-ferie-ouvert",
+        "city": "paris",
+        "raw": "PH 10:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-07-14T09:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": true
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": true,
+          "local": {
+            "date": "2026-07-14",
+            "time": "11:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-lendemain-ferie-ferme",
+        "city": "paris",
+        "raw": "PH 10:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-07-15T09:00:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": false
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": false,
+          "local": {
+            "date": "2026-07-15",
+            "time": "11:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-ferie-off",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00; PH off",
+        "check": {
+          "kind": "at",
+          "instant": "2026-07-14T09:00:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": true
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": true,
+          "local": {
+            "date": "2026-07-14",
+            "time": "11:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-lendemain-ferie-ouvert",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00; PH off",
+        "check": {
+          "kind": "at",
+          "instant": "2026-07-15T09:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-07-15",
+            "time": "11:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-syntaxe-invalide",
+        "city": "paris",
+        "raw": "nonsense",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "invalid_syntax"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "invalid_syntax",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-horaires-vides",
+        "city": "paris",
+        "raw": "",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "missing_hours"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "missing_hours",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-horaires-absents",
+        "city": "paris",
+        "raw": null,
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "missing_hours"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "missing_hours",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "12:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-etat-inconnu",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00; unknown",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "unknown"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "unknown",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "12:00"
+          },
+          "warnings": [
+            "Mo-Fr 09:00-18:00; unknown <--- (This rule which changes the default state (which is closed) for all following rules is not the first rule. The rule will overwrite all previous rules. It can be legitimate to change the default state to open for example and then only specify for which times the facility is closed.)"
+          ]
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fuseau-inconnu",
+        "city": "paris",
+        "raw": "24/7",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "invalid_timezone"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "invalid_timezone",
+          "holiday": false,
+          "local": null,
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-contexte-invalide",
+        "city": "paris",
+        "raw": "24/7",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T10:00:00Z"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "invalid_context"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "invalid_context",
+          "holiday": false,
+          "local": null,
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-instant-invalide",
+        "city": "paris",
+        "raw": "24/7",
+        "check": {
+          "kind": "at",
+          "instant": "date invalide"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "invalid_local_time"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "invalid_local_time",
+          "holiday": false,
+          "local": null,
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "lyon-ferie-ouvert",
+        "city": "lyon",
+        "raw": "PH 10:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-07-14T09:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": true
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": true,
+          "local": {
+            "date": "2026-07-14",
+            "time": "11:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "lyon-ferie-off",
+        "city": "lyon",
+        "raw": "Mo-Su 09:00-18:00; PH off",
+        "check": {
+          "kind": "at",
+          "instant": "2026-07-14T09:00:00Z"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": true
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": true,
+          "local": {
+            "date": "2026-07-14",
+            "time": "11:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "lyon-lendemain-ferie-ouvert",
+        "city": "lyon",
+        "raw": "Mo-Su 09:00-18:00; PH off",
+        "check": {
+          "kind": "at",
+          "instant": "2026-07-15T09:00:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-07-15",
+            "time": "11:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "lyon-fuseau-horaire",
+        "city": "lyon",
+        "raw": "Mo-Fr 09:00-18:00",
+        "check": {
+          "kind": "at",
+          "instant": "2026-10-21T07:30:00Z"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "09:30"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-pause-dejeuner",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-12:00,13:00-18:00",
+        "check": {
+          "kind": "window",
+          "date": "2026-10-21",
+          "start": "11:45",
+          "end": "13:15"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closes_during_stop"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closes_during_stop",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "11:45"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-fenetres-adjacentes",
+        "city": "paris",
+        "raw": "Mo 09:00-12:00,12:00-18:00",
+        "check": {
+          "kind": "window",
+          "date": "2026-10-19",
+          "start": "10:00",
+          "end": "14:00"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-19",
+            "time": "10:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-fermeture-exacte",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00",
+        "check": {
+          "kind": "window",
+          "date": "2026-10-21",
+          "start": "17:00",
+          "end": "18:00"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "17:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-fermeture-depassee",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00",
+        "check": {
+          "kind": "window",
+          "date": "2026-10-21",
+          "start": "17:00",
+          "end": "18:01"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closes_during_stop"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closes_during_stop",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "17:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-nuit",
+        "city": "paris",
+        "raw": "Fr 20:00-02:00",
+        "check": {
+          "kind": "window",
+          "date": "2026-10-23",
+          "start": "23:00",
+          "end": "01:00"
+        },
+        "expected": {
+          "status": "conforme",
+          "reason": "open"
+        },
+        "actual": {
+          "status": "conforme",
+          "reason": "open",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-23",
+            "time": "23:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-nuit-depassee",
+        "city": "paris",
+        "raw": "Fr 20:00-02:00",
+        "check": {
+          "kind": "window",
+          "date": "2026-10-23",
+          "start": "23:00",
+          "end": "02:01"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closes_during_stop"
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closes_during_stop",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-23",
+            "time": "23:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-ferie-off",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00; PH off",
+        "check": {
+          "kind": "window",
+          "date": "2026-07-14",
+          "start": "10:00",
+          "end": "12:00"
+        },
+        "expected": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": true
+        },
+        "actual": {
+          "status": "violation",
+          "reason": "closed",
+          "holiday": true,
+          "local": {
+            "date": "2026-07-14",
+            "time": "10:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-heure-inexistante",
+        "city": "paris",
+        "raw": "Su 03:00-05:00",
+        "check": {
+          "kind": "window",
+          "date": "2026-03-29",
+          "start": "02:30",
+          "end": "03:30"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "invalid_local_time"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "invalid_local_time",
+          "holiday": false,
+          "local": {
+            "date": "2026-03-29",
+            "time": "02:30"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-horaires-absents",
+        "city": "paris",
+        "raw": null,
+        "check": {
+          "kind": "window",
+          "date": "2026-10-21",
+          "start": "10:00",
+          "end": "12:00"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "missing_hours"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "missing_hours",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "10:00"
+          },
+          "warnings": []
+        },
+        "correct": true,
+        "category": null
+      },
+      {
+        "id": "paris-fenetre-etat-inconnu",
+        "city": "paris",
+        "raw": "Mo-Fr 09:00-18:00; unknown",
+        "check": {
+          "kind": "window",
+          "date": "2026-10-21",
+          "start": "10:00",
+          "end": "12:00"
+        },
+        "expected": {
+          "status": "indéterminé",
+          "reason": "unknown"
+        },
+        "actual": {
+          "status": "indéterminé",
+          "reason": "unknown",
+          "holiday": false,
+          "local": {
+            "date": "2026-10-21",
+            "time": "10:00"
+          },
+          "warnings": [
+            "Mo-Fr 09:00-18:00; unknown <--- (This rule which changes the default state (which is closed) for all following rules is not the first rule. The rule will overwrite all previous rules. It can be legitimate to change the default state to open for example and then only specify for which times the facility is closed.)"
+          ]
+        },
+        "correct": true,
+        "category": null
+      }
+    ]
+  },
+  "errors": {
+    "total": 0,
+    "resolution": [],
+    "openingHours": []
+  }
+}

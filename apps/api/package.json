@@ -18,7 +18,9 @@
     "data:check": "tsx src/cli/check-data.ts",
     "osm:fetch": "tsx src/sources/osm/fetch-places.ts",
     "eval:resolution": "tsx src/evals/resolution.ts",
-    "eval:agent": "tsx src/evals/resolution-agent.ts"
+    "eval:agent": "tsx src/evals/resolution-agent.ts",
+    "eval:opening-hours": "tsx src/evals/opening-hours.ts",
+    "eval:verification": "tsx src/evals/verification.ts"
   },
   "dependencies": {
     "@recta/domain": "workspace:*",

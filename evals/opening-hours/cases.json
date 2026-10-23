@@ -1,0 +1,565 @@
+{
+  "version": 1,
+  "thresholds": {
+    "exact": 1
+  },
+  "cases": [
+    {
+      "id": "paris-24-7",
+      "city": "paris",
+      "raw": "24/7",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-semaine-midi",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-samedi-ferme",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-24T10:00:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed"
+      }
+    },
+    {
+      "id": "paris-avant-ouverture",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T06:59:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed"
+      }
+    },
+    {
+      "id": "paris-ouverture-exacte",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T07:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-fermeture-exacte",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T16:00:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed"
+      }
+    },
+    {
+      "id": "paris-mercredi-ferme",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00; We off",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed"
+      }
+    },
+    {
+      "id": "paris-jeudi-ouvert",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00; We off",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-22T10:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-pause-dejeuner",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-12:00,13:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:30:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed"
+      }
+    },
+    {
+      "id": "paris-reouverture-dejeuner",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-12:00,13:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T11:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-nuit-ouverte",
+      "city": "paris",
+      "raw": "Fr 20:00-02:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-23T21:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-nuit-apres-minuit",
+      "city": "paris",
+      "raw": "Fr 20:00-02:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-23T23:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-nuit-fermeture-exacte",
+      "city": "paris",
+      "raw": "Fr 20:00-02:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-24T00:00:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed"
+      }
+    },
+    {
+      "id": "paris-ete-ouvert",
+      "city": "paris",
+      "raw": "Jul-Aug Mo-Su 10:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-07-15T10:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-ete-ferme",
+      "city": "paris",
+      "raw": "Jul-Aug Mo-Su 10:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed"
+      }
+    },
+    {
+      "id": "paris-ferie-ouvert",
+      "city": "paris",
+      "raw": "PH 10:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-07-14T09:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open",
+        "holiday": true
+      }
+    },
+    {
+      "id": "paris-lendemain-ferie-ferme",
+      "city": "paris",
+      "raw": "PH 10:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-07-15T09:00:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed",
+        "holiday": false
+      }
+    },
+    {
+      "id": "paris-ferie-off",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00; PH off",
+      "check": {
+        "kind": "at",
+        "instant": "2026-07-14T09:00:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed",
+        "holiday": true
+      }
+    },
+    {
+      "id": "paris-lendemain-ferie-ouvert",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00; PH off",
+      "check": {
+        "kind": "at",
+        "instant": "2026-07-15T09:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open",
+        "holiday": false
+      }
+    },
+    {
+      "id": "paris-syntaxe-invalide",
+      "city": "paris",
+      "raw": "nonsense",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "invalid_syntax"
+      }
+    },
+    {
+      "id": "paris-horaires-vides",
+      "city": "paris",
+      "raw": "",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "missing_hours"
+      }
+    },
+    {
+      "id": "paris-horaires-absents",
+      "city": "paris",
+      "raw": null,
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "missing_hours"
+      }
+    },
+    {
+      "id": "paris-etat-inconnu",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00; unknown",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "unknown"
+      }
+    },
+    {
+      "id": "paris-fuseau-inconnu",
+      "city": "paris",
+      "raw": "24/7",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "contextOverride": {
+        "timezone": "Mars/Olympus"
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "invalid_timezone"
+      }
+    },
+    {
+      "id": "paris-contexte-invalide",
+      "city": "paris",
+      "raw": "24/7",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T10:00:00Z"
+      },
+      "contextOverride": {
+        "coordinates": {
+          "lat": 100,
+          "lon": 2.3522
+        }
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "invalid_context"
+      }
+    },
+    {
+      "id": "paris-instant-invalide",
+      "city": "paris",
+      "raw": "24/7",
+      "check": {
+        "kind": "at",
+        "instant": "date invalide"
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "invalid_local_time"
+      }
+    },
+    {
+      "id": "lyon-ferie-ouvert",
+      "city": "lyon",
+      "raw": "PH 10:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-07-14T09:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open",
+        "holiday": true
+      }
+    },
+    {
+      "id": "lyon-ferie-off",
+      "city": "lyon",
+      "raw": "Mo-Su 09:00-18:00; PH off",
+      "check": {
+        "kind": "at",
+        "instant": "2026-07-14T09:00:00Z"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed",
+        "holiday": true
+      }
+    },
+    {
+      "id": "lyon-lendemain-ferie-ouvert",
+      "city": "lyon",
+      "raw": "Mo-Su 09:00-18:00; PH off",
+      "check": {
+        "kind": "at",
+        "instant": "2026-07-15T09:00:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open",
+        "holiday": false
+      }
+    },
+    {
+      "id": "lyon-fuseau-horaire",
+      "city": "lyon",
+      "raw": "Mo-Fr 09:00-18:00",
+      "check": {
+        "kind": "at",
+        "instant": "2026-10-21T07:30:00Z"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-fenetre-pause-dejeuner",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-12:00,13:00-18:00",
+      "check": {
+        "kind": "window",
+        "date": "2026-10-21",
+        "start": "11:45",
+        "end": "13:15"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closes_during_stop"
+      }
+    },
+    {
+      "id": "paris-fenetre-fenetres-adjacentes",
+      "city": "paris",
+      "raw": "Mo 09:00-12:00,12:00-18:00",
+      "check": {
+        "kind": "window",
+        "date": "2026-10-19",
+        "start": "10:00",
+        "end": "14:00"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-fenetre-fermeture-exacte",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00",
+      "check": {
+        "kind": "window",
+        "date": "2026-10-21",
+        "start": "17:00",
+        "end": "18:00"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-fenetre-fermeture-depassee",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00",
+      "check": {
+        "kind": "window",
+        "date": "2026-10-21",
+        "start": "17:00",
+        "end": "18:01"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closes_during_stop"
+      }
+    },
+    {
+      "id": "paris-fenetre-nuit",
+      "city": "paris",
+      "raw": "Fr 20:00-02:00",
+      "check": {
+        "kind": "window",
+        "date": "2026-10-23",
+        "start": "23:00",
+        "end": "01:00"
+      },
+      "expected": {
+        "status": "conforme",
+        "reason": "open"
+      }
+    },
+    {
+      "id": "paris-fenetre-nuit-depassee",
+      "city": "paris",
+      "raw": "Fr 20:00-02:00",
+      "check": {
+        "kind": "window",
+        "date": "2026-10-23",
+        "start": "23:00",
+        "end": "02:01"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closes_during_stop"
+      }
+    },
+    {
+      "id": "paris-fenetre-ferie-off",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00; PH off",
+      "check": {
+        "kind": "window",
+        "date": "2026-07-14",
+        "start": "10:00",
+        "end": "12:00"
+      },
+      "expected": {
+        "status": "violation",
+        "reason": "closed",
+        "holiday": true
+      }
+    },
+    {
+      "id": "paris-fenetre-heure-inexistante",
+      "city": "paris",
+      "raw": "Su 03:00-05:00",
+      "check": {
+        "kind": "window",
+        "date": "2026-03-29",
+        "start": "02:30",
+        "end": "03:30"
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "invalid_local_time"
+      }
+    },
+    {
+      "id": "paris-fenetre-horaires-absents",
+      "city": "paris",
+      "raw": null,
+      "check": {
+        "kind": "window",
+        "date": "2026-10-21",
+        "start": "10:00",
+        "end": "12:00"
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "missing_hours"
+      }
+    },
+    {
+      "id": "paris-fenetre-etat-inconnu",
+      "city": "paris",
+      "raw": "Mo-Fr 09:00-18:00; unknown",
+      "check": {
+        "kind": "window",
+        "date": "2026-10-21",
+        "start": "10:00",
+        "end": "12:00"
+      },
+      "expected": {
+        "status": "indéterminé",
+        "reason": "unknown"
+      }
+    }
+  ]
+}

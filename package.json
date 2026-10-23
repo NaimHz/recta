@@ -29,7 +29,9 @@
     "data:check": "pnpm --filter @recta/api data:check",
     "osm:fetch": "pnpm --filter @recta/api osm:fetch",
     "eval:resolution": "pnpm --filter @recta/api eval:resolution",
-    "eval:agent": "pnpm --filter @recta/api eval:agent"
+    "eval:agent": "pnpm --filter @recta/api eval:agent",
+    "eval:opening-hours": "pnpm --filter @recta/api eval:opening-hours",
+    "eval:verification": "pnpm --filter @recta/api eval:verification"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
