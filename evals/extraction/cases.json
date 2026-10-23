@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "thresholds": {
+    "schemaValid": 1,
+    "noInvention": 1
+  },
+  "cases": [
+    {
+      "id": "whatsapp-paris",
+      "format": "whatsapp",
+      "text": "Samedi 24 octobre, Paris\n09:00-11:00 Musée du Louvre\n12:30 déjeuner au Comptoir des Marronniers\n15:00-17:00 Musée d'Orsay"
+    },
+    {
+      "id": "blog-jour-1",
+      "format": "blog",
+      "text": "Jour 1 — Paris\nMatin : balade au Jardin du Luxembourg\nAprès-midi : Musée Rodin (14h-17h30)"
+    },
+    {
+      "id": "email-lyon",
+      "format": "email",
+      "text": "Objet : week-end à Lyon\nSamedi 25 octobre\n10h00 | Basilique Notre-Dame de Fourvière | 10h00-12h00\n13h00 | Brasserie Georges | 13h00-14h30\n16h00 | Musée des Confluences | 16h00-18h00"
+    },
+    {
+      "id": "notes-dimanche",
+      "format": "notes",
+      "text": "Dimanche :\n- 9h : café à la terrasse\n- 11h : expo Photo\n- 15h : parc"
+    },
+    {
+      "id": "english-paris",
+      "format": "english",
+      "text": "Saturday, October 24\n9:00 AM - 11:00 AM: Louvre Museum\n12:30 PM: Lunch at Café Marly\n3:00 PM - 5:00 PM: Musée d'Orsay"
+    },
+    {
+      "id": "two-days",
+      "format": "multi-day",
+      "text": "Vendredi 23 octobre — Lyon\n18h30 : dîner au Bouchon des Filles\nSamedi 24 octobre — Paris\n10h00 : Musée du Louvre\n14h00 : Jardin des Tuileries"
+    },
+    {
+      "id": "timezone-no-times",
+      "format": "prose",
+      "text": "Le 1er novembre, heure de Paris.\nProgramme : Opéra Garnier, puis Galeries Lafayette."
+    },
+    {
+      "id": "abbreviations",
+      "format": "abbreviations",
+      "text": "sam 24/10 - 10h30 Musée Picasso / 13h Repas / 15h30 Centre Pompidou"
+    },
+    {
+      "id": "prose",
+      "format": "prose",
+      "text": "On commence par le marché aux fleurs vers 10 h, puis déjeuner chez Marcel à midi, et enfin le Panthéon à 15 h."
+    },
+    {
+      "id": "weekend-two-cities",
+      "format": "weekend",
+      "text": "Week-end des 24 et 25 octobre\nSamedi : Lyon, visite des Halles Paul Bocuse à 11h\nDimanche : Paris, promenade au Luxembourg"
+    }
+  ]
+}

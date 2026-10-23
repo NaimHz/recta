@@ -1,5 +1,7 @@
 export { CityConfigSchema } from './city'
 export type { CityConfig } from './city'
+export { ExtractedDaySchema, ExtractedPlanSchema, ExtractedStopSchema } from './extraction'
+export type { ExtractedDay, ExtractedPlan, ExtractedStop } from './extraction'
 export {
   BUSINESS_STATUSES,
   BusinessStatusSchema,

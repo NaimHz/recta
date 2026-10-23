@@ -26,12 +26,15 @@
     "db:reset": "pnpm --filter @recta/api db:reset",
     "db:check": "pnpm --filter @recta/api db:check",
     "verify": "pnpm --filter @recta/api verify",
+    "extract": "pnpm --filter @recta/api extract",
     "data:check": "pnpm --filter @recta/api data:check",
     "osm:fetch": "pnpm --filter @recta/api osm:fetch",
     "eval:resolution": "pnpm --filter @recta/api eval:resolution",
     "eval:agent": "pnpm --filter @recta/api eval:agent",
     "eval:opening-hours": "pnpm --filter @recta/api eval:opening-hours",
-    "eval:verification": "pnpm --filter @recta/api eval:verification"
+    "eval:verification": "pnpm --filter @recta/api eval:verification",
+    "eval:extraction": "pnpm --filter @recta/api eval:extraction",
+    "eval:extraction:live": "pnpm --filter @recta/api eval:extraction:live"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

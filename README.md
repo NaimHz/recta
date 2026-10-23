@@ -43,12 +43,15 @@ attend que Postgres soit prêt.
 | `pnpm format` | Prettier |
 | `pnpm test` | Tests unitaires |
 | `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort le résultat JSON avec preuve, coût et fraîcheur |
+| `pnpm extract fichier.txt` | Extrait un plan depuis un texte via Anthropic (clé et modèle requis) |
 | `pnpm data:check` | Vérifie les bases curatées : 20 sites par ville, chaque fait avec source et date de revue |
 | `pnpm osm:fetch` | Récupère 25 lieux OSM par ville de référence et écrit `evals/sources/osm-places.json` |
 | `pnpm eval:resolution` | Mesure top-1 et top-3 de la résolution sur 30 cas et écrit `evals/resolution/report.json` |
 | `pnpm eval:agent` | Mesure les 10 cas de l'agent de résolution et écrit `evals/resolution/agent-report.json` |
 | `pnpm eval:opening-hours` | Mesure 40 cas d'horaires et écrit `evals/opening-hours/report.json` |
 | `pnpm eval:verification` | Combine les 30 cas de résolution et les 40 cas d'horaires dans `evals/verification/report.json` |
+| `pnpm eval:extraction` | Valide 10 textes sur les sorties enregistrées et écrit `evals/extraction/report.json` |
+| `pnpm eval:extraction:live` | Rejoue les 10 textes via Anthropic et écrit `evals/extraction/live-report.json` |
 | `pnpm build` | Build du web |
 | `pnpm db:up` | Démarre Postgres/PostGIS |
 | `pnpm db:reset` | Recrée la base, applique les migrations et charge les villes |
@@ -60,6 +63,14 @@ maximum. Les appels Overpass sont espacés d'au moins une seconde.
 `pnpm eval:verification` regroupe les deux jeux de test de la couche factuelle : 30 cas de
 résolution et 40 cas d'horaires. Le rapport donne le top-1, le top-3, les abstentions et la liste
 des erreurs, avec le détail de chaque cas.
+
+L'extraction utilise un schéma Zod strict. Toute information absente vaut `null`, et chaque stop
+doit citer un extrait exact du texte dans `sourceText`. Le mode enregistré ne fait aucun appel ;
+le mode live nécessite `ANTHROPIC_API_KEY` et `EXTRACTION_MODEL` :
+
+```sh
+ANTHROPIC_API_KEY=... EXTRACTION_MODEL=... pnpm eval:extraction:live
+```
 
 ## Faits curatés
 

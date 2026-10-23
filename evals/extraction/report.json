@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "measuredAt": "2026-10-23T12:16:04.629Z",
+  "mode": "recorded",
+  "source": "annotations de référence",
+  "promptVersion": "extraction-v1",
+  "thresholds": {
+    "schemaValid": 1,
+    "noInvention": 1
+  },
+  "metrics": {
+    "total": 10,
+    "schemaValidCount": 10,
+    "noInventionCount": 10,
+    "schemaValid": 1,
+    "noInvention": 1
+  },
+  "errorSummary": {
+    "schema": 0,
+    "invention": 0,
+    "provider": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "id": "whatsapp-paris",
+      "format": "whatsapp",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 1,
+      "stopCount": 3,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    },
+    {
+      "id": "blog-jour-1",
+      "format": "blog",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 1,
+      "stopCount": 2,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    },
+    {
+      "id": "email-lyon",
+      "format": "email",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 1,
+      "stopCount": 3,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    },
+    {
+      "id": "notes-dimanche",
+      "format": "notes",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 1,
+      "stopCount": 3,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    },
+    {
+      "id": "english-paris",
+      "format": "english",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 1,
+      "stopCount": 3,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    },
+    {
+      "id": "two-days",
+      "format": "multi-day",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 2,
+      "stopCount": 3,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    },
+    {
+      "id": "timezone-no-times",
+      "format": "prose",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 1,
+      "stopCount": 2,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    },
+    {
+      "id": "abbreviations",
+      "format": "abbreviations",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 1,
+      "stopCount": 3,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    },
+    {
+      "id": "prose",
+      "format": "prose",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 1,
+      "stopCount": 3,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    },
+    {
+      "id": "weekend-two-cities",
+      "format": "weekend",
+      "schemaValid": true,
+      "noInvention": true,
+      "dayCount": 2,
+      "stopCount": 2,
+      "schemaIssues": [],
+      "inventions": [],
+      "providerError": null
+    }
+  ]
+}
