@@ -17,6 +17,24 @@ export type {
   CuratedFactsFile,
   CuratedSite,
 } from './curated-facts'
+export {
+  DEFAULT_STOP_DURATIONS_MINUTES,
+  NormalizedDaySchema,
+  NormalizedPlanSchema,
+  NormalizedStopSchema,
+  STOP_WINDOW_SOURCES,
+  defaultDurationMinutesForType,
+  normalizeExtractedPlan,
+  normalizeExtractedStop,
+  stopTypeKeyFor,
+} from './normalize-extraction'
+export type {
+  NormalizedDay,
+  NormalizedPlan,
+  NormalizedStop,
+  StopTypeKey,
+  StopWindowSource,
+} from './normalize-extraction'
 export { resolvePlaces } from './place-resolution'
 export type {
   PlaceQuery,
