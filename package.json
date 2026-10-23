@@ -24,7 +24,8 @@
     "db:migrate": "pnpm --filter @recta/api db:migrate",
     "db:seed": "pnpm --filter @recta/api db:seed",
     "db:reset": "pnpm --filter @recta/api db:reset",
-    "db:check": "pnpm --filter @recta/api db:check"
+    "db:check": "pnpm --filter @recta/api db:check",
+    "verify": "pnpm --filter @recta/api verify"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

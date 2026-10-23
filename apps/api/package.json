@@ -13,7 +13,8 @@
     "db:migrate": "tsx src/db/migrate.ts",
     "db:seed": "tsx src/db/seed.ts",
     "db:reset": "tsx src/db/reset.ts",
-    "db:check": "tsx src/db/check.ts"
+    "db:check": "tsx src/db/check.ts",
+    "verify": "tsx src/cli/verify.ts"
   },
   "dependencies": {
     "@recta/domain": "workspace:*",

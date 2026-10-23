@@ -42,6 +42,7 @@ attend que Postgres soit prêt.
 | `pnpm lint` | ESLint |
 | `pnpm format` | Prettier |
 | `pnpm test` | Tests unitaires |
+| `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort le résultat JSON avec preuve |
 | `pnpm build` | Build du web |
 | `pnpm db:up` | Démarre Postgres/PostGIS |
 | `pnpm db:reset` | Recrée la base, applique les migrations et charge les villes |

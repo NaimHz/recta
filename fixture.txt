@@ -1,0 +1,15 @@
+# Recta — fixture 1.7
+#
+# Format :
+#   day: YYYY-MM-DD
+#   timezone: Europe/Paris
+#   début-fin | lieu | ouverture-fermeture | jours fermés
+#
+# Les horaires sont des données en dur. Le moteur d'horaires OSM arrive en 2.2.
+# Le troisième stop finit après la fermeture : c'est la violation volontaire.
+
+day: 2026-10-24
+timezone: Europe/Paris
+09:00-11:00 | Louvre | 09:00-18:00 | -
+12:00-13:30 | Le Comptoir | 12:00-14:30 | Sun,Mon
+17:30-19:00 | Musée d'Orsay | 09:30-18:00 | Mon
