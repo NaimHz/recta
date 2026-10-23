@@ -2,7 +2,7 @@ import { existsSync } from 'node:fs'
 import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { verifyOpeningHours } from '@recta/domain'
+import { buildVerificationReport, verifyOpeningHours } from '@recta/domain'
 import { parseFixture } from './fixture'
 
 const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url))
@@ -34,7 +34,8 @@ async function main(): Promise<void> {
 
   try {
     const result = verifyOpeningHours(parseFixture(text))
-    process.stdout.write(`${JSON.stringify(result, null, 2)}\n`)
+    const report = buildVerificationReport(result)
+    process.stdout.write(`${JSON.stringify(report, null, 2)}\n`)
   } catch (error) {
     const detail = error instanceof Error ? error.message : String(error)
     console.error(`Fixture invalide : ${detail}`)

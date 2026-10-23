@@ -85,4 +85,32 @@ export type {
   VerificationResult,
   VerificationStatus,
 } from './plan'
+export {
+  COST_ALERT_EUR,
+  COST_STOP_EUR,
+  FreshnessEntrySchema,
+  FreshnessReportSchema,
+  STALE_AFTER_DAYS,
+  SOURCE_CALL_COSTS_EUR,
+  SourceCallCountsSchema,
+  VerificationBudgetSchema,
+  VerificationCostTracker,
+  VerificationReportSchema,
+  VerificationUsageSchema,
+  buildFreshnessReport,
+  buildVerificationReport,
+  estimateCostEur,
+  estimateUsage,
+} from './verification-report'
+export type {
+  FreshnessEntry,
+  FreshnessReport,
+  SourceCallCosts,
+  SourceCallCounts,
+  VerificationBudget,
+  VerificationCostTrackerOptions,
+  VerificationReport,
+  VerificationReportOptions,
+  VerificationUsage,
+} from './verification-report'
 export { SCHEMA_VERSION } from './version'

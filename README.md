@@ -42,7 +42,7 @@ attend que Postgres soit prêt.
 | `pnpm lint` | ESLint |
 | `pnpm format` | Prettier |
 | `pnpm test` | Tests unitaires |
-| `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort le résultat JSON avec preuve |
+| `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort le résultat JSON avec preuve, coût et fraîcheur |
 | `pnpm data:check` | Vérifie les bases curatées : 20 sites par ville, chaque fait avec source et date de revue |
 | `pnpm osm:fetch` | Récupère 25 lieux OSM par ville de référence et écrit `evals/sources/osm-places.json` |
 | `pnpm eval:resolution` | Mesure top-1 et top-3 de la résolution sur 30 cas et écrit `evals/resolution/report.json` |
@@ -61,6 +61,16 @@ Chaque ville a une base `packages/data/cities/<ville>/curated-facts.yml`. Les fa
 (`business_status`) y sont versionnés avec leur source HTTPS et leur date de revue. Les 20 sites
 de chaque ville sont reliés à un objet OSM. `pnpm data:check` valide le format, les doublons et la
 présence d'une source datée pour chaque fait.
+
+## Coût et fraîcheur
+
+`pnpm verify` ajoute au résultat deux blocs. `usage` compte les appels, estime le coût et applique
+les plafonds : alerte à 0,50 €, arrêt à 1,00 €. `freshness` donne l'âge de la source de chaque lieu
+et signale ceux de plus de 365 jours. Sans date de source, la fraîcheur est `inconnue` : elle n'est
+pas supposée fraîche.
+
+Les appels Google Places sont estimés à 0,02 €. OSM, OSRM et Transitous restent gratuits. La
+fixture locale ne fait aucun appel externe : son coût est donc nul.
 
 ## Structure
 
