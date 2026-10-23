@@ -7,6 +7,24 @@ export type {
   ResolvePlacesOptions,
   ScoredPlace,
 } from './place-resolution'
+export {
+  RESOLUTION_AGENT_MAX_CALLS,
+  RESOLUTION_AGENT_MIN_MARGIN,
+  RESOLUTION_AGENT_MIN_NAME_SCORE,
+  RESOLUTION_AGENT_MIN_OPTION_NAME_SCORE,
+  RESOLUTION_AGENT_MIN_OPTION_SCORE,
+  RESOLUTION_AGENT_MIN_PLAUSIBLE_NAME_SCORE,
+  RESOLUTION_AGENT_MIN_SCORE,
+  runResolutionAgent,
+} from './resolution-agent'
+export type {
+  PlaceSearchTool,
+  ResolutionAgentJournalEntry,
+  ResolutionAgentOption,
+  ResolutionAgentOptions,
+  ResolutionAgentResult,
+  ResolutionSearchInput,
+} from './resolution-agent'
 export { verifyOpeningHours, dayCodeForDate } from './opening-hours'
 export {
   checkOpeningHoursAt,

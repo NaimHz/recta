@@ -1,0 +1,598 @@
+{
+  "version": 1,
+  "measuredAt": "2026-10-23T09:18:18.996Z",
+  "candidateSource": "evals/sources/osm-places.json",
+  "maxCalls": 6,
+  "thresholds": {
+    "good": 1,
+    "inventions": 0
+  },
+  "metrics": {
+    "total": 10,
+    "good": 10,
+    "goodRate": 1,
+    "resolvedCorrect": 5,
+    "clarifications": 4,
+    "notFound": 1,
+    "inventions": 0,
+    "budgetExceeded": 0
+  },
+  "cases": [
+    {
+      "id": "paris-terrasse",
+      "city": "paris",
+      "query": "la terrasse",
+      "type": "restaurant",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/176476541"
+      },
+      "good": true,
+      "status": "resolved",
+      "placeId": "osm:node/176476541",
+      "placeName": "La Terrasse",
+      "question": null,
+      "options": [],
+      "optionIds": [],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "la terrasse",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "la terrasse",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "resolved",
+          "reason": "match_confident"
+        }
+      ]
+    },
+    {
+      "id": "lyon-terrasse",
+      "city": "lyon",
+      "query": "la terrasse",
+      "type": "cafe",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/35960763"
+      },
+      "good": true,
+      "status": "resolved",
+      "placeId": "osm:node/35960763",
+      "placeName": "La Terrasse",
+      "question": null,
+      "options": [],
+      "optionIds": [],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "la terrasse",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "la terrasse",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "resolved",
+          "reason": "match_confident"
+        }
+      ]
+    },
+    {
+      "id": "paris-arts-et-metiers-museum",
+      "city": "paris",
+      "query": "arts et metiers",
+      "type": "museum",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/247618453"
+      },
+      "good": true,
+      "status": "resolved",
+      "placeId": "osm:node/247618453",
+      "placeName": "Musée des Arts et Métiers",
+      "question": null,
+      "options": [],
+      "optionIds": [],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "arts et metiers",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "arts et metiers",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "resolved",
+          "reason": "match_confident"
+        }
+      ]
+    },
+    {
+      "id": "paris-arts-et-metiers-cafe",
+      "city": "paris",
+      "query": "arts et metiers",
+      "type": "cafe",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/247696091"
+      },
+      "good": true,
+      "status": "resolved",
+      "placeId": "osm:node/247696091",
+      "placeName": "Les Arts et Métiers",
+      "question": null,
+      "options": [],
+      "optionIds": [],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "arts et metiers",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "arts et metiers",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "resolved",
+          "reason": "match_confident"
+        }
+      ]
+    },
+    {
+      "id": "paris-cafe-marly",
+      "city": "paris",
+      "query": "cafe marly",
+      "type": "cafe",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/247455918"
+      },
+      "good": true,
+      "status": "resolved",
+      "placeId": "osm:node/247455918",
+      "placeName": "Le Café Marly",
+      "question": null,
+      "options": [],
+      "optionIds": [],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "cafe marly",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "cafe marly",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "resolved",
+          "reason": "match_confident"
+        }
+      ]
+    },
+    {
+      "id": "paris-arts-et-metiers",
+      "city": "paris",
+      "query": "arts et metiers",
+      "type": null,
+      "expected": {
+        "status": "needs_clarification",
+        "optionIds": [
+          "osm:node/247696091",
+          "osm:node/247618453"
+        ]
+      },
+      "good": true,
+      "status": "needs_clarification",
+      "placeId": null,
+      "placeName": null,
+      "question": "« arts et metiers » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+      "options": [
+        {
+          "id": "osm:node/247696091",
+          "name": "Les Arts et Métiers",
+          "address": null,
+          "category": "amenity:cafe",
+          "score": 0.9500000000000001
+        },
+        {
+          "id": "osm:node/247618453",
+          "name": "Musée des Arts et Métiers",
+          "address": "60 Rue Réaumur, 75003",
+          "category": "tourism:museum",
+          "score": 0.905
+        }
+      ],
+      "optionIds": [
+        "osm:node/247696091",
+        "osm:node/247618453"
+      ],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "arts et metiers",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "arts et metiers",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "needs_clarification",
+          "reason": "close_scores"
+        },
+        {
+          "step": 4,
+          "kind": "question",
+          "question": "« arts et metiers » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+          "optionIds": [
+            "osm:node/247696091",
+            "osm:node/247618453"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lyon-bistro",
+      "city": "lyon",
+      "query": "bistro",
+      "type": null,
+      "expected": {
+        "status": "needs_clarification",
+        "optionIds": [
+          "osm:node/25733700",
+          "osm:node/61948490"
+        ]
+      },
+      "good": true,
+      "status": "needs_clarification",
+      "placeId": null,
+      "placeName": null,
+      "question": "« bistro » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+      "options": [
+        {
+          "id": "osm:node/25733700",
+          "name": "L'Esprit Bistrot",
+          "address": null,
+          "category": "amenity:restaurant",
+          "score": 0.905
+        },
+        {
+          "id": "osm:node/61948490",
+          "name": "Le Bistro Autrement",
+          "address": "12 Place Ambroise Courtois, 69008 Lyon",
+          "category": "amenity:restaurant",
+          "score": 0.905
+        }
+      ],
+      "optionIds": [
+        "osm:node/25733700",
+        "osm:node/61948490"
+      ],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "bistro",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "bistro",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "needs_clarification",
+          "reason": "generic_query"
+        },
+        {
+          "step": 4,
+          "kind": "question",
+          "question": "« bistro » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+          "optionIds": [
+            "osm:node/25733700",
+            "osm:node/61948490"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lyon-restaurant",
+      "city": "lyon",
+      "query": "restaurant",
+      "type": "restaurant",
+      "expected": {
+        "status": "needs_clarification",
+        "optionIds": [
+          "osm:node/73657010",
+          "osm:node/47770405",
+          "osm:node/75744647"
+        ]
+      },
+      "good": true,
+      "status": "needs_clarification",
+      "placeId": null,
+      "placeName": null,
+      "question": "« restaurant » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+      "options": [
+        {
+          "id": "osm:node/73657010",
+          "name": "Restaurant de la Plaine",
+          "address": null,
+          "category": "amenity:restaurant",
+          "score": 0.9400000000000001
+        },
+        {
+          "id": "osm:node/47770405",
+          "name": "Restaurant Léon de Lyon",
+          "address": null,
+          "category": "amenity:restaurant",
+          "score": 0.9400000000000001
+        },
+        {
+          "id": "osm:node/75744647",
+          "name": "Restaurant Pierre Orsi",
+          "address": null,
+          "category": "amenity:restaurant",
+          "score": 0.9400000000000001
+        }
+      ],
+      "optionIds": [
+        "osm:node/73657010",
+        "osm:node/47770405",
+        "osm:node/75744647"
+      ],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "restaurant",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "restaurant",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "needs_clarification",
+          "reason": "generic_query"
+        },
+        {
+          "step": 4,
+          "kind": "question",
+          "question": "« restaurant » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+          "optionIds": [
+            "osm:node/73657010",
+            "osm:node/47770405",
+            "osm:node/75744647"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paris-cafe",
+      "city": "paris",
+      "query": "cafe",
+      "type": null,
+      "expected": {
+        "status": "needs_clarification",
+        "optionIds": [
+          "osm:node/247696090",
+          "osm:node/247455918"
+        ]
+      },
+      "good": true,
+      "status": "needs_clarification",
+      "placeId": null,
+      "placeName": null,
+      "question": "« cafe » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+      "options": [
+        {
+          "id": "osm:node/247696090",
+          "name": "Café des Musées",
+          "address": "49 Rue de Turenne",
+          "category": "amenity:restaurant",
+          "score": 0.905
+        },
+        {
+          "id": "osm:node/247455918",
+          "name": "Le Café Marly",
+          "address": "93 Rue de Rivoli, 75001 Paris",
+          "category": "amenity:cafe",
+          "score": 0.905
+        }
+      ],
+      "optionIds": [
+        "osm:node/247696090",
+        "osm:node/247455918"
+      ],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "cafe",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "cafe",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "needs_clarification",
+          "reason": "generic_query"
+        },
+        {
+          "step": 4,
+          "kind": "question",
+          "question": "« cafe » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+          "optionIds": [
+            "osm:node/247696090",
+            "osm:node/247455918"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paris-piscine-pontoise",
+      "city": "paris",
+      "query": "piscine pontoise",
+      "type": null,
+      "expected": {
+        "status": "not_found",
+        "questionIncludes": "préciser"
+      },
+      "good": true,
+      "status": "not_found",
+      "placeId": null,
+      "placeName": null,
+      "question": "Je ne trouve pas « piscine pontoise » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+      "options": [],
+      "optionIds": [],
+      "usedCalls": 2,
+      "inventions": [],
+      "journal": [
+        {
+          "step": 1,
+          "kind": "tool",
+          "tool": "search",
+          "source": "fixture.search",
+          "query": "piscine pontoise",
+          "status": "ok",
+          "resultCount": 25
+        },
+        {
+          "step": 2,
+          "kind": "tool",
+          "tool": "rank",
+          "query": "piscine pontoise",
+          "status": "ok",
+          "resultCount": 3
+        },
+        {
+          "step": 3,
+          "kind": "decision",
+          "decision": "not_found",
+          "reason": "no_plausible_candidate"
+        },
+        {
+          "step": 4,
+          "kind": "question",
+          "question": "Je ne trouve pas « piscine pontoise » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+          "optionIds": []
+        }
+      ]
+    }
+  ]
+}

@@ -27,7 +27,8 @@
     "db:check": "pnpm --filter @recta/api db:check",
     "verify": "pnpm --filter @recta/api verify",
     "osm:fetch": "pnpm --filter @recta/api osm:fetch",
-    "eval:resolution": "pnpm --filter @recta/api eval:resolution"
+    "eval:resolution": "pnpm --filter @recta/api eval:resolution",
+    "eval:agent": "pnpm --filter @recta/api eval:agent"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

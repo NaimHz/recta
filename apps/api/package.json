@@ -16,7 +16,8 @@
     "db:check": "tsx src/db/check.ts",
     "verify": "tsx src/cli/verify.ts",
     "osm:fetch": "tsx src/sources/osm/fetch-places.ts",
-    "eval:resolution": "tsx src/evals/resolution.ts"
+    "eval:resolution": "tsx src/evals/resolution.ts",
+    "eval:agent": "tsx src/evals/resolution-agent.ts"
   },
   "dependencies": {
     "@recta/domain": "workspace:*",

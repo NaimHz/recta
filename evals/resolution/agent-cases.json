@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "maxCalls": 6,
+  "thresholds": {
+    "good": 1,
+    "inventions": 0
+  },
+  "candidateSource": "evals/sources/osm-places.json",
+  "cases": [
+    {
+      "id": "paris-terrasse",
+      "city": "paris",
+      "query": "la terrasse",
+      "type": "restaurant",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/176476541"
+      }
+    },
+    {
+      "id": "lyon-terrasse",
+      "city": "lyon",
+      "query": "la terrasse",
+      "type": "cafe",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/35960763"
+      }
+    },
+    {
+      "id": "paris-arts-et-metiers-museum",
+      "city": "paris",
+      "query": "arts et metiers",
+      "type": "museum",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/247618453"
+      }
+    },
+    {
+      "id": "paris-arts-et-metiers-cafe",
+      "city": "paris",
+      "query": "arts et metiers",
+      "type": "cafe",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/247696091"
+      }
+    },
+    {
+      "id": "paris-cafe-marly",
+      "city": "paris",
+      "query": "cafe marly",
+      "type": "cafe",
+      "expected": {
+        "status": "resolved",
+        "placeId": "osm:node/247455918"
+      }
+    },
+    {
+      "id": "paris-arts-et-metiers",
+      "city": "paris",
+      "query": "arts et metiers",
+      "expected": {
+        "status": "needs_clarification",
+        "optionIds": ["osm:node/247696091", "osm:node/247618453"]
+      }
+    },
+    {
+      "id": "lyon-bistro",
+      "city": "lyon",
+      "query": "bistro",
+      "expected": {
+        "status": "needs_clarification",
+        "optionIds": ["osm:node/25733700", "osm:node/61948490"]
+      }
+    },
+    {
+      "id": "lyon-restaurant",
+      "city": "lyon",
+      "query": "restaurant",
+      "type": "restaurant",
+      "expected": {
+        "status": "needs_clarification",
+        "optionIds": ["osm:node/73657010", "osm:node/47770405", "osm:node/75744647"]
+      }
+    },
+    {
+      "id": "paris-cafe",
+      "city": "paris",
+      "query": "cafe",
+      "expected": {
+        "status": "needs_clarification",
+        "optionIds": ["osm:node/247696090", "osm:node/247455918"]
+      }
+    },
+    {
+      "id": "paris-piscine-pontoise",
+      "city": "paris",
+      "query": "piscine pontoise",
+      "expected": {
+        "status": "not_found",
+        "questionIncludes": "préciser"
+      }
+    }
+  ]
+}
