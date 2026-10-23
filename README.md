@@ -43,6 +43,7 @@ attend que Postgres soit prêt.
 | `pnpm format` | Prettier |
 | `pnpm test` | Tests unitaires |
 | `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort le résultat JSON avec preuve |
+| `pnpm data:check` | Vérifie les bases curatées : 20 sites par ville, chaque fait avec source et date de revue |
 | `pnpm osm:fetch` | Récupère 25 lieux OSM par ville de référence et écrit `evals/sources/osm-places.json` |
 | `pnpm eval:resolution` | Mesure top-1 et top-3 de la résolution sur 30 cas et écrit `evals/resolution/report.json` |
 | `pnpm eval:agent` | Mesure les 10 cas de l'agent de résolution et écrit `evals/resolution/agent-report.json` |
@@ -53,6 +54,13 @@ attend que Postgres soit prêt.
 
 `pnpm osm:fetch --nominatim` ajoute un géocodage de contrôle par ville, à une requête par seconde
 maximum. Les appels Overpass sont espacés d'au moins une seconde.
+
+## Faits curatés
+
+Chaque ville a une base `packages/data/cities/<ville>/curated-facts.yml`. Les faits hors OSM
+(`business_status`) y sont versionnés avec leur source HTTPS et leur date de revue. Les 20 sites
+de chaque ville sont reliés à un objet OSM. `pnpm data:check` valide le format, les doublons et la
+présence d'une source datée pour chaque fait.
 
 ## Structure
 

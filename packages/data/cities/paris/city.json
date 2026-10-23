@@ -11,6 +11,6 @@
   "evalCorpusPath": "evals/corpus/paris",
   "capabilities": {
     "transit": false,
-    "curatedFacts": false
+    "curatedFacts": true
   }
 }

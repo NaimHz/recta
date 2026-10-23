@@ -1,0 +1,222 @@
+version: 1
+city: paris
+sites:
+  - id: louvre
+    name: 'Musée du Louvre'
+    placeId: 'osm:relation/7515426'
+    address: 'Place du Carrousel, 75001 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.louvre.fr/en/visit'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-orsay
+    name: "Musée d'Orsay"
+    placeId: 'osm:way/63178753'
+    address: "1 Rue de la Légion d'Honneur, 75007 Paris"
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.musee-orsay.fr/en/visit'
+          reviewedAt: '2026-10-23'
+
+  - id: centre-pompidou
+    name: 'Centre Pompidou'
+    placeId: 'osm:way/55503397'
+    address: 'Place Georges-Pompidou, 75004 Paris'
+    facts:
+      - key: business_status
+        value: closed_temporarily
+        source:
+          url: 'https://www.centrepompidou.fr/en/centre-pompidou-is-transforming-itself'
+          reviewedAt: '2026-10-23'
+
+  - id: tour-eiffel
+    name: 'Tour Eiffel'
+    placeId: 'osm:way/5013364'
+    address: '5 Avenue Anatole France, 75007 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.toureiffel.paris/en'
+          reviewedAt: '2026-10-23'
+
+  - id: arc-de-triomphe
+    name: 'Arc de Triomphe'
+    placeId: 'osm:way/226413508'
+    address: 'Place Charles de Gaulle, 75008 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.paris-arc-de-triomphe.fr/en'
+          reviewedAt: '2026-10-23'
+
+  - id: sainte-chapelle
+    name: 'Sainte-Chapelle'
+    placeId: 'osm:relation/3344870'
+    address: '10 Boulevard du Palais, 75001 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.sainte-chapelle.fr/en'
+          reviewedAt: '2026-10-23'
+
+  - id: pantheon
+    name: 'Panthéon'
+    placeId: 'osm:way/16407465'
+    address: 'Place du Panthéon, 75005 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.paris-pantheon.fr/visiter'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-orangerie
+    name: "Musée de l'Orangerie"
+    placeId: 'osm:way/54188996'
+    address: 'Jardin des Tuileries, 75001 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.musee-orangerie.fr/en'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-rodin
+    name: 'Musée Rodin'
+    placeId: 'osm:way/472159547'
+    address: '77 Rue de Varenne, 75007 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.musee-rodin.fr/en'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-arts-et-metiers
+    name: 'Musée des Arts et Métiers'
+    placeId: 'osm:node/247618453'
+    address: '60 Rue Réaumur, 75003 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.arts-et-metiers.net/'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-arts-decoratifs
+    name: 'Musée des Arts Décoratifs'
+    placeId: 'osm:node/247584452'
+    address: '107 Rue de Rivoli, 75001 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://madparis.fr/'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-armee
+    name: "Musée de l'Armée"
+    placeId: 'osm:node/130102845'
+    address: '129 Rue de Grenelle, 75007 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.musee-armee.fr/en'
+          reviewedAt: '2026-10-23'
+
+  - id: notre-dame
+    name: 'Cathédrale Notre-Dame de Paris'
+    placeId: 'osm:way/201611261'
+    address: '6 Parvis Notre-Dame - Place Jean-Paul II, 75004 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.notredamedeparis.fr/en/'
+          reviewedAt: '2026-10-23'
+
+  - id: jardin-du-luxembourg
+    name: 'Jardin du Luxembourg'
+    placeId: 'osm:way/128206209'
+    address: 'Rue de Médicis, 75006 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.senat.fr/visite/jardin/index.html'
+          reviewedAt: '2026-10-23'
+
+  - id: opera-garnier
+    name: 'Opéra Garnier'
+    placeId: 'osm:way/54667456'
+    address: "Place de l'Opéra, 75009 Paris"
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.operadeparis.fr/visites/palais-garnier'
+          reviewedAt: '2026-10-23'
+
+  - id: galeries-lafayette
+    name: 'Galeries Lafayette Haussmann'
+    placeId: 'osm:way/69224062'
+    address: '40 Boulevard Haussmann, 75009 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://haussmann.galerieslafayette.com/en/'
+          reviewedAt: '2026-10-23'
+
+  - id: le-bon-marche
+    name: 'Le Bon Marché'
+    placeId: 'osm:relation/10166422'
+    address: '24 Rue de Sèvres, 75007 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.lebonmarche.com/en'
+          reviewedAt: '2026-10-23'
+
+  - id: marche-aux-fleurs
+    name: 'Marché aux fleurs Reine Elizabeth II'
+    placeId: 'osm:way/152843972'
+    address: 'Place Louis Lépine, 75004 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.paris.fr/lieux/marche-aux-fleurs-reine-elizabeth-ii-4506'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-carnavalet
+    name: 'Musée Carnavalet'
+    placeId: 'osm:relation/2405955'
+    address: '23 Rue de Sévigné, 75003 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.carnavalet.paris.fr/en'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-picasso
+    name: 'Musée national Picasso-Paris'
+    placeId: 'osm:way/57745741'
+    address: '5 Rue de Thorigny, 75003 Paris'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.museepicassoparis.fr/en'
+          reviewedAt: '2026-10-23'

@@ -11,6 +11,6 @@
   "evalCorpusPath": "evals/corpus/lyon",
   "capabilities": {
     "transit": false,
-    "curatedFacts": false
+    "curatedFacts": true
   }
 }

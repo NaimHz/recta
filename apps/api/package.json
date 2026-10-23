@@ -15,6 +15,7 @@
     "db:reset": "tsx src/db/reset.ts",
     "db:check": "tsx src/db/check.ts",
     "verify": "tsx src/cli/verify.ts",
+    "data:check": "tsx src/cli/check-data.ts",
     "osm:fetch": "tsx src/sources/osm/fetch-places.ts",
     "eval:resolution": "tsx src/evals/resolution.ts",
     "eval:agent": "tsx src/evals/resolution-agent.ts"
@@ -25,6 +26,7 @@
     "fastify": "^5.12.7",
     "opening_hours": "3.15.0",
     "postgres": "^3.4.9",
+    "yaml": "^2.9.1",
     "zod": "^4.6.7"
   },
   "devDependencies": {

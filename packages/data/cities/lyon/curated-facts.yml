@@ -1,0 +1,222 @@
+version: 1
+city: lyon
+sites:
+  - id: musee-des-confluences
+    name: 'Musée des Confluences'
+    placeId: 'osm:way/440270631'
+    address: '86 Quai Perrache, 69002 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.museedesconfluences.fr/en'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-des-beaux-arts
+    name: 'Musée des Beaux-Arts de Lyon'
+    placeId: 'osm:way/493540665'
+    address: '20 Place des Terreaux, 69001 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.mba-lyon.fr/en'
+          reviewedAt: '2026-10-23'
+
+  - id: basilique-fourviere
+    name: 'Basilique Notre-Dame de Fourvière'
+    placeId: 'osm:way/29179429'
+    address: '8 Place de Fourvière, 69005 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.fourviere.org/en/'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-lugdunum
+    name: 'Lugdunum Musée et Théâtres Romains'
+    placeId: 'osm:way/88526510'
+    address: '17 Rue Cléberg, 69005 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://lugdunum.grandlyon.com/en/'
+          reviewedAt: '2026-10-23'
+
+  - id: cathedrale-saint-jean
+    name: 'Cathédrale Saint-Jean-Baptiste de Lyon'
+    placeId: 'osm:way/136200148'
+    address: 'Place Saint-Jean, 69005 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.cathedrale-lyon.fr/'
+          reviewedAt: '2026-10-23'
+
+  - id: institut-lumiere
+    name: 'Institut Lumière'
+    placeId: 'osm:node/4485572406'
+    address: '25 Rue du Premier Film, 69008 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.institut-lumiere.org/'
+          reviewedAt: '2026-10-23'
+
+  - id: mac-lyon
+    name: "Musée d'Art Contemporain de Lyon"
+    placeId: 'osm:way/62277312'
+    address: '81 Quai Charles de Gaulle, 69006 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://mac-lyon.com/'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-imprimerie
+    name: "Musée de l'Imprimerie et de la Communication Graphique"
+    placeId: 'osm:way/62271798'
+    address: '13 Rue de la Poulaillerie, 69002 Lyon'
+    facts:
+      - key: business_status
+        value: closed_temporarily
+        source:
+          url: 'https://www.imprimerie.lyon.fr/fr/edito/travaux'
+          reviewedAt: '2026-10-23'
+
+  - id: chrd
+    name: "Centre d'Histoire de la Résistance et de la Déportation"
+    placeId: 'osm:node/26131828'
+    address: '14 Avenue Berthelot, 69007 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.chrd.lyon.fr/'
+          reviewedAt: '2026-10-23'
+
+  - id: opera-lyon
+    name: 'Opéra de Lyon'
+    placeId: 'osm:way/10061086'
+    address: '1 Place de la Comédie, 69001 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.opera-lyon.com/'
+          reviewedAt: '2026-10-23'
+
+  - id: theatre-des-celestins
+    name: 'Théâtre des Célestins'
+    placeId: 'osm:way/82394457'
+    address: '4 Rue Charles Dullin, 69002 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.lyon.fr/lieu/theatre/les-celestins-theatre-de-lyon'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-gadagne
+    name: 'Musées Gadagne'
+    placeId: 'osm:way/700244364'
+    address: '1 Place du Petit Collège, 69005 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.gadagne-lyon.fr/'
+          reviewedAt: '2026-10-23'
+
+  - id: hotel-dieu
+    name: 'Hôtel-Dieu de Lyon'
+    placeId: 'osm:way/654805094'
+    address: "1 Place de l'Hôpital, 69002 Lyon"
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.hotel-dieu-lyon.com/'
+          reviewedAt: '2026-10-23'
+
+  - id: marche-saint-antoine
+    name: 'Marché Saint-Antoine'
+    placeId: 'osm:node/2911180061'
+    address: 'Quai Saint-Antoine, 69002 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.lyon.fr/lieu/marches-alimentaires/marche-alimentaire-saint-antoine-celestins'
+          reviewedAt: '2026-10-23'
+
+  - id: marche-croix-rousse
+    name: 'Marché de la Croix-Rousse'
+    placeId: 'osm:node/7343098368'
+    address: 'Boulevard de la Croix-Rousse, 69004 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.lyon.fr/lieu/marches-alimentaires/marche-alimentaire-de-la-croix-rousse'
+          reviewedAt: '2026-10-23'
+
+  - id: maison-des-canuts
+    name: 'Maison des Canuts'
+    placeId: 'osm:node/4885281682'
+    address: "10-12 Rue d'Ivry, 69004 Lyon"
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://maisondescanuts.fr/'
+          reviewedAt: '2026-10-23'
+
+  - id: fresque-des-lyonnais
+    name: 'Fresque des Lyonnais'
+    placeId: 'osm:way/259813452'
+    address: '2 Rue de la Martinière, 69001 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.lyon.fr/lieu/contemporaine-19eme-20eme/fresque-des-lyonnais'
+          reviewedAt: '2026-10-23'
+
+  - id: musee-cinema-miniature
+    name: 'Musée Cinéma & Miniature'
+    placeId: 'osm:node/1421012868'
+    address: '60 Rue Saint-Jean, 69005 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.museeminiatureetcinema.fr/'
+          reviewedAt: '2026-10-23'
+
+  - id: parc-tete-d-or
+    name: "Parc de la Tête d'Or"
+    placeId: 'osm:way/4077207'
+    address: 'Boulevard des Belges, 69006 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.lyon.fr/lieu/parcs/parc-de-la-tete-dor'
+          reviewedAt: '2026-10-23'
+
+  - id: jardin-des-curiosites
+    name: 'Jardin des Curiosités'
+    placeId: 'osm:way/40551161'
+    address: 'Place Abbé Larue, 69005 Lyon'
+    facts:
+      - key: business_status
+        value: operational
+        source:
+          url: 'https://www.lyon.fr/lieu/jardins/jardin-de-proximite-montreal'
+          reviewedAt: '2026-10-23'

@@ -1,5 +1,20 @@
 export { CityConfigSchema } from './city'
 export type { CityConfig } from './city'
+export {
+  BUSINESS_STATUSES,
+  BusinessStatusSchema,
+  CuratedFactSchema,
+  CuratedFactSourceSchema,
+  CuratedFactsFileSchema,
+  CuratedSiteSchema,
+} from './curated-facts'
+export type {
+  BusinessStatus,
+  CuratedFact,
+  CuratedFactSource,
+  CuratedFactsFile,
+  CuratedSite,
+} from './curated-facts'
 export { resolvePlaces } from './place-resolution'
 export type {
   PlaceQuery,
