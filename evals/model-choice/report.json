@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "measuredAt": "2026-11-03T09:25:41.589Z",
+  "promptVersion": "extraction-v4",
+  "corpusSize": 30,
+  "pricesSource": {
+    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "checkedAt": "2026-10-06",
+    "currency": "USD"
+  },
+  "rules": {
+    "repetitions": 2,
+    "costCapUsd": 5,
+    "f1Margin": 0.02,
+    "maxP95LatencyMs": 10000
+  },
+  "stopped": null,
+  "bestMacroF1": 0.9926888961166724,
+  "selected": "haiku-low",
+  "totalCostUsd": 0.7703787,
+  "configs": [
+    {
+      "id": "haiku-medium",
+      "model": "claude-haiku-5-5",
+      "effort": "medium",
+      "complete": true,
+      "repetitions": [
+        {
+          "schemaValidCount": 30,
+          "noInventionCount": 30,
+          "providerErrors": 0,
+          "macroF1": 0.9940555691059532,
+          "microF1": 0.9921996879875196,
+          "typeF1": 0.9863013698630138
+        },
+        {
+          "schemaValidCount": 30,
+          "noInventionCount": 30,
+          "providerErrors": 0,
+          "macroF1": 0.9912015636741759,
+          "microF1": 0.9874999999999999,
+          "typeF1": 0.9793103448275862
+        }
+      ],
+      "macroF1": {
+        "min": 0.9912015636741759,
+        "mean": 0.9926285663900645
+      },
+      "typeF1Mean": 0.9828058573453,
+      "calls": 60,
+      "meanInputTokens": 1790.9666666666667,
+      "meanOutputTokens": 564.1333333333333,
+      "meanCostUsd": 0.0004611633333333333,
+      "totalCostUsd": 0.028177599999999997,
+      "latency": {
+        "samples": 60,
+        "p50Ms": 3441.3221600000106,
+        "p95Ms": 4382.608238999994
+      },
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "id": "haiku-low",
+      "model": "claude-haiku-5-5",
+      "effort": "low",
+      "complete": true,
+      "repetitions": [
+        {
+          "schemaValidCount": 30,
+          "noInventionCount": 30,
+          "providerErrors": 0,
+          "macroF1": 0.9894154271878243,
+          "microF1": 0.9858267716535433,
+          "typeF1": 0.9428571428571428
+        },
+        {
+          "schemaValidCount": 30,
+          "noInventionCount": 30,
+          "providerErrors": 0,
+          "macroF1": 0.9894154271878243,
+          "microF1": 0.9858267716535433,
+          "typeF1": 0.9428571428571428
+        }
+      ],
+      "macroF1": {
+        "min": 0.9894154271878243,
+        "mean": 0.9894154271878243
+      },
+      "typeF1Mean": 0.9428571428571428,
+      "calls": 60,
+      "meanInputTokens": 1790.9666666666667,
+      "meanOutputTokens": 247.83333333333334,
+      "meanCostUsd": 0.00030301333333333325,
+      "totalCostUsd": 0.018477099999999996,
+      "latency": {
+        "samples": 60,
+        "p50Ms": 1995.9402780000237,
+        "p95Ms": 2972.3868269999803
+      },
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "id": "sonnet-high",
+      "model": "claude-sonnet-5-5",
+      "effort": "high",
+      "complete": true,
+      "repetitions": [
+        {
+          "schemaValidCount": 30,
+          "noInventionCount": 30,
+          "providerErrors": 0,
+          "macroF1": 0.9914782423636458,
+          "microF1": 0.9905956112852665,
+          "typeF1": 0.9722222222222222
+        },
+        {
+          "schemaValidCount": 30,
+          "noInventionCount": 30,
+          "providerErrors": 0,
+          "macroF1": 0.9938995498696991,
+          "microF1": 0.9921752738654147,
+          "typeF1": 0.9722222222222222
+        }
+      ],
+      "macroF1": {
+        "min": 0.9914782423636458,
+        "mean": 0.9926888961166724
+      },
+      "typeF1Mean": 0.9722222222222222,
+      "calls": 60,
+      "meanInputTokens": 1790.9666666666667,
+      "meanOutputTokens": 235.13333333333333,
+      "meanCostUsd": 0.005933266666666667,
+      "totalCostUsd": 0.36194200000000004,
+      "latency": {
+        "samples": 60,
+        "p50Ms": 2334.6554319999996,
+        "p95Ms": 3028.7608739999705
+      },
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "id": "sonnet-low",
+      "model": "claude-sonnet-5-5",
+      "effort": "low",
+      "complete": true,
+      "repetitions": [
+        {
+          "schemaValidCount": 30,
+          "noInventionCount": 29,
+          "providerErrors": 0,
+          "macroF1": 0.9902629390314119,
+          "microF1": 0.9890453834115805,
+          "typeF1": 0.9793103448275862
+        },
+        {
+          "schemaValidCount": 30,
+          "noInventionCount": 30,
+          "providerErrors": 0,
+          "macroF1": 0.9866576614696916,
+          "microF1": 0.9858712715855573,
+          "typeF1": 0.9722222222222222
+        }
+      ],
+      "macroF1": {
+        "min": 0.9866576614696916,
+        "mean": 0.9884603002505518
+      },
+      "typeF1Mean": 0.9757662835249041,
+      "calls": 60,
+      "meanInputTokens": 1790.9666666666667,
+      "meanOutputTokens": 234.86666666666667,
+      "meanCostUsd": 0.0059305999999999985,
+      "totalCostUsd": 0.361782,
+      "latency": {
+        "samples": 60,
+        "p50Ms": 2252.12824599992,
+        "p95Ms": 2602.189124000026
+      },
+      "eligible": false,
+      "reasons": [
+        "répétition 1 : sans invention 29/30"
+      ]
+    }
+  ]
+}

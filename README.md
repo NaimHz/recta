@@ -54,6 +54,8 @@ attend que Postgres soit prêt.
 | `pnpm eval:extraction:live` | Rejoue les 10 textes via Anthropic et écrit `evals/extraction/live-report.json` |
 | `pnpm eval:extraction-f1` | Note 30 textes, 3 formats et 7 champs sur les sorties enregistrées, et écrit `evals/extraction-f1/report.json` |
 | `pnpm eval:extraction-f1:live` | Rejoue les 30 textes via Anthropic et écrit `evals/extraction-f1/live-report.json` |
+| `pnpm eval:model-choice` | Recalcule la comparaison des modèles d'extraction depuis `evals/model-choice/recorded.json` et écrit `evals/model-choice/report.json` |
+| `pnpm eval:model-choice:live` | Mesure 4 configurations (Haiku et Sonnet, deux efforts) sur les 30 textes, 2 répétitions, plafond 5 $ |
 | `pnpm build` | Build du web |
 | `pnpm db:up` | Démarre Postgres/PostGIS |
 | `pnpm db:reset` | Recrée la base, applique les migrations et charge les villes |
@@ -67,11 +69,13 @@ résolution et 40 cas d'horaires. Le rapport donne le top-1, le top-3, les abste
 des erreurs, avec le détail de chaque cas.
 
 L'extraction utilise un schéma Zod strict. Toute information absente vaut `null`, et chaque stop
-doit citer un extrait exact du texte dans `sourceText`. Le mode enregistré ne fait aucun appel ;
-le mode live nécessite `ANTHROPIC_API_KEY` et `EXTRACTION_MODEL` :
+doit citer un extrait exact du texte dans `sourceText`. Le modèle répond en sortie structurée
+(`output_config.format`, schéma JSON dérivé du schéma Zod), puis Zod revalide la réponse. Le mode
+enregistré ne fait aucun appel ; le mode live nécessite `ANTHROPIC_API_KEY` et `EXTRACTION_MODEL`,
+et accepte `EXTRACTION_EFFORT` (`low`, `medium`, `high`) :
 
 ```sh
-ANTHROPIC_API_KEY=... EXTRACTION_MODEL=... pnpm eval:extraction:live
+ANTHROPIC_API_KEY=... EXTRACTION_MODEL=... EXTRACTION_EFFORT=... pnpm eval:extraction:live
 ```
 
 Le corpus F1 contient 30 textes, 10 par format (`whatsapp`, `email`, `article`). Les annotations
@@ -80,9 +84,20 @@ doit y apparaître. Le score aligne les jours et les stops, puis calcule un F1 p
 `startText`, `endText`, `type`, `dateText`, `city`, `timezoneText`. La tolérance ignore accents,
 casse, ponctuation et articles de date, compare les heures sous forme canonique `HH:MM`, accepte
 les variantes de noms à 50 % de tokens communs et regroupe les types synonymes. Le rapport donne
-le F1 macro, le F1 micro, le détail par format et les erreurs classées. Baseline live : 30/30
-schéma, 30/30 sans invention, F1 macro 0,986 et F1 micro 0,978 ; le champ `type` reste le plus
-fragile.
+le F1 macro, le F1 micro, le détail par format et les erreurs classées. Mesure live avec la
+configuration retenue (`claude-haiku-5-5`, effort `low`, prompt `extraction-v4`) : 30/30 schéma,
+30/30 sans invention, F1 macro 0,990 et F1 micro 0,987 ; le champ `type` reste le plus fragile.
+
+Le modèle d'extraction a été choisi par `pnpm eval:model-choice:live`, avec une règle fixée avant
+la mesure : la configuration la moins chère qui garde 100 % de schéma et 100 % sans invention, un
+F1 macro à moins de 0,02 du meilleur et une latence p95 inférieure ou égale à 10 s.
+
+| Configuration | F1 macro (min / moy.) | F1 `type` | Coût / extraction | p50 | p95 | Verdict |
+|---|---|---|---|---|---|---|
+| Haiku 5.5, `medium` | 0,991 / 0,993 | 0,983 | 0,00046 $ | 3,4 s | 4,4 s | éligible |
+| **Haiku 5.5, `low`** | 0,989 / 0,989 | 0,943 | **0,00030 $** | 2,0 s | 3,0 s | **retenu** |
+| Sonnet 5.5, `high` | 0,991 / 0,993 | 0,972 | 0,00593 $ | 2,3 s | 3,0 s | éligible |
+| Sonnet 5.5, `low` | 0,987 / 0,988 | 0,976 | 0,00593 $ | 2,3 s | 2,6 s | exclu (1 invention) |
 
 ## Faits curatés
 
