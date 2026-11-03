@@ -1,0 +1,208 @@
+{
+  "itineraries": [
+    {
+      "startTime": "2026-11-10T07:00:00Z",
+      "endTime": "2026-11-10T07:23:00Z",
+      "duration": 1380,
+      "transfers": 0,
+      "legs": [
+        {
+          "mode": "WALK",
+          "startTime": "2026-11-10T07:00:00Z",
+          "endTime": "2026-11-10T07:11:00Z",
+          "duration": 660,
+          "from": {
+            "name": "START",
+            "lat": 48.8809,
+            "lon": 2.3553
+          },
+          "to": {
+            "name": "Poissonnière",
+            "lat": 48.877089999999995,
+            "lon": 2.3486179999999997
+          }
+        },
+        {
+          "mode": "SUBWAY",
+          "startTime": "2026-11-10T07:11:00Z",
+          "endTime": "2026-11-10T07:18:00Z",
+          "duration": 420,
+          "routeShortName": "7",
+          "from": {
+            "name": "Poissonnière",
+            "lat": 48.877089999999995,
+            "lon": 2.3486179999999997
+          },
+          "to": {
+            "name": "Palais Royal - Musée du Louvre",
+            "lat": 48.8628,
+            "lon": 2.3368832999999993
+          }
+        },
+        {
+          "mode": "WALK",
+          "startTime": "2026-11-10T07:18:00Z",
+          "endTime": "2026-11-10T07:23:00Z",
+          "duration": 300,
+          "from": {
+            "name": "Palais Royal - Musée du Louvre",
+            "lat": 48.8628,
+            "lon": 2.3368832999999993
+          },
+          "to": {
+            "name": "END",
+            "lat": 48.8606,
+            "lon": 2.3364
+          }
+        }
+      ]
+    },
+    {
+      "startTime": "2026-11-10T07:01:00Z",
+      "endTime": "2026-11-10T07:23:00Z",
+      "duration": 1320,
+      "transfers": 1,
+      "legs": [
+        {
+          "mode": "WALK",
+          "startTime": "2026-11-10T07:01:00Z",
+          "endTime": "2026-11-10T07:05:00Z",
+          "duration": 240,
+          "from": {
+            "name": "START",
+            "lat": 48.8809,
+            "lon": 2.3553
+          },
+          "to": {
+            "name": "Gare du Nord",
+            "lat": 48.87951,
+            "lon": 2.3567687999999993
+          }
+        },
+        {
+          "mode": "SUBWAY",
+          "startTime": "2026-11-10T07:05:00Z",
+          "endTime": "2026-11-10T07:06:00Z",
+          "duration": 60,
+          "routeShortName": "4",
+          "from": {
+            "name": "Gare du Nord",
+            "lat": 48.87951,
+            "lon": 2.3567687999999993
+          },
+          "to": {
+            "name": "Gare de l'Est",
+            "lat": 48.87629,
+            "lon": 2.3578857999999996
+          }
+        },
+        {
+          "mode": "WALK",
+          "startTime": "2026-11-10T07:06:00Z",
+          "endTime": "2026-11-10T07:09:00Z",
+          "duration": 180,
+          "from": {
+            "name": "Gare de l'Est",
+            "lat": 48.87629,
+            "lon": 2.3578857999999996
+          },
+          "to": {
+            "name": "Gare de l'Est",
+            "lat": 48.87636,
+            "lon": 2.358103
+          }
+        },
+        {
+          "mode": "SUBWAY",
+          "startTime": "2026-11-10T07:09:00Z",
+          "endTime": "2026-11-10T07:18:00Z",
+          "duration": 540,
+          "routeShortName": "7",
+          "from": {
+            "name": "Gare de l'Est",
+            "lat": 48.87636,
+            "lon": 2.358103
+          },
+          "to": {
+            "name": "Palais Royal - Musée du Louvre",
+            "lat": 48.8628,
+            "lon": 2.3368832999999993
+          }
+        },
+        {
+          "mode": "WALK",
+          "startTime": "2026-11-10T07:18:00Z",
+          "endTime": "2026-11-10T07:23:00Z",
+          "duration": 300,
+          "from": {
+            "name": "Palais Royal - Musée du Louvre",
+            "lat": 48.8628,
+            "lon": 2.3368832999999993
+          },
+          "to": {
+            "name": "END",
+            "lat": 48.8606,
+            "lon": 2.3364
+          }
+        }
+      ]
+    },
+    {
+      "startTime": "2026-11-10T07:02:00Z",
+      "endTime": "2026-11-10T07:25:00Z",
+      "duration": 1380,
+      "transfers": 0,
+      "legs": [
+        {
+          "mode": "WALK",
+          "startTime": "2026-11-10T07:02:00Z",
+          "endTime": "2026-11-10T07:13:00Z",
+          "duration": 660,
+          "from": {
+            "name": "START",
+            "lat": 48.8809,
+            "lon": 2.3553
+          },
+          "to": {
+            "name": "Poissonnière",
+            "lat": 48.877089999999995,
+            "lon": 2.3486179999999997
+          }
+        },
+        {
+          "mode": "SUBWAY",
+          "startTime": "2026-11-10T07:13:00Z",
+          "endTime": "2026-11-10T07:20:00Z",
+          "duration": 420,
+          "routeShortName": "7",
+          "from": {
+            "name": "Poissonnière",
+            "lat": 48.877089999999995,
+            "lon": 2.3486179999999997
+          },
+          "to": {
+            "name": "Palais Royal - Musée du Louvre",
+            "lat": 48.8628,
+            "lon": 2.3368832999999993
+          }
+        },
+        {
+          "mode": "WALK",
+          "startTime": "2026-11-10T07:20:00Z",
+          "endTime": "2026-11-10T07:25:00Z",
+          "duration": 300,
+          "from": {
+            "name": "Palais Royal - Musée du Louvre",
+            "lat": 48.8628,
+            "lon": 2.3368832999999993
+          },
+          "to": {
+            "name": "END",
+            "lat": 48.8606,
+            "lon": 2.3364
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -10,7 +10,7 @@
   "curatedFactsPath": "packages/data/cities/paris/curated-facts.yml",
   "evalCorpusPath": "evals/corpus/paris",
   "capabilities": {
-    "transit": false,
+    "transit": true,
     "curatedFacts": true
   }
 }

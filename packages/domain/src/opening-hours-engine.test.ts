@@ -3,6 +3,7 @@ import {
   checkOpeningHoursAt,
   checkOpeningHoursWindow,
   dayOpenIntervals,
+  localToInstant,
   localDateTimeInTimezone,
   type OpeningHoursContext,
   type OpeningHoursReason,
@@ -753,5 +754,25 @@ describe('dayOpenIntervals', () => {
       status: 'indéterminé',
       reason: 'invalid_syntax',
     })
+  })
+})
+
+describe('localToInstant', () => {
+  it('convertit une heure locale en instant UTC', () => {
+    expect(localToInstant('2026-11-03', '08:00', 'Europe/Paris')).toBe('2026-11-03T07:00:00.000Z')
+    expect(localToInstant('2026-07-14', '08:00', 'Europe/Paris')).toBe('2026-07-14T06:00:00.000Z')
+  })
+
+  it('renvoie null pour une heure inexistante au passage à l’heure d’été', () => {
+    expect(localToInstant('2026-03-29', '02:30', 'Europe/Paris')).toBeNull()
+  })
+
+  it('prend la première occurrence d’une heure répétée', () => {
+    expect(localToInstant('2026-10-25', '02:30', 'Europe/Paris')).toBe('2026-10-25T00:30:00.000Z')
+  })
+
+  it('refuse un fuseau ou une heure invalides', () => {
+    expect(localToInstant('2026-11-03', '08:00', 'Mars/Olympus')).toBeNull()
+    expect(localToInstant('2026-11-03', '25:00', 'Europe/Paris')).toBeNull()
   })
 })

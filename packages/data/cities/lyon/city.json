@@ -10,7 +10,7 @@
   "curatedFactsPath": "packages/data/cities/lyon/curated-facts.yml",
   "evalCorpusPath": "evals/corpus/lyon",
   "capabilities": {
-    "transit": false,
+    "transit": true,
     "curatedFacts": true
   }
 }

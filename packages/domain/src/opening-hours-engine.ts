@@ -451,3 +451,18 @@ export function dayOpenIntervals(
     return { status: 'indéterminé', reason: 'invalid_syntax' }
   }
 }
+
+export function localToInstant(date: string, time: string, timezone: string): string | null {
+  const wall = wallClockDate({ date, time })
+
+  if (!wall || !isValidTimezone(timezone)) return null
+
+  for (let offsetMinutes = -14 * 60; offsetMinutes <= 14 * 60; offsetMinutes += 15) {
+    const candidate = new Date(wall.getTime() + offsetMinutes * 60_000)
+    const local = localDateTimeInTimezone(candidate, timezone)
+
+    if (local?.date === date && local.time === time) return candidate.toISOString()
+  }
+
+  return null
+}

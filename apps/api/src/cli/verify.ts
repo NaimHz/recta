@@ -3,7 +3,10 @@ import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { buildVerificationReport, verifyPlan } from '@recta/domain'
-import { loadVerificationFacts } from '../verification/facts'
+import { OsrmClient } from '../sources/osrm'
+import { TransitousClient } from '../sources/transitous'
+import { loadCityConfig, loadVerificationFacts } from '../verification/facts'
+import { collectTravelFacts } from '../verification/travel'
 import { parseFixture } from './fixture'
 
 const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url))
@@ -35,7 +38,14 @@ async function main(): Promise<void> {
 
   try {
     const plan = parseFixture(text)
-    const result = verifyPlan(plan, await loadVerificationFacts(plan.cityId))
+    const city = await loadCityConfig(plan.cityId)
+    const facts = await loadVerificationFacts(plan.cityId)
+    const travel = await collectTravelFacts(
+      plan,
+      { osrm: new OsrmClient(), transitous: new TransitousClient() },
+      city,
+    )
+    const result = verifyPlan(plan, { ...facts, travel })
     const report = buildVerificationReport(result)
     process.stdout.write(`${JSON.stringify(report, null, 2)}\n`)
   } catch (error) {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { verifyPlan } from './rules/engine'
-import type { VerificationFacts } from './rules/rule'
+import { NO_TRAVEL, type VerificationFacts } from './rules/rule'
 import type { Plan, Stop } from './plan'
 import { SCHEMA_VERSION } from './version'
 import {
@@ -22,6 +22,7 @@ const FACTS: VerificationFacts = {
     center: { lat: 48.86, lon: 2.35 },
   },
   placeFacts: {},
+  travel: NO_TRAVEL,
 }
 
 function makeStop(id: string, sourceDate: string | null): Stop {

@@ -3,6 +3,7 @@ import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import {
   CityConfigSchema,
+  NO_TRAVEL,
   type CityConfig,
   type CuratedFactsFile,
   type PlaceFact,
@@ -67,5 +68,6 @@ export async function loadVerificationFacts(
   return {
     city: cityFacts(city),
     placeFacts: curated ? toPlaceFacts(curated) : {},
+    travel: NO_TRAVEL,
   }
 }

@@ -1,6 +1,6 @@
 import type { Place, Plan, Stop, StopWindowSource } from '../../plan'
 import { SCHEMA_VERSION } from '../../version'
-import type { PlaceFact, VerificationFacts } from '../rule'
+import { NO_TRAVEL, type PlaceFact, type VerificationFacts } from '../rule'
 
 export const PARIS_FACTS: VerificationFacts = {
   city: {
@@ -10,6 +10,7 @@ export const PARIS_FACTS: VerificationFacts = {
     center: { lat: 48.8589, lon: 2.347 },
   },
   placeFacts: {},
+  travel: NO_TRAVEL,
 }
 
 export const LYON_FACTS: VerificationFacts = {
@@ -20,6 +21,7 @@ export const LYON_FACTS: VerificationFacts = {
     center: { lat: 45.7578, lon: 4.832 },
   },
   placeFacts: {},
+  travel: NO_TRAVEL,
 }
 
 export function withPlaceFacts(

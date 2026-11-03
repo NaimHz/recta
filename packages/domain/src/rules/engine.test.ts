@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import type { Issue, IssueCode, IssueSeverity, Plan, Stop } from '../plan'
 import { SCHEMA_VERSION } from '../version'
 import { RuleContractError, verifyPlan } from './engine'
-import type { Rule, RuleFinding, VerificationFacts } from './rule'
+import { NO_TRAVEL, type Rule, type RuleFinding, type VerificationFacts } from './rule'
 
 const FACTS: VerificationFacts = {
   city: {
@@ -12,6 +12,7 @@ const FACTS: VerificationFacts = {
     center: { lat: 48.86, lon: 2.35 },
   },
   placeFacts: {},
+  travel: NO_TRAVEL,
 }
 
 function makeStop(id: string): Stop {

@@ -61,19 +61,25 @@ export type {
 export { dayCodeForDate } from './opening-hours'
 export { RuleContractError, SUPERSEDES, verifyPlan } from './rules/engine'
 export { RULES } from './rules/registry'
+export { NO_TRAVEL } from './rules/rule'
 export type {
   FactSource,
   PlaceFact,
   Rule,
   RuleContext,
   RuleFinding,
+  TransitLeg,
+  TravelFacts,
+  TravelUnavailable,
   VerificationFacts,
+  WalkMatrix,
 } from './rules/rule'
 export {
   checkOpeningHoursAt,
   checkOpeningHoursWindow,
   dayOpenIntervals,
   localDateTimeInTimezone,
+  localToInstant,
 } from './opening-hours-engine'
 export type {
   DayOpenIntervals,
