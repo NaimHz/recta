@@ -1,5 +1,5 @@
 import type { CityConfig } from './city'
-import { resolvePlaces, type ScoredPlace } from './place-resolution'
+import { coversQueryTokens, resolvePlaces, type ScoredPlace } from './place-resolution'
 import type { Coordinates, Place } from './plan'
 
 export const RESOLUTION_AGENT_MAX_CALLS = 6
@@ -357,6 +357,15 @@ export async function runResolutionAgent(
 
   if (isGenericQuery(input.name)) {
     return finish('needs_clarification', null, question, optionsForQuestion, 'generic_query')
+  }
+
+  if (
+    optionsForQuestion.length === 1 &&
+    optionsForQuestion[0]?.id === top.place.id &&
+    top.components.type > 0 &&
+    coversQueryTokens(input.name, top.place.name)
+  ) {
+    return finish('resolved', top.place, null, [], 'single_full_match')
   }
 
   if (top.score < RESOLUTION_AGENT_MIN_SCORE) {

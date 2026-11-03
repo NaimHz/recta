@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "measuredAt": "2026-10-23T09:18:18.996Z",
+  "measuredAt": "2026-11-03T16:10:58.255Z",
   "candidateSource": "evals/sources/osm-places.json",
   "maxCalls": 6,
   "thresholds": {
@@ -58,7 +58,7 @@
           "step": 3,
           "kind": "decision",
           "decision": "resolved",
-          "reason": "match_confident"
+          "reason": "single_full_match"
         }
       ]
     },
@@ -102,7 +102,7 @@
           "step": 3,
           "kind": "decision",
           "decision": "resolved",
-          "reason": "match_confident"
+          "reason": "single_full_match"
         }
       ]
     },
@@ -234,7 +234,7 @@
           "step": 3,
           "kind": "decision",
           "decision": "resolved",
-          "reason": "match_confident"
+          "reason": "single_full_match"
         }
       ]
     },

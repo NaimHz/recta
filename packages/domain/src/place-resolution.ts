@@ -89,6 +89,13 @@ function meaningfulTokens(value: string): string[] {
     .filter((token) => token.length > 0 && !STOP_WORDS.has(token))
 }
 
+export function coversQueryTokens(queryName: string, candidateName: string): boolean {
+  const queryTokens = meaningfulTokens(queryName)
+  const candidateTokens = new Set(meaningfulTokens(candidateName))
+
+  return queryTokens.length > 0 && queryTokens.every((token) => candidateTokens.has(token))
+}
+
 function levenshteinDistance(left: string, right: string): number {
   if (left === right) return 0
   if (left.length === 0) return right.length

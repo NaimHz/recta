@@ -124,6 +124,48 @@ describe('runResolutionAgent', () => {
     expect(result.options).toHaveLength(2)
   })
 
+  it.each([
+    ['Musée Picasso', 'Musée national Picasso-Paris', 'museum'],
+    ['Centre Pompidou', 'Centre Georges Pompidou', null],
+  ])(
+    'résout « %s » quand « %s » est le seul candidat et contient tous les mots',
+    async (name, candidate, type) => {
+      const tool = makeTool(() => [makePlace('osm:way/1', candidate, 'tourism:museum')])
+
+      const result = await runResolutionAgent({ name, city, type }, { search: tool })
+
+      expect(result.status).toBe('resolved')
+      expect(result.place?.id).toBe('osm:way/1')
+      expect(result.reason).toBe('single_full_match')
+    },
+  )
+
+  it('demande quand plusieurs candidats contiennent tous les mots', async () => {
+    const tool = makeTool(() => [
+      makePlace('osm:node/1', 'Café du Musée Rodin', 'amenity:cafe'),
+      makePlace('osm:node/2', 'Boutique du Musée Rodin', 'shop:gift'),
+    ])
+
+    const result = await runResolutionAgent({ name: 'Musée Rodin', city }, { search: tool })
+
+    expect(result.status).toBe('needs_clarification')
+    expect(result.options.map((option) => option.id).sort()).toEqual(['osm:node/1', 'osm:node/2'])
+  })
+
+  it('demande quand le seul candidat contredit le type', async () => {
+    const tool = makeTool(() => [
+      makePlace('osm:node/1', 'Musée national Picasso-Paris', 'amenity:restaurant'),
+    ])
+
+    const result = await runResolutionAgent(
+      { name: 'Musée Picasso', city, type: 'museum' },
+      { search: tool },
+    )
+
+    expect(result.status).toBe('needs_clarification')
+    expect(result.reason).toBe('low_score')
+  })
+
   it('ne fabrique pas de lieu quand aucun candidat plausible ne sort', async () => {
     const tool = makeTool(() => [makePlace('osm:node/1', 'Chez Denise', 'amenity:restaurant')])
 
