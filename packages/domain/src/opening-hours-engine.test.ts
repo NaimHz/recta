@@ -627,6 +627,17 @@ describe('checkOpeningHoursWindow', () => {
     expect(result.reason).toBe('closes_during_stop')
   })
 
+  it('accepte une fermeture à 24:00', () => {
+    const result = checkOpeningHoursWindow('Mo-Sa,PH 07:00-24:00, Su 08:00-24:00', PARIS, {
+      date: '2026-11-03',
+      start: '23:00',
+      end: '00:00',
+    })
+
+    expect(result.status).toBe('conforme')
+    expect(result.reason).toBe('open')
+  })
+
   it('détecte un jour férié sur une fenêtre', () => {
     const result = checkOpeningHoursWindow('Mo-Fr 09:00-18:00; PH off', PARIS, {
       date: '2026-07-14',
