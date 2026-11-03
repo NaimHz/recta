@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest'
 const repoRoot = fileURLToPath(new URL('../../../', import.meta.url))
 const codeRoots = ['apps/api/src', 'apps/web/src', 'packages/domain/src', 'services/solver/app']
 const forbidden = /\b(paris|lyon|barcelone|barcelona)\b/i
-const ignoredDirectories = new Set(['node_modules', 'dist', 'coverage', '.git'])
+const ignoredDirectories = new Set(['node_modules', 'dist', 'coverage', '.git', '__fixtures__'])
 
 async function collectFiles(directory: string): Promise<string[]> {
   const entries = await readdir(directory, { withFileTypes: true })

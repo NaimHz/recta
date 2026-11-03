@@ -32,7 +32,6 @@ describe('mapOsmElementToPlace', () => {
       address: '1 Rue Exemple, 00000 Ville Exemple',
       category: 'tourism:museum',
       openingHoursRaw: 'Mo-Su 09:00-18:00',
-      openingHours: null,
       source: {
         provider: 'osm',
         sourceDate: '2026-09-01',

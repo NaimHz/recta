@@ -65,11 +65,8 @@ describe.each(['paris', 'lyon'])('base curatée de %s', (cityId) => {
     for (const site of file.sites) {
       expect(site.placeId).toMatch(/^osm:(node|way|relation)\/\d+$/)
       expect(site.address).not.toBeNull()
-      expect(site.facts).toHaveLength(1)
+      const fact = site.facts.find((entry) => entry.key === 'business_status')
 
-      const [fact] = site.facts
-
-      expect(fact?.key).toBe('business_status')
       expect(fact?.source.url).toMatch(/^https:\/\//)
       expect(fact?.source.reviewedAt).toBe(reviewedAt)
     }
@@ -93,5 +90,19 @@ describe('base curatée de Lyon', () => {
     const imprimerie = file.sites.find((site) => site.id === 'musee-imprimerie')
 
     expect(imprimerie?.facts[0]?.value).toBe('closed_temporarily')
+  })
+})
+
+describe('dernière entrée curatée', () => {
+  it('donne la dernière entrée du Louvre avec sa source', async () => {
+    const city = await readCity('paris')
+    const file = await loadCuratedFacts(city)
+    const louvre = file.sites.find((site) => site.id === 'louvre')
+
+    expect(louvre?.facts).toContainEqual({
+      key: 'last_entry_before_close_minutes',
+      value: 60,
+      source: { url: 'https://www.louvre.fr/en/visit', reviewedAt: '2026-11-03' },
+    })
   })
 })

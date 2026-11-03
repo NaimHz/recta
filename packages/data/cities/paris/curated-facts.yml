@@ -11,6 +11,11 @@ sites:
         source:
           url: 'https://www.louvre.fr/en/visit'
           reviewedAt: '2026-10-23'
+      - key: last_entry_before_close_minutes
+        value: 60
+        source:
+          url: 'https://www.louvre.fr/en/visit'
+          reviewedAt: '2026-11-03'
 
   - id: musee-orsay
     name: "Musée d'Orsay"

@@ -20,20 +20,6 @@ export const IsoDateSchema = z
   .string()
   .refine(isIsoDate, { message: 'Date attendue au format YYYY-MM-DD' })
 
-export const OpeningHoursSchema = z
-  .object({
-    opensAt: LocalTimeSchema,
-    closesAt: LocalTimeSchema,
-    closedOn: z.array(z.enum(DAY_CODES)),
-    raw: z.string().min(1),
-  })
-  .refine(({ opensAt, closesAt }) => opensAt < closesAt, {
-    message: "Une fenêtre nocturne n'est pas gérée en 1.7",
-    path: ['closesAt'],
-  })
-
-export type OpeningHours = z.infer<typeof OpeningHoursSchema>
-
 export const CoordinatesSchema = z.object({
   lat: z.number().min(-90).max(90),
   lon: z.number().min(-180).max(180),
@@ -56,7 +42,6 @@ export const PlaceSchema = z.object({
   address: z.string().nullable(),
   category: z.string().nullable(),
   openingHoursRaw: z.string().nullable(),
-  openingHours: OpeningHoursSchema.nullable(),
   source: PlaceSourceSchema,
 })
 

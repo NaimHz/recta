@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { buildVerificationReport, verifyPlan } from '@recta/domain'
+import { loadVerificationFacts } from '../verification/facts'
 import { parseFixture } from './fixture'
 
 const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url))
@@ -33,7 +34,8 @@ async function main(): Promise<void> {
   }
 
   try {
-    const result = verifyPlan(parseFixture(text))
+    const plan = parseFixture(text)
+    const result = verifyPlan(plan, await loadVerificationFacts(plan.cityId))
     const report = buildVerificationReport(result)
     process.stdout.write(`${JSON.stringify(report, null, 2)}\n`)
   } catch (error) {

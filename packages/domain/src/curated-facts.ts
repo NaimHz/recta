@@ -19,11 +19,18 @@ export const CuratedFactSourceSchema = z.object({
 })
 export type CuratedFactSource = z.infer<typeof CuratedFactSourceSchema>
 
-export const CuratedFactSchema = z.object({
-  key: z.literal('business_status'),
-  value: BusinessStatusSchema,
-  source: CuratedFactSourceSchema,
-})
+export const CuratedFactSchema = z.discriminatedUnion('key', [
+  z.object({
+    key: z.literal('business_status'),
+    value: BusinessStatusSchema,
+    source: CuratedFactSourceSchema,
+  }),
+  z.object({
+    key: z.literal('last_entry_before_close_minutes'),
+    value: z.number().int().positive(),
+    source: CuratedFactSourceSchema,
+  }),
+])
 export type CuratedFact = z.infer<typeof CuratedFactSchema>
 
 export const CuratedSiteSchema = z.object({

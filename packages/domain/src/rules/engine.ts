@@ -10,7 +10,7 @@ import type {
 import { ISSUE_CODES } from '../plan'
 import { SCHEMA_VERSION } from '../version'
 import { RULES } from './registry'
-import type { Rule, RuleFinding } from './rule'
+import type { Rule, RuleFinding, VerificationFacts } from './rule'
 
 export const SUPERSEDES: Partial<Record<IssueCode, readonly IssueCode[]>> = {
   place_not_operating: [
@@ -50,7 +50,11 @@ function allStopIds(plan: Plan): string[] {
   return plan.days.flatMap((day) => day.stops.map((stop) => stop.id))
 }
 
-export function verifyPlan(plan: Plan, rules: readonly Rule[] = RULES): VerificationResult {
+export function verifyPlan(
+  plan: Plan,
+  facts: VerificationFacts,
+  rules: readonly Rule[] = RULES,
+): VerificationResult {
   const issues = new Map<string, Issue>()
   const undetermined: Undetermined[] = []
   const counts = new Map<IssueCode, CheckCount>()
@@ -76,7 +80,7 @@ export function verifyPlan(plan: Plan, rules: readonly Rule[] = RULES): Verifica
     let findings: RuleFinding[]
 
     try {
-      findings = rule.run({ plan })
+      findings = rule.run({ plan, facts })
     } catch {
       findings = allStopIds(plan).map((stopId) => ({
         kind: 'undetermined',

@@ -2,7 +2,17 @@ import { describe, expect, it } from 'vitest'
 import type { Issue, IssueCode, IssueSeverity, Plan, Stop } from '../plan'
 import { SCHEMA_VERSION } from '../version'
 import { RuleContractError, verifyPlan } from './engine'
-import type { Rule, RuleFinding } from './rule'
+import type { Rule, RuleFinding, VerificationFacts } from './rule'
+
+const FACTS: VerificationFacts = {
+  city: {
+    timezone: 'Europe/Paris',
+    countryCode: 'FR',
+    holidayRegion: 'Île-de-France',
+    center: { lat: 48.86, lon: 2.35 },
+  },
+  placeFacts: {},
+}
 
 function makeStop(id: string): Stop {
   return {
@@ -74,7 +84,7 @@ describe('verifyPlan', () => {
   it('exécute les règles dans l’ordre du registre', () => {
     const log: string[] = []
 
-    verifyPlan(plan, [
+    verifyPlan(plan, FACTS, [
       rule('premiere', ['place_not_operating'], [], log),
       rule('seconde', ['outside_opening_hours'], [], log),
     ])
@@ -83,7 +93,7 @@ describe('verifyPlan', () => {
   })
 
   it('propage une fermeture vers les contrôles horaires du même stop seulement', () => {
-    const result = verifyPlan(plan, [
+    const result = verifyPlan(plan, FACTS, [
       rule('statut', ['place_not_operating'], [issue('place_not_operating', 'stop-1')]),
       rule(
         'horaires',
@@ -103,7 +113,7 @@ describe('verifyPlan', () => {
   })
 
   it('ne propage pas vers un code non dominé', () => {
-    const result = verifyPlan(plan, [
+    const result = verifyPlan(plan, FACTS, [
       rule('jour', ['place_closed_day'], [issue('place_closed_day', 'stop-1')]),
       rule('trajet', ['stop_overlap'], [issue('stop_overlap', 'stop-1')]),
     ])
@@ -112,7 +122,7 @@ describe('verifyPlan', () => {
   })
 
   it('déduplique par identifiant et garde la sévérité la plus haute', () => {
-    const result = verifyPlan(plan, [
+    const result = verifyPlan(plan, FACTS, [
       rule(
         'doublons',
         ['outside_opening_hours'],
@@ -137,7 +147,7 @@ describe('verifyPlan', () => {
       },
     }
 
-    const result = verifyPlan(plan, [failing])
+    const result = verifyPlan(plan, FACTS, [failing])
 
     expect(result.status).toBe('indéterminé')
     expect(result.undetermined).toEqual([
@@ -151,12 +161,14 @@ describe('verifyPlan', () => {
 
   it('refuse un code que la règle ne déclare pas', () => {
     expect(() =>
-      verifyPlan(plan, [rule('menteuse', ['stop_overlap'], [issue('place_closed_day', 'stop-1')])]),
+      verifyPlan(plan, FACTS, [
+        rule('menteuse', ['stop_overlap'], [issue('place_closed_day', 'stop-1')]),
+      ]),
     ).toThrow(RuleContractError)
   })
 
   it('retire d’un indéterminé les codes dominés', () => {
-    const result = verifyPlan(plan, [
+    const result = verifyPlan(plan, FACTS, [
       rule('jour', ['place_closed_day'], [issue('place_closed_day', 'stop-1')]),
       rule(
         'horaires',
@@ -187,12 +199,14 @@ describe('verifyPlan', () => {
   })
 
   it('agrège le statut', () => {
-    expect(verifyPlan(plan, [rule('vide', ['stop_overlap'], [])]).status).toBe('conforme')
+    expect(verifyPlan(plan, FACTS, [rule('vide', ['stop_overlap'], [])]).status).toBe('conforme')
     expect(
-      verifyPlan(plan, [rule('ok', ['stop_overlap'], [pass('stop_overlap', 'stop-1')])]).status,
+      verifyPlan(plan, FACTS, [rule('ok', ['stop_overlap'], [pass('stop_overlap', 'stop-1')])])
+        .status,
     ).toBe('conforme')
     expect(
-      verifyPlan(plan, [rule('ko', ['stop_overlap'], [issue('stop_overlap', 'stop-1')])]).status,
+      verifyPlan(plan, FACTS, [rule('ko', ['stop_overlap'], [issue('stop_overlap', 'stop-1')])])
+        .status,
     ).toBe('violation')
   })
 })

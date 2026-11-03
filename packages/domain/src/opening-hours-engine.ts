@@ -398,3 +398,56 @@ export function checkOpeningHoursWindow(
     return result('indéterminé', 'invalid_syntax', start)
   }
 }
+
+export type OpeningInterval = {
+  start: string
+  end: string
+}
+
+export type DayOpenIntervals =
+  | { status: 'known'; intervals: OpeningInterval[]; holiday: boolean; warnings: string[] }
+  | { status: 'indéterminé'; reason: OpeningHoursReason }
+
+function wallClockTime(instant: Date, dayEnd: Date): string {
+  return instant.getTime() >= dayEnd.getTime() ? '24:00' : instant.toISOString().slice(11, 16)
+}
+
+export function dayOpenIntervals(
+  raw: string | null | undefined,
+  context: OpeningHoursContext,
+  date: string,
+): DayOpenIntervals {
+  const contextError = invalidContextResult(context)
+
+  if (contextError) return { status: 'indéterminé', reason: contextError.reason }
+
+  const nextDate = nextLocalDate(date)
+  const dayStart = wallClockDate({ date, time: '00:00' })
+  const dayEnd = nextDate ? wallClockDate({ date: nextDate, time: '00:00' }) : null
+
+  if (!dayStart || !dayEnd) return { status: 'indéterminé', reason: 'invalid_local_time' }
+  if (!raw || raw.trim() === '') return { status: 'indéterminé', reason: 'missing_hours' }
+
+  try {
+    return withUtcWallClock<DayOpenIntervals>(() => {
+      const schedule = openingHoursFor(raw.trim(), context)
+      const openIntervals = schedule.getOpenIntervals(dayStart, dayEnd)
+
+      if (openIntervals.some(([, , isUnknown]) => isUnknown)) {
+        return { status: 'indéterminé', reason: 'unknown' }
+      }
+
+      return {
+        status: 'known',
+        intervals: openIntervals.map(([from, to]) => ({
+          start: wallClockTime(from, dayEnd),
+          end: wallClockTime(to, dayEnd),
+        })),
+        holiday: schedule.getPublicHolidayContext(dayStart).isHoliday,
+        warnings: schedule.getWarnings(),
+      }
+    })
+  } catch {
+    return { status: 'indéterminé', reason: 'invalid_syntax' }
+  }
+}

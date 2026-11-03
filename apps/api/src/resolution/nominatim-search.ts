@@ -54,7 +54,6 @@ function toPlace(result: NominatimSearchResult, retrievedAt: string): Place | nu
     address: result.displayName.trim() || null,
     category,
     openingHoursRaw: null,
-    openingHours: null,
     source: {
       provider: 'osm',
       sourceDate: null,

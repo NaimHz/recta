@@ -22,12 +22,6 @@ const place: Place = {
   address: '1 rue du Test',
   category: 'tourism:museum',
   openingHoursRaw: 'Tu-Sa 10:00-18:00',
-  openingHours: {
-    opensAt: '10:00',
-    closesAt: '18:00',
-    closedOn: ['Mon', 'Sun'],
-    raw: '10:00-18:00',
-  },
   source: { provider: 'osm', sourceDate: '2026-10-23', retrievedAt: '2026-10-23T07:37:01.372Z' },
 }
 

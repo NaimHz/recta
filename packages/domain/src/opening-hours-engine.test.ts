@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   checkOpeningHoursAt,
   checkOpeningHoursWindow,
+  dayOpenIntervals,
   localDateTimeInTimezone,
   type OpeningHoursContext,
   type OpeningHoursReason,
@@ -703,5 +704,54 @@ describe('checkOpeningHoursWindow', () => {
 
     expect(result.status).toBe('indéterminé')
     expect(result.reason).toBe('invalid_local_time')
+  })
+})
+
+describe('dayOpenIntervals', () => {
+  it('liste les plages d’une journée en heure locale', () => {
+    expect(dayOpenIntervals('Mo-Fr 12:00-14:00,19:30-21:30', PARIS, '2026-11-03')).toEqual({
+      status: 'known',
+      intervals: [
+        { start: '12:00', end: '14:00' },
+        { start: '19:30', end: '21:30' },
+      ],
+      holiday: false,
+      warnings: [],
+    })
+  })
+
+  it('renvoie une journée sans plage pour un jour fermé', () => {
+    const result = dayOpenIntervals('Tu-Sa 14:00-18:00', LYON, '2026-11-02')
+
+    expect(result).toMatchObject({ status: 'known', intervals: [], holiday: false })
+  })
+
+  it('signale le jour férié', () => {
+    const result = dayOpenIntervals('Mo-Su 10:00-18:00; May 1 off', PARIS, '2027-05-01')
+
+    expect(result).toMatchObject({ status: 'known', intervals: [], holiday: true })
+  })
+
+  it('coupe une plage nocturne à minuit et note 24:00', () => {
+    const result = dayOpenIntervals('Mo-Su 08:00-02:00', PARIS, '2026-11-03')
+
+    expect(result).toMatchObject({
+      status: 'known',
+      intervals: [
+        { start: '00:00', end: '02:00' },
+        { start: '08:00', end: '24:00' },
+      ],
+    })
+  })
+
+  it('retourne indéterminé sans horaires ou avec une syntaxe invalide', () => {
+    expect(dayOpenIntervals(null, PARIS, '2026-11-03')).toEqual({
+      status: 'indéterminé',
+      reason: 'missing_hours',
+    })
+    expect(dayOpenIntervals('n’importe quoi', PARIS, '2026-11-03')).toEqual({
+      status: 'indéterminé',
+      reason: 'invalid_syntax',
+    })
   })
 })

@@ -3,12 +3,20 @@ import {
   PlanSchema,
   SCHEMA_VERSION,
   type DayCode,
-  type OpeningHours,
   type Plan,
   type Stop,
 } from '@recta/domain'
 
 const DAY_CODE_SET = new Set<string>(DAY_CODES)
+const OSM_DAY_CODES: Record<DayCode, string> = {
+  Mon: 'Mo',
+  Tue: 'Tu',
+  Wed: 'We',
+  Thu: 'Th',
+  Fri: 'Fr',
+  Sat: 'Sa',
+  Sun: 'Su',
+}
 const TIME_RANGE = /^((?:[01]\d|2[0-3]):[0-5]\d)-((?:[01]\d|2[0-3]):[0-5]\d)$/
 
 export class FixtureParseError extends Error {
@@ -64,17 +72,15 @@ function parseStopLine(line: string, lineNumber: number, index: number, sourceDa
   const { start, end } = parseTimeRange(range, lineNumber)
   const closedOn = parseClosedDays(closedRaw, lineNumber)
 
-  let openingHours: OpeningHours | null = null
+  let openingHoursRaw: string | null = null
 
   if (hoursRange !== '-') {
-    const hours = parseTimeRange(hoursRange, lineNumber)
+    parseTimeRange(hoursRange, lineNumber)
 
-    openingHours = {
-      opensAt: hours.start,
-      closesAt: hours.end,
-      closedOn,
-      raw: closedRaw === '-' ? hoursRange : `${hoursRange}; fermé ${closedRaw}`,
-    }
+    openingHoursRaw =
+      closedOn.length === 0
+        ? hoursRange
+        : `${hoursRange}; ${closedOn.map((day) => OSM_DAY_CODES[day]).join(',')} off`
   }
 
   return {
@@ -89,8 +95,7 @@ function parseStopLine(line: string, lineNumber: number, index: number, sourceDa
       coordinates: null,
       address: null,
       category: null,
-      openingHoursRaw: hoursRange === '-' ? null : hoursRange,
-      openingHours,
+      openingHoursRaw,
       source: {
         provider: 'fixture',
         sourceDate,

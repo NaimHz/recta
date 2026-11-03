@@ -61,18 +61,28 @@ export type {
 export { dayCodeForDate } from './opening-hours'
 export { RuleContractError, SUPERSEDES, verifyPlan } from './rules/engine'
 export { RULES } from './rules/registry'
-export type { Rule, RuleContext, RuleFinding } from './rules/rule'
+export type {
+  FactSource,
+  PlaceFact,
+  Rule,
+  RuleContext,
+  RuleFinding,
+  VerificationFacts,
+} from './rules/rule'
 export {
   checkOpeningHoursAt,
   checkOpeningHoursWindow,
+  dayOpenIntervals,
   localDateTimeInTimezone,
 } from './opening-hours-engine'
 export type {
+  DayOpenIntervals,
   LocalDateTime,
   OpeningHoursCheck,
   OpeningHoursContext,
   OpeningHoursReason,
   OpeningHoursWindow,
+  OpeningInterval,
 } from './opening-hours-engine'
 export {
   CheckCountSchema,
@@ -89,7 +99,6 @@ export {
   IssueSchema,
   IssueSeveritySchema,
   LocalTimeSchema,
-  OpeningHoursSchema,
   PlaceSchema,
   PlaceSourceSchema,
   PlanSchema,
@@ -115,7 +124,6 @@ export type {
   Issue,
   IssueCode,
   IssueSeverity,
-  OpeningHours,
   Place,
   PlaceSource,
   Plan,

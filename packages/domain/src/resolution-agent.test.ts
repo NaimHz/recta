@@ -35,7 +35,6 @@ function makePlace(
     address: null,
     category,
     openingHoursRaw: null,
-    openingHours: null,
     source: {
       provider: 'fixture',
       sourceDate: null,

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { verifyPlan } from '@recta/domain'
+import { loadVerificationFacts } from '../verification/facts'
 import { FixtureParseError, parseFixture } from './fixture'
 
 const fixture = [
@@ -31,19 +32,14 @@ describe('parseFixture', () => {
       place: {
         id: 'place-1',
         name: 'Louvre',
-        openingHours: {
-          opensAt: '09:00',
-          closesAt: '18:00',
-          closedOn: [],
-          raw: '09:00-18:00',
-        },
       },
     })
-    expect(plan.days[0]?.stops[1]?.place?.openingHours?.closedOn).toEqual(['Sun', 'Mon'])
+    expect(plan.days[0]?.stops[0]?.place?.openingHoursRaw).toBe('09:00-18:00')
+    expect(plan.days[0]?.stops[1]?.place?.openingHoursRaw).toBe('12:00-14:30; Su,Mo off')
   })
 
-  it('produces a violation with evidence from the parsed fixture', () => {
-    const result = verifyPlan(parseFixture(fixture))
+  it('produces a violation with evidence from the parsed fixture', async () => {
+    const result = verifyPlan(parseFixture(fixture), await loadVerificationFacts('paris'))
 
     expect(result.status).toBe('violation')
     expect(result.issues[0]).toMatchObject({
@@ -57,6 +53,7 @@ describe('parseFixture', () => {
             placeName: "Musée d'Orsay",
             stopEnd: '19:00',
             side: 'after_closing',
+            closesAt: '18:00',
           },
         },
       ],

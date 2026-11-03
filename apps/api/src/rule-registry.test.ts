@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest'
 const rulesDirectory = fileURLToPath(
   new URL('../../../packages/domain/src/rules/', import.meta.url),
 )
-const infrastructure = new Set(['engine.ts', 'registry.ts', 'rule.ts'])
+const infrastructure = new Set(['engine.ts', 'registry.ts', 'rule.ts', 'support.ts'])
 
 describe('rule registry', () => {
   it('registers every rule file of the domain', async () => {

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { verifyPlan } from './rules/engine'
+import type { VerificationFacts } from './rules/rule'
 import type { Plan, Stop } from './plan'
 import { SCHEMA_VERSION } from './version'
 import {
@@ -13,6 +14,15 @@ import {
 } from './verification-report'
 
 const NOW = new Date('2026-10-23T12:00:00.000Z')
+const FACTS: VerificationFacts = {
+  city: {
+    timezone: 'Europe/Paris',
+    countryCode: 'FR',
+    holidayRegion: 'Île-de-France',
+    center: { lat: 48.86, lon: 2.35 },
+  },
+  placeFacts: {},
+}
 
 function makeStop(id: string, sourceDate: string | null): Stop {
   return {
@@ -28,12 +38,6 @@ function makeStop(id: string, sourceDate: string | null): Stop {
       address: null,
       category: null,
       openingHoursRaw: '09:00-18:00',
-      openingHours: {
-        opensAt: '09:00',
-        closesAt: '18:00',
-        closedOn: [],
-        raw: '09:00-18:00',
-      },
       source: {
         provider: 'fixture',
         sourceDate,
@@ -177,7 +181,7 @@ describe('buildFreshnessReport', () => {
 
 describe('buildVerificationReport', () => {
   it('ajoute le coût et la fraîcheur au résultat de vérification', () => {
-    const result = verifyPlan(makePlan(['2026-10-01', null]))
+    const result = verifyPlan(makePlan(['2026-10-01', null]), FACTS)
     const report = buildVerificationReport(result, { now: NOW, calls: { google: 25 } })
 
     expect(report.status).toBe(result.status)
@@ -188,7 +192,7 @@ describe('buildVerificationReport', () => {
   })
 
   it('affiche un coût nul quand aucune source payante ne répond', () => {
-    const result = verifyPlan(makePlan(['2026-10-01']))
+    const result = verifyPlan(makePlan(['2026-10-01']), FACTS)
     const report = buildVerificationReport(result, { now: NOW })
 
     expect(report.usage).toMatchObject({

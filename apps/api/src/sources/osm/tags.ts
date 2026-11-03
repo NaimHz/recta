@@ -71,7 +71,6 @@ export function mapOsmElementToPlace(
     address: addressFor(tags),
     category: categoryFor(tags),
     openingHoursRaw: tags.opening_hours?.trim() || null,
-    openingHours: null,
     source: {
       provider: 'osm',
       sourceDate: sourceDateFor(tags),
