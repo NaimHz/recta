@@ -217,26 +217,32 @@ function ageDaysFor(sourceDate: string | null, now: Date): number | null {
 
 export function buildFreshnessReport(plan: Plan, now = new Date()): FreshnessReport {
   const entries = plan.days.flatMap((day) =>
-    day.stops.map((stop): FreshnessEntry => {
-      const sourceDate = stop.place.source.sourceDate
+    day.stops.flatMap((stop): FreshnessEntry[] => {
+      const place = stop.place
+
+      if (!place) return []
+
+      const sourceDate = place.source.sourceDate
       const ageDays = ageDaysFor(sourceDate, now)
       const freshness =
         ageDays === null ? 'inconnue' : ageDays > STALE_AFTER_DAYS ? 'ancienne' : 'fraîche'
 
-      return {
-        stopId: stop.id,
-        placeId: stop.place.id,
-        placeName: stop.place.name,
-        provider: stop.place.source.provider,
-        sourceDate,
-        retrievedAt: stop.place.source.retrievedAt,
-        ageDays,
-        freshness,
-        warning:
-          freshness === 'ancienne'
-            ? `Donnée source vieille de ${ageDays} jours (seuil : ${STALE_AFTER_DAYS}).`
-            : null,
-      }
+      return [
+        {
+          stopId: stop.id,
+          placeId: place.id,
+          placeName: place.name,
+          provider: place.source.provider,
+          sourceDate,
+          retrievedAt: place.source.retrievedAt,
+          ageDays,
+          freshness,
+          warning:
+            freshness === 'ancienne'
+              ? `Donnée source vieille de ${ageDays} jours (seuil : ${STALE_AFTER_DAYS}).`
+              : null,
+        },
+      ]
     }),
   )
   const ages = entries.map((entry) => entry.ageDays).filter((age): age is number => age !== null)

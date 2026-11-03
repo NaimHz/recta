@@ -1,10 +1,15 @@
 import {
-  type Day,
   type DayCode,
   type Evidence,
+  type EvidenceSource,
   type Issue,
+  type IssueCode,
+  type IssueSeverity,
+  type Place,
   type Plan,
   type Stop,
+  type Undetermined,
+  type UndeterminedReason,
   type VerificationResult,
 } from './plan'
 import { SCHEMA_VERSION } from './version'
@@ -32,17 +37,34 @@ export function dayCodeForDate(date: string): DayCode {
   return code
 }
 
-function buildEvidence(day: Day, stop: Stop, weekday: DayCode): Evidence {
-  const hours = stop.place.openingHours
+const ATTRIBUTIONS: Partial<Record<EvidenceSource, string>> = {
+  osm: '© OpenStreetMap contributors',
+  google: 'Google Maps',
+}
+
+const OPENING_HOURS_CODES: IssueCode[] = ['place_closed_day', 'outside_opening_hours']
+
+type OutsideSide = 'before_opening' | 'after_closing' | 'both'
+
+function buildEvidence(
+  date: string,
+  stop: Stop,
+  place: Place,
+  weekday: DayCode,
+  extraFields: Record<string, unknown> = {},
+): Evidence {
+  const hours = place.openingHours
 
   return {
-    source: stop.place.source.provider,
-    sourceDate: stop.place.source.sourceDate,
-    retrievedAt: stop.place.source.retrievedAt,
-    raw: stop.place.openingHoursRaw ?? hours?.raw ?? '',
+    source: place.source.provider,
+    sourceDate: place.source.sourceDate,
+    retrievedAt: place.source.retrievedAt,
+    url: null,
+    attribution: ATTRIBUTIONS[place.source.provider] ?? null,
+    raw: place.openingHoursRaw ?? hours?.raw ?? '',
     fields: {
-      placeName: stop.place.name,
-      date: day.date,
+      placeName: place.name,
+      date,
       weekday,
       weekdayLabel: WEEKDAY_LABELS[weekday],
       opensAt: hours?.opensAt ?? null,
@@ -50,18 +72,40 @@ function buildEvidence(day: Day, stop: Stop, weekday: DayCode): Evidence {
       closedOn: hours?.closedOn ?? [],
       stopStart: stop.start,
       stopEnd: stop.end,
+      ...extraFields,
     },
   }
 }
 
-function buildIssue(code: string, message: string, stop: Stop, evidence: Evidence): Issue {
+function buildIssue(
+  code: IssueCode,
+  severity: IssueSeverity,
+  message: string,
+  stop: Stop,
+  evidence: Evidence,
+): Issue {
   return {
+    id: `${code}:${stop.id}`,
     code,
-    severity: 'error',
+    severity,
     message,
-    stopId: stop.id,
-    evidence,
+    stopIds: [stop.id],
+    evidence: [evidence],
   }
+}
+
+function undetermined(stop: Stop, codes: IssueCode[], reason: UndeterminedReason): Undetermined {
+  return { codes, stopIds: [stop.id], reason }
+}
+
+function outsideMessage(side: OutsideSide, stop: Stop, opensAt: string, closesAt: string): string {
+  const before = `Le stop commence à ${stop.start}, avant l'ouverture de ${opensAt}.`
+  const after = `Le stop finit à ${stop.end}, après la fermeture de ${closesAt}.`
+
+  if (side === 'before_opening') return before
+  if (side === 'after_closing') return after
+
+  return `${before} ${after}`
 }
 
 /**
@@ -70,62 +114,81 @@ function buildIssue(code: string, message: string, stop: Stop, evidence: Evidenc
  */
 export function verifyOpeningHours(plan: Plan): VerificationResult {
   const issues: Issue[] = []
-  let hasIndeterminateStop = false
+  const undeterminedChecks: Undetermined[] = []
 
   for (const day of plan.days) {
-    const weekday = dayCodeForDate(day.date)
+    const date = day.date
+
+    if (date === null) {
+      for (const stop of day.stops) {
+        undeterminedChecks.push(undetermined(stop, OPENING_HOURS_CODES, 'date_unknown'))
+      }
+      continue
+    }
+
+    const weekday = dayCodeForDate(date)
 
     for (const stop of day.stops) {
-      const hours = stop.place.openingHours
-      const evidence = buildEvidence(day, stop, weekday)
+      const place = stop.place
+
+      if (!place) {
+        undeterminedChecks.push(undetermined(stop, OPENING_HOURS_CODES, 'place_unresolved'))
+        continue
+      }
+
+      const hours = place.openingHours
 
       if (!hours) {
-        hasIndeterminateStop = true
+        undeterminedChecks.push(undetermined(stop, OPENING_HOURS_CODES, 'missing_hours'))
         continue
       }
 
       if (hours.closedOn.includes(weekday)) {
         issues.push(
           buildIssue(
-            'place_closed',
-            `Le lieu ${stop.place.name} est fermé le ${WEEKDAY_LABELS[weekday]}.`,
+            'place_closed_day',
+            'error',
+            `Le lieu ${place.name} est fermé le ${WEEKDAY_LABELS[weekday]}.`,
             stop,
-            evidence,
+            buildEvidence(date, stop, place, weekday),
           ),
         )
         continue
       }
 
-      if (stop.start < hours.opensAt) {
-        issues.push(
-          buildIssue(
-            'stop_before_opening',
-            `Le stop commence à ${stop.start}, avant l'ouverture de ${hours.opensAt}.`,
-            stop,
-            evidence,
-          ),
-        )
+      if (stop.start === null || stop.end === null) {
+        undeterminedChecks.push(undetermined(stop, ['outside_opening_hours'], 'time_unknown'))
+        continue
       }
 
-      if (stop.end > hours.closesAt) {
-        issues.push(
-          buildIssue(
-            'stop_after_closing',
-            `Le stop finit à ${stop.end}, après la fermeture de ${hours.closesAt}.`,
-            stop,
-            evidence,
-          ),
-        )
-      }
+      const startsBefore = stop.start < hours.opensAt
+      const endsAfter = stop.end < stop.start || stop.end > hours.closesAt
+
+      if (!startsBefore && !endsAfter) continue
+
+      const side: OutsideSide =
+        startsBefore && endsAfter ? 'both' : startsBefore ? 'before_opening' : 'after_closing'
+
+      issues.push(
+        buildIssue(
+          'outside_opening_hours',
+          stop.windowSource === 'explicit' ? 'error' : 'warning',
+          outsideMessage(side, stop, hours.opensAt, hours.closesAt),
+          stop,
+          buildEvidence(date, stop, place, weekday, { side }),
+        ),
+      )
     }
   }
 
-  const status = issues.length > 0 ? 'violation' : hasIndeterminateStop ? 'indéterminé' : 'conforme'
+  const status =
+    issues.length > 0 ? 'violation' : undeterminedChecks.length > 0 ? 'indéterminé' : 'conforme'
 
   return {
     schemaVersion: SCHEMA_VERSION,
     status,
     plan,
     issues,
+    undetermined: undeterminedChecks,
   }
 }

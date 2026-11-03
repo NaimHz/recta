@@ -1,10 +1,15 @@
 import { describe, expect, it } from 'vitest'
 import { verifyOpeningHours } from './opening-hours'
 import type { Plan, Stop } from './plan'
+import { SCHEMA_VERSION } from './version'
 
 function makeStop(overrides: Partial<Stop> = {}): Stop {
   return {
     id: 'stop-1',
+    name: 'Lieu',
+    sourceText: null,
+    type: null,
+    resolution: 'resolved',
     place: {
       id: 'place-1',
       name: 'Lieu',
@@ -26,14 +31,17 @@ function makeStop(overrides: Partial<Stop> = {}): Stop {
     },
     start: '09:00',
     end: '11:00',
+    windowSource: 'explicit',
     ...overrides,
   }
 }
 
-function makePlan(date: string, stops: Stop[]): Plan {
+function makePlan(date: string | null, stops: Stop[]): Plan {
   return {
-    schemaVersion: 1,
-    days: [{ date, timezone: 'Europe/Paris', stops }],
+    schemaVersion: SCHEMA_VERSION,
+    cityId: 'test-city',
+    days: [{ id: 'day-1', date, timezone: 'Europe/Paris', stops }],
+    constraints: [],
   }
 }
 
@@ -77,24 +85,31 @@ describe('verifyOpeningHours', () => {
     expect(result.status).toBe('violation')
     expect(result.issues).toHaveLength(1)
     expect(result.issues[0]).toMatchObject({
-      code: 'stop_after_closing',
+      id: 'outside_opening_hours:stop-3',
+      code: 'outside_opening_hours',
       severity: 'error',
-      stopId: 'stop-3',
-      evidence: {
-        source: 'fixture',
-        sourceDate: '2026-10-24',
-        retrievedAt: null,
-        raw: '09:30-18:00; fermé Mon',
-        fields: {
-          placeName: 'Musée',
-          weekday: 'Sat',
-          opensAt: '09:30',
-          closesAt: '18:00',
-          stopStart: '17:30',
-          stopEnd: '19:00',
+      stopIds: ['stop-3'],
+      evidence: [
+        {
+          source: 'fixture',
+          sourceDate: '2026-10-24',
+          retrievedAt: null,
+          url: null,
+          attribution: null,
+          raw: '09:30-18:00; fermé Mon',
+          fields: {
+            placeName: 'Musée',
+            weekday: 'Sat',
+            opensAt: '09:30',
+            closesAt: '18:00',
+            stopStart: '17:30',
+            stopEnd: '19:00',
+            side: 'after_closing',
+          },
         },
-      },
+      ],
     })
+    expect(result.undetermined).toEqual([])
   })
 
   it('flags a stop on a closing day', () => {
@@ -129,7 +144,8 @@ describe('verifyOpeningHours', () => {
 
     expect(result.status).toBe('violation')
     expect(result.issues[0]).toMatchObject({
-      code: 'place_closed',
+      code: 'place_closed_day',
+      severity: 'error',
       message: 'Le lieu Musée est fermé le lundi.',
     })
   })
@@ -147,8 +163,9 @@ describe('verifyOpeningHours', () => {
 
     expect(result.status).toBe('violation')
     expect(result.issues[0]).toMatchObject({
-      code: 'stop_before_opening',
+      code: 'outside_opening_hours',
       message: "Le stop commence à 08:00, avant l'ouverture de 09:00.",
+      evidence: [{ fields: { side: 'before_opening' } }],
     })
   })
 
@@ -189,5 +206,113 @@ describe('verifyOpeningHours', () => {
 
     expect(result.status).toBe('indéterminé')
     expect(result.issues).toEqual([])
+    expect(result.undetermined).toEqual([
+      {
+        codes: ['place_closed_day', 'outside_opening_hours'],
+        stopIds: ['stop-1'],
+        reason: 'missing_hours',
+      },
+    ])
+  })
+
+  it('reports one issue when a stop overflows both ends', () => {
+    const result = verifyOpeningHours(
+      makePlan('2026-10-24', [makeStop({ start: '08:00', end: '19:00' })]),
+    )
+
+    expect(result.issues).toHaveLength(1)
+    expect(result.issues[0]).toMatchObject({
+      code: 'outside_opening_hours',
+      message:
+        "Le stop commence à 08:00, avant l'ouverture de 09:00. Le stop finit à 19:00, après la fermeture de 18:00.",
+      evidence: [{ fields: { side: 'both' } }],
+    })
+  })
+
+  it('treats a stop that crosses midnight as ending after closing', () => {
+    const result = verifyOpeningHours(
+      makePlan('2026-10-24', [makeStop({ start: '17:00', end: '01:00' })]),
+    )
+
+    expect(result.issues[0]).toMatchObject({
+      code: 'outside_opening_hours',
+      evidence: [{ fields: { side: 'after_closing' } }],
+    })
+  })
+
+  it('caps the severity when the window is not fully written', () => {
+    const result = verifyOpeningHours(
+      makePlan('2026-10-24', [
+        makeStop({ start: '17:00', end: '19:00', windowSource: 'default_duration' }),
+      ]),
+    )
+
+    expect(result.issues[0]).toMatchObject({
+      code: 'outside_opening_hours',
+      severity: 'warning',
+    })
+  })
+
+  it('still flags a closing day when the stop has no time', () => {
+    const result = verifyOpeningHours(
+      makePlan('2026-10-26', [
+        makeStop({
+          start: null,
+          end: null,
+          windowSource: 'unknown',
+          place: {
+            id: 'place-1',
+            name: 'Musée',
+            coordinates: null,
+            address: null,
+            category: null,
+            openingHoursRaw: '09:30-18:00; fermé Mon',
+            openingHours: {
+              opensAt: '09:30',
+              closesAt: '18:00',
+              closedOn: ['Mon'],
+              raw: '09:30-18:00; fermé Mon',
+            },
+            source: { provider: 'fixture', sourceDate: '2026-10-24', retrievedAt: null },
+          },
+        }),
+      ]),
+    )
+
+    expect(result.status).toBe('violation')
+    expect(result.issues[0]?.code).toBe('place_closed_day')
+  })
+
+  it('returns indéterminé for a stop without time on an open day', () => {
+    const result = verifyOpeningHours(
+      makePlan('2026-10-24', [makeStop({ start: null, end: null, windowSource: 'unknown' })]),
+    )
+
+    expect(result.status).toBe('indéterminé')
+    expect(result.undetermined).toEqual([
+      { codes: ['outside_opening_hours'], stopIds: ['stop-1'], reason: 'time_unknown' },
+    ])
+  })
+
+  it('returns indéterminé for an unresolved place', () => {
+    const result = verifyOpeningHours(
+      makePlan('2026-10-24', [makeStop({ resolution: 'not_found', place: null })]),
+    )
+
+    expect(result.status).toBe('indéterminé')
+    expect(result.undetermined[0]?.reason).toBe('place_unresolved')
+  })
+
+  it('returns indéterminé for every stop of a day without date', () => {
+    const result = verifyOpeningHours(
+      makePlan(null, [makeStop(), makeStop({ id: 'stop-2', start: '12:00', end: '13:00' })]),
+    )
+
+    expect(result.status).toBe('indéterminé')
+    expect(result.issues).toEqual([])
+    expect(result.undetermined.map((entry) => [entry.stopIds, entry.reason])).toEqual([
+      [['stop-1'], 'date_unknown'],
+      [['stop-2'], 'date_unknown'],
+    ])
   })
 })

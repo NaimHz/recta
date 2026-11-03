@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { verifyOpeningHours } from './opening-hours'
 import type { Plan, Stop } from './plan'
+import { SCHEMA_VERSION } from './version'
 import {
   COST_ALERT_EUR,
   COST_STOP_EUR,
@@ -16,6 +17,10 @@ const NOW = new Date('2026-10-23T12:00:00.000Z')
 function makeStop(id: string, sourceDate: string | null): Stop {
   return {
     id,
+    name: `Lieu ${id}`,
+    sourceText: null,
+    type: null,
+    resolution: 'resolved',
     place: {
       id: `place-${id}`,
       name: `Lieu ${id}`,
@@ -37,14 +42,18 @@ function makeStop(id: string, sourceDate: string | null): Stop {
     },
     start: '09:00',
     end: '10:00',
+    windowSource: 'explicit',
   }
 }
 
 function makePlan(sourceDates: Array<string | null>): Plan {
   return {
-    schemaVersion: 1,
+    schemaVersion: SCHEMA_VERSION,
+    cityId: 'test-city',
+    constraints: [],
     days: [
       {
+        id: 'day-1',
         date: '2026-10-24',
         timezone: 'Europe/Paris',
         stops: sourceDates.map((sourceDate, index) => makeStop(`stop-${index + 1}`, sourceDate)),
@@ -149,6 +158,20 @@ describe('buildFreshnessReport', () => {
     const report = buildFreshnessReport(makePlan(['2026-10-30']), NOW)
 
     expect(report.entries[0]).toMatchObject({ ageDays: 0, freshness: 'fraîche' })
+  })
+
+  it("ignore un stop dont le lieu n'est pas résolu", () => {
+    const plan = makePlan(['2026-10-01', '2026-10-01'])
+    const day = plan.days[0]
+    const unresolved = day?.stops[1]
+
+    if (!day || !unresolved) throw new Error('plan de test incomplet')
+
+    day.stops[1] = { ...unresolved, resolution: 'not_found', place: null }
+
+    const report = buildFreshnessReport(plan, NOW)
+
+    expect(report.entries.map((entry) => entry.stopId)).toEqual(['stop-1'])
   })
 })
 

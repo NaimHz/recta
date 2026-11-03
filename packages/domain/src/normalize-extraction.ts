@@ -1,10 +1,6 @@
 import { z } from 'zod'
 import type { ExtractedPlan, ExtractedStop } from './extraction'
-import { LocalTimeSchema } from './plan'
-
-export const STOP_WINDOW_SOURCES = ['explicit', 'period', 'default_duration', 'unknown'] as const
-
-export type StopWindowSource = (typeof STOP_WINDOW_SOURCES)[number]
+import { LocalTimeSchema, STOP_WINDOW_SOURCES, type StopWindowSource } from './plan'
 
 export const NormalizedStopSchema = z.strictObject({
   name: z.string().min(1),

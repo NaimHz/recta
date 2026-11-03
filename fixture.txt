@@ -1,6 +1,7 @@
 # Recta — fixture 1.7
 #
 # Format :
+#   city: identifiant de ville
 #   day: YYYY-MM-DD
 #   timezone: Europe/Paris
 #   début-fin | lieu | ouverture-fermeture | jours fermés
@@ -8,6 +9,7 @@
 # Les horaires sont des données en dur. Le moteur d'horaires OSM arrive en 2.2.
 # Le troisième stop finit après la fermeture : c'est la violation volontaire.
 
+city: paris
 day: 2026-10-24
 timezone: Europe/Paris
 09:00-11:00 | Louvre | 09:00-18:00 | -

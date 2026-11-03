@@ -7,8 +7,8 @@ import {
   normalizeExtractedPlan,
   normalizeExtractedStop,
   stopTypeKeyFor,
-  type StopWindowSource,
 } from './normalize-extraction'
+import type { StopWindowSource } from './plan'
 
 function makeStop(overrides: Partial<ExtractedStop> = {}): ExtractedStop {
   return {

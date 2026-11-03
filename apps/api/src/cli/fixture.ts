@@ -79,6 +79,10 @@ function parseStopLine(line: string, lineNumber: number, index: number, sourceDa
 
   return {
     id: `stop-${index + 1}`,
+    name,
+    sourceText: line,
+    type: null,
+    resolution: 'resolved',
     place: {
       id: `place-${index + 1}`,
       name,
@@ -95,14 +99,16 @@ function parseStopLine(line: string, lineNumber: number, index: number, sourceDa
     },
     start,
     end,
+    windowSource: 'explicit',
   }
 }
 
 /**
  * Format 1.7, volontairement pauvre : les données sont en dur, sans LLM ni OSM.
- * Les deux premières lignes donnent la date et le fuseau ; chaque ligne suivante est un stop.
+ * Les trois premières lignes donnent la ville, la date et le fuseau ; chaque ligne suivante est un stop.
  */
 export function parseFixture(text: string): Plan {
+  let cityId: string | null = null
   let date: string | null = null
   let timezone: string | null = null
   const rawStops: Array<{ line: string; lineNumber: number; index: number }> = []
@@ -113,6 +119,11 @@ export function parseFixture(text: string): Plan {
     if (!line || line.startsWith('#')) return
 
     const lineNumber = index + 1
+
+    if (line.startsWith('city:')) {
+      cityId = line.slice('city:'.length).trim()
+      return
+    }
 
     if (line.startsWith('day:')) {
       date = line.slice('day:'.length).trim()
@@ -127,6 +138,7 @@ export function parseFixture(text: string): Plan {
     rawStops.push({ line, lineNumber, index: rawStops.length })
   })
 
+  if (!cityId) throw new FixtureParseError(0, 'ligne « city: … » manquante')
   if (!date) throw new FixtureParseError(0, 'ligne « day: YYYY-MM-DD » manquante')
   if (!timezone) throw new FixtureParseError(0, 'ligne « timezone: … » manquante')
 
@@ -141,6 +153,8 @@ export function parseFixture(text: string): Plan {
 
   return PlanSchema.parse({
     schemaVersion: SCHEMA_VERSION,
-    days: [{ date: dayDate, timezone, stops }],
+    cityId,
+    days: [{ id: 'day-1', date: dayDate, timezone, stops }],
+    constraints: [],
   })
 }

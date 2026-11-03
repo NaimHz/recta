@@ -10,7 +10,7 @@ describe('GET /health', () => {
     expect(response.json()).toEqual({
       status: 'ok',
       service: 'recta-api',
-      schemaVersion: 1,
+      schemaVersion: 2,
     })
 
     await app.close()
