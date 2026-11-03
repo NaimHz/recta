@@ -25,7 +25,7 @@
     "db:seed": "pnpm --filter @recta/api db:seed",
     "db:reset": "pnpm --filter @recta/api db:reset",
     "db:check": "pnpm --filter @recta/api db:check",
-    "verify": "pnpm --filter @recta/api verify",
+    "verify": "pnpm --silent --filter @recta/api verify",
     "extract": "pnpm --filter @recta/api extract",
     "data:check": "pnpm --filter @recta/api data:check",
     "osm:fetch": "pnpm --filter @recta/api osm:fetch",

@@ -11,6 +11,7 @@ import {
   buildFreshnessReport,
   buildVerificationReport,
   estimateUsage,
+  summarizeVerification,
 } from './verification-report'
 
 const NOW = new Date('2026-10-23T12:00:00.000Z')
@@ -204,5 +205,64 @@ describe('buildVerificationReport', () => {
       budget: { status: 'ok', degraded: false },
     })
     expect(report.freshness.staleCount).toBe(0)
+  })
+})
+
+describe('summarizeVerification', () => {
+  it('compte les issues par sévérité et la couverture des contrôles tranchés', () => {
+    const result = verifyPlan(makePlan(['2026-10-01']), FACTS)
+    const evidence = {
+      source: 'fixture' as const,
+      sourceDate: null,
+      retrievedAt: null,
+      url: null,
+      attribution: null,
+      raw: '-',
+      fields: {},
+    }
+    const summary = summarizeVerification({
+      ...result,
+      issues: [
+        {
+          id: 'a',
+          code: 'stop_overlap',
+          severity: 'error',
+          message: 'a',
+          stopIds: ['stop-1'],
+          evidence: [evidence],
+        },
+        {
+          id: 'b',
+          code: 'insufficient_buffer',
+          severity: 'warning',
+          message: 'b',
+          stopIds: ['stop-1'],
+          evidence: [evidence],
+        },
+      ],
+      undetermined: [
+        { codes: ['travel_time_infeasible'], stopIds: ['stop-1'], reason: 'time_unknown' },
+      ],
+      checks: [
+        { code: 'stop_overlap', executed: 4, undetermined: 0, suppressed: 0 },
+        { code: 'travel_time_infeasible', executed: 3, undetermined: 1, suppressed: 2 },
+      ],
+    })
+
+    expect(summary).toEqual({
+      issues: { error: 1, warning: 1, info: 0 },
+      undetermined: 1,
+      coverage: { executed: 7, decided: 6, ratio: 0.857 },
+    })
+  })
+
+  it('rend une couverture nulle quand aucun contrôle ne tourne', () => {
+    const result = verifyPlan(makePlan(['2026-10-01']), FACTS)
+
+    expect(summarizeVerification({ ...result, checks: [] }).coverage).toEqual({
+      executed: 0,
+      decided: 0,
+      ratio: null,
+    })
   })
 })

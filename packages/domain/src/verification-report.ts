@@ -3,6 +3,7 @@ import {
   IsoDateSchema,
   PlaceSourceSchema,
   VerificationResultSchema,
+  type IssueSeverity,
   type Plan,
   type VerificationResult,
 } from './plan'
@@ -68,7 +69,23 @@ export const FreshnessReportSchema = z.object({
 })
 export type FreshnessReport = z.infer<typeof FreshnessReportSchema>
 
+export const VerificationSummarySchema = z.object({
+  issues: z.object({
+    error: z.number().int().nonnegative(),
+    warning: z.number().int().nonnegative(),
+    info: z.number().int().nonnegative(),
+  }),
+  undetermined: z.number().int().nonnegative(),
+  coverage: z.object({
+    executed: z.number().int().nonnegative(),
+    decided: z.number().int().nonnegative(),
+    ratio: z.number().min(0).max(1).nullable(),
+  }),
+})
+export type VerificationSummary = z.infer<typeof VerificationSummarySchema>
+
 export const VerificationReportSchema = VerificationResultSchema.extend({
+  summary: VerificationSummarySchema,
   usage: VerificationUsageSchema,
   freshness: FreshnessReportSchema,
 })
@@ -257,6 +274,28 @@ export function buildFreshnessReport(plan: Plan, now = new Date()): FreshnessRep
   }
 }
 
+export function summarizeVerification(result: VerificationResult): VerificationSummary {
+  const executed = result.checks.reduce((total, check) => total + check.executed, 0)
+  const undetermined = result.checks.reduce((total, check) => total + check.undetermined, 0)
+  const decided = executed - undetermined
+  const countSeverity = (severity: IssueSeverity): number =>
+    result.issues.filter((issue) => issue.severity === severity).length
+
+  return {
+    issues: {
+      error: countSeverity('error'),
+      warning: countSeverity('warning'),
+      info: countSeverity('info'),
+    },
+    undetermined: result.undetermined.length,
+    coverage: {
+      executed,
+      decided,
+      ratio: executed === 0 ? null : Math.round((decided / executed) * 1000) / 1000,
+    },
+  }
+}
+
 export function buildVerificationReport(
   result: VerificationResult,
   options: VerificationReportOptions = {},
@@ -271,6 +310,7 @@ export function buildVerificationReport(
 
   return {
     ...result,
+    summary: summarizeVerification(result),
     usage,
     freshness: buildFreshnessReport(result.plan, options.now ?? new Date()),
   }

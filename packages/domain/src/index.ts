@@ -160,11 +160,13 @@ export {
   VerificationBudgetSchema,
   VerificationCostTracker,
   VerificationReportSchema,
+  VerificationSummarySchema,
   VerificationUsageSchema,
   buildFreshnessReport,
   buildVerificationReport,
   estimateCostEur,
   estimateUsage,
+  summarizeVerification,
 } from './verification-report'
 export type {
   FreshnessEntry,
@@ -175,6 +177,7 @@ export type {
   VerificationCostTrackerOptions,
   VerificationReport,
   VerificationReportOptions,
+  VerificationSummary,
   VerificationUsage,
 } from './verification-report'
 export { SCHEMA_VERSION } from './version'

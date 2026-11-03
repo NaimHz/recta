@@ -42,7 +42,7 @@ attend que Postgres soit prêt.
 | `pnpm lint` | ESLint |
 | `pnpm format` | Prettier |
 | `pnpm test` | Tests unitaires |
-| `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort le résultat JSON avec preuve, coût et fraîcheur |
+| `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort un rapport Markdown : verdict, couverture, issues avec preuve, indéterminés. `--json` pour le rapport complet (`pnpm -s verify … --json` pour un JSON seul), `--offline` sans appels de trajet. Exit code 0 sans erreur, 1 avec erreur, 2 en cas d'échec |
 | `pnpm extract fichier.txt` | Extrait un plan depuis un texte via Anthropic (clé et modèle requis) |
 | `pnpm data:check` | Vérifie les bases curatées : 20 sites par ville, chaque fait avec source et date de revue |
 | `pnpm osm:fetch` | Récupère 25 lieux OSM par ville de référence et écrit `evals/sources/osm-places.json` |
@@ -108,8 +108,9 @@ présence d'une source datée pour chaque fait.
 
 ## Coût et fraîcheur
 
-`pnpm verify` ajoute au résultat deux blocs. `usage` compte les appels, estime le coût et applique
-les plafonds : alerte à 0,50 €, arrêt à 1,00 €. `freshness` donne l'âge de la source de chaque lieu
+`pnpm verify --json` ajoute au résultat trois blocs. `summary` compte les issues par sévérité et
+donne la couverture : part des contrôles tranchés. `usage` compte les appels, estime le coût et
+applique les plafonds : alerte à 0,50 €, arrêt à 1,00 €. `freshness` donne l'âge de la source de chaque lieu
 et signale ceux de plus de 365 jours. Sans date de source, la fraîcheur est `inconnue` : elle n'est
 pas supposée fraîche.
 
