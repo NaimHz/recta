@@ -1,7 +1,16 @@
-import type { Coordinates, Evidence, Place, Plan, Stop, StopWindowSource } from '../../plan'
+import type {
+  AnnouncedTravel,
+  Coordinates,
+  Evidence,
+  Place,
+  Plan,
+  Stop,
+  StopWindowSource,
+} from '../../plan'
 import { SCHEMA_VERSION } from '../../version'
 import {
   NO_TRAVEL,
+  type AnnouncedTravelCheck,
   type PlaceFact,
   type TransitLeg,
   type TravelFacts,
@@ -78,7 +87,7 @@ export function planOn(date: string | null, stop: Stop): Plan {
   return {
     schemaVersion: SCHEMA_VERSION,
     cityId: 'test-city',
-    days: [{ id: 'day-1', date, timezone: 'Europe/Paris', stops: [stop] }],
+    days: [{ id: 'day-1', date, timezone: 'Europe/Paris', stops: [stop], travels: [] }],
     constraints: [],
   }
 }
@@ -88,6 +97,8 @@ export const COORDINATES = {
   louvre: { lat: 48.8606, lon: 2.3364 },
   cafeMarly: { lat: 48.8616428, lon: 2.3359304 },
   laDefense: { lat: 48.892, lon: 2.238 },
+  saintMichel: { lat: 48.8535, lon: 2.3446 },
+  versaillesRiveGauche: { lat: 48.8003, lon: 2.129 },
 } satisfies Record<string, Coordinates>
 
 export function locatedStop(
@@ -110,11 +121,11 @@ export function locatedStop(
   }
 }
 
-export function dayPlan(date: string | null, stops: Stop[]): Plan {
+export function dayPlan(date: string | null, stops: Stop[], travels: AnnouncedTravel[] = []): Plan {
   return {
     schemaVersion: SCHEMA_VERSION,
     cityId: 'test-city',
-    days: [{ id: 'day-1', date, timezone: 'Europe/Paris', stops }],
+    days: [{ id: 'day-1', date, timezone: 'Europe/Paris', stops, travels }],
     constraints: [],
   }
 }
@@ -197,3 +208,36 @@ export const LOUVRE_DEFENSE_MARLY_WALK = walkMatrix(
     [111, 8555.7, 0],
   ],
 )
+
+export function homeTravel(
+  fromStopId: string,
+  departure: string | null,
+  line: string | null = null,
+  coordinates: Coordinates | null = COORDINATES.versaillesRiveGauche,
+): AnnouncedTravel {
+  return {
+    id: 'travel-1',
+    fromStopId,
+    toStopId: null,
+    toPlace: { ...osmPlace('Hôtel à Versailles', null, 'osm:node/hotel'), coordinates },
+    mode: 'rer',
+    line,
+    departure,
+    sourceText: `retour en RER${line ? ` ${line}` : ''} à ${departure ?? '?'}`,
+  }
+}
+
+export function departureCheck(
+  requestedAt: string,
+  nextDepartureAt: string | null,
+  line: string | null = null,
+): AnnouncedTravelCheck {
+  return {
+    travelId: 'travel-1',
+    requestedAt,
+    transitModes: 'SUBURBAN,REGIONAL_RAIL,RAIL',
+    line,
+    nextDepartureAt,
+    evidence: serviceEvidence('transitous', 'https://api.transitous.org/api/v6/plan'),
+  }
+}

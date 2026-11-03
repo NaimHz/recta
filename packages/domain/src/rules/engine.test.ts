@@ -38,6 +38,7 @@ const plan: Plan = {
       date: '2026-11-03',
       timezone: 'Europe/Paris',
       stops: [makeStop('stop-1'), makeStop('stop-2')],
+      travels: [],
     },
   ],
   constraints: [],

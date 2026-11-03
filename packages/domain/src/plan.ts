@@ -86,11 +86,33 @@ export const StopSchema = z
 
 export type Stop = z.infer<typeof StopSchema>
 
+export const TRAVEL_MODES = ['metro', 'rer', 'train', 'tram', 'bus', 'transit'] as const
+export type TravelMode = (typeof TRAVEL_MODES)[number]
+
+export const AnnouncedTravelSchema = z
+  .object({
+    id: IdSchema,
+    fromStopId: IdSchema,
+    toStopId: IdSchema.nullable(),
+    toPlace: PlaceSchema.nullable(),
+    mode: z.enum(TRAVEL_MODES),
+    line: z.string().min(1).nullable(),
+    departure: LocalTimeSchema.nullable(),
+    sourceText: z.string().min(1),
+  })
+  .refine(({ toStopId, toPlace }) => toStopId !== null || toPlace !== null, {
+    message: 'Un trajet annoncé a une destination : un stop du plan ou un lieu',
+    path: ['toStopId'],
+  })
+
+export type AnnouncedTravel = z.infer<typeof AnnouncedTravelSchema>
+
 export const DaySchema = z.object({
   id: IdSchema,
   date: IsoDateSchema.nullable(),
   timezone: z.string().min(1),
   stops: z.array(StopSchema).min(1),
+  travels: z.array(AnnouncedTravelSchema),
 })
 
 export type Day = z.infer<typeof DaySchema>
@@ -169,7 +191,6 @@ export const ISSUE_CODES = [
   'fragmented_half_day',
   'overloaded_day',
   'last_departure_missed',
-  'connection_too_short',
 ] as const
 
 export const IssueCodeSchema = z.enum(ISSUE_CODES)

@@ -62,6 +62,7 @@ function makePlan(sourceDates: Array<string | null>): Plan {
         date: '2026-10-24',
         timezone: 'Europe/Paris',
         stops: sourceDates.map((sourceDate, index) => makeStop(`stop-${index + 1}`, sourceDate)),
+        travels: [],
       },
     ],
   }

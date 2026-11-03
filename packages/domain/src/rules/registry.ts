@@ -1,6 +1,7 @@
 import { dayClosure } from './day-closure'
 import { dayLoad } from './day-load'
 import { fragmentedHalfDay } from './fragmented-half-day'
+import { lastDeparture } from './last-departure'
 import { lastEntry } from './last-entry'
 import { openingWindow } from './opening-window'
 import { placeStatus } from './place-status'
@@ -17,4 +18,5 @@ export const RULES: readonly Rule[] = [
   travelTime,
   fragmentedHalfDay,
   dayLoad,
+  lastDeparture,
 ]

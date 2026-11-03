@@ -159,7 +159,7 @@ export function parseFixture(text: string): Plan {
   return PlanSchema.parse({
     schemaVersion: SCHEMA_VERSION,
     cityId,
-    days: [{ id: 'day-1', date: dayDate, timezone, stops }],
+    days: [{ id: 'day-1', date: dayDate, timezone, stops, travels: [] }],
     constraints: [],
   })
 }

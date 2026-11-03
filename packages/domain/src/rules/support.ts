@@ -5,6 +5,8 @@ import {
 } from '../opening-hours-engine'
 import { UNDETERMINED_REASONS } from '../plan'
 import type {
+  AnnouncedTravel,
+  Day,
   Evidence,
   EvidenceSource,
   IssueCode,
@@ -168,4 +170,12 @@ export function planEvidence(stop: Stop, fields: Record<string, unknown>): Evide
     raw: stop.sourceText ?? `${stop.name} ${stop.start ?? '?'}-${stop.end ?? '?'}`,
     fields: { stopId: stop.id, name: stop.name, start: stop.start, end: stop.end, ...fields },
   }
+}
+
+export function announcedDepartureDate(date: string, day: Day, travel: AnnouncedTravel): string {
+  const from = day.stops.find((stop) => stop.id === travel.fromStopId)
+
+  return travel.departure !== null && from?.start != null && travel.departure < from.start
+    ? addDays(date, 1)
+    : date
 }

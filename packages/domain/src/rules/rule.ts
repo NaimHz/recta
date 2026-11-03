@@ -45,13 +45,23 @@ export type TravelUnavailable = {
   reason: string
 }
 
+export type AnnouncedTravelCheck = {
+  travelId: string
+  requestedAt: string
+  transitModes: string
+  line: string | null
+  nextDepartureAt: string | null
+  evidence: Evidence
+}
+
 export type TravelFacts = {
   walk: WalkMatrix[]
   transit: TransitLeg[]
+  announced: AnnouncedTravelCheck[]
   unavailable: TravelUnavailable[]
 }
 
-export const NO_TRAVEL: TravelFacts = { walk: [], transit: [], unavailable: [] }
+export const NO_TRAVEL: TravelFacts = { walk: [], transit: [], announced: [], unavailable: [] }
 
 export type VerificationFacts = {
   city: {

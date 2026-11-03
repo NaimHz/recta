@@ -61,8 +61,10 @@ export type {
 export { dayCodeForDate } from './opening-hours'
 export { RuleContractError, SUPERSEDES, verifyPlan } from './rules/engine'
 export { RULES } from './rules/registry'
+export { announcedDepartureDate } from './rules/support'
 export { NO_TRAVEL } from './rules/rule'
 export type {
+  AnnouncedTravelCheck,
   FactSource,
   PlaceFact,
   Rule,
@@ -91,6 +93,7 @@ export type {
   OpeningInterval,
 } from './opening-hours-engine'
 export {
+  AnnouncedTravelSchema,
   CheckCountSchema,
   ConstraintSchema,
   CoordinatesSchema,
@@ -113,6 +116,7 @@ export {
   STOP_RESOLUTIONS,
   STOP_WINDOW_SOURCES,
   StopSchema,
+  TRAVEL_MODES,
   UNDETERMINED_REASONS,
   UndeterminedReasonSchema,
   UndeterminedSchema,
@@ -120,6 +124,7 @@ export {
   VerificationStatusSchema,
 } from './plan'
 export type {
+  AnnouncedTravel,
   CheckCount,
   Constraint,
   Coordinates,
@@ -138,6 +143,7 @@ export type {
   Stop,
   StopResolution,
   StopWindowSource,
+  TravelMode,
   Undetermined,
   UndeterminedReason,
   VerificationResult,

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import {
+  AnnouncedTravelSchema,
   ConstraintSchema,
   ISSUE_CODES,
   IssueSchema,
@@ -8,6 +9,7 @@ import {
   RepairProposalSchema,
   StopSchema,
   VerificationResultSchema,
+  type AnnouncedTravel,
   type Place,
   type RepairProposal,
   type Stop,
@@ -73,6 +75,17 @@ const untimedStop: Stop = {
   windowSource: 'unknown',
 }
 
+const announcedTravel: AnnouncedTravel = {
+  id: 'travel-1',
+  fromStopId: 'stop-2',
+  toStopId: null,
+  toPlace: { ...place, id: 'osm:node/9', name: 'Hôtel' },
+  mode: 'rer',
+  line: 'C',
+  departure: '00:15',
+  sourceText: 'retour en RER C à 00:15',
+}
+
 const repair: RepairProposal = {
   id: 'repair-1',
   issueIds: ['outside_opening_hours:stop-1', 'stop_overlap:stop-1,stop-3'],
@@ -99,8 +112,15 @@ const result: VerificationResult = {
         date: '2026-11-03',
         timezone: 'Europe/Paris',
         stops: [resolvedStop, nightStop],
+        travels: [announcedTravel],
       },
-      { id: 'day-2', date: null, timezone: 'Europe/Paris', stops: [unresolvedStop, untimedStop] },
+      {
+        id: 'day-2',
+        date: null,
+        timezone: 'Europe/Paris',
+        stops: [unresolvedStop, untimedStop],
+        travels: [],
+      },
     ],
     constraints: [
       {
@@ -253,8 +273,8 @@ describe('StopSchema', () => {
 describe('IssueSchema', () => {
   const issue = result.issues[0]
 
-  it('connaît les 12 types de la taxonomie', () => {
-    expect(ISSUE_CODES).toHaveLength(12)
+  it('connaît les 11 types de la taxonomie', () => {
+    expect(ISSUE_CODES).toHaveLength(11)
   })
 
   it('refuse un code hors taxonomie', () => {
@@ -271,6 +291,16 @@ describe('IssueSchema', () => {
 
     expect(
       IssueSchema.safeParse({ ...issue, evidence: [{ ...evidence, source: 'wikipedia' }] }).success,
+    ).toBe(false)
+  })
+})
+
+describe('AnnouncedTravelSchema', () => {
+  it('exige une destination : un stop du plan ou un lieu', () => {
+    expect(AnnouncedTravelSchema.safeParse(announcedTravel).success).toBe(true)
+    expect(
+      AnnouncedTravelSchema.safeParse({ ...announcedTravel, toStopId: null, toPlace: null })
+        .success,
     ).toBe(false)
   })
 })
