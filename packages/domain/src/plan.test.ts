@@ -204,6 +204,10 @@ const result: VerificationResult = {
       reason: 'date_unknown',
     },
   ],
+  checks: [
+    { code: 'place_closed_day', executed: 3, undetermined: 1, suppressed: 0 },
+    { code: 'outside_opening_hours', executed: 2, undetermined: 1, suppressed: 1 },
+  ],
 }
 
 function roundTrip<T>(value: T): unknown {

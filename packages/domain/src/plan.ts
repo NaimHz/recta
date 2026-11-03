@@ -242,6 +242,7 @@ export const UNDETERMINED_REASONS = [
   'date_unknown',
   'transit_unavailable',
   'unknown_mode',
+  'rule_error',
 ] as const
 
 export const UndeterminedReasonSchema = z.enum(UNDETERMINED_REASONS)
@@ -288,12 +289,22 @@ export type RepairProposal = z.infer<typeof RepairProposalSchema>
 export const VerificationStatusSchema = z.enum(['conforme', 'violation', 'indéterminé'])
 export type VerificationStatus = z.infer<typeof VerificationStatusSchema>
 
+export const CheckCountSchema = z.object({
+  code: IssueCodeSchema,
+  executed: z.number().int().nonnegative(),
+  undetermined: z.number().int().nonnegative(),
+  suppressed: z.number().int().nonnegative(),
+})
+
+export type CheckCount = z.infer<typeof CheckCountSchema>
+
 export const VerificationResultSchema = z.object({
   schemaVersion: z.literal(SCHEMA_VERSION),
   status: VerificationStatusSchema,
   plan: PlanSchema,
   issues: z.array(IssueSchema),
   undetermined: z.array(UndeterminedSchema),
+  checks: z.array(CheckCountSchema),
 })
 
 export type VerificationResult = z.infer<typeof VerificationResultSchema>

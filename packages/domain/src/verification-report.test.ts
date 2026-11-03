@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { verifyOpeningHours } from './opening-hours'
+import { verifyPlan } from './rules/engine'
 import type { Plan, Stop } from './plan'
 import { SCHEMA_VERSION } from './version'
 import {
@@ -177,7 +177,7 @@ describe('buildFreshnessReport', () => {
 
 describe('buildVerificationReport', () => {
   it('ajoute le coût et la fraîcheur au résultat de vérification', () => {
-    const result = verifyOpeningHours(makePlan(['2026-10-01', null]))
+    const result = verifyPlan(makePlan(['2026-10-01', null]))
     const report = buildVerificationReport(result, { now: NOW, calls: { google: 25 } })
 
     expect(report.status).toBe(result.status)
@@ -188,7 +188,7 @@ describe('buildVerificationReport', () => {
   })
 
   it('affiche un coût nul quand aucune source payante ne répond', () => {
-    const result = verifyOpeningHours(makePlan(['2026-10-01']))
+    const result = verifyPlan(makePlan(['2026-10-01']))
     const report = buildVerificationReport(result, { now: NOW })
 
     expect(report.usage).toMatchObject({

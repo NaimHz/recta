@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { verifyOpeningHours } from '@recta/domain'
+import { verifyPlan } from '@recta/domain'
 import { FixtureParseError, parseFixture } from './fixture'
 
 const fixture = [
@@ -43,7 +43,7 @@ describe('parseFixture', () => {
   })
 
   it('produces a violation with evidence from the parsed fixture', () => {
-    const result = verifyOpeningHours(parseFixture(fixture))
+    const result = verifyPlan(parseFixture(fixture))
 
     expect(result.status).toBe('violation')
     expect(result.issues[0]).toMatchObject({

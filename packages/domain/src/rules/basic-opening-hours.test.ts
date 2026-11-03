@@ -1,7 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { verifyOpeningHours } from './opening-hours'
-import type { Plan, Stop } from './plan'
-import { SCHEMA_VERSION } from './version'
+import type { Plan, Stop } from '../plan'
+import { SCHEMA_VERSION } from '../version'
+import { basicOpeningHours } from './basic-opening-hours'
+import { verifyPlan } from './engine'
+
+function verifyOpeningHours(plan: Plan) {
+  return verifyPlan(plan, [basicOpeningHours])
+}
 
 function makeStop(overrides: Partial<Stop> = {}): Stop {
   return {
@@ -45,7 +50,7 @@ function makePlan(date: string | null, stops: Stop[]): Plan {
   }
 }
 
-describe('verifyOpeningHours', () => {
+describe('basicOpeningHours', () => {
   it('flags a stop that ends after closing time with evidence', () => {
     const plan = makePlan('2026-10-24', [
       makeStop(),

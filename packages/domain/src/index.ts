@@ -58,7 +58,10 @@ export type {
   ResolutionAgentResult,
   ResolutionSearchInput,
 } from './resolution-agent'
-export { verifyOpeningHours, dayCodeForDate } from './opening-hours'
+export { dayCodeForDate } from './opening-hours'
+export { RuleContractError, SUPERSEDES, verifyPlan } from './rules/engine'
+export { RULES } from './rules/registry'
+export type { Rule, RuleContext, RuleFinding } from './rules/rule'
 export {
   checkOpeningHoursAt,
   checkOpeningHoursWindow,
@@ -72,6 +75,7 @@ export type {
   OpeningHoursWindow,
 } from './opening-hours-engine'
 export {
+  CheckCountSchema,
   ConstraintSchema,
   CoordinatesSchema,
   DAY_CODES,
@@ -101,6 +105,7 @@ export {
   VerificationStatusSchema,
 } from './plan'
 export type {
+  CheckCount,
   Constraint,
   Coordinates,
   Day,
