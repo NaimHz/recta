@@ -1,8 +1,8 @@
 {
   "version": 1,
   "source": "claude-haiku-5-5",
-  "promptVersion": "extraction-v3",
-  "measuredAt": "2026-10-23T13:16:24.879Z",
+  "promptVersion": "extraction-v4",
+  "measuredAt": "2026-11-03T09:27:34.769Z",
   "outputs": {
     "wa-paris-louvre": {
       "ok": true,
@@ -49,25 +49,25 @@
             "timezoneText": null,
             "stops": [
               {
-                "name": "terrasse",
+                "name": "café à la terrasse",
                 "startText": "9h",
                 "endText": null,
-                "type": "café",
-                "sourceText": "9h : café à la terrasse"
+                "type": null,
+                "sourceText": "- 9h : café à la terrasse"
               },
               {
-                "name": "Photo",
+                "name": "expo Photo",
                 "startText": "11h",
                 "endText": null,
-                "type": "expo",
-                "sourceText": "11h : expo Photo"
+                "type": null,
+                "sourceText": "- 11h : expo Photo"
               },
               {
                 "name": "parc",
                 "startText": "15h",
                 "endText": null,
                 "type": null,
-                "sourceText": "15h : parc"
+                "sourceText": "- 15h : parc"
               }
             ]
           }
@@ -88,7 +88,7 @@
                 "startText": "10h30",
                 "endText": null,
                 "type": "musée",
-                "sourceText": "sam 24/10 - 10h30 Musée Picasso / 13h Café de Flore / 15h30 Centre Pompidou"
+                "sourceText": "sam 24/10 - 10h30 Musée Picasso / 13h Café de Flore"
               },
               {
                 "name": "Café de Flore",
@@ -102,7 +102,7 @@
                 "startText": "15h30",
                 "endText": null,
                 "type": null,
-                "sourceText": "15h30 Centre Pompidou"
+                "sourceText": "13h Café de Flore / 15h30 Centre Pompidou"
               }
             ]
           }
@@ -122,7 +122,7 @@
                 "name": "Musée des Confluences",
                 "startText": "10h30",
                 "endText": null,
-                "type": null,
+                "type": "musée",
                 "sourceText": "10h30 : Musée des Confluences"
               },
               {
@@ -192,21 +192,21 @@
                 "name": "Louvre Museum",
                 "startText": "10:00 AM",
                 "endText": "12:00 PM",
-                "type": null,
+                "type": "museum",
                 "sourceText": "10:00 AM - 12:00 PM: Louvre Museum"
               },
               {
                 "name": "Café Marly",
                 "startText": "1:30 PM",
                 "endText": null,
-                "type": "Café",
+                "type": "café",
                 "sourceText": "1:30 PM: lunch at Café Marly"
               },
               {
                 "name": "Jardin des Tuileries",
                 "startText": "4:00 PM",
                 "endText": null,
-                "type": "Jardin",
+                "type": "jardin",
                 "sourceText": "4:00 PM: Jardin des Tuileries"
               }
             ]
@@ -227,7 +227,7 @@
                 "name": "Opéra Garnier",
                 "startText": null,
                 "endText": null,
-                "type": null,
+                "type": "opéra",
                 "sourceText": "- Opéra Garnier"
               },
               {
@@ -409,7 +409,7 @@
                 "name": "Bouchon des Filles",
                 "startText": "18h30",
                 "endText": null,
-                "type": null,
+                "type": "bouchon",
                 "sourceText": "18h30 : dîner au Bouchon des Filles"
               }
             ]
@@ -423,14 +423,14 @@
                 "name": "Musée du Louvre",
                 "startText": "10h00",
                 "endText": null,
-                "type": "Musée",
+                "type": "musée",
                 "sourceText": "10h00 : Musée du Louvre"
               },
               {
                 "name": "Jardin des Tuileries",
                 "startText": "14h00",
                 "endText": null,
-                "type": "Jardin",
+                "type": "jardin",
                 "sourceText": "14h00 : Jardin des Tuileries"
               }
             ]
@@ -483,25 +483,25 @@
             "timezoneText": null,
             "stops": [
               {
-                "name": "Louvre",
+                "name": "musée du Louvre",
                 "startText": "09h00",
                 "endText": null,
                 "type": "musée",
-                "sourceText": "09h00 : musée du Louvre"
+                "sourceText": "- 09h00 : musée du Louvre"
               },
               {
                 "name": "Comptoir des Marronniers",
                 "startText": "12h30",
                 "endText": null,
                 "type": null,
-                "sourceText": "12h30 : déjeuner au Comptoir des Marronniers"
+                "sourceText": "- 12h30 : déjeuner au Comptoir des Marronniers"
               },
               {
-                "name": "Orsay",
+                "name": "musée d'Orsay",
                 "startText": "15h00",
                 "endText": "17h00",
                 "type": "musée",
-                "sourceText": "15h00-17h00 : musée d'Orsay"
+                "sourceText": "- 15h00-17h00 : musée d'Orsay"
               }
             ]
           }
@@ -563,7 +563,7 @@
                 "name": "Café Marly",
                 "startText": "12:30 PM",
                 "endText": null,
-                "type": null,
+                "type": "Café",
                 "sourceText": "12:30 PM: lunch at Café Marly"
               },
               {
@@ -651,7 +651,7 @@
                 "sourceText": "10h00 : musée du Louvre"
               },
               {
-                "name": "Tuileries",
+                "name": "Jardin des Tuileries",
                 "startText": "14h00",
                 "endText": null,
                 "type": "jardin",
@@ -710,7 +710,7 @@
                 "name": "marché Saint-Antoine",
                 "startText": "10h00",
                 "endText": null,
-                "type": null,
+                "type": "marché",
                 "sourceText": "10h00 : marché Saint-Antoine"
               },
               {
@@ -721,7 +721,7 @@
                 "sourceText": "12h30 : déjeuner à la Brasserie Georges"
               },
               {
-                "name": "Pralus",
+                "name": "chez Pralus",
                 "startText": "16h00",
                 "endText": null,
                 "type": "café",
@@ -745,14 +745,14 @@
                 "name": "Jardin du Luxembourg",
                 "startText": "Matin",
                 "endText": null,
-                "type": "jardin",
+                "type": null,
                 "sourceText": "Matin : balade au Jardin du Luxembourg"
               },
               {
                 "name": "Musée Rodin",
                 "startText": "14h",
                 "endText": "17h30",
-                "type": "musée",
+                "type": null,
                 "sourceText": "Après-midi : Musée Rodin (14h-17h30)"
               }
             ]
@@ -781,14 +781,14 @@
                 "startText": "midi",
                 "endText": null,
                 "type": null,
-                "sourceText": "puis déjeuner chez Marcel à midi"
+                "sourceText": "déjeuner chez Marcel à midi"
               },
               {
                 "name": "Panthéon",
                 "startText": "15 h",
                 "endText": null,
                 "type": null,
-                "sourceText": "enfin le Panthéon à 15 h"
+                "sourceText": "le Panthéon à 15 h"
               }
             ]
           }
@@ -808,7 +808,7 @@
                 "name": "Louvre Museum",
                 "startText": "9:00 AM",
                 "endText": "11:00 AM",
-                "type": null,
+                "type": "museum",
                 "sourceText": "9:00 AM - 11:00 AM: Louvre Museum"
               },
               {
@@ -822,7 +822,7 @@
                 "name": "Musée d'Orsay",
                 "startText": "3:00 PM",
                 "endText": "5:00 PM",
-                "type": "musée",
+                "type": null,
                 "sourceText": "3:00 PM - 5:00 PM: Musée d'Orsay"
               }
             ]
@@ -843,7 +843,7 @@
                 "name": "Opéra Garnier",
                 "startText": null,
                 "endText": null,
-                "type": null,
+                "type": "opéra",
                 "sourceText": "Programme : Opéra Garnier, puis Galeries Lafayette."
               },
               {
@@ -863,7 +863,7 @@
       "output": {
         "days": [
           {
-            "dateText": "Le samedi 24 octobre",
+            "dateText": "samedi 24 octobre",
             "city": "Paris",
             "timezoneText": null,
             "stops": [
@@ -934,7 +934,7 @@
         "days": [
           {
             "dateText": "Sunday, October 25",
-            "city": "Paris",
+            "city": null,
             "timezoneText": null,
             "stops": [
               {
@@ -942,21 +942,21 @@
                 "startText": "10:00 AM",
                 "endText": null,
                 "type": "jardin",
-                "sourceText": "we start at the Jardin des Tuileries at 10:00 AM"
+                "sourceText": "we start at the Jardin des Tuileries at 10:00 AM."
               },
               {
                 "name": "Café Marly",
                 "startText": "12:30 PM",
                 "endText": null,
                 "type": "café",
-                "sourceText": "After lunch at Café Marly at 12:30 PM"
+                "sourceText": "After lunch at Café Marly at 12:30 PM,"
               },
               {
                 "name": "Musée d'Orsay",
                 "startText": "3:00 PM",
                 "endText": "5:00 PM",
                 "type": "musée",
-                "sourceText": "we visit the Musée d'Orsay from 3:00 PM to 5:00 PM"
+                "sourceText": "we visit the Musée d'Orsay from 3:00 PM to 5:00 PM."
               }
             ]
           }
@@ -968,7 +968,7 @@
       "output": {
         "days": [
           {
-            "dateText": "Le samedi 24 octobre",
+            "dateText": "samedi 24 octobre",
             "city": "Paris",
             "timezoneText": null,
             "stops": [
@@ -977,14 +977,14 @@
                 "startText": null,
                 "endText": null,
                 "type": "opéra",
-                "sourceText": "nous irons à l'Opéra Garnier, puis aux Galeries Lafayette"
+                "sourceText": "Le samedi 24 octobre, nous irons à l'Opéra Garnier, puis aux Galeries Lafayette."
               },
               {
                 "name": "Galeries Lafayette",
                 "startText": null,
                 "endText": null,
                 "type": null,
-                "sourceText": "nous irons à l'Opéra Garnier, puis aux Galeries Lafayette"
+                "sourceText": "Le samedi 24 octobre, nous irons à l'Opéra Garnier, puis aux Galeries Lafayette."
               },
               {
                 "name": "Paul",
@@ -1011,7 +1011,7 @@
                 "name": "Bouchon des Filles",
                 "startText": "19 h",
                 "endText": null,
-                "type": "bouchon",
+                "type": "Bouchon",
                 "sourceText": "nous dînons au Bouchon des Filles à 19 h"
               }
             ]
@@ -1054,21 +1054,21 @@
                 "startText": "10 h",
                 "endText": null,
                 "type": "marché",
-                "sourceText": "nous commençons au marché Saint-Antoine à 10 h"
+                "sourceText": "Le dimanche 26 octobre, nous commençons au marché Saint-Antoine à 10 h."
               },
               {
                 "name": "Brasserie Georges",
                 "startText": "12 h 30",
                 "endText": null,
                 "type": "brasserie",
-                "sourceText": "À 12 h 30, nous déjeunons à la Brasserie Georges"
+                "sourceText": "À 12 h 30, nous déjeunons à la Brasserie Georges."
               },
               {
                 "name": "Pralus",
                 "startText": "16 h",
                 "endText": null,
                 "type": "café",
-                "sourceText": "nous prenons un café chez Pralus à 16 h"
+                "sourceText": "Enfin, nous prenons un café chez Pralus à 16 h."
               }
             ]
           }

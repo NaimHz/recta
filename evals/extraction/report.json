@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "measuredAt": "2026-10-23T13:20:40.417Z",
+  "measuredAt": "2026-11-03T09:27:45.653Z",
   "mode": "recorded",
   "source": "annotations de référence",
-  "promptVersion": "extraction-v3",
+  "promptVersion": "extraction-v4",
   "thresholds": {
     "schemaValid": 1,
     "noInvention": 1

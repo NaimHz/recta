@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "measuredAt": "2026-10-23T13:18:22.648Z",
+  "measuredAt": "2026-11-03T09:26:37.350Z",
   "mode": "live",
   "source": "claude-haiku-5-5",
-  "promptVersion": "extraction-v3",
+  "promptVersion": "extraction-v4",
   "thresholds": {
     "schemaValid": 1,
     "noInvention": 1
