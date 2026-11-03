@@ -1,3 +1,4 @@
+import type { StopResolutionSummary } from '../pipeline/text-to-plan'
 import type {
   Evidence,
   Issue,
@@ -166,6 +167,29 @@ export function renderMarkdown(report: VerificationReport, options: { offline: b
         entry.freshness === 'ancienne'
           ? `- ${entry.placeName} : ${entry.warning}`
           : `- ${entry.placeName} : source sans date (${entry.provider}).`,
+      )
+    }
+  }
+
+  return `${lines.join('\n')}\n`
+}
+
+export function renderResolutions(resolutions: StopResolutionSummary[]): string {
+  const unresolved = resolutions.filter((entry) => entry.status !== 'resolved')
+
+  if (unresolved.length === 0) return ''
+
+  const lines = ['', '## Lieux à préciser']
+
+  for (const entry of unresolved) {
+    lines.push('', `### ${entry.name} (${entry.status === 'ambiguous' ? 'ambigu' : 'introuvable'})`)
+
+    if (entry.question) lines.push('', entry.question)
+    if (entry.options.length > 0) lines.push('')
+
+    for (const option of entry.options) {
+      lines.push(
+        `- ${option.name}${option.address ? ` — ${option.address}` : ''} (\`${option.id}\`)`,
       )
     }
   }

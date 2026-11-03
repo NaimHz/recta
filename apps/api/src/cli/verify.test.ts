@@ -51,6 +51,20 @@ describe('runVerify', () => {
 
     expect(code).toBe(2)
     expect(stdout).toBe('')
-    expect(stderr).toBe('Usage : pnpm verify [fichier] [--json] [--offline]\n')
+    expect(stderr).toMatch(/^Usage : pnpm verify/)
+  })
+
+  it.each([
+    ['--text sans ville', ['texte.txt', '--text']],
+    ['--text hors réseau', ['texte.txt', '--text', '--city', 'paris', '--offline']],
+    ['--city sans --text', ['fixture.txt', '--city', 'paris']],
+    ['date de départ invalide', ['texte.txt', '--text', '--city', 'paris', '--start', '24/10']],
+    ['option sans valeur', ['texte.txt', '--text', '--city']],
+  ])('rend 2 pour %s', async (_label, args) => {
+    const { code, stdout, stderr } = await run(args)
+
+    expect(code).toBe(2)
+    expect(stdout).toBe('')
+    expect(stderr).toMatch(/^Usage : pnpm verify/)
   })
 })

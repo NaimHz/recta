@@ -43,6 +43,7 @@ attend que Postgres soit prêt.
 | `pnpm format` | Prettier |
 | `pnpm test` | Tests unitaires |
 | `pnpm verify fixture.txt` | Vérifie la fixture minimale et sort un rapport Markdown : verdict, couverture, issues avec preuve, indéterminés. `--json` pour le rapport complet (`pnpm -s verify … --json` pour un JSON seul), `--offline` sans appels de trajet. Exit code 0 sans erreur, 1 avec erreur, 2 en cas d'échec |
+| `pnpm verify texte.txt --text --city paris [--start YYYY-MM-DD]` | Enchaîne extraction, dates, résolution des lieux (Nominatim, horaires Overpass) et vérification sur un texte libre. Liste les lieux à préciser. Clé Anthropic requise, pas de `--offline` |
 | `pnpm extract fichier.txt` | Extrait un plan depuis un texte via Anthropic (clé et modèle requis) |
 | `pnpm data:check` | Vérifie les bases curatées : 20 sites par ville, chaque fait avec source et date de revue |
 | `pnpm osm:fetch` | Récupère 25 lieux OSM par ville de référence et écrit `evals/sources/osm-places.json` |

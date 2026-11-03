@@ -8,7 +8,7 @@ import {
 } from '@recta/domain'
 import { loadVerificationFacts } from '../verification/facts'
 import { parseFixture } from './fixture'
-import { exitCodeFor, renderMarkdown } from './report'
+import { exitCodeFor, renderMarkdown, renderResolutions } from './report'
 
 const NOW = new Date('2026-11-03T12:00:00.000Z')
 
@@ -149,5 +149,61 @@ describe('exitCodeFor', () => {
         undetermined: [{ codes: ['stop_overlap'], stopIds: ['stop-1'], reason: 'rule_error' }],
       }),
     ).toBe(2)
+  })
+})
+
+describe('renderResolutions', () => {
+  it('liste les lieux ambigus et introuvables avec la question et les options', () => {
+    expect(
+      renderResolutions([
+        { stopId: 'stop-1', name: 'Louvre', status: 'resolved', question: null, options: [] },
+        {
+          stopId: 'stop-2',
+          name: 'Café Lumière',
+          status: 'ambiguous',
+          question: 'Quel Café Lumière ?',
+          options: [
+            {
+              id: 'osm:node/1',
+              name: 'Café Lumière',
+              address: '1 rue A, Paris',
+              category: null,
+              score: 0.9,
+            },
+          ],
+        },
+        {
+          stopId: 'stop-3',
+          name: 'Bar Inconnu',
+          status: 'not_found',
+          question: 'Où est Bar Inconnu ?',
+          options: [],
+        },
+      ]),
+    ).toBe(
+      [
+        '',
+        '## Lieux à préciser',
+        '',
+        '### Café Lumière (ambigu)',
+        '',
+        'Quel Café Lumière ?',
+        '',
+        '- Café Lumière — 1 rue A, Paris (`osm:node/1`)',
+        '',
+        '### Bar Inconnu (introuvable)',
+        '',
+        'Où est Bar Inconnu ?',
+        '',
+      ].join('\n'),
+    )
+  })
+
+  it('ne rend rien quand tout est résolu', () => {
+    expect(
+      renderResolutions([
+        { stopId: 'stop-1', name: 'Louvre', status: 'resolved', question: null, options: [] },
+      ]),
+    ).toBe('')
   })
 })

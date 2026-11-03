@@ -34,6 +34,8 @@ export type {
   StopTypeKey,
 } from './normalize-extraction'
 export { resolvePlaces } from './place-resolution'
+export { resolveDayDates } from './resolve-dates'
+export type { ResolveDayDatesOptions } from './resolve-dates'
 export type {
   PlaceQuery,
   PlaceScoreComponents,
