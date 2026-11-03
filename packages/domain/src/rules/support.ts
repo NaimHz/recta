@@ -1,4 +1,8 @@
-import type { OpeningHoursContext, OpeningHoursReason } from '../opening-hours-engine'
+import {
+  localToInstant,
+  type OpeningHoursContext,
+  type OpeningHoursReason,
+} from '../opening-hours-engine'
 import { UNDETERMINED_REASONS } from '../plan'
 import type {
   Evidence,
@@ -102,5 +106,66 @@ export function factEvidence(fact: PlaceFact, fields: Record<string, unknown>): 
     attribution: ATTRIBUTIONS[fact.source.provider] ?? null,
     raw: String(fact.value),
     fields: { [fact.key]: fact.value, ...fields },
+  }
+}
+
+const MINUTE_MS = 60_000
+
+export function addDays(date: string, days: number): string {
+  const parsed = new Date(`${date}T00:00:00.000Z`)
+
+  parsed.setUTCDate(parsed.getUTCDate() + days)
+
+  return parsed.toISOString().slice(0, 10)
+}
+
+function minutesOfDay(time: string): number {
+  const [hours = 0, minutes = 0] = time.split(':').map(Number)
+
+  return hours * 60 + minutes
+}
+
+export type StopBounds = {
+  startMs: number
+  endMs: number
+}
+
+export function stopBounds(date: string | null, stop: Stop, timezone: string): StopBounds | null {
+  if (stop.start === null || stop.end === null) return null
+
+  const crossesMidnight = stop.end < stop.start
+
+  if (date === null) {
+    return {
+      startMs: minutesOfDay(stop.start) * MINUTE_MS,
+      endMs: (minutesOfDay(stop.end) + (crossesMidnight ? 24 * 60 : 0)) * MINUTE_MS,
+    }
+  }
+
+  const start = localToInstant(date, stop.start, timezone)
+  const end = localToInstant(crossesMidnight ? addDays(date, 1) : date, stop.end, timezone)
+
+  if (start === null || end === null) return null
+
+  return { startMs: Date.parse(start), endMs: Date.parse(end) }
+}
+
+export function toMinutes(milliseconds: number): number {
+  return Math.round(milliseconds / MINUTE_MS)
+}
+
+export function writtenSeverity(stops: Stop[]): IssueSeverity {
+  return stops.every((stop) => stop.windowSource === 'explicit') ? 'error' : 'warning'
+}
+
+export function planEvidence(stop: Stop, fields: Record<string, unknown>): Evidence {
+  return {
+    source: 'plan',
+    sourceDate: null,
+    retrievedAt: null,
+    url: null,
+    attribution: null,
+    raw: stop.sourceText ?? `${stop.name} ${stop.start ?? '?'}-${stop.end ?? '?'}`,
+    fields: { stopId: stop.id, name: stop.name, start: stop.start, end: stop.end, ...fields },
   }
 }

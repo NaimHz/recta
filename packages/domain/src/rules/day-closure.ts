@@ -2,6 +2,7 @@ import { dayOpenIntervals, type OpeningHoursContext } from '../opening-hours-eng
 import type { IssueCode, Place } from '../plan'
 import type { Rule, RuleFinding } from './rule'
 import {
+  addDays,
   datedStops,
   hoursEvidence,
   issueFinding,
@@ -13,14 +14,6 @@ import {
 
 const CODES: IssueCode[] = ['place_closed_day', 'holiday_closure']
 const REFERENCE_WEEKS = 4
-
-function addDays(date: string, days: number): string {
-  const parsed = new Date(`${date}T00:00:00.000Z`)
-
-  parsed.setUTCDate(parsed.getUTCDate() + days)
-
-  return parsed.toISOString().slice(0, 10)
-}
 
 function openReferenceDay(
   place: Place,

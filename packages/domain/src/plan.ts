@@ -223,6 +223,7 @@ export const UNDETERMINED_REASONS = [
   'invalid_context',
   'invalid_local_time',
   'place_unresolved',
+  'missing_coordinates',
   'time_unknown',
   'date_unknown',
   'transit_unavailable',

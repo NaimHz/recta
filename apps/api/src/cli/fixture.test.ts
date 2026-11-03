@@ -58,7 +58,18 @@ describe('parseFixture', () => {
         },
       ],
     })
-    expect(result.undetermined).toEqual([])
+    expect(result.undetermined).toEqual([
+      {
+        codes: ['travel_time_infeasible', 'insufficient_buffer'],
+        stopIds: ['stop-1', 'stop-2'],
+        reason: 'missing_coordinates',
+      },
+      {
+        codes: ['travel_time_infeasible', 'insufficient_buffer'],
+        stopIds: ['stop-2', 'stop-3'],
+        reason: 'missing_coordinates',
+      },
+    ])
   })
 
   it('rejects a fixture without city', () => {
