@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest'
-import { EXTRACTION_SYSTEM_PROMPT, EXTRACTION_TOOL_NAME, buildExtractionPrompt } from './prompt'
+import {
+  EXTRACTION_PROMPT_VERSION,
+  EXTRACTION_SYSTEM_PROMPT,
+  buildExtractionPrompt,
+} from './prompt'
 
 describe('prompt d’extraction', () => {
   it('délimite le texte et demande des null explicites', () => {
@@ -9,7 +13,12 @@ describe('prompt d’extraction', () => {
     expect(prompt).toContain('09:00 Louvre')
     expect(prompt).toContain('</itineraire>')
     expect(EXTRACTION_SYSTEM_PROMPT).toContain('mets null')
-    expect(EXTRACTION_SYSTEM_PROMPT).toContain(EXTRACTION_TOOL_NAME)
+    expect(EXTRACTION_SYSTEM_PROMPT).toContain('uniquement avec le JSON du schéma')
+  })
+
+  it('ne mentionne plus d’outil depuis la v4', () => {
+    expect(EXTRACTION_PROMPT_VERSION).toBe('extraction-v4')
+    expect(EXTRACTION_SYSTEM_PROMPT).not.toMatch(/outil|emit_plan/)
   })
 
   it('neutralise une balise de fermeture dans le texte utilisateur', () => {

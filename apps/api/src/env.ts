@@ -19,6 +19,10 @@ const EnvSchema = z.object({
   DATABASE_URL: z.string().min(1).default('postgres://recta:recta@localhost:5432/recta'),
   ANTHROPIC_API_KEY: optionalNonEmpty,
   EXTRACTION_MODEL: optionalNonEmpty,
+  EXTRACTION_EFFORT: z.preprocess(
+    (value) => (value === '' ? undefined : value),
+    z.enum(['low', 'medium', 'high']).optional(),
+  ),
 })
 
 export const env = EnvSchema.parse(process.env)
