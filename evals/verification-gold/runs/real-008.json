@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "plan": "real-008",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-05T10:03:41.586Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "mercredi 11 novembre 2026",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Vieux Lyon et cathédrale Saint-Jean",
+              "startText": "9 h 30",
+              "endText": "10 h 15",
+              "type": null,
+              "sourceText": "1. 9 h 30 – 10 h 15 | Vieux Lyon et cathédrale Saint-Jean"
+            },
+            {
+              "name": "Fourvière en funiculaire",
+              "startText": "10 h 15",
+              "endText": "11 h 30",
+              "type": null,
+              "sourceText": "2. 10 h 15 – 11 h 30 | Fourvière en funiculaire"
+            },
+            {
+              "name": "Redescente et promenade dans le Vieux Lyon",
+              "startText": "11 h 30",
+              "endText": "12 h 15",
+              "type": null,
+              "sourceText": "3. 11 h 30 – 12 h 15 | Redescente et promenade dans le Vieux Lyon"
+            },
+            {
+              "name": "Déjeuner lyonnais",
+              "startText": "12 h 15",
+              "endText": "13 h 30",
+              "type": null,
+              "sourceText": "4. 12 h 15 – 13 h 30 | Déjeuner lyonnais"
+            },
+            {
+              "name": "Trajet vers le musée des Confluences",
+              "startText": "13 h 30",
+              "endText": "14 h 00",
+              "type": null,
+              "sourceText": "5. 13 h 30 – 14 h 00 | Trajet vers le musée des Confluences"
+            },
+            {
+              "name": "Musée des Confluences",
+              "startText": "14 h 00",
+              "endText": "16 h 30",
+              "type": "musée",
+              "sourceText": "6. 14 h 00 – 16 h 30 | Musée des Confluences"
+            },
+            {
+              "name": "Trajet vers la Croix-Rousse",
+              "startText": "16 h 30",
+              "endText": "17 h 15",
+              "type": null,
+              "sourceText": "7. 16 h 30 – 17 h 15 | Trajet vers la Croix-Rousse"
+            },
+            {
+              "name": "Vogue des marrons",
+              "startText": "17 h 15",
+              "endText": "19 h 30",
+              "type": null,
+              "sourceText": "8. 17 h 15 – 19 h 30 | Vogue des marrons"
+            },
+            {
+              "name": "Dîner léger ou retour",
+              "startText": "19 h 30",
+              "endText": "20 h 00",
+              "type": null,
+              "sourceText": "9. 19 h 30 – 20 h 00 | Dîner léger ou retour"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-05T10:35:08.782Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "lyon",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-11",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Vieux Lyon et cathédrale Saint-Jean",
+              "sourceText": "1. 9 h 30 – 10 h 15 | Vieux Lyon et cathédrale Saint-Jean",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "09:30",
+              "end": "10:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Fourvière en funiculaire",
+              "sourceText": "2. 10 h 15 – 11 h 30 | Fourvière en funiculaire",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "10:15",
+              "end": "11:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Redescente et promenade dans le Vieux Lyon",
+              "sourceText": "3. 11 h 30 – 12 h 15 | Redescente et promenade dans le Vieux Lyon",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "11:30",
+              "end": "12:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Déjeuner lyonnais",
+              "sourceText": "4. 12 h 15 – 13 h 30 | Déjeuner lyonnais",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "12:15",
+              "end": "13:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Trajet vers le musée des Confluences",
+              "sourceText": "5. 13 h 30 – 14 h 00 | Trajet vers le musée des Confluences",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "13:30",
+              "end": "14:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-6",
+              "name": "Musée des Confluences",
+              "sourceText": "6. 14 h 00 – 16 h 30 | Musée des Confluences",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/440270631",
+                "name": "Musée des Confluences",
+                "coordinates": {
+                  "lat": 45.7326277,
+                  "lon": 4.8179852
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Su 10:30-18:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-10-11",
+                  "retrievedAt": "2026-11-05T10:35:18.800Z"
+                }
+              },
+              "start": "14:00",
+              "end": "16:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-7",
+              "name": "Trajet vers la Croix-Rousse",
+              "sourceText": "7. 16 h 30 – 17 h 15 | Trajet vers la Croix-Rousse",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "16:30",
+              "end": "17:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-8",
+              "name": "Vogue des marrons",
+              "sourceText": "8. 17 h 15 – 19 h 30 | Vogue des marrons",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "17:15",
+              "end": "19:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-9",
+              "name": "Dîner léger ou retour",
+              "sourceText": "9. 19 h 30 – 20 h 00 | Dîner léger ou retour",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "19:30",
+              "end": "20:00",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Vieux Lyon et cathédrale Saint-Jean",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Vieux Lyon et cathédrale Saint-Jean » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Fourvière en funiculaire",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Fourvière en funiculaire » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Redescente et promenade dans le Vieux Lyon",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Redescente et promenade dans le Vieux Lyon » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Déjeuner lyonnais",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Déjeuner lyonnais » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Trajet vers le musée des Confluences",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Trajet vers le musée des Confluences » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-6",
+        "name": "Musée des Confluences",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-7",
+        "name": "Trajet vers la Croix-Rousse",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Trajet vers la Croix-Rousse » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-8",
+        "name": "Vogue des marrons",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Vogue des marrons » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-9",
+        "name": "Dîner léger ou retour",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Dîner léger ou retour » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [],
+      "transit": [],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

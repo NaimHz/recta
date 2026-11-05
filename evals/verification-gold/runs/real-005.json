@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "plan": "real-005",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-05T10:02:45.427Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Vendredi 27 novembre 2026",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée de l'Orangerie",
+              "startText": "18h00",
+              "endText": "19h30",
+              "type": "musée",
+              "sourceText": "18h00 – 19h30 | Une exposition autour de Monet à l'Orangerie Nocturne exceptionnelle le vendredi 27 novembre Musée de l'Orangerie"
+            },
+            {
+              "name": "Jardin des Tuileries",
+              "startText": "19h30",
+              "endText": "19h45",
+              "type": "jardin",
+              "sourceText": "19h30 – 19h45 | Petite promenade dans les Tuileries En sortant, profite de l'atmosphère du jardin des Tuileries et rejoins tranquillement la rue Cambon."
+            },
+            {
+              "name": "Brasserie Flottes",
+              "startText": "19h45",
+              "endText": "21h15",
+              "type": "brasserie",
+              "sourceText": "19h45 – 21h15 | Dîner dans une brasserie parisienne Brasserie Flottes 2 rue Cambon, 75001 Paris. Ouverte le vendredi jusqu'à 23h Une brasserie traditionnelle au décor Art nouveau"
+            },
+            {
+              "name": "Bar Les Ambassadeurs",
+              "startText": "21h15",
+              "endText": "22h15",
+              "type": "bar",
+              "sourceText": "21h15 – 22h15 | Un cocktail au bar Les Ambassadeurs Mon choix pour une belle soirée parisienne Bar Les Ambassadeurs Hôtel de Crillon, 10 place de la Concorde, 75008 Paris."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-05T10:33:17.545Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-27",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Musée de l'Orangerie",
+              "sourceText": "18h00 – 19h30 | Une exposition autour de Monet à l'Orangerie Nocturne exceptionnelle le vendredi 27 novembre Musée de l'Orangerie",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/54188996",
+                "name": "Musée de l'Orangerie",
+                "coordinates": {
+                  "lat": 48.8637655,
+                  "lon": 2.3226594
+                },
+                "address": "Quai des Tuileries, 75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo-Su 09:00-18:00; Tu off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:33:22.152Z"
+                }
+              },
+              "start": "18:00",
+              "end": "19:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Jardin des Tuileries",
+              "sourceText": "19h30 – 19h45 | Petite promenade dans les Tuileries En sortant, profite de l'atmosphère du jardin des Tuileries et rejoins tranquillement la rue Cambon.",
+              "type": "jardin",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/53820452",
+                "name": "Jardin des Tuileries",
+                "coordinates": {
+                  "lat": 48.8636681,
+                  "lon": 2.3266855
+                },
+                "address": "113 Rue de Rivoli, 75001 Paris",
+                "category": "leisure:park",
+                "openingHoursRaw": "Mo-Su 07:30-21:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:33:22.152Z"
+                }
+              },
+              "start": "19:30",
+              "end": "19:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Brasserie Flottes",
+              "sourceText": "19h45 – 21h15 | Dîner dans une brasserie parisienne Brasserie Flottes 2 rue Cambon, 75001 Paris. Ouverte le vendredi jusqu'à 23h Une brasserie traditionnelle au décor Art nouveau",
+              "type": "brasserie",
+              "resolution": "not_found",
+              "place": null,
+              "start": "19:45",
+              "end": "21:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Bar Les Ambassadeurs",
+              "sourceText": "21h15 – 22h15 | Un cocktail au bar Les Ambassadeurs Mon choix pour une belle soirée parisienne Bar Les Ambassadeurs Hôtel de Crillon, 10 place de la Concorde, 75008 Paris.",
+              "type": "bar",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "21:15",
+              "end": "22:15",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Musée de l'Orangerie",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Jardin des Tuileries",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Brasserie Flottes",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Brasserie Flottes » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Bar Les Ambassadeurs",
+        "status": "ambiguous",
+        "question": "« Bar Les Ambassadeurs » correspond à « EHPAD Les Ambassadeurs » à Paris. Est-ce bien ce lieu ?",
+        "options": [
+          {
+            "id": "osm:way/1445266845",
+            "name": "EHPAD Les Ambassadeurs",
+            "address": "EHPAD Les Ambassadeurs, Rue de Montreuil, Quartier Sainte-Marguerite, Paris 11e Arrondissement, Paris, Île-de-France, France métropolitaine, 75011, France",
+            "category": "amenity:social_facility",
+            "score": 0.7350000000000001
+          }
+        ]
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              311.6
+            ],
+            [
+              311.6,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              379.7
+            ],
+            [
+              379.7,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:34:00.051Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3226594,48.8637655;2.3266855,48.8636681?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,311.6],[311.6,0]],\"distances\":[[0,379.7],[379.7,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-27T18:30:00.000Z",
+          "durationSeconds": null,
+          "arrivalAt": null,
+          "transfers": null,
+          "modes": [],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-27",
+            "retrievedAt": "2026-11-05T10:34:00.243Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8637655%2C2.3226594&toPlace=48.8636681%2C2.3266855&time=2026-11-27T18%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "null",
+            "fields": {
+              "from": "Musée de l'Orangerie",
+              "to": "Jardin des Tuileries",
+              "departureAt": "2026-11-27T18:30:00.000Z",
+              "arrivalAt": null,
+              "itinerariesReturned": 0
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

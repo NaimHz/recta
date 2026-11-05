@@ -1,0 +1,428 @@
+{
+  "version": 1,
+  "plan": "real-006",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-05T10:02:56.669Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Lundi 23 novembre 2026",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée des Beaux-Arts de Lyon",
+              "startText": "10h00",
+              "endText": "12h30",
+              "type": "Musée",
+              "sourceText": "10h00 – 12h30 | Musée des Beaux-Arts de Lyon"
+            },
+            {
+              "name": "Café Comptoir Abel",
+              "startText": "12h30",
+              "endText": "14h00",
+              "type": "Café",
+              "sourceText": "12h30 – 14h00 | Déjeuner lyonnais Café Comptoir Abel"
+            },
+            {
+              "name": "Découverte du Vieux Lyon",
+              "startText": "14h00",
+              "endText": "15h15",
+              "type": null,
+              "sourceText": "14h00 – 15h15 | Découverte du Vieux Lyon"
+            },
+            {
+              "name": "Montée en funiculaire à Fourvière",
+              "startText": "15h15",
+              "endText": "15h30",
+              "type": null,
+              "sourceText": "15h15 – 15h30 | Montée en funiculaire à Fourvière"
+            },
+            {
+              "name": "Musée de Fourvière",
+              "startText": "15h30",
+              "endText": "16h30",
+              "type": "Musée",
+              "sourceText": "15h30 – 16h30 | Musée de Fourvière"
+            },
+            {
+              "name": "Basilique Notre-Dame de Fourvière",
+              "startText": "16h30",
+              "endText": "17h30",
+              "type": "Basilique",
+              "sourceText": "16h30 – 17h30 | Basilique Notre-Dame de Fourvière et panorama"
+            },
+            {
+              "name": "Retour dans le centre et pause gourmande",
+              "startText": "17h30",
+              "endText": "19h15",
+              "type": null,
+              "sourceText": "17h30 – 19h15 | Retour dans le centre et pause gourmande"
+            },
+            {
+              "name": "La Mère Brazier",
+              "startText": "19h45",
+              "endText": "21h45",
+              "type": null,
+              "sourceText": "19h45 – 21h45 | Dîner gastronomique chez La Mère Brazier"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-05T10:34:00.262Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "lyon",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-23",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Musée des Beaux-Arts de Lyon",
+              "sourceText": "10h00 – 12h30 | Musée des Beaux-Arts de Lyon",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/493540665",
+                "name": "Musée des Beaux-Arts de Lyon",
+                "coordinates": {
+                  "lat": 45.7667066,
+                  "lon": 4.8336192
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "We,Th,Sa-Mo 10:00-18:00, Fr 10:30-18:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:34:08.050Z"
+                }
+              },
+              "start": "10:00",
+              "end": "12:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Café Comptoir Abel",
+              "sourceText": "12h30 – 14h00 | Déjeuner lyonnais Café Comptoir Abel",
+              "type": "Café",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/7713771336",
+                "name": "Café comptoir Abel",
+                "coordinates": {
+                  "lat": 45.7542753,
+                  "lon": 4.8260017
+                },
+                "address": null,
+                "category": "amenity:cafe",
+                "openingHoursRaw": null,
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:34:08.050Z"
+                }
+              },
+              "start": "12:30",
+              "end": "14:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Découverte du Vieux Lyon",
+              "sourceText": "14h00 – 15h15 | Découverte du Vieux Lyon",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "14:00",
+              "end": "15:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Montée en funiculaire à Fourvière",
+              "sourceText": "15h15 – 15h30 | Montée en funiculaire à Fourvière",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "15:15",
+              "end": "15:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Musée de Fourvière",
+              "sourceText": "15h30 – 16h30 | Musée de Fourvière",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/1533883643",
+                "name": "Musée d'art religieux de Fourvière",
+                "coordinates": {
+                  "lat": 45.7618566,
+                  "lon": 4.8226091
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo-Su 12:00-18:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:34:08.050Z"
+                }
+              },
+              "start": "15:30",
+              "end": "16:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-6",
+              "name": "Basilique Notre-Dame de Fourvière",
+              "sourceText": "16h30 – 17h30 | Basilique Notre-Dame de Fourvière et panorama",
+              "type": "Basilique",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "16:30",
+              "end": "17:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-7",
+              "name": "Retour dans le centre et pause gourmande",
+              "sourceText": "17h30 – 19h15 | Retour dans le centre et pause gourmande",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "17:30",
+              "end": "19:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-8",
+              "name": "La Mère Brazier",
+              "sourceText": "19h45 – 21h45 | Dîner gastronomique chez La Mère Brazier",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/638214585",
+                "name": "La Mère Brazier",
+                "coordinates": {
+                  "lat": 45.771386,
+                  "lon": 4.8371707
+                },
+                "address": null,
+                "category": "amenity:restaurant",
+                "openingHoursRaw": "Mo-Fr 12:00-14:00,19:30-21:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:34:08.050Z"
+                }
+              },
+              "start": "19:45",
+              "end": "21:45",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Musée des Beaux-Arts de Lyon",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Café Comptoir Abel",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Découverte du Vieux Lyon",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Découverte du Vieux Lyon » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Montée en funiculaire à Fourvière",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Montée en funiculaire à Fourvière » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Musée de Fourvière",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-6",
+        "name": "Basilique Notre-Dame de Fourvière",
+        "status": "ambiguous",
+        "question": "« Basilique Notre-Dame de Fourvière » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/125690785",
+            "name": "Basilique Notre-Dame de Fourvière",
+            "address": "Basilique Notre-Dame de Fourvière, Place de Fourvière, Conseil de quartier Colline des funiculaires, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "building:cathedral",
+            "score": 0.9450000000000001
+          },
+          {
+            "id": "osm:way/29179429",
+            "name": "Basilique Notre-Dame de Fourvière",
+            "address": "Basilique Notre-Dame de Fourvière, Chemin du Rosaire, Saint-Jean, Conseil de quartier Colline des funiculaires, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "amenity:place_of_worship",
+            "score": 0.9450000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-7",
+        "name": "Retour dans le centre et pause gourmande",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Retour dans le centre et pause gourmande » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-8",
+        "name": "La Mère Brazier",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2",
+            "stop-5",
+            "stop-8"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              1391.2,
+              1284.4,
+              563.3
+            ],
+            [
+              1391.2,
+              0,
+              1250.7,
+              1873.1
+            ],
+            [
+              1284.4,
+              1250.7,
+              0,
+              1706.3
+            ],
+            [
+              563.3,
+              1873.1,
+              1706.3,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              1739.5,
+              1605.7,
+              701.5
+            ],
+            [
+              1739.5,
+              0,
+              1561,
+              2339
+            ],
+            [
+              1605.7,
+              1561,
+              0,
+              2130.1
+            ],
+            [
+              701.5,
+              2339,
+              2130.1,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:34:56.066Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.8336192,45.7667066;4.8260017,45.7542753;4.8226091,45.7618566;4.8371707,45.771386?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,1391.2,1284.4,563.3],[1391.2,0,1250.7,1873.1],[1284.4,1250.7,0,1706.3],[563.3,1873.1,1706.3,0]],\"distances\":[[0,1739.5,1605.7,701.5],[1739.5,0,1561,2339],[1605.7,1561,0,2130.1],[701.5,2339,2130.1,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2",
+                "stop-5",
+                "stop-8"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-23T11:30:00.000Z",
+          "durationSeconds": 1140,
+          "arrivalAt": "2026-11-23T11:49:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-23",
+            "retrievedAt": "2026-11-05T10:34:56.266Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=45.7667066%2C4.8336192&toPlace=45.7542753%2C4.8260017&time=2026-11-23T11%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-23T11:33:00Z\",\"endTime\":\"2026-11-23T11:49:00Z\",\"durationSeconds\":960,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":45.7667066,\"lon\":4.8336192},\"to\":{\"name\":\"Cordeliers\",\"lat\":45.763470000000005,\"lon\":4.835891},\"startTime\":\"2026-11-23T11:33:00Z\",\"endTime\":\"2026-11-23T11:41:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"A\",\"from\":{\"name\":\"Cordeliers\",\"lat\":45.763470000000005,\"lon\":4.835891},\"to\":{\"name\":\"Ampère - Victor Hugo\",\"lat\":45.753105000000005,\"lon\":4.829254},\"startTime\":\"2026-11-23T11:41:00Z\",\"endTime\":\"2026-11-23T11:44:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Ampère - Victor Hugo\",\"lat\":45.753105000000005,\"lon\":4.829254},\"to\":{\"name\":\"END\",\"lat\":45.7542753,\"lon\":4.8260017},\"startTime\":\"2026-11-23T11:44:00Z\",\"endTime\":\"2026-11-23T11:49:00Z\"}]}",
+            "fields": {
+              "from": "Musée des Beaux-Arts de Lyon",
+              "to": "Café Comptoir Abel",
+              "departureAt": "2026-11-23T11:30:00.000Z",
+              "arrivalAt": "2026-11-23T11:49:00Z",
+              "itinerariesReturned": 5
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

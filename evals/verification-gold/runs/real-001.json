@@ -1,0 +1,297 @@
+{
+  "version": 1,
+  "plan": "real-001",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-05T09:57:57.289Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Lundi 16 novembre 2026",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée du Louvre",
+              "startText": "9h",
+              "endText": "13h",
+              "type": "musée",
+              "sourceText": "9h – 13h | Le musée du Louvre\n\nMusée du Louvre\n\nRue de Rivoli, 75001 Paris\nOuvert le lundi · 9h–18h\nRéserve ton billet pour 9h afin de profiter des collections avant l'affluence."
+            },
+            {
+              "name": "Le Royal",
+              "startText": "13h",
+              "endText": "14h",
+              "type": "brasserie",
+              "sourceText": "13h – 14h | Déjeuner dans le quartier du Louvre\n\nLe Royal\n\n246 rue Saint-Honoré, 75001 Paris\n\nUne brasserie parisienne pratique pour déjeuner avant de repartir vers les Invalides."
+            },
+            {
+              "name": "Musée de l'Armée",
+              "startText": "14h",
+              "endText": "17h45",
+              "type": "musée",
+              "sourceText": "14h – 17h45 | Musée de l'Armée et les Invalides\n\nMusée de l'Armée\n\n129 rue de Grenelle, 75007 Paris\nOuvert le lundi · 10h–18h\nUn lieu magnifique, à la fois musée d'histoire, musée d'art et monument historique."
+            },
+            {
+              "name": "Promenade autour des Invalides",
+              "startText": "17h45",
+              "endText": "19h",
+              "type": null,
+              "sourceText": "17h45 – 19h | Promenade autour des Invalides\n\nProfite de la fin d'après-midi pour découvrir :\n- L'esplanade des Invalides."
+            },
+            {
+              "name": "Au Canon des Invalides",
+              "startText": "19h30",
+              "endText": "21h30",
+              "type": "brasserie",
+              "sourceText": "19h30 – 21h30 | Dîner parisien\n\nAu Canon des Invalides\n\n54 rue Saint-Dominique, 75007 Paris\nOuvert le lundi soir\nUne brasserie française conviviale pour terminer la journée autour de plats traditionnels."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-05T10:31:04.074Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-16",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Musée du Louvre",
+              "sourceText": "9h – 13h | Le musée du Louvre\n\nMusée du Louvre\n\nRue de Rivoli, 75001 Paris\nOuvert le lundi · 9h–18h\nRéserve ton billet pour 9h afin de profiter des collections avant l'affluence.",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/7515426",
+                "name": "Musée du Louvre",
+                "coordinates": {
+                  "lat": 48.8611474,
+                  "lon": 2.3358637
+                },
+                "address": "75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-07-26",
+                  "retrievedAt": "2026-11-05T10:31:08.586Z"
+                }
+              },
+              "start": "09:00",
+              "end": "13:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Le Royal",
+              "sourceText": "13h – 14h | Déjeuner dans le quartier du Louvre\n\nLe Royal\n\n246 rue Saint-Honoré, 75001 Paris\n\nUne brasserie parisienne pratique pour déjeuner avant de repartir vers les Invalides.",
+              "type": "brasserie",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "13:00",
+              "end": "14:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Musée de l'Armée",
+              "sourceText": "14h – 17h45 | Musée de l'Armée et les Invalides\n\nMusée de l'Armée\n\n129 rue de Grenelle, 75007 Paris\nOuvert le lundi · 10h–18h\nUn lieu magnifique, à la fois musée d'histoire, musée d'art et monument historique.",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/130102845",
+                "name": "Musée de l'Armée",
+                "coordinates": {
+                  "lat": 48.8570374,
+                  "lon": 2.3118779
+                },
+                "address": "129 Rue de Grenelle, 75007 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Nov-Mar: Mo-Su 10:00-17:00; Apr-Oct: Mo-Su 10:00-18:00; Apr-Sep: Tu 21:00+; Jan 1 off; May 1 off; Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-03-23",
+                  "retrievedAt": "2026-11-05T10:31:08.586Z"
+                }
+              },
+              "start": "14:00",
+              "end": "17:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Promenade autour des Invalides",
+              "sourceText": "17h45 – 19h | Promenade autour des Invalides\n\nProfite de la fin d'après-midi pour découvrir :\n- L'esplanade des Invalides.",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "17:45",
+              "end": "19:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Au Canon des Invalides",
+              "sourceText": "19h30 – 21h30 | Dîner parisien\n\nAu Canon des Invalides\n\n54 rue Saint-Dominique, 75007 Paris\nOuvert le lundi soir\nUne brasserie française conviviale pour terminer la journée autour de plats traditionnels.",
+              "type": "brasserie",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/1191402771",
+                "name": "Au Canon des Invalides",
+                "coordinates": {
+                  "lat": 48.8599637,
+                  "lon": 2.309512
+                },
+                "address": "Paris",
+                "category": "amenity:cafe",
+                "openingHoursRaw": null,
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-09-06",
+                  "retrievedAt": "2026-11-05T10:31:08.586Z"
+                }
+              },
+              "start": "19:30",
+              "end": "21:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Musée du Louvre",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Le Royal",
+        "status": "ambiguous",
+        "question": "« Le Royal » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:node/1144196236",
+            "name": "Le Royal",
+            "address": "Le Royal, Rue Pierre Nicole, Quartier du Val-de-Grâce, Paris 5e Arrondissement, Paris, Île-de-France, France métropolitaine, 75005, France",
+            "category": "amenity:restaurant",
+            "score": 0.9450000000000001
+          },
+          {
+            "id": "osm:node/2074923993",
+            "name": "Le Royal",
+            "address": "Le Royal, Rue Sadi-Lecointe, Quartier du Combat, Paris 19e Arrondissement, Paris, Île-de-France, France métropolitaine, 75019, France",
+            "category": "amenity:cafe",
+            "score": 0.9450000000000001
+          },
+          {
+            "id": "osm:node/3470039793",
+            "name": "Le Royal",
+            "address": "Le Royal, 143, Rue Saint-Denis, Bonne-Nouvelle, Paris 2e Arrondissement, Paris, Île-de-France, France métropolitaine, 75002, France",
+            "category": "amenity:bar",
+            "score": 0.9450000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Musée de l'Armée",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Promenade autour des Invalides",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Promenade autour des Invalides » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Au Canon des Invalides",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-3",
+            "stop-5"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              1998.3,
+              1963.1
+            ],
+            [
+              1998.3,
+              0,
+              505.3
+            ],
+            [
+              1951.5,
+              505.3,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              2492.7,
+              2449.2
+            ],
+            [
+              2492.7,
+              0,
+              631.7
+            ],
+            [
+              2434.5,
+              631.7,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:31:42.143Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3358637,48.8611474;2.3118779,48.8570374;2.309512,48.8599637?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,1998.3,1963.1],[1998.3,0,505.3],[1951.5,505.3,0]],\"distances\":[[0,2492.7,2449.2],[2492.7,0,631.7],[2434.5,631.7,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-3",
+                "stop-5"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

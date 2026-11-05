@@ -1,0 +1,631 @@
+{
+  "version": 1,
+  "plan": "real-009",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-05T10:04:20.662Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Samedi 28 novembre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Petit-déjeuner place des Terreaux",
+              "startText": "09h00",
+              "endText": "10h00",
+              "type": null,
+              "sourceText": "09h00 – 10h00 09h00 — Petit-déjeuner place des Terreaux Commencez tranquillement avec un café et une viennoiserie."
+            },
+            {
+              "name": "Musée des Beaux-Arts",
+              "startText": "10h00",
+              "endText": "12h00",
+              "type": "musée",
+              "sourceText": "10h00 – 12h00 10h00 — Musée des Beaux-Arts Musée des Beaux-Arts de Lyon."
+            },
+            {
+              "name": "Déjeuner dans un bouchon lyonnais",
+              "startText": "12h00",
+              "endText": "13h30",
+              "type": "bouchon",
+              "sourceText": "12h00 – 13h30 12h00 — Déjeuner dans un bouchon lyonnais Direction le Vieux Lyon ou la Presqu'île."
+            },
+            {
+              "name": "Vieux Lyon et traboules",
+              "startText": "13h30",
+              "endText": "15h30",
+              "type": null,
+              "sourceText": "13h30 – 15h30 13h30 — Vieux Lyon et traboules Explorez le quartier Saint-Jean"
+            },
+            {
+              "name": "Musée Gadagne",
+              "startText": "15h30",
+              "endText": "16h30",
+              "type": "musée",
+              "sourceText": "15h30 – 16h30 15h30 — Musée Gadagne Musées Gadagne. Un beau complément artistique et historique"
+            },
+            {
+              "name": "Fourvière et panorama",
+              "startText": "16h30",
+              "endText": "18h00",
+              "type": null,
+              "sourceText": "16h30 – 18h00 16h30 — Fourvière et panorama Montez en funiculaire depuis la station Vieux Lyon jusqu'à Fourvière."
+            },
+            {
+              "name": "Apéritif et balade dans le Vieux Lyon",
+              "startText": "18h00",
+              "endText": "19h30",
+              "type": null,
+              "sourceText": "18h00 – 19h30 18h00 — Apéritif et balade dans le Vieux Lyon Redescendez en funiculaire."
+            },
+            {
+              "name": "Dîner lyonnais",
+              "startText": "19h30",
+              "endText": "21h30",
+              "type": null,
+              "sourceText": "19h30 – 21h30 19h30 — Dîner lyonnais Un deuxième dîner typique"
+            },
+            {
+              "name": "Dernière promenade sur les quais de Saône",
+              "startText": "21h30",
+              "endText": null,
+              "type": null,
+              "sourceText": "21h30 21h30 — Dernière promenade sur les quais de Saône Une jolie façon de terminer la journée"
+            }
+          ]
+        },
+        {
+          "dateText": "Dimanche 29 novembre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Marché Saint-Antoine",
+              "startText": "08h30",
+              "endText": "10h00",
+              "type": "marché",
+              "sourceText": "08h30 – 10h00 08h30 — Marché Saint-Antoine Commencez par le marché alimentaire des quais de Saône."
+            },
+            {
+              "name": "Balade sur les quais et Presqu'île",
+              "startText": "10h00",
+              "endText": "11h00",
+              "type": null,
+              "sourceText": "10h00 – 11h00 10h00 — Balade sur les quais et Presqu'île Traversez les jolies rues du centre"
+            },
+            {
+              "name": "Art contemporain au macLYON",
+              "startText": "11h00",
+              "endText": "12h30",
+              "type": "musée",
+              "sourceText": "11h00 – 12h30 11h00 — Art contemporain au macLYON Musée d'art contemporain de Lyon."
+            },
+            {
+              "name": "Déjeuner dans un deuxième bouchon",
+              "startText": "12h45",
+              "endText": "14h15",
+              "type": "bouchon",
+              "sourceText": "12h45 – 14h15 12h45 — Déjeuner dans un deuxième bouchon Pour le dimanche midi"
+            },
+            {
+              "name": "Musée des Confluences",
+              "startText": "14h30",
+              "endText": "16h15",
+              "type": "musée",
+              "sourceText": "14h30 – 16h15 14h30 — Musée des Confluences Musée des Confluences. Un musée spectaculaire"
+            },
+            {
+              "name": "Promenade au confluent",
+              "startText": "16h15",
+              "endText": "17h00",
+              "type": null,
+              "sourceText": "16h15 – 17h00 16h15 — Promenade au confluent Sortez du musée pour profiter du paysage"
+            },
+            {
+              "name": "Marché de Noël place Carnot",
+              "startText": "17h15",
+              "endText": "18h30",
+              "type": "marché",
+              "sourceText": "17h15 – 18h30 17h15 — Marché de Noël place Carnot Ouvert pendant votre week-end !"
+            },
+            {
+              "name": "Fin du week-end",
+              "startText": "18h30",
+              "endText": null,
+              "type": null,
+              "sourceText": "18h30 — Fin du week-end Un dernier verre ou une petite douceur avant le départ."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-05T10:36:07.329Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "lyon",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-28",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Petit-déjeuner place des Terreaux",
+              "sourceText": "09h00 – 10h00 09h00 — Petit-déjeuner place des Terreaux Commencez tranquillement avec un café et une viennoiserie.",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "09:00",
+              "end": "10:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Musée des Beaux-Arts",
+              "sourceText": "10h00 – 12h00 10h00 — Musée des Beaux-Arts Musée des Beaux-Arts de Lyon.",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/493540665",
+                "name": "Musée des Beaux-Arts de Lyon",
+                "coordinates": {
+                  "lat": 45.7667066,
+                  "lon": 4.8336192
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "We,Th,Sa-Mo 10:00-18:00, Fr 10:30-18:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:36:26.102Z"
+                }
+              },
+              "start": "10:00",
+              "end": "12:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Déjeuner dans un bouchon lyonnais",
+              "sourceText": "12h00 – 13h30 12h00 — Déjeuner dans un bouchon lyonnais Direction le Vieux Lyon ou la Presqu'île.",
+              "type": "bouchon",
+              "resolution": "not_found",
+              "place": null,
+              "start": "12:00",
+              "end": "13:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Vieux Lyon et traboules",
+              "sourceText": "13h30 – 15h30 13h30 — Vieux Lyon et traboules Explorez le quartier Saint-Jean",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "13:30",
+              "end": "15:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Musée Gadagne",
+              "sourceText": "15h30 – 16h30 15h30 — Musée Gadagne Musées Gadagne. Un beau complément artistique et historique",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/700244364",
+                "name": "Musées Gadagne",
+                "coordinates": {
+                  "lat": 45.7640744,
+                  "lon": 4.827301
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "We-Su 10:30-18:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:36:26.102Z"
+                }
+              },
+              "start": "15:30",
+              "end": "16:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-6",
+              "name": "Fourvière et panorama",
+              "sourceText": "16h30 – 18h00 16h30 — Fourvière et panorama Montez en funiculaire depuis la station Vieux Lyon jusqu'à Fourvière.",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "16:30",
+              "end": "18:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-7",
+              "name": "Apéritif et balade dans le Vieux Lyon",
+              "sourceText": "18h00 – 19h30 18h00 — Apéritif et balade dans le Vieux Lyon Redescendez en funiculaire.",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "18:00",
+              "end": "19:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-8",
+              "name": "Dîner lyonnais",
+              "sourceText": "19h30 – 21h30 19h30 — Dîner lyonnais Un deuxième dîner typique",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "19:30",
+              "end": "21:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-9",
+              "name": "Dernière promenade sur les quais de Saône",
+              "sourceText": "21h30 21h30 — Dernière promenade sur les quais de Saône Une jolie façon de terminer la journée",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "21:30",
+              "end": "22:30",
+              "windowSource": "default_duration"
+            }
+          ],
+          "travels": []
+        },
+        {
+          "id": "day-2",
+          "date": "2026-11-29",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-10",
+              "name": "Marché Saint-Antoine",
+              "sourceText": "08h30 – 10h00 08h30 — Marché Saint-Antoine Commencez par le marché alimentaire des quais de Saône.",
+              "type": "marché",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/2911180061",
+                "name": "Marché Saint-Antoine",
+                "coordinates": {
+                  "lat": 45.7615248,
+                  "lon": 4.831339
+                },
+                "address": null,
+                "category": "amenity:marketplace",
+                "openingHoursRaw": "Tu-Sa 07:30-13:00; Su 07:30-14:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:36:26.102Z"
+                }
+              },
+              "start": "08:30",
+              "end": "10:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-11",
+              "name": "Balade sur les quais et Presqu'île",
+              "sourceText": "10h00 – 11h00 10h00 — Balade sur les quais et Presqu'île Traversez les jolies rues du centre",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "10:00",
+              "end": "11:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-12",
+              "name": "Art contemporain au macLYON",
+              "sourceText": "11h00 – 12h30 11h00 — Art contemporain au macLYON Musée d'art contemporain de Lyon.",
+              "type": "musée",
+              "resolution": "not_found",
+              "place": null,
+              "start": "11:00",
+              "end": "12:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-13",
+              "name": "Déjeuner dans un deuxième bouchon",
+              "sourceText": "12h45 – 14h15 12h45 — Déjeuner dans un deuxième bouchon Pour le dimanche midi",
+              "type": "bouchon",
+              "resolution": "not_found",
+              "place": null,
+              "start": "12:45",
+              "end": "14:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-14",
+              "name": "Musée des Confluences",
+              "sourceText": "14h30 – 16h15 14h30 — Musée des Confluences Musée des Confluences. Un musée spectaculaire",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/440270631",
+                "name": "Musée des Confluences",
+                "coordinates": {
+                  "lat": 45.7326277,
+                  "lon": 4.8179852
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Su 10:30-18:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-10-11",
+                  "retrievedAt": "2026-11-05T10:36:26.102Z"
+                }
+              },
+              "start": "14:30",
+              "end": "16:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-15",
+              "name": "Promenade au confluent",
+              "sourceText": "16h15 – 17h00 16h15 — Promenade au confluent Sortez du musée pour profiter du paysage",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "16:15",
+              "end": "17:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-16",
+              "name": "Marché de Noël place Carnot",
+              "sourceText": "17h15 – 18h30 17h15 — Marché de Noël place Carnot Ouvert pendant votre week-end !",
+              "type": "marché",
+              "resolution": "not_found",
+              "place": null,
+              "start": "17:15",
+              "end": "18:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-17",
+              "name": "Fin du week-end",
+              "sourceText": "18h30 — Fin du week-end Un dernier verre ou une petite douceur avant le départ.",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "18:30",
+              "end": "19:30",
+              "windowSource": "default_duration"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Petit-déjeuner place des Terreaux",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Petit-déjeuner place des Terreaux » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Musée des Beaux-Arts",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Déjeuner dans un bouchon lyonnais",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Déjeuner dans un bouchon lyonnais » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Vieux Lyon et traboules",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Vieux Lyon et traboules » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Musée Gadagne",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-6",
+        "name": "Fourvière et panorama",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Fourvière et panorama » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-7",
+        "name": "Apéritif et balade dans le Vieux Lyon",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Apéritif et balade dans le Vieux Lyon » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-8",
+        "name": "Dîner lyonnais",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Dîner lyonnais » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-9",
+        "name": "Dernière promenade sur les quais de Saône",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Dernière promenade sur les quais de Saône » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-10",
+        "name": "Marché Saint-Antoine",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-11",
+        "name": "Balade sur les quais et Presqu'île",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Balade sur les quais et Presqu'île » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-12",
+        "name": "Art contemporain au macLYON",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Art contemporain au macLYON » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-13",
+        "name": "Déjeuner dans un deuxième bouchon",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Déjeuner dans un deuxième bouchon » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-14",
+        "name": "Musée des Confluences",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-15",
+        "name": "Promenade au confluent",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Promenade au confluent » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-16",
+        "name": "Marché de Noël place Carnot",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Marché de Noël place Carnot » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-17",
+        "name": "Fin du week-end",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Fin du week-end » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-2",
+            "stop-5"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              692.6
+            ],
+            [
+              692.6,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              866
+            ],
+            [
+              866,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:37:06.141Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.8336192,45.7667066;4.827301,45.7640744?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,692.6],[692.6,0]],\"distances\":[[0,866],[866,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-2",
+                "stop-5"
+              ]
+            }
+          }
+        },
+        {
+          "dayId": "day-2",
+          "stopIds": [
+            "stop-10",
+            "stop-14"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              3103.2
+            ],
+            [
+              3103.2,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              3879.2
+            ],
+            [
+              3879.2,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:37:16.139Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.831339,45.7615248;4.8179852,45.7326277?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,3103.2],[3103.2,0]],\"distances\":[[0,3879.2],[3879.2,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-10",
+                "stop-14"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

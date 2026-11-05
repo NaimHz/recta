@@ -1,0 +1,137 @@
+# Annotation 4.6 : real-004 (paris, départ 2026-11-24)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/real-004.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: real-004
+pass: 1
+annotatedAt: 2026-11-05
+minutes: null
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée d'Orsay
+    sourceText: |-
+      9h30 – 11h45 | Musée d'Orsay
+
+      Musée d'Orsay
+
+      1 rue de la Légion-d'Honneur, 75007 Paris.
+    start: 09:30
+    end: 11:45
+  - id: stop-2
+    day: day-1
+    name: Musée de l'Orangerie
+    sourceText: |-
+      12h00 – 13h00 | Musée de l'Orangerie
+
+      Musée de l'Orangerie
+
+      Jardin des Tuileries, place de la Concorde, 75001 Paris.
+    start: 12:00
+    end: 13:00
+  - id: stop-3
+    day: day-1
+    name: Musée Rodin
+    sourceText: |-
+      14h00 – 15h00 | Le musée Rodin
+
+      Musée Rodin
+
+      77 rue de Varenne, 75007 Paris.
+    start: 14:00
+    end: 15:00
+  - id: stop-4
+    day: day-1
+    name: L'esplanade des Invalides
+    sourceText: |-
+      14h30 – 15h15 | L'esplanade des Invalides
+
+      Hôtel des Invalides
+
+      129 rue de Grenelle, 75007 Paris.
+    start: 14:30
+    end: 15:15
+  - id: stop-5
+    day: day-1
+    name: Pont Alexandre-III
+    sourceText: |-
+      15h15 – 16h00 | Le pont Alexandre-III
+
+      Pont Alexandre-III
+    start: 15:15
+    end: 16:00
+  - id: stop-6
+    day: day-1
+    name: Le Petit Palais et les Champs-Élysées
+    sourceText: |-
+      16h00 – 17h00 | Le Petit Palais et les Champs-Élysées
+
+      Passe devant le Petit Palais, puis rejoins le bas des Champs-Élysées.
+
+      Le Petit Palais est un très beau monument à admirer de l'extérieur.
+    start: 16:00
+    end: 17:00
+  - id: stop-7
+    day: day-1
+    name: Place de la Concorde et Madeleine
+    sourceText: >-
+      17h00 – 18h00 | Place de la Concorde et Madeleine
+
+
+      Rejoins la place de la Concorde, puis remonte vers l'église de la
+      Madeleine.
+    start: 17:00
+    end: 18:00
+  - id: stop-8
+    day: day-1
+    name: Mollard
+    sourceText: |-
+      19h00 – 20h30 | Dîner chez Mollard
+
+      Mollard
+
+      115 Rue Saint-Lazare, 75008 Paris, France
+
+      Une brasserie parisienne historique
+    start: 19:00
+    end: 20:30
+issues:
+  - code: place_closed_day
+    severity: error
+    stopIds:
+      - stop-2
+    evidence:
+      - source: official
+        url: https://www.musee-orangerie.fr/en/visit-orangerie
+        sourceDate: 2026-11-05
+        raw: Closed every Tuesday ; le plan prévoit l'Orangerie le mardi 24 novembre
+          12h-13h
+  - code: insufficient_buffer
+    severity: warning
+    stopIds:
+      - stop-1
+      - stop-2
+    evidence:
+      - source: transitous
+        url: https://api.transitous.org/api/v6/plan?fromPlace=48.8599179,2.3265849&toPlace=48.8637655,2.3226602&time=2026-11-24T11%3A45%3A00%2B01%3A00&transitModes=TRANSIT&directModes=WALK
+        sourceDate: 2026-11-05
+        raw: 'Orsay → Orangerie : 10 min à pied (Transitous), 12,2 min (OSRM) ; écart
+          prévu 15 min, marge 10 min'
+  - code: stop_overlap
+    severity: error
+    stopIds:
+      - stop-3
+      - stop-4
+    evidence:
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 14h00 – 15h00 | Le musée Rodin
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 14h30 – 15h15 | L'esplanade des Invalides
+undetermined: []
+planted: []

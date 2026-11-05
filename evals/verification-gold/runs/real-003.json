@@ -1,0 +1,1006 @@
+{
+  "version": 1,
+  "plan": "real-003",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-05T09:58:20.756Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Samedi 21 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "quartier Latin",
+              "startText": "9h00",
+              "endText": "9h30",
+              "type": null,
+              "sourceText": "9h00 – 9h30 | Petit-déjeuner dans le quartier Latin Commencez tranquillement autour du boulevard Saint-Michel ou de la place Saint-Michel."
+            },
+            {
+              "name": "Sainte-Chapelle",
+              "startText": "9h30",
+              "endText": "10h30",
+              "type": "monument",
+              "sourceText": "9h30 – 10h30 | La Sainte-Chapelle Sainte-Chapelle 10 boulevard du Palais, 75001 Paris. Un monument absolument magnifique, célèbre pour ses immenses vitraux colorés."
+            },
+            {
+              "name": "Cathédrale Notre-Dame de Paris",
+              "startText": "10h30",
+              "endText": "11h30",
+              "type": null,
+              "sourceText": "10h30 – 11h30 | Notre-Dame de Paris Cathédrale Notre-Dame de Paris 6 parvis Notre-Dame, 75004 Paris."
+            },
+            {
+              "name": "quais de Seine",
+              "startText": "11h30",
+              "endText": "12h30",
+              "type": null,
+              "sourceText": "11h30 – 12h30 | Promenade sur les quais de Seine Traversez le Pont-Neuf, profitez des vues sur la Seine"
+            },
+            {
+              "name": "Déjeuner",
+              "startText": "12h30",
+              "endText": "14h00",
+              "type": null,
+              "sourceText": "12h30 – 14h00 | Déjeuner Je vous conseille de déjeuner dans le quartier du Palais-Royal ou autour de la rue de Rivoli."
+            },
+            {
+              "name": "Musée du Louvre",
+              "startText": "14h00",
+              "endText": "16h45",
+              "type": "musée",
+              "sourceText": "14h00 – 16h45 | Le musée du Louvre Musée du Louvre Rue de Rivoli, 75001 Paris."
+            },
+            {
+              "name": "Jardin des Tuileries et place de la Concorde",
+              "startText": "16h45",
+              "endText": "17h45",
+              "type": "jardin",
+              "sourceText": "16h45 – 17h45 | Jardin des Tuileries et place de la Concorde Sortez du Louvre et traversez le jardin des Tuileries."
+            },
+            {
+              "name": "hôtel",
+              "startText": "18h00",
+              "endText": "19h00",
+              "type": "hôtel",
+              "sourceText": "18h00 – 19h00 | Pause à l'hôtel Prenez le temps de vous reposer et de vous préparer pour la soirée."
+            },
+            {
+              "name": "Vagenende",
+              "startText": "19h30",
+              "endText": "21h00",
+              "type": "brasserie",
+              "sourceText": "19h30 – 21h00 | Dîner à Saint-Germain-des-Prés Vagenende 142 boulevard Saint-Germain, 75006 Paris Une belle brasserie historique avec un décor Belle Époque"
+            }
+          ]
+        },
+        {
+          "dateText": "Dimanche 22 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Place du Trocadéro",
+              "startText": "9h00",
+              "endText": "9h45",
+              "type": null,
+              "sourceText": "9h00 – 9h45 | Petit-déjeuner et découverte du Trocadéro Place du Trocadéro Place du Trocadéro, 75016 Paris."
+            },
+            {
+              "name": "Tour Eiffel",
+              "startText": "10h00",
+              "endText": "12h15",
+              "type": null,
+              "sourceText": "10h00 – 12h15 | Visite de la tour Eiffel Tour Eiffel Avenue Gustave-Eiffel, 75007 Paris."
+            },
+            {
+              "name": "Le Campanella",
+              "startText": "12h15",
+              "endText": "13h45",
+              "type": "brasserie",
+              "sourceText": "12h15 – 13h45 | Déjeuner près de la tour Eiffel Le Campanella 18 avenue Bosquet, 75007 Paris Une brasserie de quartier pour un déjeuner traditionnel."
+            },
+            {
+              "name": "Croisière sur la Seine",
+              "startText": "14h00",
+              "endText": "15h00",
+              "type": null,
+              "sourceText": "14h00 – 15h00 | Croisière sur la Seine Départ : Port de la Bourdonnais, 75007 Paris."
+            },
+            {
+              "name": "Pont Alexandre-III",
+              "startText": "15h00",
+              "endText": "16h00",
+              "type": null,
+              "sourceText": "15h00 – 16h00 | Pont Alexandre-III et les Invalides Rejoignez le pont Alexandre-III."
+            },
+            {
+              "name": "Arc de Triomphe",
+              "startText": "16h15",
+              "endText": "17h45",
+              "type": null,
+              "sourceText": "16h15 – 17h45 | L'Arc de Triomphe Arc de Triomphe Place Charles-de-Gaulle, 75008 Paris. Ouvert jusqu'à 22h30"
+            },
+            {
+              "name": "Champs-Élysées",
+              "startText": "17h45",
+              "endText": "19h00",
+              "type": null,
+              "sourceText": "17h45 – 19h00 | Promenade sur les Champs-Élysées Descendez tranquillement l'avenue des Champs-Élysées."
+            },
+            {
+              "name": "Dîner",
+              "startText": "19h00",
+              "endText": "20h30",
+              "type": null,
+              "sourceText": "19h00 – 20h30 | Dîner pour terminer le week-end Vous pouvez dîner dans le quartier des Champs-Élysées ou revenir vers Saint-Germain-des-Prés selon l'emplacement de votre hôtel."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-05T10:31:52.543Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-21",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "quartier Latin",
+              "sourceText": "9h00 – 9h30 | Petit-déjeuner dans le quartier Latin Commencez tranquillement autour du boulevard Saint-Michel ou de la place Saint-Michel.",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/2038017580",
+                "name": "Quartier latin",
+                "coordinates": {
+                  "lat": 48.8486028,
+                  "lon": 2.3425156
+                },
+                "address": null,
+                "category": null,
+                "openingHoursRaw": null,
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:32:10.413Z"
+                }
+              },
+              "start": "09:00",
+              "end": "09:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Sainte-Chapelle",
+              "sourceText": "9h30 – 10h30 | La Sainte-Chapelle Sainte-Chapelle 10 boulevard du Palais, 75001 Paris. Un monument absolument magnifique, célèbre pour ses immenses vitraux colorés.",
+              "type": "monument",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/3344870",
+                "name": "Sainte-Chapelle",
+                "coordinates": {
+                  "lat": 48.8553966,
+                  "lon": 2.3450136
+                },
+                "address": "8 Boulevard du Palais, 75001",
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Jan-Mar 09:00-17:00; Apr-Sep 09:00-19:00; Oct-Dec 09:00-17:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2024-02-15",
+                  "retrievedAt": "2026-11-05T10:32:10.413Z"
+                }
+              },
+              "start": "09:30",
+              "end": "10:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Cathédrale Notre-Dame de Paris",
+              "sourceText": "10h30 – 11h30 | Notre-Dame de Paris Cathédrale Notre-Dame de Paris 6 parvis Notre-Dame, 75004 Paris.",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/201611261",
+                "name": "Cathédrale Notre-Dame de Paris",
+                "coordinates": {
+                  "lat": 48.8529371,
+                  "lon": 2.3498701
+                },
+                "address": "6 Parvis Notre-Dame - Place Jean-Paul II, 75004 Paris",
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Mo,Tu,We,Fr 07:50-19:00; Th 07:50-22:00; Sa,Su 08:15-19:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-06-05",
+                  "retrievedAt": "2026-11-05T10:32:10.413Z"
+                }
+              },
+              "start": "10:30",
+              "end": "11:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "quais de Seine",
+              "sourceText": "11h30 – 12h30 | Promenade sur les quais de Seine Traversez le Pont-Neuf, profitez des vues sur la Seine",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "11:30",
+              "end": "12:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Déjeuner",
+              "sourceText": "12h30 – 14h00 | Déjeuner Je vous conseille de déjeuner dans le quartier du Palais-Royal ou autour de la rue de Rivoli.",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/1823551413",
+                "name": "Le Déjeuner sur l'Herbe",
+                "coordinates": {
+                  "lat": 48.881207,
+                  "lon": 2.3286079
+                },
+                "address": null,
+                "category": "amenity:cafe",
+                "openingHoursRaw": null,
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:32:10.413Z"
+                }
+              },
+              "start": "12:30",
+              "end": "14:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-6",
+              "name": "Musée du Louvre",
+              "sourceText": "14h00 – 16h45 | Le musée du Louvre Musée du Louvre Rue de Rivoli, 75001 Paris.",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/7515426",
+                "name": "Musée du Louvre",
+                "coordinates": {
+                  "lat": 48.8611474,
+                  "lon": 2.3358637
+                },
+                "address": "75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-07-26",
+                  "retrievedAt": "2026-11-05T10:32:10.413Z"
+                }
+              },
+              "start": "14:00",
+              "end": "16:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-7",
+              "name": "Jardin des Tuileries et place de la Concorde",
+              "sourceText": "16h45 – 17h45 | Jardin des Tuileries et place de la Concorde Sortez du Louvre et traversez le jardin des Tuileries.",
+              "type": "jardin",
+              "resolution": "not_found",
+              "place": null,
+              "start": "16:45",
+              "end": "17:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-8",
+              "name": "hôtel",
+              "sourceText": "18h00 – 19h00 | Pause à l'hôtel Prenez le temps de vous reposer et de vous préparer pour la soirée.",
+              "type": "hôtel",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "18:00",
+              "end": "19:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-9",
+              "name": "Vagenende",
+              "sourceText": "19h30 – 21h00 | Dîner à Saint-Germain-des-Prés Vagenende 142 boulevard Saint-Germain, 75006 Paris Une belle brasserie historique avec un décor Belle Époque",
+              "type": "brasserie",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/1695637600",
+                "name": "Vagenende",
+                "coordinates": {
+                  "lat": 48.8529555,
+                  "lon": 2.3374309
+                },
+                "address": null,
+                "category": "amenity:restaurant",
+                "openingHoursRaw": "Mo-Fr 12:00-22:30; Sa-Su 12:00-23:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:32:10.413Z"
+                }
+              },
+              "start": "19:30",
+              "end": "21:00",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        },
+        {
+          "id": "day-2",
+          "date": "2026-11-22",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-10",
+              "name": "Place du Trocadéro",
+              "sourceText": "9h00 – 9h45 | Petit-déjeuner et découverte du Trocadéro Place du Trocadéro Place du Trocadéro, 75016 Paris.",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "09:00",
+              "end": "09:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-11",
+              "name": "Tour Eiffel",
+              "sourceText": "10h00 – 12h15 | Visite de la tour Eiffel Tour Eiffel Avenue Gustave-Eiffel, 75007 Paris.",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/5013364",
+                "name": "Tour Eiffel",
+                "coordinates": {
+                  "lat": 48.8582603,
+                  "lon": 2.2945008
+                },
+                "address": "5 Avenue Anatole France, 75007 Paris",
+                "category": "tourism:attraction",
+                "openingHoursRaw": "09:30-23:45; Jun 21-Sep 02: 09:00-00:45; Jul 14,Jul 15 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-09-23",
+                  "retrievedAt": "2026-11-05T10:32:10.413Z"
+                }
+              },
+              "start": "10:00",
+              "end": "12:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-12",
+              "name": "Le Campanella",
+              "sourceText": "12h15 – 13h45 | Déjeuner près de la tour Eiffel Le Campanella 18 avenue Bosquet, 75007 Paris Une brasserie de quartier pour un déjeuner traditionnel.",
+              "type": "brasserie",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/582552434",
+                "name": "Le Campanella",
+                "coordinates": {
+                  "lat": 48.8585847,
+                  "lon": 2.3032822
+                },
+                "address": null,
+                "category": "amenity:cafe",
+                "openingHoursRaw": "Mo-Sa 08:00-23:00; Su 09:00-23:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-08-22",
+                  "retrievedAt": "2026-11-05T10:32:10.413Z"
+                }
+              },
+              "start": "12:15",
+              "end": "13:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-13",
+              "name": "Croisière sur la Seine",
+              "sourceText": "14h00 – 15h00 | Croisière sur la Seine Départ : Port de la Bourdonnais, 75007 Paris.",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "14:00",
+              "end": "15:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-14",
+              "name": "Pont Alexandre-III",
+              "sourceText": "15h00 – 16h00 | Pont Alexandre-III et les Invalides Rejoignez le pont Alexandre-III.",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "15:00",
+              "end": "16:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-15",
+              "name": "Arc de Triomphe",
+              "sourceText": "16h15 – 17h45 | L'Arc de Triomphe Arc de Triomphe Place Charles-de-Gaulle, 75008 Paris. Ouvert jusqu'à 22h30",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/226413508",
+                "name": "Arc de Triomphe",
+                "coordinates": {
+                  "lat": 48.8737782,
+                  "lon": 2.2950354
+                },
+                "address": null,
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Apr 02-Jan 31: Mo-Su 10:00-22:30; Apr 01,Sep 30: Mo-Su 10:00-23:00; Oct 01,Dec 31: Mo-Su 10:00-22:30; Jan 01,May 01,May 08,Jul 14,Nov 11,Dec 25: off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:32:10.413Z"
+                }
+              },
+              "start": "16:15",
+              "end": "17:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-16",
+              "name": "Champs-Élysées",
+              "sourceText": "17h45 – 19h00 | Promenade sur les Champs-Élysées Descendez tranquillement l'avenue des Champs-Élysées.",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "17:45",
+              "end": "19:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-17",
+              "name": "Dîner",
+              "sourceText": "19h00 – 20h30 | Dîner pour terminer le week-end Vous pouvez dîner dans le quartier des Champs-Élysées ou revenir vers Saint-Germain-des-Prés selon l'emplacement de votre hôtel.",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "19:00",
+              "end": "20:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "quartier Latin",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Sainte-Chapelle",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Cathédrale Notre-Dame de Paris",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "quais de Seine",
+        "status": "not_found",
+        "question": "Je ne trouve pas « quais de Seine » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Déjeuner",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-6",
+        "name": "Musée du Louvre",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-7",
+        "name": "Jardin des Tuileries et place de la Concorde",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Jardin des Tuileries et place de la Concorde » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-8",
+        "name": "hôtel",
+        "status": "ambiguous",
+        "question": "« hôtel » correspond à « Hôtel » à Paris. Est-ce bien ce lieu ?",
+        "options": [
+          {
+            "id": "osm:node/1224788566",
+            "name": "Hôtel",
+            "address": "Hôtel, Rue des Haies, Quartier de Charonne, Paris 20e Arrondissement, Paris, Île-de-France, France métropolitaine, 75020, France",
+            "category": "amenity:cafe",
+            "score": 0.9450000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-9",
+        "name": "Vagenende",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-10",
+        "name": "Place du Trocadéro",
+        "status": "ambiguous",
+        "question": "« Place du Trocadéro » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:node/12754740786",
+            "name": "Place du Trocadéro",
+            "address": "Place du Trocadéro, Place du Trocadéro et du 11 Novembre 1918, Quartier de la Muette, Paris 16e Arrondissement, Paris, Île-de-France, France métropolitaine, 75016, France",
+            "category": "information:board",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/51259547",
+            "name": "Place du Trocadéro",
+            "address": "Place du Trocadéro, Quartier de la Muette, Paris 16e Arrondissement, Paris, Île-de-France, France métropolitaine, 75016, France",
+            "category": "highway:pedestrian",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/595908371",
+            "name": "Place du Trocadéro",
+            "address": "Place du Trocadéro, Chaillot, Paris 16e Arrondissement, Paris, Île-de-France, France métropolitaine, 75016, France",
+            "category": "highway:pedestrian",
+            "score": 0.9800000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-11",
+        "name": "Tour Eiffel",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-12",
+        "name": "Le Campanella",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-13",
+        "name": "Croisière sur la Seine",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Croisière sur la Seine » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-14",
+        "name": "Pont Alexandre-III",
+        "status": "ambiguous",
+        "question": "« Pont Alexandre-III » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/17066999",
+            "name": "Pont Alexandre III",
+            "address": "Pont Alexandre III, Quartier des Champs-Élysées, Paris 8e Arrondissement, Paris, Île-de-France, France métropolitaine, 75008, France",
+            "category": "highway:primary",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/17067006",
+            "name": "Pont Alexandre III",
+            "address": "Pont Alexandre III, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "highway:primary",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/183620685",
+            "name": "Pont Alexandre III",
+            "address": "Pont Alexandre III, Promenade des Berges de la Seine — Port des Invalides, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "man_made:bridge",
+            "score": 0.9800000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-15",
+        "name": "Arc de Triomphe",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-16",
+        "name": "Champs-Élysées",
+        "status": "ambiguous",
+        "question": "« Champs-Élysées » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:node/4533627787",
+            "name": "Champs Élysées",
+            "address": "Champs Élysées, Quartier des Champs-Élysées, Paris 8e Arrondissement, Paris, Île-de-France, France métropolitaine, 75008, France",
+            "category": "tourism:attraction",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:relation/2188686",
+            "name": "Quartier des Champs-Élysées",
+            "address": "Quartier des Champs-Élysées, Paris 8e Arrondissement, Paris, Île-de-France, France métropolitaine, 75008, France",
+            "category": "boundary:administrative",
+            "score": 0.905
+          }
+        ]
+      },
+      {
+        "stopId": "stop-17",
+        "name": "Dîner",
+        "status": "ambiguous",
+        "question": "« Dîner » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:node/2758759497",
+            "name": "Dîner d'Artistes",
+            "address": "Dîner d'Artistes, Boulevard Berthier, Quartier de la Plaine-de-Monceau, Paris 17e Arrondissement, Paris, Île-de-France, France métropolitaine, 75017, France",
+            "category": "shop:houseware",
+            "score": 0.905
+          },
+          {
+            "id": "osm:node/2879817401",
+            "name": "HD Diner",
+            "address": "HD Diner, Rue du Roule, Quartier Les Halles, Paris 1er Arrondissement, Paris, Île-de-France, France métropolitaine, 75001, France",
+            "category": "amenity:fast_food",
+            "score": 0.905
+          },
+          {
+            "id": "osm:node/4935628437",
+            "name": "Le Grenier dîner spectacle",
+            "address": "Le Grenier dîner spectacle, Rue Rennequin, Quartier des Ternes, Paris 17e Arrondissement, Paris, Île-de-France, France métropolitaine, 75017, France",
+            "category": "amenity:restaurant",
+            "score": 0.905
+          }
+        ]
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2",
+            "stop-3",
+            "stop-5",
+            "stop-6",
+            "stop-9"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              677,
+              738,
+              3433.5,
+              1441.4,
+              577.6
+            ],
+            [
+              677,
+              0,
+              376.3,
+              2979.5,
+              1069.9,
+              617.4
+            ],
+            [
+              738,
+              376.3,
+              0,
+              3277.2,
+              1367.6,
+              894.4
+            ],
+            [
+              3433.5,
+              2979.5,
+              3277.2,
+              0,
+              1999,
+              2894.4
+            ],
+            [
+              1441.4,
+              1069.9,
+              1367.6,
+              1999,
+              0,
+              902.3
+            ],
+            [
+              577.6,
+              617.4,
+              894.4,
+              2894.4,
+              902.3,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              846.4,
+              922.7,
+              4292.1,
+              1802,
+              722
+            ],
+            [
+              846.4,
+              0,
+              469.9,
+              3724.7,
+              1337.3,
+              771.5
+            ],
+            [
+              922.7,
+              469.9,
+              0,
+              4096.5,
+              1709.1,
+              1117.8
+            ],
+            [
+              4292.1,
+              3724.7,
+              4096.5,
+              0,
+              2499,
+              3618.8
+            ],
+            [
+              1802,
+              1337.3,
+              1709.1,
+              2499,
+              0,
+              1128.7
+            ],
+            [
+              722,
+              771.5,
+              1117.8,
+              3618.8,
+              1128.7,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:32:55.527Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3425156,48.8486028;2.3450136,48.8553966;2.3498701,48.8529371;2.3286079,48.881207;2.3358637,48.8611474;2.3374309,48.8529555?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,677,738,3433.5,1441.4,577.6],[677,0,376.3,2979.5,1069.9,617.4],[738,376.3,0,3277.2,1367.6,894.4],[3433.5,2979.5,3277.2,0,1999,2894.4],[1441.4,1069.9,1367.6,1999,0,902.3],[577.6,617.4,894.4,2894.4,902.3,0]],\"distances\":[[0,846.4,922.7,4292.1,1802,722],[846.4,0,469.9,3724.7,1337.3,771.5],[922.7,469.9,0,4096.5,1709.1,1117.8],[4292.1,3724.7,4096.5,0,2499,3618.8],[1802,1337.3,1709.1,2499,0,1128.7],[722,771.5,1117.8,3618.8,1128.7,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2",
+                "stop-3",
+                "stop-5",
+                "stop-6",
+                "stop-9"
+              ]
+            }
+          }
+        },
+        {
+          "dayId": "day-2",
+          "stopIds": [
+            "stop-11",
+            "stop-12",
+            "stop-15"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              610.6,
+              1808.1
+            ],
+            [
+              610.6,
+              0,
+              1616.8
+            ],
+            [
+              1808.1,
+              1616.8,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              763.3,
+              2260.2
+            ],
+            [
+              763.3,
+              0,
+              2021.1
+            ],
+            [
+              2260.2,
+              2021.1,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:33:05.525Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.2945008,48.8582603;2.3032822,48.8585847;2.2950354,48.8737782?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,610.6,1808.1],[610.6,0,1616.8],[1808.1,1616.8,0]],\"distances\":[[0,763.3,2260.2],[763.3,0,2021.1],[2260.2,2021.1,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-11",
+                "stop-12",
+                "stop-15"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-21T08:30:00.000Z",
+          "durationSeconds": 660,
+          "arrivalAt": "2026-11-21T08:41:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "BUS"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-21",
+            "retrievedAt": "2026-11-05T10:32:55.761Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8486028%2C2.3425156&toPlace=48.8553966%2C2.3450136&time=2026-11-21T08%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-21T08:32:00Z\",\"endTime\":\"2026-11-21T08:41:00Z\",\"durationSeconds\":540,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8486028,\"lon\":2.3425156},\"to\":{\"name\":\"Les Écoles\",\"lat\":48.8499,\"lon\":2.3425529999999997},\"startTime\":\"2026-11-21T08:32:00Z\",\"endTime\":\"2026-11-21T08:35:00Z\"},{\"mode\":\"BUS\",\"routeShortName\":\"38\",\"from\":{\"name\":\"Les Écoles\",\"lat\":48.8499,\"lon\":2.3425529999999997},\"to\":{\"name\":\"Cité\",\"lat\":48.855746999999994,\"lon\":2.3463632999999997},\"startTime\":\"2026-11-21T08:35:00Z\",\"endTime\":\"2026-11-21T08:38:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Cité\",\"lat\":48.855746999999994,\"lon\":2.3463632999999997},\"to\":{\"name\":\"END\",\"lat\":48.8553966,\"lon\":2.3450136},\"startTime\":\"2026-11-21T08:38:00Z\",\"endTime\":\"2026-11-21T08:41:00Z\"}]}",
+            "fields": {
+              "from": "quartier Latin",
+              "to": "Sainte-Chapelle",
+              "departureAt": "2026-11-21T08:30:00.000Z",
+              "arrivalAt": "2026-11-21T08:41:00Z",
+              "itinerariesReturned": 5
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-21T09:30:00.000Z",
+          "durationSeconds": null,
+          "arrivalAt": null,
+          "transfers": null,
+          "modes": [],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-21",
+            "retrievedAt": "2026-11-05T10:32:56.767Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8553966%2C2.3450136&toPlace=48.8529371%2C2.3498701&time=2026-11-21T09%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "null",
+            "fields": {
+              "from": "Sainte-Chapelle",
+              "to": "Cathédrale Notre-Dame de Paris",
+              "departureAt": "2026-11-21T09:30:00.000Z",
+              "arrivalAt": null,
+              "itinerariesReturned": 0
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-5",
+          "toStopId": "stop-6",
+          "departureAt": "2026-11-21T13:00:00.000Z",
+          "durationSeconds": 1140,
+          "arrivalAt": "2026-11-21T13:19:00Z",
+          "transfers": 1,
+          "modes": [
+            "WALK",
+            "BUS",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-21",
+            "retrievedAt": "2026-11-05T10:32:57.947Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.881207%2C2.3286079&toPlace=48.8611474%2C2.3358637&time=2026-11-21T13%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-21T13:00:00Z\",\"endTime\":\"2026-11-21T13:19:00Z\",\"durationSeconds\":1140,\"transfers\":1,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.881207,\"lon\":2.3286079},\"to\":{\"name\":\"La Bruyère / Moncey\",\"lat\":48.879723,\"lon\":2.3313497999999995},\"startTime\":\"2026-11-21T13:00:00Z\",\"endTime\":\"2026-11-21T13:05:00Z\"},{\"mode\":\"BUS\",\"routeShortName\":\"68\",\"from\":{\"name\":\"La Bruyère / Moncey\",\"lat\":48.879723,\"lon\":2.3313497999999995},\"to\":{\"name\":\"Chaussée d'Antin - La Fayette\",\"lat\":48.87446599999999,\"lon\":2.3325626999999995},\"startTime\":\"2026-11-21T13:05:00Z\",\"endTime\":\"2026-11-21T13:08:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Chaussée d'Antin - La Fayette\",\"lat\":48.87446599999999,\"lon\":2.3325626999999995},\"to\":{\"name\":\"Chaussée d'Antin - La Fayette\",\"lat\":48.8732,\"lon\":2.3336696999999997},\"startTime\":\"2026-11-21T13:08:00Z\",\"endTime\":\"2026-11-21T13:12:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"7\",\"from\":{\"name\":\"Chaussée d'Antin - La Fayette\",\"lat\":48.8732,\"lon\":2.3336696999999997},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.8628,\"lon\":2.3368832999999993},\"startTime\":\"2026-11-21T13:12:00Z\",\"endTime\":\"2026-11-21T13:15:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.8628,\"lon\":2.3368832999999993},\"to\":{\"name\":\"END\",\"lat\":48.8611474,\"lon\":2.3358637},\"startTime\":\"2026-11-21T13:15:00Z\",\"endTime\":\"2026-11-21T13:19:00Z\"}]}",
+            "fields": {
+              "from": "Déjeuner",
+              "to": "Musée du Louvre",
+              "departureAt": "2026-11-21T13:00:00.000Z",
+              "arrivalAt": "2026-11-21T13:19:00Z",
+              "itinerariesReturned": 10
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-11",
+          "toStopId": "stop-12",
+          "departureAt": "2026-11-22T11:15:00.000Z",
+          "durationSeconds": 780,
+          "arrivalAt": "2026-11-22T11:28:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "BUS"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-22",
+            "retrievedAt": "2026-11-05T10:33:05.665Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8582603%2C2.2945008&toPlace=48.8585847%2C2.3032822&time=2026-11-22T11%3A15%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-22T11:16:00Z\",\"endTime\":\"2026-11-22T11:28:00Z\",\"durationSeconds\":720,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8582603,\"lon\":2.2945008},\"to\":{\"name\":\"Champ de Mars - Suffren\",\"lat\":48.855059999999995,\"lon\":2.2968034999999998},\"startTime\":\"2026-11-22T11:16:00Z\",\"endTime\":\"2026-11-22T11:24:00Z\"},{\"mode\":\"BUS\",\"routeShortName\":\"69\",\"from\":{\"name\":\"Champ de Mars - Suffren\",\"lat\":48.855059999999995,\"lon\":2.2968034999999998},\"to\":{\"name\":\"Bosquet - Saint-Dominique\",\"lat\":48.858852,\"lon\":2.3038399999999997},\"startTime\":\"2026-11-22T11:24:00Z\",\"endTime\":\"2026-11-22T11:27:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Bosquet - Saint-Dominique\",\"lat\":48.858852,\"lon\":2.3038399999999997},\"to\":{\"name\":\"END\",\"lat\":48.8585847,\"lon\":2.3032822},\"startTime\":\"2026-11-22T11:27:00Z\",\"endTime\":\"2026-11-22T11:28:00Z\"}]}",
+            "fields": {
+              "from": "Tour Eiffel",
+              "to": "Le Campanella",
+              "departureAt": "2026-11-22T11:15:00.000Z",
+              "arrivalAt": "2026-11-22T11:28:00Z",
+              "itinerariesReturned": 2
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

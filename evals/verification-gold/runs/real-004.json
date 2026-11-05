@@ -1,0 +1,432 @@
+{
+  "version": 1,
+  "plan": "real-004",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-05T10:06:54.563Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Mardi 24 novembre 2026",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée d'Orsay",
+              "startText": "9h30",
+              "endText": "11h45",
+              "type": "musée",
+              "sourceText": "9h30 – 11h45 | Musée d'Orsay\n\nMusée d'Orsay\n\n1 rue de la Légion-d'Honneur, 75007 Paris."
+            },
+            {
+              "name": "Musée de l'Orangerie",
+              "startText": "12h00",
+              "endText": "13h00",
+              "type": "musée",
+              "sourceText": "12h00 – 13h00 | Musée de l'Orangerie\n\nMusée de l'Orangerie\n\nJardin des Tuileries, place de la Concorde, 75001 Paris."
+            },
+            {
+              "name": "Musée Rodin",
+              "startText": "14h00",
+              "endText": "15h00",
+              "type": "musée",
+              "sourceText": "14h00 – 15h00 | Le musée Rodin\n\nMusée Rodin\n\n77 rue de Varenne, 75007 Paris."
+            },
+            {
+              "name": "L'esplanade des Invalides",
+              "startText": "14h30",
+              "endText": "15h15",
+              "type": null,
+              "sourceText": "14h30 – 15h15 | L'esplanade des Invalides\n\nHôtel des Invalides\n\n129 rue de Grenelle, 75007 Paris."
+            },
+            {
+              "name": "Pont Alexandre-III",
+              "startText": "15h15",
+              "endText": "16h00",
+              "type": null,
+              "sourceText": "15h15 – 16h00 | Le pont Alexandre-III\n\nPont Alexandre-III"
+            },
+            {
+              "name": "Le Petit Palais et les Champs-Élysées",
+              "startText": "16h00",
+              "endText": "17h00",
+              "type": "monument",
+              "sourceText": "16h00 – 17h00 | Le Petit Palais et les Champs-Élysées\n\nPasse devant le Petit Palais, puis rejoins le bas des Champs-Élysées.\n\nLe Petit Palais est un très beau monument à admirer de l'extérieur."
+            },
+            {
+              "name": "Place de la Concorde et Madeleine",
+              "startText": "17h00",
+              "endText": "18h00",
+              "type": null,
+              "sourceText": "17h00 – 18h00 | Place de la Concorde et Madeleine\n\nRejoins la place de la Concorde, puis remonte vers l'église de la Madeleine."
+            },
+            {
+              "name": "Mollard",
+              "startText": "19h00",
+              "endText": "20h30",
+              "type": "brasserie",
+              "sourceText": "19h00 – 20h30 | Dîner chez Mollard\n\nMollard\n\n115 Rue Saint-Lazare, 75008 Paris, France\n\nUne brasserie parisienne historique"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-05T10:33:05.675Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-24",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Musée d'Orsay",
+              "sourceText": "9h30 – 11h45 | Musée d'Orsay\n\nMusée d'Orsay\n\n1 rue de la Légion-d'Honneur, 75007 Paris.",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/63178753",
+                "name": "Musée d'Orsay",
+                "coordinates": {
+                  "lat": 48.8599188,
+                  "lon": 2.3265259
+                },
+                "address": "1 Rue de la Légion d'Honneur, 75007",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Su 09:30-18:00; Th 09:30-21:45",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2024-03-16",
+                  "retrievedAt": "2026-11-05T10:33:13.464Z"
+                }
+              },
+              "start": "09:30",
+              "end": "11:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Musée de l'Orangerie",
+              "sourceText": "12h00 – 13h00 | Musée de l'Orangerie\n\nMusée de l'Orangerie\n\nJardin des Tuileries, place de la Concorde, 75001 Paris.",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/54188996",
+                "name": "Musée de l'Orangerie",
+                "coordinates": {
+                  "lat": 48.8637655,
+                  "lon": 2.3226594
+                },
+                "address": "Quai des Tuileries, 75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo-Su 09:00-18:00; Tu off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:33:13.464Z"
+                }
+              },
+              "start": "12:00",
+              "end": "13:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Musée Rodin",
+              "sourceText": "14h00 – 15h00 | Le musée Rodin\n\nMusée Rodin\n\n77 rue de Varenne, 75007 Paris.",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/472159547",
+                "name": "Musée Rodin",
+                "coordinates": {
+                  "lat": 48.8546543,
+                  "lon": 2.3159185
+                },
+                "address": "77 Rue de Varenne, 75007 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Su 10:00-18:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-03-21",
+                  "retrievedAt": "2026-11-05T10:33:13.464Z"
+                }
+              },
+              "start": "14:00",
+              "end": "15:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "L'esplanade des Invalides",
+              "sourceText": "14h30 – 15h15 | L'esplanade des Invalides\n\nHôtel des Invalides\n\n129 rue de Grenelle, 75007 Paris.",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "14:30",
+              "end": "15:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Pont Alexandre-III",
+              "sourceText": "15h15 – 16h00 | Le pont Alexandre-III\n\nPont Alexandre-III",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "15:15",
+              "end": "16:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-6",
+              "name": "Le Petit Palais et les Champs-Élysées",
+              "sourceText": "16h00 – 17h00 | Le Petit Palais et les Champs-Élysées\n\nPasse devant le Petit Palais, puis rejoins le bas des Champs-Élysées.\n\nLe Petit Palais est un très beau monument à admirer de l'extérieur.",
+              "type": "monument",
+              "resolution": "not_found",
+              "place": null,
+              "start": "16:00",
+              "end": "17:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-7",
+              "name": "Place de la Concorde et Madeleine",
+              "sourceText": "17h00 – 18h00 | Place de la Concorde et Madeleine\n\nRejoins la place de la Concorde, puis remonte vers l'église de la Madeleine.",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "17:00",
+              "end": "18:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-8",
+              "name": "Mollard",
+              "sourceText": "19h00 – 20h30 | Dîner chez Mollard\n\nMollard\n\n115 Rue Saint-Lazare, 75008 Paris, France\n\nUne brasserie parisienne historique",
+              "type": "brasserie",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "19:00",
+              "end": "20:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Musée d'Orsay",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Musée de l'Orangerie",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Musée Rodin",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "L'esplanade des Invalides",
+        "status": "not_found",
+        "question": "Je ne trouve pas « L'esplanade des Invalides » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Pont Alexandre-III",
+        "status": "ambiguous",
+        "question": "« Pont Alexandre-III » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/17066999",
+            "name": "Pont Alexandre III",
+            "address": "Pont Alexandre III, Quartier des Champs-Élysées, Paris 8e Arrondissement, Paris, Île-de-France, France métropolitaine, 75008, France",
+            "category": "highway:primary",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/17067006",
+            "name": "Pont Alexandre III",
+            "address": "Pont Alexandre III, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "highway:primary",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/183620685",
+            "name": "Pont Alexandre III",
+            "address": "Pont Alexandre III, Promenade des Berges de la Seine — Port des Invalides, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "man_made:bridge",
+            "score": 0.9800000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-6",
+        "name": "Le Petit Palais et les Champs-Élysées",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Le Petit Palais et les Champs-Élysées » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-7",
+        "name": "Place de la Concorde et Madeleine",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Place de la Concorde et Madeleine » à Paris. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-8",
+        "name": "Mollard",
+        "status": "ambiguous",
+        "question": "« Mollard » correspond à « Brasserie Mollard » à Paris. Est-ce bien ce lieu ?",
+        "options": [
+          {
+            "id": "osm:node/817244406",
+            "name": "Brasserie Mollard",
+            "address": "Brasserie Mollard, Rue Saint-Lazare, Quartier de l'Europe, Paris 8e Arrondissement, Paris, Île-de-France, France métropolitaine, 75008, France",
+            "category": "amenity:restaurant",
+            "score": 0.87
+          }
+        ]
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2",
+            "stop-3"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              735.9,
+              1246.1
+            ],
+            [
+              735.9,
+              0,
+              1222.5
+            ],
+            [
+              1246.1,
+              1222.5,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              869,
+              1557.3
+            ],
+            [
+              869,
+              0,
+              1519.4
+            ],
+            [
+              1557.3,
+              1519.4,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:33:15.525Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3265259,48.8599188;2.3226594,48.8637655;2.3159185,48.8546543?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,735.9,1246.1],[735.9,0,1222.5],[1246.1,1222.5,0]],\"distances\":[[0,869,1557.3],[869,0,1519.4],[1557.3,1519.4,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2",
+                "stop-3"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-24T10:45:00.000Z",
+          "durationSeconds": null,
+          "arrivalAt": null,
+          "transfers": null,
+          "modes": [],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-24",
+            "retrievedAt": "2026-11-05T10:33:15.688Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8599188%2C2.3265259&toPlace=48.8637655%2C2.3226594&time=2026-11-24T10%3A45%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "null",
+            "fields": {
+              "from": "Musée d'Orsay",
+              "to": "Musée de l'Orangerie",
+              "departureAt": "2026-11-24T10:45:00.000Z",
+              "arrivalAt": null,
+              "itinerariesReturned": 0
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-24T12:00:00.000Z",
+          "durationSeconds": 1320,
+          "arrivalAt": "2026-11-24T12:22:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-24",
+            "retrievedAt": "2026-11-05T10:33:17.537Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8637655%2C2.3226594&toPlace=48.8546543%2C2.3159185&time=2026-11-24T12%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-24T12:00:00Z\",\"endTime\":\"2026-11-24T12:22:00Z\",\"durationSeconds\":1320,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8637655,\"lon\":2.3226594},\"to\":{\"name\":\"Champs-Élysées - Clemenceau\",\"lat\":48.867374,\"lon\":2.3138547},\"startTime\":\"2026-11-24T12:00:00Z\",\"endTime\":\"2026-11-24T12:14:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"13\",\"from\":{\"name\":\"Champs-Élysées - Clemenceau\",\"lat\":48.867374,\"lon\":2.3138547},\"to\":{\"name\":\"Varenne\",\"lat\":48.856399999999994,\"lon\":2.3149397},\"startTime\":\"2026-11-24T12:14:00Z\",\"endTime\":\"2026-11-24T12:17:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Varenne\",\"lat\":48.856399999999994,\"lon\":2.3149397},\"to\":{\"name\":\"END\",\"lat\":48.8546543,\"lon\":2.3159185},\"startTime\":\"2026-11-24T12:17:00Z\",\"endTime\":\"2026-11-24T12:22:00Z\"}]}",
+            "fields": {
+              "from": "Musée de l'Orangerie",
+              "to": "Musée Rodin",
+              "departureAt": "2026-11-24T12:00:00.000Z",
+              "arrivalAt": "2026-11-24T12:22:00Z",
+              "itinerariesReturned": 10
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

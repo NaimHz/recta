@@ -1,0 +1,70 @@
+# Annotation 4.6 : real-002 (paris, départ 2026-11-11)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/real-002.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: real-002
+pass: 1
+annotatedAt: 2026-11-05
+minutes: null
+stops:
+  - id: stop-1
+    day: day-1
+    name: Jardin des Plantes
+    sourceText: 9h – 10h | Petit-déjeuner et promenade au Jardin des Plantes
+    start: 09:00
+    end: 10:00
+  - id: stop-2
+    day: day-1
+    name: Grande Galerie de l'Évolution
+    sourceText: 10h – 12h15 | La Grande Galerie de l'Évolution
+    start: 10:00
+    end: 12:15
+  - id: stop-3
+    day: day-1
+    name: Musée de l'Armée
+    sourceText: 14h – 16h30 | Le Musée de l'Armée et le tombeau de Napoléon
+    start: 14:00
+    end: 16:30
+  - id: stop-4
+    day: day-1
+    name: Invalides
+    sourceText: 16h30 – 17h30 | Promenade aux Invalides
+    start: 16:30
+    end: 17:30
+  - id: stop-5
+    day: day-1
+    name: Pont Alexandre-III
+    sourceText: 17h30 – 18h30 | Balade jusqu'au pont Alexandre-III
+    start: 17:30
+    end: 18:30
+  - id: stop-6
+    day: day-1
+    name: Rue Cler
+    sourceText: 18h30 – 20h30 | Dîner en famille dans le quartier de la rue Cler
+    start: 18:30
+    end: 20:30
+issues:
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-5
+      - stop-6
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3135181,48.8634697;2.3065089,48.8565839?overview=false
+        sourceDate: 2026-11-05
+        raw: 'Pont Alexandre-III → rue Cler : 16,0 min, 1201 m à pied ; écart prévu 0
+          min (18h30 puis 18h30)'
+undetermined:
+  - codes:
+      - place_closed_day
+      - place_not_operating
+      - outside_opening_hours
+      - after_last_entry
+      - holiday_closure
+    stopIds:
+      - stop-6
+    reason: place_unresolved
+planted: []

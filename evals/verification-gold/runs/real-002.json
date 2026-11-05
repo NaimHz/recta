@@ -1,0 +1,378 @@
+{
+  "version": 1,
+  "plan": "real-002",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-05T09:58:04.986Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "mercredi 11 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Jardin des Plantes",
+              "startText": "9h",
+              "endText": "10h",
+              "type": "jardin",
+              "sourceText": "9h – 10h | Petit-déjeuner et promenade au Jardin des Plantes"
+            },
+            {
+              "name": "Grande Galerie de l'Évolution",
+              "startText": "10h",
+              "endText": "12h15",
+              "type": null,
+              "sourceText": "10h – 12h15 | La Grande Galerie de l'Évolution"
+            },
+            {
+              "name": "Musée de l'Armée",
+              "startText": "14h",
+              "endText": "16h30",
+              "type": "musée",
+              "sourceText": "14h – 16h30 | Le Musée de l'Armée et le tombeau de Napoléon"
+            },
+            {
+              "name": "Invalides",
+              "startText": "16h30",
+              "endText": "17h30",
+              "type": null,
+              "sourceText": "16h30 – 17h30 | Promenade aux Invalides"
+            },
+            {
+              "name": "Pont Alexandre-III",
+              "startText": "17h30",
+              "endText": "18h30",
+              "type": null,
+              "sourceText": "17h30 – 18h30 | Balade jusqu'au pont Alexandre-III"
+            },
+            {
+              "name": "Rue Cler",
+              "startText": "18h30",
+              "endText": "20h30",
+              "type": null,
+              "sourceText": "18h30 – 20h30 | Dîner en famille dans le quartier de la rue Cler"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-05T10:31:42.156Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-11",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Jardin des Plantes",
+              "sourceText": "9h – 10h | Petit-déjeuner et promenade au Jardin des Plantes",
+              "type": "jardin",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "09:00",
+              "end": "10:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Grande Galerie de l'Évolution",
+              "sourceText": "10h – 12h15 | La Grande Galerie de l'Évolution",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/83913793",
+                "name": "Grande Galerie de l'Évolution",
+                "coordinates": {
+                  "lat": 48.8421181,
+                  "lon": 2.3562418
+                },
+                "address": "75005",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo 10:00-18:00; We-Su 10:00-18:00; May 01 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-05-17",
+                  "retrievedAt": "2026-11-05T10:31:47.765Z"
+                }
+              },
+              "start": "10:00",
+              "end": "12:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Musée de l'Armée",
+              "sourceText": "14h – 16h30 | Le Musée de l'Armée et le tombeau de Napoléon",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/130102845",
+                "name": "Musée de l'Armée",
+                "coordinates": {
+                  "lat": 48.8570374,
+                  "lon": 2.3118779
+                },
+                "address": "129 Rue de Grenelle, 75007 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Nov-Mar: Mo-Su 10:00-17:00; Apr-Oct: Mo-Su 10:00-18:00; Apr-Sep: Tu 21:00+; Jan 1 off; May 1 off; Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-03-23",
+                  "retrievedAt": "2026-11-05T10:31:47.765Z"
+                }
+              },
+              "start": "14:00",
+              "end": "16:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Invalides",
+              "sourceText": "16h30 – 17h30 | Promenade aux Invalides",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "16:30",
+              "end": "17:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Pont Alexandre-III",
+              "sourceText": "17h30 – 18h30 | Balade jusqu'au pont Alexandre-III",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "17:30",
+              "end": "18:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-6",
+              "name": "Rue Cler",
+              "sourceText": "18h30 – 20h30 | Dîner en famille dans le quartier de la rue Cler",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "18:30",
+              "end": "20:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Jardin des Plantes",
+        "status": "ambiguous",
+        "question": "« Jardin des Plantes » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/4221369",
+            "name": "Jardin des Plantes",
+            "address": "Jardin des Plantes, Paris, Île-de-France, France métropolitaine, France",
+            "category": "leisure:park",
+            "score": 0.9450000000000001
+          },
+          {
+            "id": "osm:relation/2188148",
+            "name": "Quartier du Jardin des Plantes",
+            "address": "Quartier du Jardin des Plantes, Paris 5e Arrondissement, Paris, Île-de-France, France métropolitaine, 75005, France",
+            "category": "boundary:administrative",
+            "score": 0.87
+          }
+        ]
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Grande Galerie de l'Évolution",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Musée de l'Armée",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Invalides",
+        "status": "ambiguous",
+        "question": "« Invalides » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:node/1489806675",
+            "name": "Invalides",
+            "address": "Invalides, Rue de Constantine, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "railway:stop",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:node/154788912",
+            "name": "Invalides",
+            "address": "Invalides, Quai d'Orsay, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "railway:station",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:node/264473695",
+            "name": "Invalides",
+            "address": "Invalides, Sortie Parking Invalides, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "railway:stop",
+            "score": 0.9800000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Pont Alexandre-III",
+        "status": "ambiguous",
+        "question": "« Pont Alexandre-III » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/17066999",
+            "name": "Pont Alexandre III",
+            "address": "Pont Alexandre III, Quartier des Champs-Élysées, Paris 8e Arrondissement, Paris, Île-de-France, France métropolitaine, 75008, France",
+            "category": "highway:primary",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/17067006",
+            "name": "Pont Alexandre III",
+            "address": "Pont Alexandre III, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "highway:primary",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/183620685",
+            "name": "Pont Alexandre III",
+            "address": "Pont Alexandre III, Promenade des Berges de la Seine — Port des Invalides, Quartier des Invalides, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "man_made:bridge",
+            "score": 0.9800000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-6",
+        "name": "Rue Cler",
+        "status": "ambiguous",
+        "question": "« Rue Cler » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:node/831157912",
+            "name": "Rue Cler",
+            "address": "Rue Cler, Avenue de la Motte-Picquet, Quartier du Gros-Caillou, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "highway:bus_stop",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/19729642",
+            "name": "Rue Cler",
+            "address": "Rue Cler, Quartier du Gros-Caillou, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "highway:pedestrian",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:way/4633488",
+            "name": "Rue Cler",
+            "address": "Rue Cler, Quartier du Gros-Caillou, Paris 7e Arrondissement, Paris, Île-de-France, France métropolitaine, 75007, France",
+            "category": "highway:residential",
+            "score": 0.9800000000000001
+          }
+        ]
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-2",
+            "stop-3"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              3567.3
+            ],
+            [
+              3567.3,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              4458.6
+            ],
+            [
+              4458.6,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:31:52.139Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3562418,48.8421181;2.3118779,48.8570374?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,3567.3],[3567.3,0]],\"distances\":[[0,4458.6],[4458.6,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-2",
+                "stop-3"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-11T11:15:00.000Z",
+          "durationSeconds": 2220,
+          "arrivalAt": "2026-11-11T11:52:00Z",
+          "transfers": 1,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-11",
+            "retrievedAt": "2026-11-05T10:31:52.523Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8421181%2C2.3562418&toPlace=48.8570374%2C2.3118779&time=2026-11-11T11%3A15%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-11T11:19:00Z\",\"endTime\":\"2026-11-11T11:52:00Z\",\"durationSeconds\":1980,\"transfers\":1,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8421181,\"lon\":2.3562418},\"to\":{\"name\":\"Jussieu\",\"lat\":48.84616,\"lon\":2.3548913},\"startTime\":\"2026-11-11T11:19:00Z\",\"endTime\":\"2026-11-11T11:27:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"10\",\"from\":{\"name\":\"Jussieu\",\"lat\":48.84616,\"lon\":2.3548913},\"to\":{\"name\":\"Duroc\",\"lat\":48.846756,\"lon\":2.3162247999999996},\"startTime\":\"2026-11-11T11:27:00Z\",\"endTime\":\"2026-11-11T11:37:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Duroc\",\"lat\":48.846756,\"lon\":2.3162247999999996},\"to\":{\"name\":\"Duroc\",\"lat\":48.84784299999999,\"lon\":2.3160604999999994},\"startTime\":\"2026-11-11T11:37:00Z\",\"endTime\":\"2026-11-11T11:41:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"13\",\"from\":{\"name\":\"Duroc\",\"lat\":48.84784299999999,\"lon\":2.3160604999999994},\"to\":{\"name\":\"Varenne\",\"lat\":48.85639,\"lon\":2.3150759999999995},\"startTime\":\"2026-11-11T11:41:00Z\",\"endTime\":\"2026-11-11T11:44:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Varenne\",\"lat\":48.85639,\"lon\":2.3150759999999995},\"to\":{\"name\":\"END\",\"lat\":48.8570374,\"lon\":2.3118779},\"startTime\":\"2026-11-11T11:44:00Z\",\"endTime\":\"2026-11-11T11:52:00Z\"}]}",
+            "fields": {
+              "from": "Grande Galerie de l'Évolution",
+              "to": "Musée de l'Armée",
+              "departureAt": "2026-11-11T11:15:00.000Z",
+              "arrivalAt": "2026-11-11T11:52:00Z",
+              "itinerariesReturned": 7
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

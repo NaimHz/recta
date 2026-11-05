@@ -1,0 +1,66 @@
+# Annotation 4.6 : real-005 (paris, départ 2026-11-27)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/real-005.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: real-005
+pass: 1
+annotatedAt: 2026-11-05
+minutes: null
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée de l'Orangerie
+    sourceText: 18h00 – 19h30 | Une exposition autour de Monet à l'Orangerie
+      Nocturne exceptionnelle le vendredi 27 novembre Musée de l'Orangerie
+    start: 18:00
+    end: 19:30
+  - id: stop-2
+    day: day-1
+    name: Jardin des Tuileries
+    sourceText: 19h30 – 19h45 | Petite promenade dans les Tuileries En sortant,
+      profite de l'atmosphère du jardin des Tuileries et rejoins tranquillement
+      la rue Cambon.
+    start: 19:30
+    end: 19:45
+  - id: stop-3
+    day: day-1
+    name: Brasserie Flottes
+    sourceText: 19h45 – 21h15 | Dîner dans une brasserie parisienne Brasserie
+      Flottes 2 rue Cambon, 75001 Paris. Ouverte le vendredi jusqu'à 23h Une
+      brasserie traditionnelle au décor Art nouveau
+    start: 19:45
+    end: 21:15
+  - id: stop-4
+    day: day-1
+    name: Bar Les Ambassadeurs
+    sourceText: 21h15 – 22h15 | Un cocktail au bar Les Ambassadeurs Mon choix pour
+      une belle soirée parisienne Bar Les Ambassadeurs Hôtel de Crillon, 10
+      place de la Concorde, 75008 Paris.
+    start: 21:15
+    end: 22:15
+issues:
+  - code: outside_opening_hours
+    severity: error
+    stopIds:
+      - stop-2
+    evidence:
+      - source: official
+        url: https://www.louvre.fr/preparer-sa-visite/dans-les-jardins
+        sourceDate: 2026-11-05
+        raw: 'Jardin des Tuileries, novembre : 7h30-19h30, évacuation 30 min avant ; le
+          plan prévoit 19h30-19h45'
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-3
+      - stop-4
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.325326,48.866297;2.3213665,48.8676219?overview=false
+        sourceDate: 2026-11-05
+        raw: '2 rue Cambon → Hôtel de Crillon : 5,7 min, 431 m à pied ; écart prévu 0
+          min (21h15 puis 21h15)'
+undetermined: []
+planted: []

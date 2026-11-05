@@ -1,0 +1,117 @@
+# Annotation 4.6 : real-007 (lyon, départ 2026-11-17)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/real-007.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: real-007
+pass: 1
+annotatedAt: 2026-11-05
+minutes: null
+stops:
+  - id: stop-1
+    day: day-1
+    name: Petit-déjeuner dans le Vieux Lyon
+    sourceText: 9h00 – 9h45 | Petit-déjeuner dans le Vieux Lyon
+    start: 09:00
+    end: 09:45
+  - id: stop-2
+    day: day-1
+    name: Cathédrale Saint-Jean
+    sourceText: 9h45 – 10h15 | Cathédrale Saint-Jean
+    start: 09:45
+    end: 10:15
+  - id: stop-3
+    day: day-1
+    name: Montée en funiculaire à Fourvière
+    sourceText: 10h15 – 10h30 | Montée en funiculaire à Fourvière
+    start: 10:15
+    end: 10:30
+  - id: stop-4
+    day: day-1
+    name: Les théâtres romains
+    sourceText: 10h30 – 11h00 | Les théâtres romains
+    start: 10:30
+    end: 11:00
+  - id: stop-5
+    day: day-1
+    name: Musée Lugdunum
+    sourceText: 11h00 – 13h00 | Musée Lugdunum
+    start: 11:00
+    end: 13:00
+  - id: stop-6
+    day: day-1
+    name: Déjeuner dans un bouchon lyonnais
+    sourceText: 13h00 – 14h30 | Déjeuner dans un bouchon lyonnais
+    start: 13:00
+    end: 14:30
+  - id: stop-7
+    day: day-1
+    name: Musée Cinéma et Miniature
+    sourceText: 14h45 – 16h45 | Musée Cinéma et Miniature
+    start: 14:45
+    end: 16:45
+  - id: stop-8
+    day: day-1
+    name: Flânerie dans le Vieux Lyon
+    sourceText: 16h45 – 18h30 | Flânerie dans le Vieux Lyon
+    start: 16:45
+    end: 18:30
+  - id: stop-9
+    day: day-1
+    name: Promenade sur les quais de Saône
+    sourceText: 18h30 – 19h15 | Promenade sur les quais de Saône
+    start: 18:30
+    end: 19:15
+  - id: stop-10
+    day: day-1
+    name: Dîner dans un bouchon traditionnel
+    sourceText: 19h30 – 21h30 | Dîner dans un bouchon traditionnel
+    start: 19:30
+    end: 21:30
+  - id: stop-11
+    day: day-1
+    name: Dernière balade nocturne
+    sourceText: 21h30 – 22h00 | Dernière balade nocturne
+    start: 21:30
+    end: 22:00
+issues:
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-2
+      - stop-3
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/4.8274238,45.7607136;4.8259681,45.7601928?overview=false
+        sourceDate: 2026-11-05
+        raw: 'Cathédrale Saint-Jean → station Vieux Lyon : 2,5 min, 190 m à pied ; écart
+          prévu 0 min (10h15 puis 10h15)'
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-3
+      - stop-4
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/4.8214507,45.762381;4.8211152,45.7578365?overview=false
+        sourceDate: 2026-11-05
+        raw: 'Station Fourvière → théâtres romains : 10,1 min, 756 m à pied ; écart
+          prévu 0 min (10h30 puis 10h30)'
+undetermined:
+  - codes:
+      - place_closed_day
+      - place_not_operating
+      - outside_opening_hours
+      - after_last_entry
+    stopIds:
+      - stop-1
+    reason: place_unresolved
+  - codes:
+      - travel_time_infeasible
+      - insufficient_buffer
+    stopIds:
+      - stop-1
+      - stop-2
+    reason: place_unresolved
+planted: []

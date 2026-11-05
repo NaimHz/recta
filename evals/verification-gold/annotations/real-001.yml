@@ -1,0 +1,129 @@
+# Annotation 4.6 : real-001 (paris, départ 2026-11-16)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/real-001.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: real-001
+pass: 1
+annotatedAt: 2026-11-05
+minutes: null
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée du Louvre
+    sourceText: >-
+      9h – 13h | Le musée du Louvre
+
+
+      Musée du Louvre
+
+
+      Rue de Rivoli, 75001 Paris
+
+      Ouvert le lundi · 9h–18h
+
+      Réserve ton billet pour 9h afin de profiter des collections avant
+      l'affluence.
+    start: 09:00
+    end: 13:00
+  - id: stop-2
+    day: day-1
+    name: Le Royal
+    sourceText: >-
+      13h – 14h | Déjeuner dans le quartier du Louvre
+
+
+      Le Royal
+
+
+      246 rue Saint-Honoré, 75001 Paris
+
+
+      Une brasserie parisienne pratique pour déjeuner avant de repartir vers les
+      Invalides.
+    start: 13:00
+    end: 14:00
+  - id: stop-3
+    day: day-1
+    name: Musée de l'Armée
+    sourceText: >-
+      14h – 17h45 | Musée de l'Armée et les Invalides
+
+
+      Musée de l'Armée
+
+
+      129 rue de Grenelle, 75007 Paris
+
+      Ouvert le lundi · 10h–18h
+
+      Un lieu magnifique, à la fois musée d'histoire, musée d'art et monument
+      historique.
+    start: 14:00
+    end: 17:45
+  - id: stop-4
+    day: day-1
+    name: Promenade autour des Invalides
+    sourceText: |-
+      17h45 – 19h | Promenade autour des Invalides
+
+      Profite de la fin d'après-midi pour découvrir :
+      - L'esplanade des Invalides.
+    start: 17:45
+    end: 19:00
+  - id: stop-5
+    day: day-1
+    name: Au Canon des Invalides
+    sourceText: >-
+      19h30 – 21h30 | Dîner parisien
+
+
+      Au Canon des Invalides
+
+
+      54 rue Saint-Dominique, 75007 Paris
+
+      Ouvert le lundi soir
+
+      Une brasserie française conviviale pour terminer la journée autour de
+      plats traditionnels.
+    start: 19:30
+    end: 21:30
+issues:
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-1
+      - stop-2
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3358432,48.8609943;2.3350745,48.8634269?overview=false
+        sourceDate: 2026-11-05
+        raw: 'Louvre → 246 rue Saint-Honoré : 5,6 min, 415 m à pied ; écart prévu 0 min
+          (13h puis 13h)'
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-2
+      - stop-3
+    evidence:
+      - source: transitous
+        url: https://api.transitous.org/api/v6/plan?fromPlace=48.8634269,2.3350745&toPlace=48.8570374,2.3118779&time=2026-11-16T14%3A00%3A00%2B01%3A00&transitModes=TRANSIT&directModes=WALK
+        sourceDate: 2026-11-05
+        raw: "Rue Saint-Honoré → Musée de l'Armée : 22 min en métro 1 + 13 ; écart prévu
+          0 min (14h puis 14h)"
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3350745,48.8634269;2.3118779,48.8570374?overview=false
+        sourceDate: 2026-11-05
+        raw: 34,3 min, 2564 m à pied
+undetermined:
+  - codes:
+      - place_closed_day
+      - place_not_operating
+      - outside_opening_hours
+      - after_last_entry
+    stopIds:
+      - stop-2
+    reason: place_unresolved
+planted: []

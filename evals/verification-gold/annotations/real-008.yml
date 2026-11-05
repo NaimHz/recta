@@ -1,0 +1,79 @@
+# Annotation 4.6 : real-008 (lyon, départ 2026-11-11)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/real-008.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: real-008
+pass: 1
+annotatedAt: 2026-11-05
+minutes: null
+stops:
+  - id: stop-1
+    day: day-1
+    name: Vieux Lyon et cathédrale Saint-Jean
+    sourceText: 1. 9 h 30 – 10 h 15 | Vieux Lyon et cathédrale Saint-Jean
+    start: 09:30
+    end: 10:15
+  - id: stop-2
+    day: day-1
+    name: Fourvière en funiculaire
+    sourceText: 2. 10 h 15 – 11 h 30 | Fourvière en funiculaire
+    start: 10:15
+    end: 11:30
+  - id: stop-3
+    day: day-1
+    name: Redescente et promenade dans le Vieux Lyon
+    sourceText: 3. 11 h 30 – 12 h 15 | Redescente et promenade dans le Vieux Lyon
+    start: 11:30
+    end: 12:15
+  - id: stop-4
+    day: day-1
+    name: Déjeuner lyonnais
+    sourceText: 4. 12 h 15 – 13 h 30 | Déjeuner lyonnais
+    start: 12:15
+    end: 13:30
+  - id: stop-5
+    day: day-1
+    name: Trajet vers le musée des Confluences
+    sourceText: 5. 13 h 30 – 14 h 00 | Trajet vers le musée des Confluences
+    start: 13:30
+    end: 14:00
+  - id: stop-6
+    day: day-1
+    name: Musée des Confluences
+    sourceText: 6. 14 h 00 – 16 h 30 | Musée des Confluences
+    start: 14:00
+    end: 16:30
+  - id: stop-7
+    day: day-1
+    name: Trajet vers la Croix-Rousse
+    sourceText: 7. 16 h 30 – 17 h 15 | Trajet vers la Croix-Rousse
+    start: 16:30
+    end: 17:15
+  - id: stop-8
+    day: day-1
+    name: Vogue des marrons
+    sourceText: 8. 17 h 15 – 19 h 30 | Vogue des marrons
+    start: 17:15
+    end: 19:30
+  - id: stop-9
+    day: day-1
+    name: Dîner léger ou retour
+    sourceText: 9. 19 h 30 – 20 h 00 | Dîner léger ou retour
+    start: 19:30
+    end: 20:00
+issues:
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-1
+      - stop-2
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/4.8274238,45.7607136;4.8259681,45.7601928?overview=false
+        sourceDate: 2026-11-05
+        raw: 'Cathédrale Saint-Jean → station Vieux Lyon : 2,5 min, 190 m à pied ; écart
+          prévu 0 min (10h15 puis 10h15)'
+undetermined: []
+planted: []

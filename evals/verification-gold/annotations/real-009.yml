@@ -1,0 +1,279 @@
+# Annotation 4.6 : real-009 (lyon, départ 2026-11-28)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/real-009.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: real-009
+pass: 1
+annotatedAt: 2026-11-05
+minutes: null
+stops:
+  - id: stop-1
+    day: day-1
+    name: Petit-déjeuner place des Terreaux
+    sourceText: 09h00 – 10h00 09h00 — Petit-déjeuner place des Terreaux Commencez
+      tranquillement avec un café et une viennoiserie.
+    start: 09:00
+    end: 10:00
+  - id: stop-2
+    day: day-1
+    name: Musée des Beaux-Arts
+    sourceText: 10h00 – 12h00 10h00 — Musée des Beaux-Arts Musée des Beaux-Arts de Lyon.
+    start: 10:00
+    end: 12:00
+  - id: stop-3
+    day: day-1
+    name: Déjeuner dans un bouchon lyonnais
+    sourceText: 12h00 – 13h30 12h00 — Déjeuner dans un bouchon lyonnais Direction le
+      Vieux Lyon ou la Presqu'île.
+    start: 12:00
+    end: 13:30
+  - id: stop-4
+    day: day-1
+    name: Vieux Lyon et traboules
+    sourceText: 13h30 – 15h30 13h30 — Vieux Lyon et traboules Explorez le quartier
+      Saint-Jean
+    start: 13:30
+    end: 15:30
+  - id: stop-5
+    day: day-1
+    name: Musée Gadagne
+    sourceText: 15h30 – 16h30 15h30 — Musée Gadagne Musées Gadagne. Un beau
+      complément artistique et historique
+    start: 15:30
+    end: 16:30
+  - id: stop-6
+    day: day-1
+    name: Fourvière et panorama
+    sourceText: 16h30 – 18h00 16h30 — Fourvière et panorama Montez en funiculaire
+      depuis la station Vieux Lyon jusqu'à Fourvière.
+    start: 16:30
+    end: 18:00
+  - id: stop-7
+    day: day-1
+    name: Apéritif et balade dans le Vieux Lyon
+    sourceText: 18h00 – 19h30 18h00 — Apéritif et balade dans le Vieux Lyon
+      Redescendez en funiculaire.
+    start: 18:00
+    end: 19:30
+  - id: stop-8
+    day: day-1
+    name: Dîner lyonnais
+    sourceText: 19h30 – 21h30 19h30 — Dîner lyonnais Un deuxième dîner typique
+    start: 19:30
+    end: 21:30
+  - id: stop-9
+    day: day-1
+    name: Dernière promenade sur les quais de Saône
+    sourceText: 21h30 21h30 — Dernière promenade sur les quais de Saône Une jolie
+      façon de terminer la journée
+    start: 21:30
+    end: 22:30
+  - id: stop-10
+    day: day-2
+    name: Marché Saint-Antoine
+    sourceText: 08h30 – 10h00 08h30 — Marché Saint-Antoine Commencez par le marché
+      alimentaire des quais de Saône.
+    start: 08:30
+    end: 10:00
+  - id: stop-11
+    day: day-2
+    name: Balade sur les quais et Presqu'île
+    sourceText: 10h00 – 11h00 10h00 — Balade sur les quais et Presqu'île Traversez
+      les jolies rues du centre
+    start: 10:00
+    end: 11:00
+  - id: stop-12
+    day: day-2
+    name: Art contemporain au macLYON
+    sourceText: 11h00 – 12h30 11h00 — Art contemporain au macLYON Musée d'art
+      contemporain de Lyon.
+    start: 11:00
+    end: 12:30
+  - id: stop-13
+    day: day-2
+    name: Déjeuner dans un deuxième bouchon
+    sourceText: 12h45 – 14h15 12h45 — Déjeuner dans un deuxième bouchon Pour le
+      dimanche midi
+    start: 12:45
+    end: 14:15
+  - id: stop-14
+    day: day-2
+    name: Musée des Confluences
+    sourceText: 14h30 – 16h15 14h30 — Musée des Confluences Musée des Confluences.
+      Un musée spectaculaire
+    start: 14:30
+    end: 16:15
+  - id: stop-15
+    day: day-2
+    name: Promenade au confluent
+    sourceText: 16h15 – 17h00 16h15 — Promenade au confluent Sortez du musée pour
+      profiter du paysage
+    start: 16:15
+    end: 17:00
+  - id: stop-16
+    day: day-2
+    name: Marché de Noël place Carnot
+    sourceText: 17h15 – 18h30 17h15 — Marché de Noël place Carnot Ouvert pendant
+      votre week-end !
+    start: 17:15
+    end: 18:30
+  - id: stop-17
+    day: day-2
+    name: Fin du week-end
+    sourceText: 18h30 — Fin du week-end Un dernier verre ou une petite douceur avant
+      le départ.
+    start: 18:30
+    end: 19:30
+issues:
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-5
+      - stop-6
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/4.8272861,45.7640502;4.8259681,45.7601928?overview=false
+        sourceDate: 2026-11-05
+        raw: 'Musées Gadagne → station Vieux Lyon : 6,9 min, 515 m à pied ; écart prévu
+          0 min (16h30 puis 16h30)'
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-11
+      - stop-12
+    evidence:
+      - source: transitous
+        url: https://api.transitous.org/api/v6/plan?fromPlace=45.7674919,4.8334945&toPlace=45.7842186,4.8524698&time=2026-11-29T11%3A00%3A00%2B01%3A00&transitModes=TRANSIT&directModes=WALK
+        sourceDate: 2026-11-05
+        raw: "Presqu'île (Terreaux, point le plus proche) → macLYON : 17 min au plus
+          vite (bus C23), 39 min à pied ; écart prévu 0 min (11h puis 11h)"
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-12
+      - stop-13
+    evidence:
+      - source: transitous
+        url: https://api.transitous.org/api/v6/plan?fromPlace=45.7842186,4.8524698&toPlace=45.7618711,4.8262601&time=2026-11-29T12%3A30%3A00%2B01%3A00&transitModes=TRANSIT&directModes=WALK
+        sourceDate: 2026-11-05
+        raw: 'macLYON → rue de la Bombarde : arrivée 13h01 au plus tôt (bus), 52 min à
+          pied ; écart prévu 15 min (12h30 puis 12h45)'
+      - source: transitous
+        url: https://api.transitous.org/api/v6/plan?fromPlace=45.7842186,4.8524698&toPlace=45.7611893,4.8266461&time=2026-11-29T12%3A30%3A00%2B01%3A00&transitModes=TRANSIT&directModes=WALK
+        sourceDate: 2026-11-05
+        raw: 'macLYON → 8 place Saint-Jean : arrivée 13h02 au plus tôt'
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-13
+      - stop-14
+    evidence:
+      - source: transitous
+        url: https://api.transitous.org/api/v6/plan?fromPlace=45.7618711,4.8262601&toPlace=45.7326778,4.8181607&time=2026-11-29T14%3A15%3A00%2B01%3A00&transitModes=TRANSIT&directModes=WALK
+        sourceDate: 2026-11-05
+        raw: 'Rue de la Bombarde → musée des Confluences : arrivée 14h43 au plus tôt ;
+          écart prévu 15 min (14h15 puis 14h30)'
+      - source: transitous
+        url: https://api.transitous.org/api/v6/plan?fromPlace=45.7611893,4.8266461&toPlace=45.7326778,4.8181607&time=2026-11-29T14%3A15%3A00%2B01%3A00&transitModes=TRANSIT&directModes=WALK
+        sourceDate: 2026-11-05
+        raw: '8 place Saint-Jean → musée des Confluences : arrivée 14h43 au plus tôt'
+  - code: insufficient_buffer
+    severity: warning
+    stopIds:
+      - stop-15
+      - stop-16
+    evidence:
+      - source: transitous
+        url: https://api.transitous.org/api/v6/plan?fromPlace=45.7326778,4.8181607&toPlace=45.7507059,4.8278612&time=2026-11-29T17%3A00%3A00%2B01%3A00&transitModes=TRANSIT&directModes=WALK
+        sourceDate: 2026-11-05
+        raw: 'Confluent (musée des Confluences) → place Carnot : 15 min au plus vite
+          (bus 115), 32,5 min à pied ; écart prévu 15 min, marge 10 min'
+  - code: fragmented_half_day
+    severity: warning
+    stopIds:
+      - stop-10
+      - stop-12
+      - stop-13
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/4.831339,45.7615248;4.8524698,45.7842186?overview=false
+        sourceDate: 2026-11-05
+        raw: 'Marché Saint-Antoine → macLYON : 3690 m à pied (≥ 2 km)'
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/route/v1/foot/4.831339,45.7615248;4.8262601,45.7618711?overview=false
+        sourceDate: 2026-11-05
+        raw: 'Marché Saint-Antoine → rue de la Bombarde : 484 m à pied (≤ 500 m) ; 8
+          place Saint-Jean : 494 m ; 10h → 12h45, moins de 4 h'
+undetermined:
+  - codes: &a1
+      - place_closed_day
+      - place_not_operating
+      - outside_opening_hours
+      - after_last_entry
+    stopIds:
+      - stop-1
+    reason: place_unresolved
+  - codes: *a1
+    stopIds:
+      - stop-3
+    reason: place_unresolved
+  - codes: *a1
+    stopIds:
+      - stop-7
+    reason: place_unresolved
+  - codes: *a1
+    stopIds:
+      - stop-8
+    reason: place_unresolved
+  - codes: *a1
+    stopIds:
+      - stop-17
+    reason: place_unresolved
+  - codes: &a2
+      - travel_time_infeasible
+      - insufficient_buffer
+    stopIds:
+      - stop-1
+      - stop-2
+    reason: place_unresolved
+  - codes: *a2
+    stopIds:
+      - stop-2
+      - stop-3
+    reason: place_unresolved
+  - codes: *a2
+    stopIds:
+      - stop-3
+      - stop-4
+    reason: place_unresolved
+  - codes: *a2
+    stopIds:
+      - stop-7
+      - stop-8
+    reason: place_unresolved
+  - codes: *a2
+    stopIds:
+      - stop-8
+      - stop-9
+    reason: place_unresolved
+  - codes: *a2
+    stopIds:
+      - stop-16
+      - stop-17
+    reason: place_unresolved
+  - codes:
+      - overloaded_day
+    stopIds:
+      - stop-1
+      - stop-2
+      - stop-3
+      - stop-4
+      - stop-5
+      - stop-6
+      - stop-7
+      - stop-8
+      - stop-9
+    reason: time_unknown
+planted: []

@@ -1,0 +1,9 @@
+{
+  "id": "real-006",
+  "kind": "real",
+  "cityId": "lyon",
+  "start": "2026-11-23",
+  "model": "chatgpt",
+  "collectedAt": "2026-11-05",
+  "promptId": "real-006"
+}

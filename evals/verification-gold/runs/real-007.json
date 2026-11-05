@@ -1,0 +1,425 @@
+{
+  "version": 1,
+  "plan": "real-007",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-05T10:03:07.472Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Mardi 17 novembre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Petit-déjeuner dans le Vieux Lyon",
+              "startText": "9h00",
+              "endText": "9h45",
+              "type": null,
+              "sourceText": "9h00 – 9h45 | Petit-déjeuner dans le Vieux Lyon"
+            },
+            {
+              "name": "Cathédrale Saint-Jean",
+              "startText": "9h45",
+              "endText": "10h15",
+              "type": null,
+              "sourceText": "9h45 – 10h15 | Cathédrale Saint-Jean"
+            },
+            {
+              "name": "Montée en funiculaire à Fourvière",
+              "startText": "10h15",
+              "endText": "10h30",
+              "type": null,
+              "sourceText": "10h15 – 10h30 | Montée en funiculaire à Fourvière"
+            },
+            {
+              "name": "Les théâtres romains",
+              "startText": "10h30",
+              "endText": "11h00",
+              "type": null,
+              "sourceText": "10h30 – 11h00 | Les théâtres romains"
+            },
+            {
+              "name": "Musée Lugdunum",
+              "startText": "11h00",
+              "endText": "13h00",
+              "type": "musée",
+              "sourceText": "11h00 – 13h00 | Musée Lugdunum"
+            },
+            {
+              "name": "Déjeuner dans un bouchon lyonnais",
+              "startText": "13h00",
+              "endText": "14h30",
+              "type": "bouchon",
+              "sourceText": "13h00 – 14h30 | Déjeuner dans un bouchon lyonnais"
+            },
+            {
+              "name": "Musée Cinéma et Miniature",
+              "startText": "14h45",
+              "endText": "16h45",
+              "type": "musée",
+              "sourceText": "14h45 – 16h45 | Musée Cinéma et Miniature"
+            },
+            {
+              "name": "Flânerie dans le Vieux Lyon",
+              "startText": "16h45",
+              "endText": "18h30",
+              "type": null,
+              "sourceText": "16h45 – 18h30 | Flânerie dans le Vieux Lyon"
+            },
+            {
+              "name": "Promenade sur les quais de Saône",
+              "startText": "18h30",
+              "endText": "19h15",
+              "type": null,
+              "sourceText": "18h30 – 19h15 | Promenade sur les quais de Saône"
+            },
+            {
+              "name": "Dîner dans un bouchon traditionnel",
+              "startText": "19h30",
+              "endText": "21h30",
+              "type": "bouchon",
+              "sourceText": "19h30 – 21h30 | Dîner dans un bouchon traditionnel"
+            },
+            {
+              "name": "Dernière balade nocturne",
+              "startText": "21h30",
+              "endText": "22h00",
+              "type": null,
+              "sourceText": "21h30 – 22h00 | Dernière balade nocturne"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-05T10:34:56.277Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "lyon",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-17",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Petit-déjeuner dans le Vieux Lyon",
+              "sourceText": "9h00 – 9h45 | Petit-déjeuner dans le Vieux Lyon",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "09:00",
+              "end": "09:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Cathédrale Saint-Jean",
+              "sourceText": "9h45 – 10h15 | Cathédrale Saint-Jean",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/136200148",
+                "name": "Cathédrale Saint-Jean",
+                "coordinates": {
+                  "lat": 45.760715,
+                  "lon": 4.8274333
+                },
+                "address": null,
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Mo-Th 08:15-19:45; Fr 08:15-20:45; Sa 08:15-19:00; Su 08:00-19:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-08-04",
+                  "retrievedAt": "2026-11-05T10:35:07.375Z"
+                }
+              },
+              "start": "09:45",
+              "end": "10:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Montée en funiculaire à Fourvière",
+              "sourceText": "10h15 – 10h30 | Montée en funiculaire à Fourvière",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "10:15",
+              "end": "10:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Les théâtres romains",
+              "sourceText": "10h30 – 11h00 | Les théâtres romains",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "10:30",
+              "end": "11:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Musée Lugdunum",
+              "sourceText": "11h00 – 13h00 | Musée Lugdunum",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/88526510",
+                "name": "Lugdunum Musée et Théâtres Romains",
+                "coordinates": {
+                  "lat": 45.760294,
+                  "lon": 4.8204842
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Fr 11:00-18:00; Sa-Su 10:00-18:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-05T10:35:07.375Z"
+                }
+              },
+              "start": "11:00",
+              "end": "13:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-6",
+              "name": "Déjeuner dans un bouchon lyonnais",
+              "sourceText": "13h00 – 14h30 | Déjeuner dans un bouchon lyonnais",
+              "type": "bouchon",
+              "resolution": "not_found",
+              "place": null,
+              "start": "13:00",
+              "end": "14:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-7",
+              "name": "Musée Cinéma et Miniature",
+              "sourceText": "14h45 – 16h45 | Musée Cinéma et Miniature",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/1421012868",
+                "name": "Musée Cinéma & Miniature",
+                "coordinates": {
+                  "lat": 45.7618753,
+                  "lon": 4.8272985
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo-Fr 10:00-18:30; Sa,Su 10:00-19:00; SH,Mo-Su 10:00-19:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-09-16",
+                  "retrievedAt": "2026-11-05T10:35:07.375Z"
+                }
+              },
+              "start": "14:45",
+              "end": "16:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-8",
+              "name": "Flânerie dans le Vieux Lyon",
+              "sourceText": "16h45 – 18h30 | Flânerie dans le Vieux Lyon",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "16:45",
+              "end": "18:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-9",
+              "name": "Promenade sur les quais de Saône",
+              "sourceText": "18h30 – 19h15 | Promenade sur les quais de Saône",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "18:30",
+              "end": "19:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-10",
+              "name": "Dîner dans un bouchon traditionnel",
+              "sourceText": "19h30 – 21h30 | Dîner dans un bouchon traditionnel",
+              "type": "bouchon",
+              "resolution": "not_found",
+              "place": null,
+              "start": "19:30",
+              "end": "21:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-11",
+              "name": "Dernière balade nocturne",
+              "sourceText": "21h30 – 22h00 | Dernière balade nocturne",
+              "type": null,
+              "resolution": "not_found",
+              "place": null,
+              "start": "21:30",
+              "end": "22:00",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Petit-déjeuner dans le Vieux Lyon",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Petit-déjeuner dans le Vieux Lyon » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Cathédrale Saint-Jean",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Montée en funiculaire à Fourvière",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Montée en funiculaire à Fourvière » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Les théâtres romains",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Les théâtres romains » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Musée Lugdunum",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-6",
+        "name": "Déjeuner dans un bouchon lyonnais",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Déjeuner dans un bouchon lyonnais » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-7",
+        "name": "Musée Cinéma et Miniature",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-8",
+        "name": "Flânerie dans le Vieux Lyon",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Flânerie dans le Vieux Lyon » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-9",
+        "name": "Promenade sur les quais de Saône",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Promenade sur les quais de Saône » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-10",
+        "name": "Dîner dans un bouchon traditionnel",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Dîner dans un bouchon traditionnel » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      },
+      {
+        "stopId": "stop-11",
+        "name": "Dernière balade nocturne",
+        "status": "not_found",
+        "question": "Je ne trouve pas « Dernière balade nocturne » à Lyon. Peux-tu préciser le nom ou l'adresse ?",
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-2",
+            "stop-5",
+            "stop-7"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              765.3,
+              99.8
+            ],
+            [
+              765.3,
+              0,
+              708.7
+            ],
+            [
+              99.8,
+              708.7,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              954,
+              124.5
+            ],
+            [
+              954,
+              0,
+              886.2
+            ],
+            [
+              124.5,
+              886.2,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-05T10:35:08.777Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.8274333,45.760715;4.8204842,45.760294;4.8272985,45.7618753?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,765.3,99.8],[765.3,0,708.7],[99.8,708.7,0]],\"distances\":[[0,954,124.5],[954,0,886.2],[124.5,886.2,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-2",
+                "stop-5",
+                "stop-7"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}
