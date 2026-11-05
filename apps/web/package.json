@@ -12,6 +12,7 @@
     "test:watch": "vitest --passWithNoTests"
   },
   "dependencies": {
+    "@recta/domain": "workspace:*",
     "@tanstack/react-router": "^1.170.45",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"

@@ -75,6 +75,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@recta/domain':
+        specifier: workspace:*
+        version: link:../../packages/domain
       '@tanstack/react-router':
         specifier: ^1.170.45
         version: 1.170.45(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
