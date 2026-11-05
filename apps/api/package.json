@@ -27,7 +27,10 @@
     "eval:extraction-f1": "tsx src/evals/extraction-f1.ts",
     "eval:extraction-f1:live": "tsx src/evals/extraction-f1.ts --live",
     "eval:model-choice": "tsx src/evals/model-choice.ts",
-    "eval:model-choice:live": "tsx src/evals/model-choice.ts --live"
+    "eval:model-choice:live": "tsx src/evals/model-choice.ts --live",
+    "gold:prepare": "tsx src/evals/verification-gold.ts prepare",
+    "gold:run": "tsx src/evals/verification-gold.ts run",
+    "eval:gold": "tsx src/evals/verification-gold.ts eval"
   },
   "dependencies": {
     "@recta/domain": "workspace:*",

@@ -1,0 +1,70 @@
+# Annotation 4.6 : planted-14 (lyon, départ 2026-11-28)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-14.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-14
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Parc de la Tête d'Or
+    sourceText: 9h-10h45 Parc de la Tête d'Or
+    start: 09:00
+    end: 10:45
+  - id: stop-2
+    day: day-1
+    name: Basilique Notre-Dame de Fourvière
+    sourceText: 10h50-12h Basilique Notre-Dame de Fourvière
+    start: 10:50
+    end: 12:00
+  - id: stop-3
+    day: day-1
+    name: Musée des Confluences
+    sourceText: 14h-16h Musée des Confluences
+    start: 14:00
+    end: 16:00
+  - id: stop-4
+    day: day-1
+    name: Musée d'Art Contemporain de Lyon
+    sourceText: 15h30-17h Musée d'Art Contemporain de Lyon
+    start: 15:30
+    end: 17:00
+issues:
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-1
+      - stop-2
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.8520963,45.7785792;4.8225879,45.7622841?annotations=duration%2Cdistance
+        sourceDate: 2026-11-04
+        raw: "Tête d'Or → Fourvière : 49,7 min, 3 727 m à pied ; écart prévu 5 min"
+  - code: stop_overlap
+    severity: error
+    stopIds:
+      - stop-3
+      - stop-4
+    evidence:
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 14h-16h Musée des Confluences
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 15h30-17h Musée d'Art Contemporain de Lyon
+undetermined: []
+planted:
+  - code: travel_time_infeasible
+    stopIds:
+      - stop-1
+      - stop-2
+  - code: stop_overlap
+    stopIds:
+      - stop-3
+      - stop-4

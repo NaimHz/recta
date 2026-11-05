@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "plan": "planted-13",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:31.946Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Mardi 17 novembre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Lugdunum Musée et Théâtres Romains",
+              "startText": "10h",
+              "endText": "11h30",
+              "type": "Musée",
+              "sourceText": "10h-11h30 Lugdunum Musée et Théâtres Romains"
+            },
+            {
+              "name": "Basilique Notre-Dame de Fourvière",
+              "startText": "12h",
+              "endText": "13h",
+              "type": "Basilique",
+              "sourceText": "12h-13h Basilique Notre-Dame de Fourvière"
+            },
+            {
+              "name": "Musée des Beaux-Arts de Lyon",
+              "startText": "14h30",
+              "endText": "16h30",
+              "type": "Musée",
+              "sourceText": "14h30-16h30 Musée des Beaux-Arts de Lyon"
+            },
+            {
+              "name": "Institut Lumière",
+              "startText": "17h30",
+              "endText": "18h30",
+              "type": null,
+              "sourceText": "17h30-18h30 Institut Lumière"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T07:00:17.450Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "lyon",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-17",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Lugdunum Musée et Théâtres Romains",
+              "sourceText": "10h-11h30 Lugdunum Musée et Théâtres Romains",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/88526510",
+                "name": "Lugdunum Musée et Théâtres Romains",
+                "coordinates": {
+                  "lat": 45.760294,
+                  "lon": 4.8204842
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Fr 11:00-18:00; Sa-Su 10:00-18:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T07:00:21.282Z"
+                }
+              },
+              "start": "10:00",
+              "end": "11:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Basilique Notre-Dame de Fourvière",
+              "sourceText": "12h-13h Basilique Notre-Dame de Fourvière",
+              "type": "Basilique",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "12:00",
+              "end": "13:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Musée des Beaux-Arts de Lyon",
+              "sourceText": "14h30-16h30 Musée des Beaux-Arts de Lyon",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/493540665",
+                "name": "Musée des Beaux-Arts de Lyon",
+                "coordinates": {
+                  "lat": 45.7667066,
+                  "lon": 4.8336192
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "We,Th,Sa-Mo 10:00-18:00, Fr 10:30-18:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T07:00:21.282Z"
+                }
+              },
+              "start": "14:30",
+              "end": "16:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Institut Lumière",
+              "sourceText": "17h30-18h30 Institut Lumière",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "17:30",
+              "end": "18:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Lugdunum Musée et Théâtres Romains",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Basilique Notre-Dame de Fourvière",
+        "status": "ambiguous",
+        "question": "« Basilique Notre-Dame de Fourvière » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/125690785",
+            "name": "Basilique Notre-Dame de Fourvière",
+            "address": "Basilique Notre-Dame de Fourvière, Place de Fourvière, Conseil de quartier Colline des funiculaires, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "building:cathedral",
+            "score": 0.9450000000000001
+          },
+          {
+            "id": "osm:way/29179429",
+            "name": "Basilique Notre-Dame de Fourvière",
+            "address": "Basilique Notre-Dame de Fourvière, Place de Fourvière, Conseil de quartier Colline des funiculaires, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "amenity:place_of_worship",
+            "score": 0.9450000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Musée des Beaux-Arts de Lyon",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Institut Lumière",
+        "status": "ambiguous",
+        "question": "« Institut Lumière » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:node/362767170",
+            "name": "Institut Lumière",
+            "address": "Institut Lumière, Cours Albert Thomas, Monplaisir, Lyon 3e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69008, France",
+            "category": "amenity:bicycle_rental",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:node/4485572406",
+            "name": "Institut Lumière",
+            "address": "Institut Lumière, Rue du Premier Film, Monplaisir, Lyon 8e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69008, France",
+            "category": "tourism:museum",
+            "score": 0.9800000000000001
+          },
+          {
+            "id": "osm:node/558818398",
+            "name": "Institut Lumière",
+            "address": "Institut Lumière, Rue du Premier Film, Monplaisir, Lyon 8e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69008, France",
+            "category": "amenity:cinema",
+            "score": 0.9800000000000001
+          }
+        ]
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-3"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              1337.5
+            ],
+            [
+              1337.5,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              1671.9
+            ],
+            [
+              1671.9,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T07:01:04.109Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.8204842,45.760294;4.8336192,45.7667066?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,1337.5],[1337.5,0]],\"distances\":[[0,1671.9],[1671.9,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-3"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

@@ -1,0 +1,68 @@
+# Annotation 4.6 : planted-09 (paris, départ 2026-11-20)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-09.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-09
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Cathédrale Notre-Dame de Paris
+    sourceText: 8h-9h30 Cathédrale Notre-Dame de Paris
+    start: 08:00
+    end: 09:30
+  - id: stop-2
+    day: day-1
+    name: Musée du Louvre
+    sourceText: 10h15-12h30 Musée du Louvre
+    start: 10:15
+    end: 12:30
+  - id: stop-3
+    day: day-1
+    name: Musée d'Orsay
+    sourceText: 14h-16h Musée d'Orsay
+    start: 14:00
+    end: 16:00
+  - id: stop-4
+    day: day-1
+    name: Galeries Lafayette Haussmann
+    sourceText: 17h-19h30 Galeries Lafayette Haussmann
+    start: 17:00
+    end: 19:30
+  - id: stop-5
+    day: day-1
+    name: Tour Eiffel
+    sourceText: 21h-22h30 Tour Eiffel
+    start: 21:00
+    end: 22:30
+issues:
+  - code: overloaded_day
+    severity: warning
+    stopIds:
+      - stop-1
+      - stop-2
+      - stop-3
+      - stop-4
+      - stop-5
+    evidence:
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 8h-9h30 Cathédrale Notre-Dame de Paris
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 21h-22h30 Tour Eiffel
+undetermined: []
+planted:
+  - code: overloaded_day
+    stopIds:
+      - stop-1
+      - stop-2
+      - stop-3
+      - stop-4
+      - stop-5

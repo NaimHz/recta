@@ -1,0 +1,278 @@
+{
+  "version": 1,
+  "plan": "planted-10",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:20.748Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Mardi 24 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée de l'Orangerie",
+              "startText": "10h",
+              "endText": "12h",
+              "type": "Musée",
+              "sourceText": "10h-12h Musée de l'Orangerie"
+            },
+            {
+              "name": "Musée d'Orsay",
+              "startText": "14h",
+              "endText": "17h",
+              "type": "Musée",
+              "sourceText": "14h-17h Musée d'Orsay"
+            },
+            {
+              "name": "Procope",
+              "startText": "20h",
+              "endText": "23h",
+              "type": null,
+              "sourceText": "20h-23h dîner au Procope"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T06:58:37.919Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-24",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Musée de l'Orangerie",
+              "sourceText": "10h-12h Musée de l'Orangerie",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/54188996",
+                "name": "Musée de l'Orangerie",
+                "coordinates": {
+                  "lat": 48.8637655,
+                  "lon": 2.3226594
+                },
+                "address": "Quai des Tuileries, 75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo-Su 09:00-18:00; Tu off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T06:58:40.192Z"
+                }
+              },
+              "start": "10:00",
+              "end": "12:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Musée d'Orsay",
+              "sourceText": "14h-17h Musée d'Orsay",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/63178753",
+                "name": "Musée d'Orsay",
+                "coordinates": {
+                  "lat": 48.8599188,
+                  "lon": 2.3265259
+                },
+                "address": "1 Rue de la Légion d'Honneur, 75007",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Su 09:30-18:00; Th 09:30-21:45",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-10-02",
+                  "retrievedAt": "2026-11-04T06:58:40.192Z"
+                }
+              },
+              "start": "14:00",
+              "end": "17:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Procope",
+              "sourceText": "20h-23h dîner au Procope",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/2386622236",
+                "name": "Le Procope",
+                "coordinates": {
+                  "lat": 48.8530584,
+                  "lon": 2.3387505
+                },
+                "address": null,
+                "category": "amenity:restaurant",
+                "openingHoursRaw": "12:00-24:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-11-30",
+                  "retrievedAt": "2026-11-04T06:58:40.192Z"
+                }
+              },
+              "start": "20:00",
+              "end": "23:00",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Musée de l'Orangerie",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Musée d'Orsay",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Procope",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2",
+            "stop-3"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              735.9,
+              1623.9
+            ],
+            [
+              735.9,
+              0,
+              1074.4
+            ],
+            [
+              1623.9,
+              1074.4,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              869,
+              1978.2
+            ],
+            [
+              869,
+              0,
+              1342.2
+            ],
+            [
+              1978.2,
+              1342.2,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T06:59:10.578Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3226594,48.8637655;2.3265259,48.8599188;2.3387505,48.8530584?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,735.9,1623.9],[735.9,0,1074.4],[1623.9,1074.4,0]],\"distances\":[[0,869,1978.2],[869,0,1342.2],[1978.2,1342.2,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2",
+                "stop-3"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-24T11:00:00.000Z",
+          "durationSeconds": null,
+          "arrivalAt": null,
+          "transfers": null,
+          "modes": [],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-24",
+            "retrievedAt": "2026-11-04T06:59:10.741Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8637655%2C2.3226594&toPlace=48.8599188%2C2.3265259&time=2026-11-24T11%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "null",
+            "fields": {
+              "from": "Musée de l'Orangerie",
+              "to": "Musée d'Orsay",
+              "departureAt": "2026-11-24T11:00:00.000Z",
+              "arrivalAt": null,
+              "itinerariesReturned": 0
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-24T16:00:00.000Z",
+          "durationSeconds": 840,
+          "arrivalAt": "2026-11-24T16:14:00Z",
+          "transfers": 1,
+          "modes": [
+            "WALK",
+            "REGIONAL_RAIL",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-24",
+            "retrievedAt": "2026-11-04T06:59:11.879Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8599188%2C2.3265259&toPlace=48.8530584%2C2.3387505&time=2026-11-24T16%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-24T16:00:00Z\",\"endTime\":\"2026-11-24T16:14:00Z\",\"durationSeconds\":840,\"transfers\":1,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8599188,\"lon\":2.3265259},\"to\":{\"name\":\"Musée d'Orsay\",\"lat\":48.860367,\"lon\":2.3266229999999997},\"startTime\":\"2026-11-24T16:00:00Z\",\"endTime\":\"2026-11-24T16:04:00Z\"},{\"mode\":\"REGIONAL_RAIL\",\"routeShortName\":\"C\",\"from\":{\"name\":\"Musée d'Orsay\",\"lat\":48.860367,\"lon\":2.3266229999999997},\"to\":{\"name\":\"Saint-Michel Notre-Dame\",\"lat\":48.85302399999999,\"lon\":2.3449597},\"startTime\":\"2026-11-24T16:04:00Z\",\"endTime\":\"2026-11-24T16:07:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Saint-Michel Notre-Dame\",\"lat\":48.85302399999999,\"lon\":2.3449597},\"to\":{\"name\":\"Saint-Michel Notre-Dame\",\"lat\":48.85343999999999,\"lon\":2.3437482999999997},\"startTime\":\"2026-11-24T16:07:00Z\",\"endTime\":\"2026-11-24T16:11:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"4\",\"from\":{\"name\":\"Saint-Michel Notre-Dame\",\"lat\":48.85343999999999,\"lon\":2.3437482999999997},\"to\":{\"name\":\"Odéon\",\"lat\":48.85235,\"lon\":2.3397279999999996},\"startTime\":\"2026-11-24T16:11:00Z\",\"endTime\":\"2026-11-24T16:12:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Odéon\",\"lat\":48.85235,\"lon\":2.3397279999999996},\"to\":{\"name\":\"END\",\"lat\":48.8530584,\"lon\":2.3387505},\"startTime\":\"2026-11-24T16:12:00Z\",\"endTime\":\"2026-11-24T16:14:00Z\"}]}",
+            "fields": {
+              "from": "Musée d'Orsay",
+              "to": "Procope",
+              "departureAt": "2026-11-24T16:00:00.000Z",
+              "arrivalAt": "2026-11-24T16:14:00Z",
+              "itinerariesReturned": 12
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

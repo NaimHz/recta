@@ -1,0 +1,67 @@
+# Annotation 4.6 : planted-05 (paris, départ 2026-11-23)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-05.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-05
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Centre Pompidou
+    sourceText: 10h-12h Centre Pompidou
+    start: 10:00
+    end: 12:00
+  - id: stop-2
+    day: day-1
+    name: Sainte-Chapelle
+    sourceText: 13h-14h30 Sainte-Chapelle
+    start: 13:00
+    end: 14:30
+  - id: stop-3
+    day: day-1
+    name: Cathédrale Notre-Dame de Paris
+    sourceText: 15h30-16h30 Cathédrale Notre-Dame de Paris
+    start: 15:30
+    end: 16:30
+  - id: stop-4
+    day: day-1
+    name: Musée du Louvre
+    sourceText: 17h15-18h Musée du Louvre
+    start: 17:15
+    end: 18:00
+issues:
+  - code: place_not_operating
+    severity: error
+    stopIds:
+      - stop-1
+    evidence:
+      - source: curated
+        url: https://www.centrepompidou.fr/en/centre-pompidou-is-transforming-itself
+        sourceDate: 2026-10-23
+        raw: 'business_status: closed_temporarily'
+  - code: after_last_entry
+    severity: error
+    stopIds:
+      - stop-4
+    evidence:
+      - source: curated
+        url: https://www.louvre.fr/en/visit
+        sourceDate: 2026-11-03
+        raw: 'last_entry_before_close_minutes: 60'
+      - source: osm
+        url: https://www.openstreetmap.org/relation/7515426
+        sourceDate: 2025-07-26
+        raw: Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25
+          off
+undetermined: []
+planted:
+  - code: place_not_operating
+    stopIds:
+      - stop-1
+  - code: after_last_entry
+    stopIds:
+      - stop-4

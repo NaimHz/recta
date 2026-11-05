@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "prompts": [
+    {
+      "id": "real-001",
+      "cityId": "paris",
+      "start": "2026-11-16",
+      "prompt": "Je suis à Paris le lundi 16 novembre 2026 pour une journée. J'adore les musées. Propose-moi un programme heure par heure, de 9h au dîner, avec les adresses."
+    },
+    {
+      "id": "real-002",
+      "cityId": "paris",
+      "start": "2026-11-11",
+      "prompt": "On passe le mercredi 11 novembre 2026 à Paris avec nos deux enfants de 8 et 11 ans. Peux-tu organiser la journée avec des horaires précis pour chaque étape ?"
+    },
+    {
+      "id": "real-003",
+      "cityId": "paris",
+      "start": "2026-11-21",
+      "prompt": "Premier week-end à Paris, samedi 21 et dimanche 22 novembre 2026. On veut voir les incontournables sans courir. Itinéraire jour par jour avec les heures."
+    },
+    {
+      "id": "real-004",
+      "cityId": "paris",
+      "start": "2026-11-24",
+      "prompt": "Je passe le mardi 24 novembre 2026 à Paris : musées le matin, balade l'après-midi, dîner le soir, puis retour en transports en commun à mon hôtel à Saint-Denis. Donne-moi un planning horaire."
+    },
+    {
+      "id": "real-005",
+      "cityId": "paris",
+      "start": "2026-11-27",
+      "prompt": "Vendredi 27 novembre 2026, je finis le travail à 17h à La Défense. Propose une soirée à Paris : une expo, un dîner, un verre, puis le retour en transports. Avec les horaires."
+    },
+    {
+      "id": "real-006",
+      "cityId": "lyon",
+      "start": "2026-11-23",
+      "prompt": "Une journée à Lyon le lundi 23 novembre 2026, entre culture et gastronomie. Je voudrais un programme détaillé avec les horaires de chaque étape."
+    },
+    {
+      "id": "real-007",
+      "cityId": "lyon",
+      "start": "2026-11-17",
+      "prompt": "Mardi 17 novembre 2026 à Lyon : je veux voir des musées et le Vieux Lyon. Fais-moi un planning de 9h à 22h."
+    },
+    {
+      "id": "real-008",
+      "cityId": "lyon",
+      "start": "2026-11-11",
+      "prompt": "Nous serons à Lyon le mercredi 11 novembre 2026 en famille, avec un enfant de 6 ans. Organise-nous la journée, avec les heures."
+    },
+    {
+      "id": "real-009",
+      "cityId": "lyon",
+      "start": "2026-11-28",
+      "prompt": "Week-end à Lyon les samedi 28 et dimanche 29 novembre 2026. On aime l'art, les bouchons et les vues. Programme heure par heure pour les deux jours."
+    },
+    {
+      "id": "real-010",
+      "cityId": "lyon",
+      "start": "2026-11-14",
+      "prompt": "J'arrive à Lyon Part-Dieu le samedi 14 novembre 2026 à 14h et je dors à Villeurbanne. Organise mon après-midi et ma soirée avec les horaires, et le retour en transports en commun."
+    }
+  ]
+}

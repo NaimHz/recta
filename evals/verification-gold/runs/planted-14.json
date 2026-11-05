@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "plan": "planted-14",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:35.673Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Samedi 28 novembre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Parc de la Tête d'Or",
+              "startText": "9h",
+              "endText": "10h45",
+              "type": null,
+              "sourceText": "9h-10h45 Parc de la Tête d'Or"
+            },
+            {
+              "name": "Basilique Notre-Dame de Fourvière",
+              "startText": "10h50",
+              "endText": "12h",
+              "type": "Basilique",
+              "sourceText": "10h50-12h Basilique Notre-Dame de Fourvière"
+            },
+            {
+              "name": "Musée des Confluences",
+              "startText": "14h",
+              "endText": "16h",
+              "type": "Musée",
+              "sourceText": "14h-16h Musée des Confluences"
+            },
+            {
+              "name": "Musée d'Art Contemporain de Lyon",
+              "startText": "15h30",
+              "endText": "17h",
+              "type": "Musée",
+              "sourceText": "15h30-17h Musée d'Art Contemporain de Lyon"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T07:01:04.113Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "lyon",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-28",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Parc de la Tête d'Or",
+              "sourceText": "9h-10h45 Parc de la Tête d'Or",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/4077207",
+                "name": "Parc de la Tête d'Or",
+                "coordinates": {
+                  "lat": 45.7786093,
+                  "lon": 4.8521626
+                },
+                "address": null,
+                "category": "leisure:park",
+                "openingHoursRaw": "Apr 15-Oct 14 06:30-22:30 ; Oct 15-Apr 14 06:30-20:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T07:01:07.671Z"
+                }
+              },
+              "start": "09:00",
+              "end": "10:45",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Basilique Notre-Dame de Fourvière",
+              "sourceText": "10h50-12h Basilique Notre-Dame de Fourvière",
+              "type": "Basilique",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "10:50",
+              "end": "12:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Musée des Confluences",
+              "sourceText": "14h-16h Musée des Confluences",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/440270631",
+                "name": "Musée des Confluences",
+                "coordinates": {
+                  "lat": 45.7326277,
+                  "lon": 4.8179852
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Su 10:30-18:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-10-11",
+                  "retrievedAt": "2026-11-04T07:01:07.671Z"
+                }
+              },
+              "start": "14:00",
+              "end": "16:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Musée d'Art Contemporain de Lyon",
+              "sourceText": "15h30-17h Musée d'Art Contemporain de Lyon",
+              "type": "Musée",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "15:30",
+              "end": "17:00",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Parc de la Tête d'Or",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Basilique Notre-Dame de Fourvière",
+        "status": "ambiguous",
+        "question": "« Basilique Notre-Dame de Fourvière » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/125690785",
+            "name": "Basilique Notre-Dame de Fourvière",
+            "address": "Basilique Notre-Dame de Fourvière, Place de Fourvière, Conseil de quartier Colline des funiculaires, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "building:cathedral",
+            "score": 0.9450000000000001
+          },
+          {
+            "id": "osm:way/29179429",
+            "name": "Basilique Notre-Dame de Fourvière",
+            "address": "Basilique Notre-Dame de Fourvière, Place de Fourvière, Conseil de quartier Colline des funiculaires, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "amenity:place_of_worship",
+            "score": 0.9450000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Musée des Confluences",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Musée d'Art Contemporain de Lyon",
+        "status": "ambiguous",
+        "question": "« Musée d'Art Contemporain de Lyon » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/62277312",
+            "name": "Musée d'Art Contemporain",
+            "address": "Musée d'Art Contemporain, Allée Achille Lignon, Cité Internationale, Lyon 6e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69006, France",
+            "category": "tourism:museum",
+            "score": 0.8950000000000001
+          },
+          {
+            "id": "osm:node/362797257",
+            "name": "Musée d'Art Contemporain",
+            "address": "Musée d'Art Contemporain, Allée Achille Lignon, Cité Internationale, Lyon 6e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69006, France",
+            "category": "amenity:bicycle_rental",
+            "score": 0.8250000000000001
+          },
+          {
+            "id": "osm:node/8663905934",
+            "name": "Musée d'Art Contemporain",
+            "address": "Musée d'Art Contemporain, Allée Achille Lignon, Cité Internationale, Lyon 6e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69006, France",
+            "category": "highway:bus_stop",
+            "score": 0.8250000000000001
+          }
+        ]
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-3"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              5258.2
+            ],
+            [
+              5258.2,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              6609.2
+            ],
+            [
+              6609.2,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T07:01:35.601Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.8521626,45.7786093;4.8179852,45.7326277?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,5258.2],[5258.2,0]],\"distances\":[[0,6609.2],[6609.2,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-3"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

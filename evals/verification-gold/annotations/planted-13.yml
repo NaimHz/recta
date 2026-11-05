@@ -1,0 +1,62 @@
+# Annotation 4.6 : planted-13 (lyon, départ 2026-11-17)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-13.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-13
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Lugdunum Musée et Théâtres Romains
+    sourceText: 10h-11h30 Lugdunum Musée et Théâtres Romains
+    start: 10:00
+    end: 11:30
+  - id: stop-2
+    day: day-1
+    name: Basilique Notre-Dame de Fourvière
+    sourceText: 12h-13h Basilique Notre-Dame de Fourvière
+    start: 12:00
+    end: 13:00
+  - id: stop-3
+    day: day-1
+    name: Musée des Beaux-Arts de Lyon
+    sourceText: 14h30-16h30 Musée des Beaux-Arts de Lyon
+    start: 14:30
+    end: 16:30
+  - id: stop-4
+    day: day-1
+    name: Institut Lumière
+    sourceText: 17h30-18h30 Institut Lumière
+    start: 17:30
+    end: 18:30
+issues:
+  - code: outside_opening_hours
+    severity: error
+    stopIds:
+      - stop-1
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/88526510
+        sourceDate: null
+        raw: Tu-Fr 11:00-18:00; Sa-Su 10:00-18:00
+  - code: place_closed_day
+    severity: error
+    stopIds:
+      - stop-3
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/493540665
+        sourceDate: null
+        raw: We,Th,Sa-Mo 10:00-18:00, Fr 10:30-18:00
+undetermined: []
+planted:
+  - code: outside_opening_hours
+    stopIds:
+      - stop-1
+  - code: place_closed_day
+    stopIds:
+      - stop-3

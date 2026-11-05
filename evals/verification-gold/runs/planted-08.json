@@ -1,0 +1,367 @@
+{
+  "version": 1,
+  "plan": "planted-08",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:13.631Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Dimanche 29 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée du Louvre",
+              "startText": "9h",
+              "endText": "10h30",
+              "type": "Musée",
+              "sourceText": "9h-10h30 Musée du Louvre"
+            },
+            {
+              "name": "Arc de Triomphe",
+              "startText": "11h30",
+              "endText": "12h15",
+              "type": null,
+              "sourceText": "11h30-12h15 Arc de Triomphe"
+            },
+            {
+              "name": "Café Marly",
+              "startText": "13h15",
+              "endText": "14h30",
+              "type": "Café",
+              "sourceText": "13h15-14h30 déjeuner au Café Marly"
+            },
+            {
+              "name": "Musée Carnavalet",
+              "startText": "15h30",
+              "endText": "17h30",
+              "type": "Musée",
+              "sourceText": "15h30-17h30 Musée Carnavalet"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T06:57:16.244Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-29",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Musée du Louvre",
+              "sourceText": "9h-10h30 Musée du Louvre",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/7515426",
+                "name": "Musée du Louvre",
+                "coordinates": {
+                  "lat": 48.8611474,
+                  "lon": 2.3358637
+                },
+                "address": "75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-07-26",
+                  "retrievedAt": "2026-11-04T06:57:20.030Z"
+                }
+              },
+              "start": "09:00",
+              "end": "10:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Arc de Triomphe",
+              "sourceText": "11h30-12h15 Arc de Triomphe",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/226413508",
+                "name": "Arc de Triomphe",
+                "coordinates": {
+                  "lat": 48.8737782,
+                  "lon": 2.2950354
+                },
+                "address": null,
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Apr 02-Jan 31: Mo-Su 10:00-22:30; Apr 01,Sep 30: Mo-Su 10:00-23:00; Oct 01,Dec 31: Mo-Su 10:00-22:30; Jan 01,May 01,May 08,Jul 14,Nov 11,Dec 25: off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T06:57:20.030Z"
+                }
+              },
+              "start": "11:30",
+              "end": "12:15",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Café Marly",
+              "sourceText": "13h15-14h30 déjeuner au Café Marly",
+              "type": "Café",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:node/247455918",
+                "name": "Le Café Marly",
+                "coordinates": {
+                  "lat": 48.8616428,
+                  "lon": 2.3359304
+                },
+                "address": "93 Rue de Rivoli, 75001 Paris",
+                "category": "amenity:cafe",
+                "openingHoursRaw": "Mo-Su 08:00-02:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-04-12",
+                  "retrievedAt": "2026-11-04T06:57:20.030Z"
+                }
+              },
+              "start": "13:15",
+              "end": "14:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Musée Carnavalet",
+              "sourceText": "15h30-17h30 Musée Carnavalet",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/2405955",
+                "name": "Musée Carnavalet",
+                "coordinates": {
+                  "lat": 48.8576819,
+                  "lon": 2.3627147
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Su 10:00-18:00 \"Final admission 17:15\"",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-06-19",
+                  "retrievedAt": "2026-11-04T06:57:20.030Z"
+                }
+              },
+              "start": "15:30",
+              "end": "17:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Musée du Louvre",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Arc de Triomphe",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Café Marly",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Musée Carnavalet",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2",
+            "stop-3",
+            "stop-4"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              2882.7,
+              40.4,
+              1915.5
+            ],
+            [
+              2882.7,
+              0,
+              2850.5,
+              4620.6
+            ],
+            [
+              40.4,
+              2850.5,
+              0,
+              1900.5
+            ],
+            [
+              1915.6,
+              4620.7,
+              1900.6,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              3604.3,
+              50.5,
+              2394.5
+            ],
+            [
+              3604.3,
+              0,
+              3563.8,
+              5776.6
+            ],
+            [
+              50.5,
+              3563.8,
+              0,
+              2375.9
+            ],
+            [
+              2394.6,
+              5776.7,
+              2376,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T06:57:56.220Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3358637,48.8611474;2.2950354,48.8737782;2.3359304,48.8616428;2.3627147,48.8576819?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,2882.7,40.4,1915.5],[2882.7,0,2850.5,4620.6],[40.4,2850.5,0,1900.5],[1915.6,4620.7,1900.6,0]],\"distances\":[[0,3604.3,50.5,2394.5],[3604.3,0,3563.8,5776.6],[50.5,3563.8,0,2375.9],[2394.6,5776.7,2376,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2",
+                "stop-3",
+                "stop-4"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-29T09:30:00.000Z",
+          "durationSeconds": 1080,
+          "arrivalAt": "2026-11-29T09:48:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-29",
+            "retrievedAt": "2026-11-04T06:57:56.394Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8611474%2C2.3358637&toPlace=48.8737782%2C2.2950354&time=2026-11-29T09%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-29T09:33:00Z\",\"endTime\":\"2026-11-29T09:48:00Z\",\"durationSeconds\":900,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8611474,\"lon\":2.3358637},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862747,\"lon\":2.3353025999999995},\"startTime\":\"2026-11-29T09:33:00Z\",\"endTime\":\"2026-11-29T09:37:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"1\",\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862747,\"lon\":2.3353025999999995},\"to\":{\"name\":\"Charles de Gaulle - Étoile\",\"lat\":48.875175000000006,\"lon\":2.295932},\"startTime\":\"2026-11-29T09:37:00Z\",\"endTime\":\"2026-11-29T09:45:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Charles de Gaulle - Étoile\",\"lat\":48.875175000000006,\"lon\":2.295932},\"to\":{\"name\":\"END\",\"lat\":48.8737782,\"lon\":2.2950354},\"startTime\":\"2026-11-29T09:45:00Z\",\"endTime\":\"2026-11-29T09:48:00Z\"}]}",
+            "fields": {
+              "from": "Musée du Louvre",
+              "to": "Arc de Triomphe",
+              "departureAt": "2026-11-29T09:30:00.000Z",
+              "arrivalAt": "2026-11-29T09:48:00Z",
+              "itinerariesReturned": 5
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-29T11:15:00.000Z",
+          "durationSeconds": 900,
+          "arrivalAt": "2026-11-29T11:30:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-29",
+            "retrievedAt": "2026-11-04T06:57:57.450Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8737782%2C2.2950354&toPlace=48.8616428%2C2.3359304&time=2026-11-29T11%3A15%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-29T11:16:00Z\",\"endTime\":\"2026-11-29T11:30:00Z\",\"durationSeconds\":840,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8737782,\"lon\":2.2950354},\"to\":{\"name\":\"Charles de Gaulle - Étoile\",\"lat\":48.87511000000001,\"lon\":2.2958783999999994},\"startTime\":\"2026-11-29T11:16:00Z\",\"endTime\":\"2026-11-29T11:19:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"1\",\"from\":{\"name\":\"Charles de Gaulle - Étoile\",\"lat\":48.87511000000001,\"lon\":2.2958783999999994},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862694,\"lon\":2.3352760999999993},\"startTime\":\"2026-11-29T11:19:00Z\",\"endTime\":\"2026-11-29T11:26:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862694,\"lon\":2.3352760999999993},\"to\":{\"name\":\"END\",\"lat\":48.8616428,\"lon\":2.3359304},\"startTime\":\"2026-11-29T11:26:00Z\",\"endTime\":\"2026-11-29T11:30:00Z\"}]}",
+            "fields": {
+              "from": "Arc de Triomphe",
+              "to": "Café Marly",
+              "departureAt": "2026-11-29T11:15:00.000Z",
+              "arrivalAt": "2026-11-29T11:30:00Z",
+              "itinerariesReturned": 6
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-3",
+          "toStopId": "stop-4",
+          "departureAt": "2026-11-29T13:30:00.000Z",
+          "durationSeconds": 960,
+          "arrivalAt": "2026-11-29T13:46:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-29",
+            "retrievedAt": "2026-11-04T06:57:58.544Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8616428%2C2.3359304&toPlace=48.8576819%2C2.3627147&time=2026-11-29T13%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-29T13:31:00Z\",\"endTime\":\"2026-11-29T13:46:00Z\",\"durationSeconds\":900,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8616428,\"lon\":2.3359304},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862694,\"lon\":2.3352760999999993},\"startTime\":\"2026-11-29T13:31:00Z\",\"endTime\":\"2026-11-29T13:35:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"1\",\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862694,\"lon\":2.3352760999999993},\"to\":{\"name\":\"Saint-Paul (Le Marais)\",\"lat\":48.855185999999996,\"lon\":2.3608850999999995},\"startTime\":\"2026-11-29T13:35:00Z\",\"endTime\":\"2026-11-29T13:40:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Saint-Paul (Le Marais)\",\"lat\":48.855185999999996,\"lon\":2.3608850999999995},\"to\":{\"name\":\"END\",\"lat\":48.8576819,\"lon\":2.3627147},\"startTime\":\"2026-11-29T13:40:00Z\",\"endTime\":\"2026-11-29T13:46:00Z\"}]}",
+            "fields": {
+              "from": "Café Marly",
+              "to": "Musée Carnavalet",
+              "departureAt": "2026-11-29T13:30:00.000Z",
+              "arrivalAt": "2026-11-29T13:46:00Z",
+              "itinerariesReturned": 7
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

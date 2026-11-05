@@ -1,0 +1,50 @@
+# Annotation 4.6 : planted-03 (paris, départ 2026-11-11)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-03.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-03
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Arc de Triomphe
+    sourceText: 10h-11h30 Arc de Triomphe
+    start: 10:00
+    end: 11:30
+  - id: stop-2
+    day: day-1
+    name: Musée du Louvre
+    sourceText: 13h-15h Musée du Louvre
+    start: 13:00
+    end: 15:00
+  - id: stop-3
+    day: day-1
+    name: Galeries Lafayette Haussmann
+    sourceText: 16h-17h30 Galeries Lafayette Haussmann
+    start: 16:00
+    end: 17:30
+issues:
+  - code: holiday_closure
+    severity: error
+    stopIds:
+      - stop-1
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/226413508
+        sourceDate: null
+        raw: 'Apr 02-Jan 31: Mo-Su 10:00-22:30; Apr 01,Sep 30: Mo-Su 10:00-23:00; Oct
+          01,Dec 31: Mo-Su 10:00-22:30; Jan 01,May 01,May 08,Jul 14,Nov 11,Dec
+          25: off'
+      - source: calendar
+        url: null
+        sourceDate: 2026-11-11
+        raw: '2026-11-11 : jour férié en France'
+undetermined: []
+planted:
+  - code: holiday_closure
+    stopIds:
+      - stop-1

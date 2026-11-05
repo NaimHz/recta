@@ -1,0 +1,380 @@
+{
+  "version": 1,
+  "plan": "planted-09",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:16.816Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Vendredi 20 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Cathédrale Notre-Dame de Paris",
+              "startText": "8h",
+              "endText": "9h30",
+              "type": null,
+              "sourceText": "8h-9h30 Cathédrale Notre-Dame de Paris"
+            },
+            {
+              "name": "Musée du Louvre",
+              "startText": "10h15",
+              "endText": "12h30",
+              "type": "musée",
+              "sourceText": "10h15-12h30 Musée du Louvre"
+            },
+            {
+              "name": "Musée d'Orsay",
+              "startText": "14h",
+              "endText": "16h",
+              "type": "musée",
+              "sourceText": "14h-16h Musée d'Orsay"
+            },
+            {
+              "name": "Galeries Lafayette Haussmann",
+              "startText": "17h",
+              "endText": "19h30",
+              "type": null,
+              "sourceText": "17h-19h30 Galeries Lafayette Haussmann"
+            },
+            {
+              "name": "Tour Eiffel",
+              "startText": "21h",
+              "endText": "22h30",
+              "type": null,
+              "sourceText": "21h-22h30 Tour Eiffel"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T06:57:58.548Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-20",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Cathédrale Notre-Dame de Paris",
+              "sourceText": "8h-9h30 Cathédrale Notre-Dame de Paris",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/201611261",
+                "name": "Cathédrale Notre-Dame de Paris",
+                "coordinates": {
+                  "lat": 48.8529371,
+                  "lon": 2.3498701
+                },
+                "address": "6 Parvis Notre-Dame - Place Jean-Paul II, 75004 Paris",
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Mo,Tu,We,Fr 07:50-19:00; Th 07:50-22:00; Sa,Su 08:15-19:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-06-05",
+                  "retrievedAt": "2026-11-04T06:58:03.788Z"
+                }
+              },
+              "start": "08:00",
+              "end": "09:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Musée du Louvre",
+              "sourceText": "10h15-12h30 Musée du Louvre",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/7515426",
+                "name": "Musée du Louvre",
+                "coordinates": {
+                  "lat": 48.8611474,
+                  "lon": 2.3358637
+                },
+                "address": "75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-07-26",
+                  "retrievedAt": "2026-11-04T06:58:03.788Z"
+                }
+              },
+              "start": "10:15",
+              "end": "12:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Musée d'Orsay",
+              "sourceText": "14h-16h Musée d'Orsay",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/63178753",
+                "name": "Musée d'Orsay",
+                "coordinates": {
+                  "lat": 48.8599188,
+                  "lon": 2.3265259
+                },
+                "address": "1 Rue de la Légion d'Honneur, 75007",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Su 09:30-18:00; Th 09:30-21:45",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-10-02",
+                  "retrievedAt": "2026-11-04T06:58:03.788Z"
+                }
+              },
+              "start": "14:00",
+              "end": "16:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Galeries Lafayette Haussmann",
+              "sourceText": "17h-19h30 Galeries Lafayette Haussmann",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "17:00",
+              "end": "19:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Tour Eiffel",
+              "sourceText": "21h-22h30 Tour Eiffel",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/5013364",
+                "name": "Tour Eiffel",
+                "coordinates": {
+                  "lat": 48.8582603,
+                  "lon": 2.2945008
+                },
+                "address": "5 Avenue Anatole France, 75007 Paris",
+                "category": "tourism:attraction",
+                "openingHoursRaw": "09:30-23:45; Jun 21-Sep 02: 09:00-00:45; Jul 14,Jul 15 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-09-23",
+                  "retrievedAt": "2026-11-04T06:58:03.788Z"
+                }
+              },
+              "start": "21:00",
+              "end": "22:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Cathédrale Notre-Dame de Paris",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Musée du Louvre",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Musée d'Orsay",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Galeries Lafayette Haussmann",
+        "status": "ambiguous",
+        "question": "« Galeries Lafayette Haussmann » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/106703446",
+            "name": "Accès Parking Haussmann - Galeries Lafayette",
+            "address": "Accès Parking Haussmann - Galeries Lafayette, Quartier de la Chaussée-d'Antin, Paris 9e Arrondissement, Paris, Île-de-France, France métropolitaine, 75009, France",
+            "category": "highway:service",
+            "score": 0.8780000000000001
+          },
+          {
+            "id": "osm:way/69224062",
+            "name": "Galeries Lafayette",
+            "address": "Galeries Lafayette, 40, Boulevard Haussmann, Quartier de la Chaussée-d'Antin, Paris 9e Arrondissement, Paris, Île-de-France, France métropolitaine, 75009, France",
+            "category": "shop:department_store",
+            "score": 0.8600000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Tour Eiffel",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2",
+            "stop-3",
+            "stop-5"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              1367.6,
+              1648.1,
+              3727.8
+            ],
+            [
+              1367.6,
+              0,
+              778.4,
+              2947.9
+            ],
+            [
+              1648.1,
+              778.4,
+              0,
+              2335.3
+            ],
+            [
+              3727.8,
+              2947.9,
+              2335.3,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              1709.1,
+              2059.4,
+              4659.4
+            ],
+            [
+              1709.1,
+              0,
+              973.1,
+              3681.2
+            ],
+            [
+              2059.4,
+              973.1,
+              0,
+              2920.1
+            ],
+            [
+              4659.4,
+              3681.2,
+              2920.1,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T06:58:36.691Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3498701,48.8529371;2.3358637,48.8611474;2.3265259,48.8599188;2.2945008,48.8582603?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,1367.6,1648.1,3727.8],[1367.6,0,778.4,2947.9],[1648.1,778.4,0,2335.3],[3727.8,2947.9,2335.3,0]],\"distances\":[[0,1709.1,2059.4,4659.4],[1709.1,0,973.1,3681.2],[2059.4,973.1,0,2920.1],[4659.4,3681.2,2920.1,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2",
+                "stop-3",
+                "stop-5"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-20T08:30:00.000Z",
+          "durationSeconds": 1020,
+          "arrivalAt": "2026-11-20T08:47:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-20",
+            "retrievedAt": "2026-11-04T06:58:37.060Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8529371%2C2.3498701&toPlace=48.8611474%2C2.3358637&time=2026-11-20T08%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-20T08:31:00Z\",\"endTime\":\"2026-11-20T08:47:00Z\",\"durationSeconds\":960,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8529371,\"lon\":2.3498701},\"to\":{\"name\":\"Châtelet\",\"lat\":48.856936999999995,\"lon\":2.3482429999999996},\"startTime\":\"2026-11-20T08:31:00Z\",\"endTime\":\"2026-11-20T08:40:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"7\",\"from\":{\"name\":\"Châtelet\",\"lat\":48.856936999999995,\"lon\":2.3482429999999996},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862826999999996,\"lon\":2.3369509999999996},\"startTime\":\"2026-11-20T08:40:00Z\",\"endTime\":\"2026-11-20T08:42:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862826999999996,\"lon\":2.3369509999999996},\"to\":{\"name\":\"END\",\"lat\":48.8611474,\"lon\":2.3358637},\"startTime\":\"2026-11-20T08:42:00Z\",\"endTime\":\"2026-11-20T08:47:00Z\"}]}",
+            "fields": {
+              "from": "Cathédrale Notre-Dame de Paris",
+              "to": "Musée du Louvre",
+              "departureAt": "2026-11-20T08:30:00.000Z",
+              "arrivalAt": "2026-11-20T08:47:00Z",
+              "itinerariesReturned": 17
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-20T11:30:00.000Z",
+          "durationSeconds": 840,
+          "arrivalAt": "2026-11-20T11:44:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "BUS"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-20",
+            "retrievedAt": "2026-11-04T06:58:37.915Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8611474%2C2.3358637&toPlace=48.8599188%2C2.3265259&time=2026-11-20T11%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-20T11:30:00Z\",\"endTime\":\"2026-11-20T11:44:00Z\",\"durationSeconds\":840,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8611474,\"lon\":2.3358637},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.860766999999996,\"lon\":2.3335016},\"startTime\":\"2026-11-20T11:30:00Z\",\"endTime\":\"2026-11-20T11:35:00Z\"},{\"mode\":\"BUS\",\"routeShortName\":\"68\",\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.860766999999996,\"lon\":2.3335016},\"to\":{\"name\":\"Musée d'Orsay\",\"lat\":48.86027,\"lon\":2.3272378000000002},\"startTime\":\"2026-11-20T11:35:00Z\",\"endTime\":\"2026-11-20T11:40:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Musée d'Orsay\",\"lat\":48.86027,\"lon\":2.3272378000000002},\"to\":{\"name\":\"END\",\"lat\":48.8599188,\"lon\":2.3265259},\"startTime\":\"2026-11-20T11:40:00Z\",\"endTime\":\"2026-11-20T11:44:00Z\"}]}",
+            "fields": {
+              "from": "Musée du Louvre",
+              "to": "Musée d'Orsay",
+              "departureAt": "2026-11-20T11:30:00.000Z",
+              "arrivalAt": "2026-11-20T11:44:00Z",
+              "itinerariesReturned": 4
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

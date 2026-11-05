@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "plan": "planted-03",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:01.253Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Mercredi 11 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Arc de Triomphe",
+              "startText": "10h",
+              "endText": "11h30",
+              "type": null,
+              "sourceText": "10h-11h30 Arc de Triomphe"
+            },
+            {
+              "name": "Musée du Louvre",
+              "startText": "13h",
+              "endText": "15h",
+              "type": "Musée",
+              "sourceText": "13h-15h Musée du Louvre"
+            },
+            {
+              "name": "Galeries Lafayette Haussmann",
+              "startText": "16h",
+              "endText": "17h30",
+              "type": null,
+              "sourceText": "16h-17h30 Galeries Lafayette Haussmann"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T06:55:12.285Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-11",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Arc de Triomphe",
+              "sourceText": "10h-11h30 Arc de Triomphe",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/226413508",
+                "name": "Arc de Triomphe",
+                "coordinates": {
+                  "lat": 48.8737782,
+                  "lon": 2.2950354
+                },
+                "address": null,
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Apr 02-Jan 31: Mo-Su 10:00-22:30; Apr 01,Sep 30: Mo-Su 10:00-23:00; Oct 01,Dec 31: Mo-Su 10:00-22:30; Jan 01,May 01,May 08,Jul 14,Nov 11,Dec 25: off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T06:55:14.991Z"
+                }
+              },
+              "start": "10:00",
+              "end": "11:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Musée du Louvre",
+              "sourceText": "13h-15h Musée du Louvre",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/7515426",
+                "name": "Musée du Louvre",
+                "coordinates": {
+                  "lat": 48.8611474,
+                  "lon": 2.3358637
+                },
+                "address": "75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-07-26",
+                  "retrievedAt": "2026-11-04T06:55:14.991Z"
+                }
+              },
+              "start": "13:00",
+              "end": "15:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Galeries Lafayette Haussmann",
+              "sourceText": "16h-17h30 Galeries Lafayette Haussmann",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "16:00",
+              "end": "17:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Arc de Triomphe",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Musée du Louvre",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Galeries Lafayette Haussmann",
+        "status": "ambiguous",
+        "question": "« Galeries Lafayette Haussmann » peut désigner plusieurs lieux à Paris. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/106703446",
+            "name": "Accès Parking Haussmann - Galeries Lafayette",
+            "address": "Accès Parking Haussmann - Galeries Lafayette, Quartier de la Chaussée-d'Antin, Paris 9e Arrondissement, Paris, Île-de-France, France métropolitaine, 75009, France",
+            "category": "highway:service",
+            "score": 0.8780000000000001
+          },
+          {
+            "id": "osm:way/69224062",
+            "name": "Galeries Lafayette",
+            "address": "Galeries Lafayette, 40, Boulevard Haussmann, Quartier de la Chaussée-d'Antin, Paris 9e Arrondissement, Paris, Île-de-France, France métropolitaine, 75009, France",
+            "category": "shop:department_store",
+            "score": 0.8600000000000001
+          }
+        ]
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              2882.7
+            ],
+            [
+              2882.7,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              3604.3
+            ],
+            [
+              3604.3,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T06:55:46.062Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.2950354,48.8737782;2.3358637,48.8611474?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,2882.7],[2882.7,0]],\"distances\":[[0,3604.3],[3604.3,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-11T10:30:00.000Z",
+          "durationSeconds": 900,
+          "arrivalAt": "2026-11-11T10:45:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-11",
+            "retrievedAt": "2026-11-04T06:55:46.285Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8737782%2C2.2950354&toPlace=48.8611474%2C2.3358637&time=2026-11-11T10%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-11T10:31:00Z\",\"endTime\":\"2026-11-11T10:45:00Z\",\"durationSeconds\":840,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8737782,\"lon\":2.2950354},\"to\":{\"name\":\"Charles de Gaulle - Étoile\",\"lat\":48.87511000000001,\"lon\":2.2958783999999994},\"startTime\":\"2026-11-11T10:31:00Z\",\"endTime\":\"2026-11-11T10:34:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"1\",\"from\":{\"name\":\"Charles de Gaulle - Étoile\",\"lat\":48.87511000000001,\"lon\":2.2958783999999994},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862694,\"lon\":2.3352760999999993},\"startTime\":\"2026-11-11T10:34:00Z\",\"endTime\":\"2026-11-11T10:41:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862694,\"lon\":2.3352760999999993},\"to\":{\"name\":\"END\",\"lat\":48.8611474,\"lon\":2.3358637},\"startTime\":\"2026-11-11T10:41:00Z\",\"endTime\":\"2026-11-11T10:45:00Z\"}]}",
+            "fields": {
+              "from": "Arc de Triomphe",
+              "to": "Musée du Louvre",
+              "departureAt": "2026-11-11T10:30:00.000Z",
+              "arrivalAt": "2026-11-11T10:45:00Z",
+              "itinerariesReturned": 6
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

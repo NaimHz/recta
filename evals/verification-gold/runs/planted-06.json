@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "plan": "planted-06",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:07.461Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Jeudi 19 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Sainte-Chapelle",
+              "startText": "9h",
+              "endText": "11h",
+              "type": null,
+              "sourceText": "9h-11h Sainte-Chapelle"
+            },
+            {
+              "name": "Cathédrale Notre-Dame de Paris",
+              "startText": "11h12",
+              "endText": "12h30",
+              "type": null,
+              "sourceText": "11h12-12h30 Cathédrale Notre-Dame de Paris"
+            },
+            {
+              "name": "Musée du Louvre",
+              "startText": "14h",
+              "endText": "16h",
+              "type": "Musée",
+              "sourceText": "14h-16h Musée du Louvre"
+            },
+            {
+              "name": "Musée de l'Orangerie",
+              "startText": "15h30",
+              "endText": "17h",
+              "type": "Musée",
+              "sourceText": "15h30-17h Musée de l'Orangerie"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T07:04:02.786Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-19",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Sainte-Chapelle",
+              "sourceText": "9h-11h Sainte-Chapelle",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/3344870",
+                "name": "Sainte-Chapelle",
+                "coordinates": {
+                  "lat": 48.8553966,
+                  "lon": 2.3450136
+                },
+                "address": "8 Boulevard du Palais, 75001",
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Jan-Mar 09:00-17:00; Apr-Sep 09:00-19:00; Oct-Dec 09:00-17:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2024-02-15",
+                  "retrievedAt": "2026-11-04T07:04:06.099Z"
+                }
+              },
+              "start": "09:00",
+              "end": "11:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Cathédrale Notre-Dame de Paris",
+              "sourceText": "11h12-12h30 Cathédrale Notre-Dame de Paris",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/201611261",
+                "name": "Cathédrale Notre-Dame de Paris",
+                "coordinates": {
+                  "lat": 48.8529371,
+                  "lon": 2.3498701
+                },
+                "address": "6 Parvis Notre-Dame - Place Jean-Paul II, 75004 Paris",
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Mo,Tu,We,Fr 07:50-19:00; Th 07:50-22:00; Sa,Su 08:15-19:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-06-05",
+                  "retrievedAt": "2026-11-04T07:04:06.099Z"
+                }
+              },
+              "start": "11:12",
+              "end": "12:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Musée du Louvre",
+              "sourceText": "14h-16h Musée du Louvre",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/7515426",
+                "name": "Musée du Louvre",
+                "coordinates": {
+                  "lat": 48.8611474,
+                  "lon": 2.3358637
+                },
+                "address": "75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-07-26",
+                  "retrievedAt": "2026-11-04T07:04:06.099Z"
+                }
+              },
+              "start": "14:00",
+              "end": "16:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Musée de l'Orangerie",
+              "sourceText": "15h30-17h Musée de l'Orangerie",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/54188996",
+                "name": "Musée de l'Orangerie",
+                "coordinates": {
+                  "lat": 48.8637655,
+                  "lon": 2.3226594
+                },
+                "address": "Quai des Tuileries, 75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo-Su 09:00-18:00; Tu off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T07:04:06.099Z"
+                }
+              },
+              "start": "15:30",
+              "end": "17:00",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Sainte-Chapelle",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Cathédrale Notre-Dame de Paris",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Musée du Louvre",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Musée de l'Orangerie",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2",
+            "stop-3",
+            "stop-4"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              376.3,
+              1069.9,
+              1888.2
+            ],
+            [
+              376.3,
+              0,
+              1367.6,
+              2181.7
+            ],
+            [
+              1069.9,
+              1367.6,
+              0,
+              1077.1
+            ],
+            [
+              1888.2,
+              2181.7,
+              1077.1,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              469.9,
+              1337.3,
+              2308.8
+            ],
+            [
+              469.9,
+              0,
+              1709.1,
+              2675.5
+            ],
+            [
+              1337.3,
+              1709.1,
+              0,
+              1295.6
+            ],
+            [
+              2308.8,
+              2675.5,
+              1295.6,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T07:04:32.976Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3450136,48.8553966;2.3498701,48.8529371;2.3358637,48.8611474;2.3226594,48.8637655?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,376.3,1069.9,1888.2],[376.3,0,1367.6,2181.7],[1069.9,1367.6,0,1077.1],[1888.2,2181.7,1077.1,0]],\"distances\":[[0,469.9,1337.3,2308.8],[469.9,0,1709.1,2675.5],[1337.3,1709.1,0,1295.6],[2308.8,2675.5,1295.6,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2",
+                "stop-3",
+                "stop-4"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-19T10:00:00.000Z",
+          "durationSeconds": null,
+          "arrivalAt": null,
+          "transfers": null,
+          "modes": [],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-19",
+            "retrievedAt": "2026-11-04T07:04:33.163Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8553966%2C2.3450136&toPlace=48.8529371%2C2.3498701&time=2026-11-19T10%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "null",
+            "fields": {
+              "from": "Sainte-Chapelle",
+              "to": "Cathédrale Notre-Dame de Paris",
+              "departureAt": "2026-11-19T10:00:00.000Z",
+              "arrivalAt": null,
+              "itinerariesReturned": 0
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-19T11:30:00.000Z",
+          "durationSeconds": 1080,
+          "arrivalAt": "2026-11-19T11:48:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-19",
+            "retrievedAt": "2026-11-04T07:04:34.268Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8529371%2C2.3498701&toPlace=48.8611474%2C2.3358637&time=2026-11-19T11%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-19T11:30:00Z\",\"endTime\":\"2026-11-19T11:48:00Z\",\"durationSeconds\":1080,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8529371,\"lon\":2.3498701},\"to\":{\"name\":\"Hôtel de Ville\",\"lat\":48.85720399999999,\"lon\":2.3529827999999995},\"startTime\":\"2026-11-19T11:30:00Z\",\"endTime\":\"2026-11-19T11:40:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"1\",\"from\":{\"name\":\"Hôtel de Ville\",\"lat\":48.85720399999999,\"lon\":2.3529827999999995},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862747,\"lon\":2.3353025999999995},\"startTime\":\"2026-11-19T11:40:00Z\",\"endTime\":\"2026-11-19T11:44:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862747,\"lon\":2.3353025999999995},\"to\":{\"name\":\"END\",\"lat\":48.8611474,\"lon\":2.3358637},\"startTime\":\"2026-11-19T11:44:00Z\",\"endTime\":\"2026-11-19T11:48:00Z\"}]}",
+            "fields": {
+              "from": "Cathédrale Notre-Dame de Paris",
+              "to": "Musée du Louvre",
+              "departureAt": "2026-11-19T11:30:00.000Z",
+              "arrivalAt": "2026-11-19T11:48:00Z",
+              "itinerariesReturned": 10
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-3",
+          "toStopId": "stop-4",
+          "departureAt": "2026-11-19T15:00:00.000Z",
+          "durationSeconds": 960,
+          "arrivalAt": "2026-11-19T15:16:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-19",
+            "retrievedAt": "2026-11-04T07:04:35.292Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8611474%2C2.3358637&toPlace=48.8637655%2C2.3226594&time=2026-11-19T15%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-19T15:02:00Z\",\"endTime\":\"2026-11-19T15:16:00Z\",\"durationSeconds\":840,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8611474,\"lon\":2.3358637},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862747,\"lon\":2.3353025999999995},\"startTime\":\"2026-11-19T15:02:00Z\",\"endTime\":\"2026-11-19T15:06:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"1\",\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862747,\"lon\":2.3353025999999995},\"to\":{\"name\":\"Concorde\",\"lat\":48.866165,\"lon\":2.3245852},\"startTime\":\"2026-11-19T15:06:00Z\",\"endTime\":\"2026-11-19T15:08:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Concorde\",\"lat\":48.866165,\"lon\":2.3245852},\"to\":{\"name\":\"END\",\"lat\":48.8637655,\"lon\":2.3226594},\"startTime\":\"2026-11-19T15:08:00Z\",\"endTime\":\"2026-11-19T15:16:00Z\"}]}",
+            "fields": {
+              "from": "Musée du Louvre",
+              "to": "Musée de l'Orangerie",
+              "departureAt": "2026-11-19T15:00:00.000Z",
+              "arrivalAt": "2026-11-19T15:16:00Z",
+              "itinerariesReturned": 6
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

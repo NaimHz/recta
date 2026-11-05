@@ -38,7 +38,10 @@
     "eval:extraction-f1": "pnpm --filter @recta/api eval:extraction-f1",
     "eval:extraction-f1:live": "pnpm --filter @recta/api eval:extraction-f1:live",
     "eval:model-choice": "pnpm --filter @recta/api eval:model-choice",
-    "eval:model-choice:live": "pnpm --filter @recta/api eval:model-choice:live"
+    "eval:model-choice:live": "pnpm --filter @recta/api eval:model-choice:live",
+    "gold:prepare": "pnpm --filter @recta/api gold:prepare",
+    "gold:run": "pnpm --filter @recta/api gold:run",
+    "eval:gold": "pnpm --filter @recta/api eval:gold"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

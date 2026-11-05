@@ -1,0 +1,56 @@
+# Annotation 4.6 : planted-10 (paris, départ 2026-11-24)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-10.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-10
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée de l'Orangerie
+    sourceText: 10h-12h Musée de l'Orangerie
+    start: 10:00
+    end: 12:00
+  - id: stop-2
+    day: day-1
+    name: Musée d'Orsay
+    sourceText: 14h-17h Musée d'Orsay
+    start: 14:00
+    end: 17:00
+  - id: stop-3
+    day: day-1
+    name: Procope
+    sourceText: 20h-23h dîner au Procope
+    start: 20:00
+    end: 23:00
+issues:
+  - code: place_closed_day
+    severity: error
+    stopIds:
+      - stop-1
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/54188996
+        sourceDate: null
+        raw: Mo-Su 09:00-18:00; Tu off
+  - code: last_departure_missed
+    severity: error
+    stopIds:
+      - stop-3
+    evidence:
+      - source: transitous
+        url: https://api.transitous.org/api/v6/plan?fromPlace=48.8535%2C2.3446&toPlace=48.8003%2C2.129&time=2026-11-24T22%3A55%3A00Z&transitModes=SUBURBAN%2CRAIL&directModes=WALK&numItineraries=5
+        sourceDate: 2026-11-24
+        raw: Après 23:55, premier RER C Saint-Michel → Versailles à 05:28 le 25 novembre
+undetermined: []
+planted:
+  - code: place_closed_day
+    stopIds:
+      - stop-1
+  - code: last_departure_missed
+    stopIds:
+      - stop-3

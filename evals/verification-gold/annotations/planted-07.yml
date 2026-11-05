@@ -1,0 +1,46 @@
+# Annotation 4.6 : planted-07 (paris, départ 2026-11-28)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-07.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-07
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée du Louvre
+    sourceText: 10h-12h Musée du Louvre
+    start: 10:00
+    end: 12:00
+  - id: stop-2
+    day: day-1
+    name: Basilique du Sacré-Cœur
+    sourceText: 12h05-13h Basilique du Sacré-Cœur
+    start: 12:05
+    end: 13:00
+  - id: stop-3
+    day: day-1
+    name: Musée national Picasso-Paris
+    sourceText: 15h-17h Musée national Picasso-Paris
+    start: 15:00
+    end: 17:00
+issues:
+  - code: travel_time_infeasible
+    severity: error
+    stopIds:
+      - stop-1
+      - stop-2
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3380277,48.8611473;2.3430153,48.8868058?annotations=duration%2Cdistance
+        sourceDate: 2026-11-04
+        raw: 'Louvre → Sacré-Cœur : 44,2 min, 3 318 m à pied ; écart prévu 5 min'
+undetermined: []
+planted:
+  - code: travel_time_infeasible
+    stopIds:
+      - stop-1
+      - stop-2

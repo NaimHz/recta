@@ -1,0 +1,355 @@
+{
+  "version": 1,
+  "plan": "planted-15",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:41.042Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Dimanche 29 novembre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Cathédrale Saint-Jean-Baptiste",
+              "startText": "9h15",
+              "endText": "10h18",
+              "type": null,
+              "sourceText": "9h15-10h18 Cathédrale Saint-Jean-Baptiste"
+            },
+            {
+              "name": "Musées Gadagne",
+              "startText": "10h30",
+              "endText": "12h",
+              "type": "musée",
+              "sourceText": "10h30-12h Musées Gadagne"
+            },
+            {
+              "name": "Musée des Confluences",
+              "startText": "13h",
+              "endText": "15h",
+              "type": "musée",
+              "sourceText": "13h-15h Musée des Confluences"
+            },
+            {
+              "name": "Musée des Beaux-Arts de Lyon",
+              "startText": "16h",
+              "endText": "18h",
+              "type": "musée",
+              "sourceText": "16h-18h Musée des Beaux-Arts de Lyon"
+            },
+            {
+              "name": "Léon de Lyon",
+              "startText": "20h",
+              "endText": "22h30",
+              "type": null,
+              "sourceText": "20h-22h30 dîner chez Léon de Lyon"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T07:01:35.605Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "lyon",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-29",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Cathédrale Saint-Jean-Baptiste",
+              "sourceText": "9h15-10h18 Cathédrale Saint-Jean-Baptiste",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "09:15",
+              "end": "10:18",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Musées Gadagne",
+              "sourceText": "10h30-12h Musées Gadagne",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/700244364",
+                "name": "Musées Gadagne",
+                "coordinates": {
+                  "lat": 45.7640744,
+                  "lon": 4.827301
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "We-Su 10:30-18:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T07:01:40.018Z"
+                }
+              },
+              "start": "10:30",
+              "end": "12:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Musée des Confluences",
+              "sourceText": "13h-15h Musée des Confluences",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/440270631",
+                "name": "Musée des Confluences",
+                "coordinates": {
+                  "lat": 45.7326277,
+                  "lon": 4.8179852
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Su 10:30-18:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-10-11",
+                  "retrievedAt": "2026-11-04T07:01:40.018Z"
+                }
+              },
+              "start": "13:00",
+              "end": "15:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Musée des Beaux-Arts de Lyon",
+              "sourceText": "16h-18h Musée des Beaux-Arts de Lyon",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/493540665",
+                "name": "Musée des Beaux-Arts de Lyon",
+                "coordinates": {
+                  "lat": 45.7667066,
+                  "lon": 4.8336192
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "We,Th,Sa-Mo 10:00-18:00, Fr 10:30-18:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T07:01:40.018Z"
+                }
+              },
+              "start": "16:00",
+              "end": "18:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-5",
+              "name": "Léon de Lyon",
+              "sourceText": "20h-22h30 dîner chez Léon de Lyon",
+              "type": null,
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "20:00",
+              "end": "22:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Cathédrale Saint-Jean-Baptiste",
+        "status": "ambiguous",
+        "question": "« Cathédrale Saint-Jean-Baptiste » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:node/9870921225",
+            "name": "Primatiale Saint-Jean-Baptiste Cathédrale de Lyon",
+            "address": "Primatiale Saint-Jean-Baptiste Cathédrale de Lyon, Place Saint-Jean, Saint-Jean, Quartiers anciens, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "information:board",
+            "score": 0.8900000000000001
+          },
+          {
+            "id": "osm:way/136200148",
+            "name": "Cathédrale Saint-Jean",
+            "address": "Cathédrale Saint-Jean, Place Saint-Jean, Saint-Jean, Quartiers anciens, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "amenity:place_of_worship",
+            "score": 0.8600000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Musées Gadagne",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Musée des Confluences",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Musée des Beaux-Arts de Lyon",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-5",
+        "name": "Léon de Lyon",
+        "status": "ambiguous",
+        "question": "« Léon de Lyon » correspond à « Lyon » à Lyon. Est-ce bien ce lieu ?",
+        "options": [
+          {
+            "id": "osm:node/9877714218",
+            "name": "Lyon",
+            "address": "Lyon, Route de Genas, Lyon 3e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69100, France",
+            "category": "highway:street_lamp",
+            "score": 0.8600000000000001
+          }
+        ]
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-2",
+            "stop-3",
+            "stop-4"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              3343.8,
+              692.6
+            ],
+            [
+              3343.8,
+              0,
+              3572.5
+            ],
+            [
+              692.6,
+              3572.5,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              4177.3,
+              866
+            ],
+            [
+              4177.3,
+              0,
+              4465.5
+            ],
+            [
+              866,
+              4465.5,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T07:02:28.015Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.827301,45.7640744;4.8179852,45.7326277;4.8336192,45.7667066?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,3343.8,692.6],[3343.8,0,3572.5],[692.6,3572.5,0]],\"distances\":[[0,4177.3,866],[4177.3,0,4465.5],[866,4465.5,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-2",
+                "stop-3",
+                "stop-4"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-29T11:00:00.000Z",
+          "durationSeconds": 1740,
+          "arrivalAt": "2026-11-29T11:29:00Z",
+          "transfers": 1,
+          "modes": [
+            "WALK",
+            "SUBWAY",
+            "BUS"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-29",
+            "retrievedAt": "2026-11-04T07:02:28.280Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=45.7640744%2C4.827301&toPlace=45.7326277%2C4.8179852&time=2026-11-29T11%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-29T11:06:00Z\",\"endTime\":\"2026-11-29T11:29:00Z\",\"durationSeconds\":1380,\"transfers\":1,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":45.7640744,\"lon\":4.827301},\"to\":{\"name\":\"Vieux Lyon Cat. St-Jean\",\"lat\":45.76013000000001,\"lon\":4.826535999999999},\"startTime\":\"2026-11-29T11:06:00Z\",\"endTime\":\"2026-11-29T11:14:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"D\",\"from\":{\"name\":\"Vieux Lyon Cat. St-Jean\",\"lat\":45.76013000000001,\"lon\":4.826535999999999},\"to\":{\"name\":\"Bellecour\",\"lat\":45.756577,\"lon\":4.833760000000001},\"startTime\":\"2026-11-29T11:14:00Z\",\"endTime\":\"2026-11-29T11:16:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Bellecour\",\"lat\":45.756577,\"lon\":4.833760000000001},\"to\":{\"name\":\"Bellecour A. Poncet\",\"lat\":45.756083999999994,\"lon\":4.833331},\"startTime\":\"2026-11-29T11:16:00Z\",\"endTime\":\"2026-11-29T11:18:00Z\"},{\"mode\":\"BUS\",\"routeShortName\":\"115\",\"from\":{\"name\":\"Bellecour A. Poncet\",\"lat\":45.756083999999994,\"lon\":4.833331},\"to\":{\"name\":\"Musée des Confluences\",\"lat\":45.733585000000005,\"lon\":4.817499999999999},\"startTime\":\"2026-11-29T11:21:00Z\",\"endTime\":\"2026-11-29T11:26:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Musée des Confluences\",\"lat\":45.733585000000005,\"lon\":4.817499999999999},\"to\":{\"name\":\"END\",\"lat\":45.7326277,\"lon\":4.8179852},\"startTime\":\"2026-11-29T11:26:00Z\",\"endTime\":\"2026-11-29T11:29:00Z\"}]}",
+            "fields": {
+              "from": "Musées Gadagne",
+              "to": "Musée des Confluences",
+              "departureAt": "2026-11-29T11:00:00.000Z",
+              "arrivalAt": "2026-11-29T11:29:00Z",
+              "itinerariesReturned": 5
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-3",
+          "toStopId": "stop-4",
+          "departureAt": "2026-11-29T14:00:00.000Z",
+          "durationSeconds": 1800,
+          "arrivalAt": "2026-11-29T14:30:00Z",
+          "transfers": 1,
+          "modes": [
+            "WALK",
+            "BUS",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-29",
+            "retrievedAt": "2026-11-04T07:02:29.279Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=45.7326277%2C4.8179852&toPlace=45.7667066%2C4.8336192&time=2026-11-29T14%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-29T14:06:00Z\",\"endTime\":\"2026-11-29T14:30:00Z\",\"durationSeconds\":1440,\"transfers\":1,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":45.7326277,\"lon\":4.8179852},\"to\":{\"name\":\"Musée des Confluences\",\"lat\":45.734455000000004,\"lon\":4.818973},\"startTime\":\"2026-11-29T14:06:00Z\",\"endTime\":\"2026-11-29T14:10:00Z\"},{\"mode\":\"BUS\",\"routeShortName\":\"C10\",\"from\":{\"name\":\"Musée des Confluences\",\"lat\":45.734455000000004,\"lon\":4.818973},\"to\":{\"name\":\"Bellecour A. Poncet\",\"lat\":45.754925,\"lon\":4.832777},\"startTime\":\"2026-11-29T14:10:00Z\",\"endTime\":\"2026-11-29T14:16:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Bellecour A. Poncet\",\"lat\":45.754925,\"lon\":4.832777},\"to\":{\"name\":\"Bellecour\",\"lat\":45.757625999999995,\"lon\":4.833019},\"startTime\":\"2026-11-29T14:16:00Z\",\"endTime\":\"2026-11-29T14:20:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"A\",\"from\":{\"name\":\"Bellecour\",\"lat\":45.757625999999995,\"lon\":4.833019},\"to\":{\"name\":\"Cordeliers\",\"lat\":45.763428000000005,\"lon\":4.835735},\"startTime\":\"2026-11-29T14:21:00Z\",\"endTime\":\"2026-11-29T14:22:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Cordeliers\",\"lat\":45.763428000000005,\"lon\":4.835735},\"to\":{\"name\":\"END\",\"lat\":45.7667066,\"lon\":4.8336192},\"startTime\":\"2026-11-29T14:22:00Z\",\"endTime\":\"2026-11-29T14:30:00Z\"}]}",
+            "fields": {
+              "from": "Musée des Confluences",
+              "to": "Musée des Beaux-Arts de Lyon",
+              "departureAt": "2026-11-29T14:00:00.000Z",
+              "arrivalAt": "2026-11-29T14:30:00Z",
+              "itinerariesReturned": 5
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

@@ -1,0 +1,55 @@
+# Annotation 4.6 : planted-08 (paris, départ 2026-11-29)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-08.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-08
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée du Louvre
+    sourceText: 9h-10h30 Musée du Louvre
+    start: 09:00
+    end: 10:30
+  - id: stop-2
+    day: day-1
+    name: Arc de Triomphe
+    sourceText: 11h30-12h15 Arc de Triomphe
+    start: 11:30
+    end: 12:15
+  - id: stop-3
+    day: day-1
+    name: Café Marly
+    sourceText: 13h15-14h30 déjeuner au Café Marly
+    start: 13:15
+    end: 14:30
+  - id: stop-4
+    day: day-1
+    name: Musée Carnavalet
+    sourceText: 15h30-17h30 Musée Carnavalet
+    start: 15:30
+    end: 17:30
+issues:
+  - code: fragmented_half_day
+    severity: warning
+    stopIds:
+      - stop-1
+      - stop-2
+      - stop-3
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3380277,48.8611473;2.2950372,48.8737791;2.3359304,48.8616428?annotations=duration%2Cdistance
+        sourceDate: 2026-11-04
+        raw: Louvre → Arc de Triomphe 3 690 m, Louvre → Café Marly 140 m, entre 10:30 et
+          13:15
+undetermined: []
+planted:
+  - code: fragmented_half_day
+    stopIds:
+      - stop-1
+      - stop-2
+      - stop-3

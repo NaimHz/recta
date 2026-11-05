@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "plan": "planted-12",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:28.945Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Mercredi 18 novembre",
+          "city": "Lyon",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée de l'Imprimerie et de la Communication Graphique",
+              "startText": "10h",
+              "endText": "11h30",
+              "type": "Musée",
+              "sourceText": "10h-11h30 Musée de l'Imprimerie et de la Communication Graphique"
+            },
+            {
+              "name": "Basilique Notre-Dame de Fourvière",
+              "startText": "13h",
+              "endText": "14h30",
+              "type": "Basilique",
+              "sourceText": "13h-14h30 Basilique Notre-Dame de Fourvière"
+            },
+            {
+              "name": "Lugdunum Musée et Théâtres Romains",
+              "startText": "15h",
+              "endText": "16h",
+              "type": "Musée",
+              "sourceText": "15h-16h Lugdunum Musée et Théâtres Romains"
+            },
+            {
+              "name": "Musées Gadagne",
+              "startText": "17h30",
+              "endText": "19h30",
+              "type": "Musées",
+              "sourceText": "17h30-19h30 Musées Gadagne"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T06:59:46.181Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "lyon",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-18",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Musée de l'Imprimerie et de la Communication Graphique",
+              "sourceText": "10h-11h30 Musée de l'Imprimerie et de la Communication Graphique",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/62271798",
+                "name": "Musée de l'Imprimerie et de la communication graphique",
+                "coordinates": {
+                  "lat": 45.7642819,
+                  "lon": 4.8347672
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": null,
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T06:59:50.002Z"
+                }
+              },
+              "start": "10:00",
+              "end": "11:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Basilique Notre-Dame de Fourvière",
+              "sourceText": "13h-14h30 Basilique Notre-Dame de Fourvière",
+              "type": "Basilique",
+              "resolution": "ambiguous",
+              "place": null,
+              "start": "13:00",
+              "end": "14:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Lugdunum Musée et Théâtres Romains",
+              "sourceText": "15h-16h Lugdunum Musée et Théâtres Romains",
+              "type": "Musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/88526510",
+                "name": "Lugdunum Musée et Théâtres Romains",
+                "coordinates": {
+                  "lat": 45.760294,
+                  "lon": 4.8204842
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Fr 11:00-18:00; Sa-Su 10:00-18:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T06:59:50.002Z"
+                }
+              },
+              "start": "15:00",
+              "end": "16:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Musées Gadagne",
+              "sourceText": "17h30-19h30 Musées Gadagne",
+              "type": "Musées",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/700244364",
+                "name": "Musées Gadagne",
+                "coordinates": {
+                  "lat": 45.7640744,
+                  "lon": 4.827301
+                },
+                "address": null,
+                "category": "tourism:museum",
+                "openingHoursRaw": "We-Su 10:30-18:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T06:59:50.002Z"
+                }
+              },
+              "start": "17:30",
+              "end": "19:30",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Musée de l'Imprimerie et de la Communication Graphique",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Basilique Notre-Dame de Fourvière",
+        "status": "ambiguous",
+        "question": "« Basilique Notre-Dame de Fourvière » peut désigner plusieurs lieux à Lyon. Lequel veux-tu ?",
+        "options": [
+          {
+            "id": "osm:way/125690785",
+            "name": "Basilique Notre-Dame de Fourvière",
+            "address": "Basilique Notre-Dame de Fourvière, Place de Fourvière, Conseil de quartier Colline des funiculaires, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "building:cathedral",
+            "score": 0.9450000000000001
+          },
+          {
+            "id": "osm:way/29179429",
+            "name": "Basilique Notre-Dame de Fourvière",
+            "address": "Basilique Notre-Dame de Fourvière, Place de Fourvière, Conseil de quartier Colline des funiculaires, Lyon 5e Arrondissement, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69005, France",
+            "category": "amenity:place_of_worship",
+            "score": 0.9450000000000001
+          }
+        ]
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Lugdunum Musée et Théâtres Romains",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Musées Gadagne",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-3",
+            "stop-4"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              1326.2,
+              641.1
+            ],
+            [
+              1326.2,
+              0,
+              706
+            ],
+            [
+              641.1,
+              706,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              1658.2,
+              801.4
+            ],
+            [
+              1658.2,
+              0,
+              882.5
+            ],
+            [
+              801.4,
+              882.5,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T07:00:17.298Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.8347672,45.7642819;4.8204842,45.760294;4.827301,45.7640744?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,1326.2,641.1],[1326.2,0,706],[641.1,706,0]],\"distances\":[[0,1658.2,801.4],[1658.2,0,882.5],[801.4,882.5,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-3",
+                "stop-4"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-3",
+          "toStopId": "stop-4",
+          "departureAt": "2026-11-18T15:00:00.000Z",
+          "durationSeconds": null,
+          "arrivalAt": null,
+          "transfers": null,
+          "modes": [],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-18",
+            "retrievedAt": "2026-11-04T07:00:17.446Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=45.760294%2C4.8204842&toPlace=45.7640744%2C4.827301&time=2026-11-18T15%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "null",
+            "fields": {
+              "from": "Lugdunum Musée et Théâtres Romains",
+              "to": "Musées Gadagne",
+              "departureAt": "2026-11-18T15:00:00.000Z",
+              "arrivalAt": null,
+              "itinerariesReturned": 0
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

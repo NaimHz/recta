@@ -1,0 +1,9 @@
+{
+  "id": "planted-01",
+  "kind": "planted",
+  "cityId": "paris",
+  "start": "2026-11-16",
+  "model": null,
+  "collectedAt": null,
+  "promptId": null
+}

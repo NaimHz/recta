@@ -1,0 +1,56 @@
+# Annotation 4.6 : planted-11 (lyon, départ 2026-11-23)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-11.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-11
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée des Confluences
+    sourceText: 10h-12h Musée des Confluences
+    start: 10:00
+    end: 12:00
+  - id: stop-2
+    day: day-1
+    name: Musée des Beaux-Arts de Lyon
+    sourceText: 14h-16h Musée des Beaux-Arts de Lyon
+    start: 14:00
+    end: 16:00
+  - id: stop-3
+    day: day-1
+    name: Léon de Lyon
+    sourceText: 19h30-21h dîner chez Léon de Lyon
+    start: 19:30
+    end: 21:00
+issues:
+  - code: place_closed_day
+    severity: error
+    stopIds:
+      - stop-1
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/440270631
+        sourceDate: 2026-10-11
+        raw: Tu-Su 10:30-18:30
+  - code: place_closed_day
+    severity: error
+    stopIds:
+      - stop-3
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/node/47770405
+        sourceDate: null
+        raw: We-Fr 12:00-14:00, 19:00-22:00; Sa 12:00-14:30, 19:00-22:30; Su 12:00-14:30
+undetermined: []
+planted:
+  - code: place_closed_day
+    stopIds:
+      - stop-1
+  - code: place_closed_day
+    stopIds:
+      - stop-3

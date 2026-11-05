@@ -1,0 +1,95 @@
+# Annotation 4.6 : planted-15 (lyon, départ 2026-11-29)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-15.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-15
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Cathédrale Saint-Jean-Baptiste
+    sourceText: 9h15-10h18 Cathédrale Saint-Jean-Baptiste
+    start: 09:15
+    end: 10:18
+  - id: stop-2
+    day: day-1
+    name: Musées Gadagne
+    sourceText: 10h30-12h Musées Gadagne
+    start: 10:30
+    end: 12:00
+  - id: stop-3
+    day: day-1
+    name: Musée des Confluences
+    sourceText: 13h-15h Musée des Confluences
+    start: 13:00
+    end: 15:00
+  - id: stop-4
+    day: day-1
+    name: Musée des Beaux-Arts de Lyon
+    sourceText: 16h-18h Musée des Beaux-Arts de Lyon
+    start: 16:00
+    end: 18:00
+  - id: stop-5
+    day: day-1
+    name: Léon de Lyon
+    sourceText: 20h-22h30 dîner chez Léon de Lyon
+    start: 20:00
+    end: 22:30
+issues:
+  - code: insufficient_buffer
+    severity: warning
+    stopIds:
+      - stop-1
+      - stop-2
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/table/v1/foot/4.8274238,45.7607136;4.8272861,45.7640502?annotations=duration%2Cdistance
+        sourceDate: 2026-11-04
+        raw: 'Saint-Jean → Gadagne : 5,6 min, 420 m à pied ; écart prévu 12 min, marge
+          10 min'
+  - code: outside_opening_hours
+    severity: error
+    stopIds:
+      - stop-5
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/node/47770405
+        sourceDate: null
+        raw: We-Fr 12:00-14:00, 19:00-22:00; Sa 12:00-14:30, 19:00-22:30; Su 12:00-14:30
+  - code: overloaded_day
+    severity: warning
+    stopIds:
+      - stop-1
+      - stop-2
+      - stop-3
+      - stop-4
+      - stop-5
+    evidence:
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 9h15-10h18 Cathédrale Saint-Jean-Baptiste
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 20h-22h30 dîner chez Léon de Lyon
+undetermined: []
+planted:
+  - code: insufficient_buffer
+    stopIds:
+      - stop-1
+      - stop-2
+  - code: outside_opening_hours
+    stopIds:
+      - stop-5
+  - code: overloaded_day
+    stopIds:
+      - stop-1
+      - stop-2
+      - stop-3
+      - stop-4
+      - stop-5

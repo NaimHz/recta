@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "plan": "planted-05",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:04.047Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Lundi 23 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Centre Pompidou",
+              "startText": "10h",
+              "endText": "12h",
+              "type": null,
+              "sourceText": "10h-12h Centre Pompidou"
+            },
+            {
+              "name": "Sainte-Chapelle",
+              "startText": "13h",
+              "endText": "14h30",
+              "type": null,
+              "sourceText": "13h-14h30 Sainte-Chapelle"
+            },
+            {
+              "name": "Cathédrale Notre-Dame de Paris",
+              "startText": "15h30",
+              "endText": "16h30",
+              "type": null,
+              "sourceText": "15h30-16h30 Cathédrale Notre-Dame de Paris"
+            },
+            {
+              "name": "Musée du Louvre",
+              "startText": "17h15",
+              "endText": "18h",
+              "type": "musée",
+              "sourceText": "17h15-18h Musée du Louvre"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T07:03:14.588Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-23",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Centre Pompidou",
+              "sourceText": "10h-12h Centre Pompidou",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/55503397",
+                "name": "Centre Georges Pompidou",
+                "coordinates": {
+                  "lat": 48.8605235,
+                  "lon": 2.3524395
+                },
+                "address": "19 Rue Beaubourg, 75004 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "closed",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": null,
+                  "retrievedAt": "2026-11-04T07:03:17.901Z"
+                }
+              },
+              "start": "10:00",
+              "end": "12:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Sainte-Chapelle",
+              "sourceText": "13h-14h30 Sainte-Chapelle",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/3344870",
+                "name": "Sainte-Chapelle",
+                "coordinates": {
+                  "lat": 48.8553966,
+                  "lon": 2.3450136
+                },
+                "address": "8 Boulevard du Palais, 75001",
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Jan-Mar 09:00-17:00; Apr-Sep 09:00-19:00; Oct-Dec 09:00-17:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2024-02-15",
+                  "retrievedAt": "2026-11-04T07:03:17.901Z"
+                }
+              },
+              "start": "13:00",
+              "end": "14:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Cathédrale Notre-Dame de Paris",
+              "sourceText": "15h30-16h30 Cathédrale Notre-Dame de Paris",
+              "type": null,
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/201611261",
+                "name": "Cathédrale Notre-Dame de Paris",
+                "coordinates": {
+                  "lat": 48.8529371,
+                  "lon": 2.3498701
+                },
+                "address": "6 Parvis Notre-Dame - Place Jean-Paul II, 75004 Paris",
+                "category": "tourism:attraction",
+                "openingHoursRaw": "Mo,Tu,We,Fr 07:50-19:00; Th 07:50-22:00; Sa,Su 08:15-19:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2026-06-05",
+                  "retrievedAt": "2026-11-04T07:03:17.901Z"
+                }
+              },
+              "start": "15:30",
+              "end": "16:30",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-4",
+              "name": "Musée du Louvre",
+              "sourceText": "17h15-18h Musée du Louvre",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/7515426",
+                "name": "Musée du Louvre",
+                "coordinates": {
+                  "lat": 48.8611474,
+                  "lon": 2.3358637
+                },
+                "address": "75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-07-26",
+                  "retrievedAt": "2026-11-04T07:03:17.901Z"
+                }
+              },
+              "start": "17:15",
+              "end": "18:00",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Centre Pompidou",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Sainte-Chapelle",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Cathédrale Notre-Dame de Paris",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-4",
+        "name": "Musée du Louvre",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2",
+            "stop-3",
+            "stop-4"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              800.1,
+              732.8,
+              1250.2
+            ],
+            [
+              800.1,
+              0,
+              376.3,
+              1069.9
+            ],
+            [
+              732.8,
+              376.3,
+              0,
+              1367.6
+            ],
+            [
+              1250.2,
+              1069.9,
+              1367.6,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              997.1,
+              915.7,
+              1559.7
+            ],
+            [
+              997.1,
+              0,
+              469.9,
+              1337.3
+            ],
+            [
+              915.7,
+              469.9,
+              0,
+              1709.1
+            ],
+            [
+              1559.7,
+              1337.3,
+              1709.1,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T07:04:00.257Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3524395,48.8605235;2.3450136,48.8553966;2.3498701,48.8529371;2.3358637,48.8611474?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,800.1,732.8,1250.2],[800.1,0,376.3,1069.9],[732.8,376.3,0,1367.6],[1250.2,1069.9,1367.6,0]],\"distances\":[[0,997.1,915.7,1559.7],[997.1,0,469.9,1337.3],[915.7,469.9,0,1709.1],[1559.7,1337.3,1709.1,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2",
+                "stop-3",
+                "stop-4"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-23T11:00:00.000Z",
+          "durationSeconds": 720,
+          "arrivalAt": "2026-11-23T11:12:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "BUS"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-23",
+            "retrievedAt": "2026-11-04T07:04:00.511Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8605235%2C2.3524395&toPlace=48.8553966%2C2.3450136&time=2026-11-23T11%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-23T11:00:00Z\",\"endTime\":\"2026-11-23T11:12:00Z\",\"durationSeconds\":720,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8605235,\"lon\":2.3524395},\"to\":{\"name\":\"Rambuteau\",\"lat\":48.85984799999999,\"lon\":2.3525955999999995},\"startTime\":\"2026-11-23T11:00:00Z\",\"endTime\":\"2026-11-23T11:03:00Z\"},{\"mode\":\"BUS\",\"routeShortName\":\"38\",\"from\":{\"name\":\"Rambuteau\",\"lat\":48.85984799999999,\"lon\":2.3525955999999995},\"to\":{\"name\":\"Cité\",\"lat\":48.855681999999995,\"lon\":2.3461052999999996},\"startTime\":\"2026-11-23T11:03:00Z\",\"endTime\":\"2026-11-23T11:09:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Cité\",\"lat\":48.855681999999995,\"lon\":2.3461052999999996},\"to\":{\"name\":\"END\",\"lat\":48.8553966,\"lon\":2.3450136},\"startTime\":\"2026-11-23T11:09:00Z\",\"endTime\":\"2026-11-23T11:12:00Z\"}]}",
+            "fields": {
+              "from": "Centre Pompidou",
+              "to": "Sainte-Chapelle",
+              "departureAt": "2026-11-23T11:00:00.000Z",
+              "arrivalAt": "2026-11-23T11:12:00Z",
+              "itinerariesReturned": 8
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-23T13:30:00.000Z",
+          "durationSeconds": null,
+          "arrivalAt": null,
+          "transfers": null,
+          "modes": [],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-23",
+            "retrievedAt": "2026-11-04T07:04:01.476Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8553966%2C2.3450136&toPlace=48.8529371%2C2.3498701&time=2026-11-23T13%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "null",
+            "fields": {
+              "from": "Sainte-Chapelle",
+              "to": "Cathédrale Notre-Dame de Paris",
+              "departureAt": "2026-11-23T13:30:00.000Z",
+              "arrivalAt": null,
+              "itinerariesReturned": 0
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-3",
+          "toStopId": "stop-4",
+          "departureAt": "2026-11-23T15:30:00.000Z",
+          "durationSeconds": 1020,
+          "arrivalAt": "2026-11-23T15:47:00Z",
+          "transfers": 0,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-23",
+            "retrievedAt": "2026-11-04T07:04:02.781Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8529371%2C2.3498701&toPlace=48.8611474%2C2.3358637&time=2026-11-23T15%3A30%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-23T15:30:00Z\",\"endTime\":\"2026-11-23T15:47:00Z\",\"durationSeconds\":1020,\"transfers\":0,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8529371,\"lon\":2.3498701},\"to\":{\"name\":\"Hôtel de Ville\",\"lat\":48.85720399999999,\"lon\":2.3529827999999995},\"startTime\":\"2026-11-23T15:30:00Z\",\"endTime\":\"2026-11-23T15:40:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"1\",\"from\":{\"name\":\"Hôtel de Ville\",\"lat\":48.85720399999999,\"lon\":2.3529827999999995},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862747,\"lon\":2.3353025999999995},\"startTime\":\"2026-11-23T15:40:00Z\",\"endTime\":\"2026-11-23T15:43:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862747,\"lon\":2.3353025999999995},\"to\":{\"name\":\"END\",\"lat\":48.8611474,\"lon\":2.3358637},\"startTime\":\"2026-11-23T15:43:00Z\",\"endTime\":\"2026-11-23T15:47:00Z\"}]}",
+            "fields": {
+              "from": "Cathédrale Notre-Dame de Paris",
+              "to": "Musée du Louvre",
+              "departureAt": "2026-11-23T15:30:00.000Z",
+              "arrivalAt": "2026-11-23T15:47:00Z",
+              "itinerariesReturned": 17
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}

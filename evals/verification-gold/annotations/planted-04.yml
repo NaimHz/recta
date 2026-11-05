@@ -1,0 +1,78 @@
+# Annotation 4.6 : planted-04 (paris, départ 2026-12-25)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-04.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-04
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Panthéon
+    sourceText: 10h-12h Panthéon
+    start: 10:00
+    end: 12:00
+  - id: stop-2
+    day: day-1
+    name: Musée du Louvre
+    sourceText: 14h-17h Musée du Louvre
+    start: 14:00
+    end: 17:00
+  - id: stop-3
+    day: day-1
+    name: Cathédrale Notre-Dame de Paris
+    sourceText: 18h30-20h Cathédrale Notre-Dame de Paris
+    start: 18:30
+    end: 20:00
+issues:
+  - code: holiday_closure
+    severity: error
+    stopIds:
+      - stop-1
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/16407465
+        sourceDate: 2023-08-06
+        raw: 'Mo-Su 10:00-18:00; Apr 1-Sep 30: Mo-Su 10:00-18:30; Jan 1,May 1,Dec 25:
+          off'
+      - source: calendar
+        url: null
+        sourceDate: 2026-12-25
+        raw: '2026-12-25 : jour férié en France'
+  - code: holiday_closure
+    severity: error
+    stopIds:
+      - stop-2
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/relation/7515426
+        sourceDate: 2025-07-26
+        raw: Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25
+          off
+      - source: calendar
+        url: null
+        sourceDate: 2026-12-25
+        raw: '2026-12-25 : jour férié en France'
+  - code: outside_opening_hours
+    severity: error
+    stopIds:
+      - stop-3
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/201611261
+        sourceDate: 2026-06-05
+        raw: Mo,Tu,We,Fr 07:50-19:00; Th 07:50-22:00; Sa,Su 08:15-19:30
+undetermined: []
+planted:
+  - code: holiday_closure
+    stopIds:
+      - stop-1
+  - code: holiday_closure
+    stopIds:
+      - stop-2
+  - code: outside_opening_hours
+    stopIds:
+      - stop-3

@@ -1,0 +1,62 @@
+# Annotation 4.6 : planted-12 (lyon, départ 2026-11-18)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-12.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-12
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée de l'Imprimerie et de la Communication Graphique
+    sourceText: 10h-11h30 Musée de l'Imprimerie et de la Communication Graphique
+    start: 10:00
+    end: 11:30
+  - id: stop-2
+    day: day-1
+    name: Basilique Notre-Dame de Fourvière
+    sourceText: 13h-14h30 Basilique Notre-Dame de Fourvière
+    start: 13:00
+    end: 14:30
+  - id: stop-3
+    day: day-1
+    name: Lugdunum Musée et Théâtres Romains
+    sourceText: 15h-16h Lugdunum Musée et Théâtres Romains
+    start: 15:00
+    end: 16:00
+  - id: stop-4
+    day: day-1
+    name: Musées Gadagne
+    sourceText: 17h30-19h30 Musées Gadagne
+    start: 17:30
+    end: 19:30
+issues:
+  - code: place_not_operating
+    severity: error
+    stopIds:
+      - stop-1
+    evidence:
+      - source: curated
+        url: https://www.imprimerie.lyon.fr/fr/edito/travaux
+        sourceDate: 2026-10-23
+        raw: 'business_status: closed_temporarily'
+  - code: outside_opening_hours
+    severity: error
+    stopIds:
+      - stop-4
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/700244364
+        sourceDate: null
+        raw: We-Su 10:30-18:30
+undetermined: []
+planted:
+  - code: place_not_operating
+    stopIds:
+      - stop-1
+  - code: outside_opening_hours
+    stopIds:
+      - stop-4

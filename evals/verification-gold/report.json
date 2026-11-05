@@ -1,0 +1,949 @@
+{
+  "version": 1,
+  "matrixFilled": true,
+  "missingCodes": [],
+  "kinds": {
+    "planted": {
+      "plans": 15,
+      "annotatedKeys": {
+        "place_closed_day": 6,
+        "place_not_operating": 2,
+        "holiday_closure": 3,
+        "outside_opening_hours": 5,
+        "after_last_entry": 1,
+        "travel_time_infeasible": 2,
+        "stop_overlap": 2,
+        "insufficient_buffer": 2,
+        "fragmented_half_day": 1,
+        "overloaded_day": 2,
+        "last_departure_missed": 1
+      },
+      "matrix": {
+        "place_closed_day": {
+          "place_closed_day": 5,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 1
+        },
+        "place_not_operating": {
+          "place_closed_day": 0,
+          "place_not_operating": 2,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "holiday_closure": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 3,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "outside_opening_hours": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 4,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 1
+        },
+        "after_last_entry": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 1,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "travel_time_infeasible": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 1,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 1
+        },
+        "stop_overlap": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 2,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "insufficient_buffer": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 1,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 1
+        },
+        "fragmented_half_day": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 1,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "overloaded_day": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 2,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "last_departure_missed": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 1
+        },
+        "aucun": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        }
+      },
+      "perCode": {
+        "place_closed_day": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "fnAbstention": 1,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 0.833,
+          "f1": 0.909
+        },
+        "place_not_operating": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        },
+        "holiday_closure": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        },
+        "outside_opening_hours": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "fnAbstention": 1,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 0.8,
+          "f1": 0.889
+        },
+        "after_last_entry": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        },
+        "travel_time_infeasible": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "fnAbstention": 1,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 0.5,
+          "f1": 0.667
+        },
+        "stop_overlap": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        },
+        "insufficient_buffer": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "fnAbstention": 1,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 0.5,
+          "f1": 0.667
+        },
+        "fragmented_half_day": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        },
+        "overloaded_day": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1
+        },
+        "last_departure_missed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": 0,
+          "f1": 0
+        }
+      },
+      "macroF1": 0.83,
+      "micro": {
+        "tp": 22,
+        "fp": 0,
+        "fn": 5,
+        "fnAbstention": 4,
+        "fpOnUndetermined": 0,
+        "precision": 1,
+        "recall": 0.815,
+        "f1": 0.898
+      },
+      "severityAgreement": {
+        "same": 22,
+        "tp": 22,
+        "ratio": 1
+      },
+      "coverage": {
+        "place_closed_day": {
+          "executed": 54,
+          "undetermined": 11,
+          "ratio": 0.796
+        },
+        "place_not_operating": {
+          "executed": 42,
+          "undetermined": 0,
+          "ratio": 1
+        },
+        "holiday_closure": {
+          "executed": 54,
+          "undetermined": 11,
+          "ratio": 0.796
+        },
+        "outside_opening_hours": {
+          "executed": 46,
+          "undetermined": 11,
+          "ratio": 0.761
+        },
+        "after_last_entry": {
+          "executed": 7,
+          "undetermined": 0,
+          "ratio": 1
+        },
+        "travel_time_infeasible": {
+          "executed": 39,
+          "undetermined": 13,
+          "ratio": 0.667
+        },
+        "stop_overlap": {
+          "executed": 80,
+          "undetermined": 0,
+          "ratio": 1
+        },
+        "insufficient_buffer": {
+          "executed": 38,
+          "undetermined": 13,
+          "ratio": 0.658
+        },
+        "fragmented_half_day": {
+          "executed": 11,
+          "undetermined": 0,
+          "ratio": 1
+        },
+        "overloaded_day": {
+          "executed": 15,
+          "undetermined": 0,
+          "ratio": 1
+        },
+        "last_departure_missed": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        }
+      },
+      "plansWithError": {
+        "annotated": 13,
+        "system": 12
+      },
+      "details": [
+        {
+          "id": "planted-01",
+          "kind": "planted",
+          "tp": [
+            "place_closed_day:stop-1"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-02",
+          "kind": "planted",
+          "tp": [
+            "place_closed_day:stop-1",
+            "outside_opening_hours:stop-4"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-03",
+          "kind": "planted",
+          "tp": [
+            "holiday_closure:stop-1"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-04",
+          "kind": "planted",
+          "tp": [
+            "holiday_closure:stop-1",
+            "holiday_closure:stop-2",
+            "outside_opening_hours:stop-3"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-05",
+          "kind": "planted",
+          "tp": [
+            "place_not_operating:stop-1",
+            "after_last_entry:stop-4"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-06",
+          "kind": "planted",
+          "tp": [
+            "insufficient_buffer:stop-1,stop-2",
+            "stop_overlap:stop-3,stop-4"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-07",
+          "kind": "planted",
+          "tp": [
+            "travel_time_infeasible:stop-1,stop-2"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-08",
+          "kind": "planted",
+          "tp": [
+            "fragmented_half_day:stop-1,stop-2,stop-3"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-09",
+          "kind": "planted",
+          "tp": [
+            "overloaded_day:stop-1,stop-2,stop-3,stop-4,stop-5"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-10",
+          "kind": "planted",
+          "tp": [
+            "place_closed_day:stop-1"
+          ],
+          "fp": [],
+          "fn": [
+            "last_departure_missed:stop-3"
+          ],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-11",
+          "kind": "planted",
+          "tp": [
+            "place_closed_day:stop-1"
+          ],
+          "fp": [],
+          "fn": [
+            "place_closed_day:stop-3"
+          ],
+          "fnAbstention": [
+            "place_closed_day:stop-3"
+          ],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-12",
+          "kind": "planted",
+          "tp": [
+            "place_not_operating:stop-1",
+            "outside_opening_hours:stop-4"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-13",
+          "kind": "planted",
+          "tp": [
+            "outside_opening_hours:stop-1",
+            "place_closed_day:stop-3"
+          ],
+          "fp": [],
+          "fn": [],
+          "fnAbstention": [],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-14",
+          "kind": "planted",
+          "tp": [
+            "stop_overlap:stop-3,stop-4"
+          ],
+          "fp": [],
+          "fn": [
+            "travel_time_infeasible:stop-1,stop-2"
+          ],
+          "fnAbstention": [
+            "travel_time_infeasible:stop-1,stop-2"
+          ],
+          "fpOnUndetermined": []
+        },
+        {
+          "id": "planted-15",
+          "kind": "planted",
+          "tp": [
+            "overloaded_day:stop-1,stop-2,stop-3,stop-4,stop-5"
+          ],
+          "fp": [],
+          "fn": [
+            "insufficient_buffer:stop-1,stop-2",
+            "outside_opening_hours:stop-5"
+          ],
+          "fnAbstention": [
+            "insufficient_buffer:stop-1,stop-2",
+            "outside_opening_hours:stop-5"
+          ],
+          "fpOnUndetermined": []
+        }
+      ]
+    },
+    "real": {
+      "plans": 0,
+      "annotatedKeys": {
+        "place_closed_day": 0,
+        "place_not_operating": 0,
+        "holiday_closure": 0,
+        "outside_opening_hours": 0,
+        "after_last_entry": 0,
+        "travel_time_infeasible": 0,
+        "stop_overlap": 0,
+        "insufficient_buffer": 0,
+        "fragmented_half_day": 0,
+        "overloaded_day": 0,
+        "last_departure_missed": 0
+      },
+      "matrix": {
+        "place_closed_day": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "place_not_operating": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "holiday_closure": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "outside_opening_hours": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "after_last_entry": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "travel_time_infeasible": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "stop_overlap": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "insufficient_buffer": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "fragmented_half_day": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "overloaded_day": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "last_departure_missed": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        },
+        "aucun": {
+          "place_closed_day": 0,
+          "place_not_operating": 0,
+          "holiday_closure": 0,
+          "outside_opening_hours": 0,
+          "after_last_entry": 0,
+          "travel_time_infeasible": 0,
+          "stop_overlap": 0,
+          "insufficient_buffer": 0,
+          "fragmented_half_day": 0,
+          "overloaded_day": 0,
+          "last_departure_missed": 0,
+          "aucun": 0
+        }
+      },
+      "perCode": {
+        "place_closed_day": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "place_not_operating": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "holiday_closure": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "outside_opening_hours": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "after_last_entry": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "travel_time_infeasible": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "stop_overlap": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "insufficient_buffer": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "fragmented_half_day": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "overloaded_day": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "last_departure_missed": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "fnAbstention": 0,
+          "fpOnUndetermined": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "macroF1": null,
+      "micro": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "fnAbstention": 0,
+        "fpOnUndetermined": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "severityAgreement": {
+        "same": 0,
+        "tp": 0,
+        "ratio": null
+      },
+      "coverage": {
+        "place_closed_day": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "place_not_operating": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "holiday_closure": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "outside_opening_hours": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "after_last_entry": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "travel_time_infeasible": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "stop_overlap": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "insufficient_buffer": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "fragmented_half_day": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "overloaded_day": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        },
+        "last_departure_missed": {
+          "executed": 0,
+          "undetermined": 0,
+          "ratio": null
+        }
+      },
+      "plansWithError": {
+        "annotated": 0,
+        "system": 0
+      },
+      "details": []
+    }
+  },
+  "pending": []
+}

@@ -1,0 +1,44 @@
+# Annotation 4.6 : planted-01 (paris, départ 2026-11-16)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-01.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-01
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée d'Orsay
+    sourceText: "9h30-11h30 : Musée d'Orsay"
+    start: 09:30
+    end: 11:30
+  - id: stop-2
+    day: day-1
+    name: Café Marly
+    sourceText: '12h30-14h : déjeuner au Café Marly'
+    start: 12:30
+    end: 14:00
+  - id: stop-3
+    day: day-1
+    name: Musée du Louvre
+    sourceText: '15h-17h : Musée du Louvre'
+    start: 15:00
+    end: 17:00
+issues:
+  - code: place_closed_day
+    severity: error
+    stopIds:
+      - stop-1
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/63178753
+        sourceDate: 2026-10-02
+        raw: Tu-Su 09:30-18:00; Th 09:30-21:45
+undetermined: []
+planted:
+  - code: place_closed_day
+    stopIds:
+      - stop-1

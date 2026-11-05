@@ -1,0 +1,71 @@
+# Annotation 4.6 : planted-06 (paris, départ 2026-11-19)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-06.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-06
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Sainte-Chapelle
+    sourceText: 9h-11h Sainte-Chapelle
+    start: 09:00
+    end: 11:00
+  - id: stop-2
+    day: day-1
+    name: Cathédrale Notre-Dame de Paris
+    sourceText: 11h12-12h30 Cathédrale Notre-Dame de Paris
+    start: 11:12
+    end: 12:30
+  - id: stop-3
+    day: day-1
+    name: Musée du Louvre
+    sourceText: 14h-16h Musée du Louvre
+    start: 14:00
+    end: 16:00
+  - id: stop-4
+    day: day-1
+    name: Musée de l'Orangerie
+    sourceText: 15h30-17h Musée de l'Orangerie
+    start: 15:30
+    end: 17:00
+issues:
+  - code: insufficient_buffer
+    severity: warning
+    stopIds:
+      - stop-1
+      - stop-2
+    evidence:
+      - source: osrm
+        url: https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3449941,48.8553933;2.3500501,48.8529371?annotations=duration%2Cdistance
+        sourceDate: 2026-11-04
+        raw: 'Sainte-Chapelle → Notre-Dame : 6,4 min, 483 m à pied ; écart prévu 12 min,
+          marge 10 min'
+  - code: stop_overlap
+    severity: error
+    stopIds:
+      - stop-3
+      - stop-4
+    evidence:
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 14h-16h Musée du Louvre
+      - source: plan
+        url: null
+        sourceDate: null
+        raw: 15h30-17h Musée de l'Orangerie
+undetermined: []
+planted:
+  - code: insufficient_buffer
+    stopIds:
+      - stop-1
+      - stop-2
+  - code: stop_overlap
+    stopIds:
+      - stop-3
+      - stop-4

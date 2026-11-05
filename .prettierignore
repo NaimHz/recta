@@ -7,3 +7,4 @@ apps/api/drizzle/
 # Rapports d'évaluation générés
 evals/**/report.json
 evals/**/*-report.json
+evals/verification-gold/runs/

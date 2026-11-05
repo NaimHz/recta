@@ -1,0 +1,63 @@
+# Annotation 4.6 : planted-02 (paris, départ 2026-11-17)
+# Guide : evals/verification-gold/README.md. Texte : evals/verification-gold/plans/planted-02.txt
+# Codes : place_closed_day, place_not_operating, holiday_closure, outside_opening_hours, after_last_entry, travel_time_infeasible, stop_overlap, insufficient_buffer, fragmented_half_day, overloaded_day, last_departure_missed
+# Raisons d'indéterminé : unknown, missing_hours, invalid_syntax, invalid_timezone, invalid_context, invalid_local_time, place_unresolved, missing_coordinates, time_unknown, date_unknown, transit_unavailable, unknown_mode, rule_error
+# issues : { code, severity, stopIds, evidence: [{ source, url, sourceDate, raw }] }
+# undetermined : { codes, stopIds, reason }
+plan: planted-02
+pass: 1
+annotatedAt: 2026-11-04
+minutes: 5
+stops:
+  - id: stop-1
+    day: day-1
+    name: Musée du Louvre
+    sourceText: 10h-12h Musée du Louvre
+    start: 10:00
+    end: 12:00
+  - id: stop-2
+    day: day-1
+    name: Musée de l'Armée
+    sourceText: 13h-14h15 Musée de l'Armée
+    start: 13:00
+    end: 14:15
+  - id: stop-3
+    day: day-1
+    name: Musée d'Orsay
+    sourceText: 15h-16h45 Musée d'Orsay
+    start: 15:00
+    end: 16:45
+  - id: stop-4
+    day: day-1
+    name: Musée Rodin
+    sourceText: 17h30-19h Musée Rodin
+    start: 17:30
+    end: 19:00
+issues:
+  - code: place_closed_day
+    severity: error
+    stopIds:
+      - stop-1
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/relation/7515426
+        sourceDate: 2025-07-26
+        raw: Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25
+          off
+  - code: outside_opening_hours
+    severity: error
+    stopIds:
+      - stop-4
+    evidence:
+      - source: osm
+        url: https://www.openstreetmap.org/way/472159547
+        sourceDate: 2026-03-21
+        raw: Tu-Su 10:00-18:30
+undetermined: []
+planted:
+  - code: place_closed_day
+    stopIds:
+      - stop-1
+  - code: outside_opening_hours
+    stopIds:
+      - stop-4

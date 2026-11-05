@@ -1,0 +1,280 @@
+{
+  "version": 1,
+  "plan": "planted-07",
+  "extraction": {
+    "model": "claude-haiku-5-5",
+    "promptVersion": "extraction-v4",
+    "extractedAt": "2026-11-04T06:52:10.338Z",
+    "output": {
+      "days": [
+        {
+          "dateText": "Samedi 28 novembre",
+          "city": "Paris",
+          "timezoneText": null,
+          "stops": [
+            {
+              "name": "Musée du Louvre",
+              "startText": "10h",
+              "endText": "12h",
+              "type": "musée",
+              "sourceText": "10h-12h Musée du Louvre"
+            },
+            {
+              "name": "Basilique du Sacré-Cœur",
+              "startText": "12h05",
+              "endText": "13h",
+              "type": "basilique",
+              "sourceText": "12h05-13h Basilique du Sacré-Cœur"
+            },
+            {
+              "name": "Musée national Picasso-Paris",
+              "startText": "15h",
+              "endText": "17h",
+              "type": "musée",
+              "sourceText": "15h-17h Musée national Picasso-Paris"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "build": {
+    "ranAt": "2026-11-04T06:56:32.019Z",
+    "plan": {
+      "schemaVersion": 2,
+      "cityId": "paris",
+      "days": [
+        {
+          "id": "day-1",
+          "date": "2026-11-28",
+          "timezone": "Europe/Paris",
+          "stops": [
+            {
+              "id": "stop-1",
+              "name": "Musée du Louvre",
+              "sourceText": "10h-12h Musée du Louvre",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:relation/7515426",
+                "name": "Musée du Louvre",
+                "coordinates": {
+                  "lat": 48.8611474,
+                  "lon": 2.3358637
+                },
+                "address": "75001 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Mo,Th,Sa-Su 09:00-18:00; Tu off; We,Fr 09:00-21:00; Jan 01,May 01,Dec 25 off",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-07-26",
+                  "retrievedAt": "2026-11-04T06:56:34.472Z"
+                }
+              },
+              "start": "10:00",
+              "end": "12:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-2",
+              "name": "Basilique du Sacré-Cœur",
+              "sourceText": "12h05-13h Basilique du Sacré-Cœur",
+              "type": "basilique",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/23762981",
+                "name": "Basilique du Sacré-Cœur",
+                "coordinates": {
+                  "lat": 48.8867961,
+                  "lon": 2.3430272
+                },
+                "address": null,
+                "category": "tourism:attraction",
+                "openingHoursRaw": "06:00-22:30",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2024-12-28",
+                  "retrievedAt": "2026-11-04T06:56:34.472Z"
+                }
+              },
+              "start": "12:05",
+              "end": "13:00",
+              "windowSource": "explicit"
+            },
+            {
+              "id": "stop-3",
+              "name": "Musée national Picasso-Paris",
+              "sourceText": "15h-17h Musée national Picasso-Paris",
+              "type": "musée",
+              "resolution": "resolved",
+              "place": {
+                "id": "osm:way/57745741",
+                "name": "Musée national Picasso-Paris",
+                "coordinates": {
+                  "lat": 48.8598781,
+                  "lon": 2.3620895
+                },
+                "address": "5 Rue de Thorigny, 75003 Paris",
+                "category": "tourism:museum",
+                "openingHoursRaw": "Tu-Fr 10:30-18:00; Sa,Su 09:30-18:00",
+                "source": {
+                  "provider": "osm",
+                  "sourceDate": "2025-06-12",
+                  "retrievedAt": "2026-11-04T06:56:34.472Z"
+                }
+              },
+              "start": "15:00",
+              "end": "17:00",
+              "windowSource": "explicit"
+            }
+          ],
+          "travels": []
+        }
+      ],
+      "constraints": []
+    },
+    "resolutions": [
+      {
+        "stopId": "stop-1",
+        "name": "Musée du Louvre",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-2",
+        "name": "Basilique du Sacré-Cœur",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      },
+      {
+        "stopId": "stop-3",
+        "name": "Musée national Picasso-Paris",
+        "status": "resolved",
+        "question": null,
+        "options": []
+      }
+    ],
+    "travel": {
+      "walk": [
+        {
+          "dayId": "day-1",
+          "stopIds": [
+            "stop-1",
+            "stop-2",
+            "stop-3"
+          ],
+          "durationsSeconds": [
+            [
+              0,
+              2593.4,
+              1919.5
+            ],
+            [
+              2593.4,
+              0,
+              3131.7
+            ],
+            [
+              1919.5,
+              3131.7,
+              0
+            ]
+          ],
+          "distancesMeters": [
+            [
+              0,
+              3242.4,
+              2399.8
+            ],
+            [
+              3242.4,
+              0,
+              3915.4
+            ],
+            [
+              2399.8,
+              3915.4,
+              0
+            ]
+          ],
+          "evidence": {
+            "source": "osrm",
+            "sourceDate": null,
+            "retrievedAt": "2026-11-04T06:57:14.922Z",
+            "url": "https://routing.openstreetmap.de/routed-foot/table/v1/foot/2.3358637,48.8611474;2.3430272,48.8867961;2.3620895,48.8598781?annotations=duration%2Cdistance",
+            "attribution": "OSRM FOSSGIS, © OpenStreetMap contributors",
+            "raw": "{\"durations\":[[0,2593.4,1919.5],[2593.4,0,3131.7],[1919.5,3131.7,0]],\"distances\":[[0,3242.4,2399.8],[3242.4,0,3915.4],[2399.8,3915.4,0]]}",
+            "fields": {
+              "profile": "foot",
+              "stopIds": [
+                "stop-1",
+                "stop-2",
+                "stop-3"
+              ]
+            }
+          }
+        }
+      ],
+      "transit": [
+        {
+          "fromStopId": "stop-1",
+          "toStopId": "stop-2",
+          "departureAt": "2026-11-28T11:00:00.000Z",
+          "durationSeconds": 1860,
+          "arrivalAt": "2026-11-28T11:31:00Z",
+          "transfers": 1,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-28",
+            "retrievedAt": "2026-11-04T06:57:15.277Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8611474%2C2.3358637&toPlace=48.8867961%2C2.3430272&time=2026-11-28T11%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-28T11:04:00Z\",\"endTime\":\"2026-11-28T11:31:00Z\",\"durationSeconds\":1620,\"transfers\":1,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8611474,\"lon\":2.3358637},\"to\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862826999999996,\"lon\":2.3369509999999996},\"startTime\":\"2026-11-28T11:04:00Z\",\"endTime\":\"2026-11-28T11:09:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"7\",\"from\":{\"name\":\"Palais Royal - Musée du Louvre\",\"lat\":48.862826999999996,\"lon\":2.3369509999999996},\"to\":{\"name\":\"Le Peletier\",\"lat\":48.874849999999995,\"lon\":2.3402063999999996},\"startTime\":\"2026-11-28T11:09:00Z\",\"endTime\":\"2026-11-28T11:14:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Le Peletier\",\"lat\":48.874849999999995,\"lon\":2.3402063999999996},\"to\":{\"name\":\"Notre-Dame-de-Lorette\",\"lat\":48.876039999999996,\"lon\":2.3375462999999996},\"startTime\":\"2026-11-28T11:14:00Z\",\"endTime\":\"2026-11-28T11:17:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"12\",\"from\":{\"name\":\"Notre-Dame-de-Lorette\",\"lat\":48.876039999999996,\"lon\":2.3375462999999996},\"to\":{\"name\":\"Lamarck - Caulaincourt\",\"lat\":48.88968299999999,\"lon\":2.3385837},\"startTime\":\"2026-11-28T11:17:00Z\",\"endTime\":\"2026-11-28T11:22:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Lamarck - Caulaincourt\",\"lat\":48.88968299999999,\"lon\":2.3385837},\"to\":{\"name\":\"END\",\"lat\":48.8867961,\"lon\":2.3430272},\"startTime\":\"2026-11-28T11:22:00Z\",\"endTime\":\"2026-11-28T11:31:00Z\"}]}",
+            "fields": {
+              "from": "Musée du Louvre",
+              "to": "Basilique du Sacré-Cœur",
+              "departureAt": "2026-11-28T11:00:00.000Z",
+              "arrivalAt": "2026-11-28T11:31:00Z",
+              "itinerariesReturned": 9
+            }
+          }
+        },
+        {
+          "fromStopId": "stop-2",
+          "toStopId": "stop-3",
+          "departureAt": "2026-11-28T12:00:00.000Z",
+          "durationSeconds": 2100,
+          "arrivalAt": "2026-11-28T12:35:00Z",
+          "transfers": 1,
+          "modes": [
+            "WALK",
+            "SUBWAY"
+          ],
+          "evidence": {
+            "source": "transitous",
+            "sourceDate": "2026-11-28",
+            "retrievedAt": "2026-11-04T06:57:16.240Z",
+            "url": "https://api.transitous.org/api/v6/plan?fromPlace=48.8867961%2C2.3430272&toPlace=48.8598781%2C2.3620895&time=2026-11-28T12%3A00%3A00.000Z&transitModes=TRANSIT&directModes=WALK&numItineraries=5",
+            "attribution": "Transitous, © OpenStreetMap contributors",
+            "raw": "{\"startTime\":\"2026-11-28T12:02:00Z\",\"endTime\":\"2026-11-28T12:35:00Z\",\"durationSeconds\":1980,\"transfers\":1,\"legs\":[{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"START\",\"lat\":48.8867961,\"lon\":2.3430272},\"to\":{\"name\":\"Barbès - Rochechouart\",\"lat\":48.88340399999999,\"lon\":2.3496298999999996},\"startTime\":\"2026-11-28T12:02:00Z\",\"endTime\":\"2026-11-28T12:14:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"4\",\"from\":{\"name\":\"Barbès - Rochechouart\",\"lat\":48.88340399999999,\"lon\":2.3496298999999996},\"to\":{\"name\":\"Strasbourg - Saint-Denis\",\"lat\":48.86964,\"lon\":2.3544639999999997},\"startTime\":\"2026-11-28T12:14:00Z\",\"endTime\":\"2026-11-28T12:20:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Strasbourg - Saint-Denis\",\"lat\":48.86964,\"lon\":2.3544639999999997},\"to\":{\"name\":\"Strasbourg - Saint-Denis\",\"lat\":48.86942,\"lon\":2.3535943},\"startTime\":\"2026-11-28T12:20:00Z\",\"endTime\":\"2026-11-28T12:24:00Z\"},{\"mode\":\"SUBWAY\",\"routeShortName\":\"8\",\"from\":{\"name\":\"Strasbourg - Saint-Denis\",\"lat\":48.86942,\"lon\":2.3535943},\"to\":{\"name\":\"Filles du Calvaire\",\"lat\":48.86304,\"lon\":2.3665957},\"startTime\":\"2026-11-28T12:24:00Z\",\"endTime\":\"2026-11-28T12:27:00Z\"},{\"mode\":\"WALK\",\"routeShortName\":null,\"from\":{\"name\":\"Filles du Calvaire\",\"lat\":48.86304,\"lon\":2.3665957},\"to\":{\"name\":\"END\",\"lat\":48.8598781,\"lon\":2.3620895},\"startTime\":\"2026-11-28T12:27:00Z\",\"endTime\":\"2026-11-28T12:35:00Z\"}]}",
+            "fields": {
+              "from": "Basilique du Sacré-Cœur",
+              "to": "Musée national Picasso-Paris",
+              "departureAt": "2026-11-28T12:00:00.000Z",
+              "arrivalAt": "2026-11-28T12:35:00Z",
+              "itinerariesReturned": 6
+            }
+          }
+        }
+      ],
+      "announced": [],
+      "unavailable": []
+    }
+  }
+}
