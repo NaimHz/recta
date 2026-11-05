@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises'
+import { readFile, readdir } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import {
@@ -25,6 +25,16 @@ export async function loadCityConfig(
   const path = resolve(repoRoot, 'packages/data/cities', cityId, 'city.json')
 
   return CityConfigSchema.parse(JSON.parse(await readFile(path, 'utf8')))
+}
+
+export async function listCities(repoRoot = defaultRepoRoot): Promise<CityConfig[]> {
+  const entries = await readdir(resolve(repoRoot, 'packages/data/cities'), { withFileTypes: true })
+  const ids = entries
+    .filter((entry) => entry.isDirectory() && CITY_ID.test(entry.name))
+    .map((entry) => entry.name)
+    .sort()
+
+  return Promise.all(ids.map((id) => loadCityConfig(id, repoRoot)))
 }
 
 export function toPlaceFacts(file: CuratedFactsFile): Record<string, PlaceFact[]> {

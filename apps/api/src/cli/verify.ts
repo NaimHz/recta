@@ -6,16 +6,12 @@ import {
   IsoDateSchema,
   NO_TRAVEL,
   buildVerificationReport,
-  localDateTimeInTimezone,
   verifyPlan,
-  type Plan,
+  type VerificationReport,
 } from '@recta/domain'
-import { createAnthropicExtractionClientFromEnv } from '../extraction/anthropic'
-import { buildPlanFromText, type StopResolutionSummary } from '../pipeline/text-to-plan'
-import { NominatimPlaceSearch } from '../resolution/nominatim-search'
-import { NominatimClient } from '../sources/nominatim'
+import type { StopResolutionSummary } from '../pipeline/text-to-plan'
+import { verifyText } from '../pipeline/verify-text'
 import { OsrmClient } from '../sources/osrm'
-import { OverpassClient } from '../sources/overpass'
 import { TransitousClient } from '../sources/transitous'
 import { loadCityConfig, loadVerificationFacts } from '../verification/facts'
 import { collectTravelFacts } from '../verification/travel'
@@ -85,25 +81,25 @@ function parseArgs(args: string[]): VerifyArgs | null {
   return parsed
 }
 
-async function planFromText(
+async function verifyFixture(
   text: string,
-  cityId: string,
-  start: string | null,
-): Promise<{ plan: Plan; resolutions: StopResolutionSummary[] }> {
-  const city = await loadCityConfig(cityId)
-  const today =
-    localDateTimeInTimezone(new Date(), city.timezone)?.date ??
-    new Date().toISOString().slice(0, 10)
+  offline: boolean,
+): Promise<{ report: VerificationReport; resolutions: StopResolutionSummary[] | null }> {
+  const plan = parseFixture(text)
+  const city = await loadCityConfig(plan.cityId)
+  const facts = await loadVerificationFacts(plan.cityId)
+  const travel = offline
+    ? NO_TRAVEL
+    : await collectTravelFacts(
+        plan,
+        { osrm: new OsrmClient(), transitous: new TransitousClient() },
+        city,
+      )
 
-  return buildPlanFromText(
-    text,
-    { city, start, today },
-    {
-      extraction: createAnthropicExtractionClientFromEnv(),
-      search: new NominatimPlaceSearch({ client: new NominatimClient() }),
-      overpass: new OverpassClient(),
-    },
-  )
+  return {
+    report: buildVerificationReport(verifyPlan(plan, { ...facts, travel })),
+    resolutions: null,
+  }
 }
 
 const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url))
@@ -139,19 +135,9 @@ export async function runVerify(args: string[], output: VerifyOutput): Promise<E
   }
 
   try {
-    const { plan, resolutions } = options.text
-      ? await planFromText(text, options.city ?? '', options.start)
-      : { plan: parseFixture(text), resolutions: null }
-    const city = await loadCityConfig(plan.cityId)
-    const facts = await loadVerificationFacts(plan.cityId)
-    const travel = options.offline
-      ? NO_TRAVEL
-      : await collectTravelFacts(
-          plan,
-          { osrm: new OsrmClient(), transitous: new TransitousClient() },
-          city,
-        )
-    const report = buildVerificationReport(verifyPlan(plan, { ...facts, travel }))
+    const { report, resolutions } = options.text
+      ? await verifyText({ text, cityId: options.city ?? '', start: options.start })
+      : await verifyFixture(text, options.offline)
 
     if (options.json) {
       const payload = resolutions === null ? report : { report, resolutions }
